@@ -1,75 +1,131 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head><meta charset='UTF-8'><title>Project</title></head>
-<body>
-<h1>1 Project</h1>
-<img src='placeholder.jpg' alt='Project Graphic' style='width:300px;height:auto;'>
-<h2>Key Questions Addressed</h2>
-<ul>
-<li>Early Detection Feasibility: Can non-traditional data sources (tweets, search queries, news feeds) be reliably used to detect nascent biological threats earlier than official surveillance?</li>
-<li>Signal Versus Noise: How to identify a true emerging health threat signal amid the noise of massive digital datasets? (e.g. discerning a “weak signal” bio-threat event from normal chatter).</li>
-<li>Integration of Sources: What combination of data streams (social media, Google Trends, HealthMap news, participatory flu reports) and analytical techniques best improves detection accuracy for novel outbreaks?</li>
-</ul>
-<h2>The Problem</h2>
-<ul>
-<li>Delayed & Fragmented Reporting: Reliance on traditional surveillance (hospital reports, official bulletins) introduces delays and may miss early signs of unconventional outbreaks. Novel bio-threats with low initial case counts are especially hard to detect, as signals are weak and often misidentified by conventional systems.</li>
-<li>Weak-Signal Challenge: When a new pathogen/toxin emerges, initial indicators in digital data are sparse and ambiguous. Traditional systems struggle with unfamiliar keywords or rare symptoms, risking that an outbreak goes unnoticed until it’s widespread.</li>
-<li>Data Siloes: Relevant data is spread across disparate platforms (social networks, news sites, etc.) that are not designed for epidemiological monitoring. Manually monitoring all these channels in real-time is infeasible.</li>
-</ul>
-<h2>The Importance</h2>
-<ul>
-<li>Mitigating Outbreak Impact: Early warning can trigger faster public health response, potentially minimizing adverse health outcomes in an emergency or outbreak. Even a slight lead time (days or weeks) in detecting an incident (e.g. unusual illness cluster) can save lives by enabling containment measures.</li>
-<li>Addressing Novel Threats: For previously unseen threats (e.g. a bioterror agent or novel virus), traditional surveillance may miss the signal entirely. Integrating new data streams provides a safety net to catch unusual patterns that wouldn’t otherwise trigger alerts.</li>
-<li>Public Health Preparedness: Demonstrating an effective digital early-warning system informs national security and public health strategy. It shows the value of leveraging big data and AI for bio-surveillance, influencing how agencies plan for future pandemics and bio-terror scenarios.</li>
-</ul>
-<h2>The Solution</h2>
-<ul>
-<li>Multi-Stream Data Integration: Pandemic Pulse continuously ingests data from multiple “open-source” channels – Twitter APIs, Google Trends, HealthMap news feeds, and Flu Near You participatory surveillance – aggregating them into a unified platform. By monitoring keywords related to Category A/B/C biothreat pathogens and symptoms, it casts a wide net for aberrant signals.</li>
-<li>Hierarchical Signal Triage: The system employs a three-tiered filtering of data by pathogen category, source credibility, and transmission/symptom specificity. This hierarchy (e.g., Tier 1 = highest priority pathogens, trusted sources, very specific symptoms) controls data quality and quantity, helping analysts focus on the most credible signals first.</li>
-<li>Automated Event Detection Algorithms: Advanced event-detection methods (NLP, anomaly detection, geo-spatial clustering) are applied to the incoming data to flag unusual activity in real-time. For example, spikes in certain symptom keywords or a cluster of reports in a location trigger an alert. A custom NLP pipeline “signal enrichment engine” cleans and enriches the data (e.g., removing noise by dropping low-relevance keywords) to improve detection accuracy.</li>
-</ul>
-<h2>Architecture Overview</h2>
-<ul>
-<li>Cloud-Based Modular Pipeline: The system is built on a scalable cloud platform (AWS) and is composed of six main engines operating in sequence:</li>
-<li>Data Extraction Engine – Pulls in data continuously from each source via APIs/RSS feeds, respecting rate limits.</li>
-<li>Signal Enrichment Engine – Processes raw data to reduce noise (e.g., filters by keywords, applies regex for case counts) and enhance signal quality (feedback loops to refine extraction based on signal content).</li>
-<li>Event Detection Engine – Analyzes enriched data for anomalies (spikes or clusters) indicating a potential event; uses statistical thresholds and spatial clustering to flag events with location context.</li>
-<li>Data Presentation Engine – Feeds the processed data into a user-facing dashboard, visualizing maps, timelines, and alert banners for any detected events.</li>
-<li>Evaluation Engine – Provides tools to evaluate system performance using historical test cases (e.g., retrospectively detecting the 2013 Boston Marathon bombing, 2017 Hepatitis A outbreak).</li>
-<li>Collaboration & Event Monitoring Engine – Facilitates coordinated response by sharing alert details with other systems and suggesting “next steps” (like conducting targeted surveys via Flu Near You in affected cities).</li>
-<li>Geospatial and Temporal Analytics: An in-house geolocation engine maps Twitter data to locations (even from text when GPS not available) to identify where signals originate. The dashboard offers both map and timeline views for selected areas, enabling users to see where and when unusual reports are emerging.</li>
-<li>Feedback Loop: The architecture allows iterative refinement – detected event feedback can adjust the keywords or sources the Data Extraction engine pulls (e.g., adding new symptom keywords that appeared) to continuously improve sensitivity.</li>
-</ul>
-<h2>Results and Impacts</h2>
-<ul>
-<li>Successful Test Case Detections: Pandemic Pulse was evaluated on historical events. In a retrospective test, it detected anomalies corresponding to the 2013 Boston Marathon bombing using Twitter, search and transit alerts, and similarly flagged a cluster in the 2017 San Francisco Hepatitis A outbreak, demonstrating the system’s ability to catch real-world events. These validations build confidence in its real-time performance.</li>
-<li>Challenge Winner – Real-world Recognition: The project won the DHS Hidden Signal National Challenge, outperforming 69 other solutions in bio-threat detection. Dr. Tuli was invited to the White House as a panelist, highlighting the tool’s significance and innovation on a national stage. This validation by DHS indicates the approach’s potential value to national biosurveillance efforts.</li>
-<li>Operational Prototype: A functional prototype dashboard was delivered, providing public health officials a user-friendly interface to monitor integrated data streams and receive alerts. State and local public health personnel (the intended end-users) participated in testing to ensure the dashboard is intuitive and actionable.</li>
-<li>Stakeholder Engagement: The development process involved collaboration with the National Biosurveillance Integration Center (NBIC) and other stakeholders, ensuring the solution meets practical needs. By demonstrating how informal data can enhance situational awareness, the project influenced how agencies consider using big data and AI for public health.</li>
-<li>Spin-off Use Cases: Insights and techniques from Pandemic Pulse (e.g., using social media for health monitoring) were later applied to other domains. For example, similar NLP and anomaly-detection methods were used in COVID-19 surveillance collaborations with Meta and Google, illustrating cross-project synergies in Dr. Tuli’s work.</li>
-</ul>
-<h2>Skills and Tools Used</h2>
-<ul>
-<li>Data Engineering & APIs: Extensive use of APIs (Twitter, Google Trends) and RSS feeds to stream data in real-time. Developed robust ingestion pipelines in Python for high-volume, high-velocity data, handling millions of data points.</li>
-<li>Natural Language Processing: Leveraged NLP for filtering and interpreting text signals (e.g., extracting symptom reports from tweets, running keyword-based classifiers). This included regex pattern matching for symptoms and using domain-specific keywords for bio-threats.</li>
-<li>Cloud & Scalable Systems: Deployed on AWS cloud infrastructure for scalability. Utilized AWS services for data storage and processing, ensuring the pipeline could handle surges in data during a potential outbreak.</li>
-<li>Custom Algorithms & Analytics: Implemented statistical anomaly detection and clustering algorithms to identify events. Integrated an in-house geolocation algorithm for social media, which was originally developed by Dr. Tuli to map billions of social posts to locations.</li>
-<li>Visualization & Dashboard Design: Used web development tools (D3.js, map APIs) to create the interactive dashboard interface. Focused on UI/UX principles so that non-technical public health officials could easily interpret complex multi-source data (e.g., tiered filters, map vs. list toggle).</li>
-<li>Project Management & Collaboration: Coordinated with cross-functional teams – data scientists, public health experts, and federal agencies – requiring strong communication skills. Employed tools like Trello and GitHub for project tracking and version control, and adhered to data governance considering privacy (especially for social media data).</li>
-</ul>
-<h2>Cross-project Capabilities</h2>
-<ul>
-<li>Real-time Data Fusion: Experience in integrating diverse, noisy data sources in real-time (demonstrated here with social, web, and crowdsourced data) is applicable to many other domains (e.g., integrating IoT sensor data or hospital feeds in other projects).</li>
-<li>AI for Public Health: This project solidified Dr. Tuli’s niche in applying AI to public health problems, a theme visible across his work. He has shown the ability to align technical solutions with public health needs – a skill later used in pandemic monitoring (COVID-19 Facebook surveys) and hospital safety models.</li>
-<li>Stakeholder Alignment: Pandemic Pulse required uniting government agencies, healthcare providers, and tech (data providers) – a cross-sector collaboration skill that Dr. Tuli honed and replicated in later projects (like working with CDC, HHS, and big tech on COVID and clinical initiatives).</li>
-<li>Modular System Design: The six-engine modular approach reflects a design philosophy of building flexible, extensible pipelines. This approach is mirrored in other projects (e.g., the structured pipelines in ML diagnostic projects and the multi-component dashboards) where systems are designed to be maintainable and upgradable with new data or algorithms.</li>
-<li>Analytical Rigor: Combining domain knowledge (epidemiology) with data science, Dr. Tuli ensured the system wasn’t a “black box” – contextual validation via case studies and expert feedback was built-in. This rigorous approach to validating AI models is a capability he brings to all projects (e.g., validating ML models against clinical standards in later CDSS projects).</li>
-</ul>
-<h2>Published Papers/Tools</h2>
-<ul>
-<li>White Paper: “Pandemic Pulse: Using Digital Exhaust of Syndromic Data to Detect Bio-threats” – Finalist paper submitted to DHS’s Hidden Signal Challenge. This internal white paper details the methodology and was the basis for the winning challenge entry.</li>
-<li>Prototype Dashboard: An interactive web dashboard (not publicly released due to sensitive use) was developed as a proof-of-concept tool for agencies. (Screenshots and architecture diagrams available in the project documentation).</li>
-<li>Related Publications: Techniques from this project contributed to scholarly work in digital epidemiology. Dr. Tuli’s earlier research on using Twitter for health surveillance (e.g., tracking foodborne illness with 742M tweets) provided foundational methods for Pandemic Pulse. While not a direct publication of Pandemic Pulse, the methodologies align with his contributions in academic papers and conference proceedings on social media surveillance.</li>
-</ul>
-<p><a href='../index.html'>&larr; Back to Projects</a></p>
-</body></html>
+<html lang="en" class="theme-light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pandemic Pulse — Digital Biosurveillance</title>
+  <link rel="stylesheet" href="../assets/css/al-folio.css" />
+  <link rel="stylesheet" href="../assets/css/custom.css" />
+</head>
+<body class="page">
+  <div class="page__inner">
+    <header class="project-hero">
+      <div class="wrapper project-hero__inner">
+        <a class="back-link" href="../index.html">&larr; Back to portfolio</a>
+        <h1 class="project-hero__title">Pandemic Pulse — Digital Biosurveillance</h1>
+        <p class="project-hero__subtitle">
+          A national-scale digital exhaust monitoring system that fuses social, search, and news data to detect biological
+          threats weeks earlier than traditional surveillance.
+        </p>
+      </div>
+    </header>
+
+    <main class="wrapper project-body">
+      <div class="project-body__grid">
+        <figure class="project-body__media">
+          <img src="placeholder.jpg" alt="Pandemic Pulse dashboard showing digital biosurveillance insights" />
+        </figure>
+        <div class="project-body__content">
+          <section class="project-section">
+            <h2>Key Questions Addressed</h2>
+            <ul>
+              <li>Early Detection Feasibility: Can non-traditional data sources (tweets, search queries, news feeds) be reliably used to detect nascent biological threats earlier than official surveillance?</li>
+              <li>Signal Versus Noise: How to identify a true emerging health threat signal amid the noise of massive digital datasets? (e.g., discerning a “weak signal” bio-threat event from normal chatter).</li>
+              <li>Integration of Sources: What combination of data streams (social media, Google Trends, HealthMap news, participatory flu reports) and analytical techniques best improves detection accuracy for novel outbreaks?</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>The Problem</h2>
+            <ul>
+              <li>Delayed &amp; Fragmented Reporting: Reliance on traditional surveillance (hospital reports, official bulletins) introduces delays and may miss early signs of unconventional outbreaks. Novel bio-threats with low initial case counts are especially hard to detect, as signals are weak and often misidentified by conventional systems.</li>
+              <li>Weak-Signal Challenge: When a new pathogen/toxin emerges, initial indicators in digital data are sparse and ambiguous. Traditional systems struggle with unfamiliar keywords or rare symptoms, risking that an outbreak goes unnoticed until it’s widespread.</li>
+              <li>Data Siloes: Relevant data is spread across disparate platforms (social networks, news sites, etc.) that are not designed for epidemiological monitoring. Manually monitoring all these channels in real-time is infeasible.</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>The Importance</h2>
+            <ul>
+              <li>Mitigating Outbreak Impact: Early warning can trigger faster public health response, potentially minimizing adverse health outcomes in an emergency or outbreak. Even a slight lead time (days or weeks) in detecting an incident (e.g. unusual illness cluster) can save lives by enabling containment measures.</li>
+              <li>Addressing Novel Threats: For previously unseen threats (e.g. a bioterror agent or novel virus), traditional surveillance may miss the signal entirely. Integrating new data streams provides a safety net to catch unusual patterns that wouldn’t otherwise trigger alerts.</li>
+              <li>Public Health Preparedness: Demonstrating an effective digital early-warning system informs national security and public health strategy. It shows the value of leveraging big data and AI for bio-surveillance, influencing how agencies plan for future pandemics and bio-terror scenarios.</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>The Solution</h2>
+            <ul>
+              <li>Multi-Stream Data Integration: Pandemic Pulse continuously ingests data from multiple “open-source” channels – Twitter APIs, Google Trends, HealthMap news feeds, and Flu Near You participatory surveillance – aggregating them into a unified platform. By monitoring keywords related to Category A/B/C biothreat pathogens and symptoms, it casts a wide net for aberrant signals.</li>
+              <li>Hierarchical Signal Triage: The system employs a three-tiered filtering of data by pathogen category, source credibility, and transmission/symptom specificity. This hierarchy (e.g., Tier 1 = highest priority pathogens, trusted sources, very specific symptoms) controls data quality and quantity, helping analysts focus on the most credible signals first.</li>
+              <li>Automated Event Detection Algorithms: Advanced event-detection methods (NLP, anomaly detection, geo-spatial clustering) are applied to the incoming data to flag unusual activity in real-time. For example, spikes in certain symptom keywords or a cluster of reports in a location trigger an alert. A custom NLP pipeline “signal enrichment engine” cleans and enriches the data (e.g., removing noise by dropping low-relevance keywords) to improve detection accuracy.</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Architecture Overview</h2>
+            <ul>
+              <li>Cloud-Based Modular Pipeline: The system is built on a scalable cloud platform (AWS) and is composed of six main engines operating in sequence:</li>
+              <li>Data Extraction Engine – Pulls in data continuously from each source via APIs/RSS feeds, respecting rate limits.</li>
+              <li>Signal Enrichment Engine – Processes raw data to reduce noise (e.g., filters by keywords, applies regex for case counts) and enhance signal quality (feedback loops to refine extraction based on signal content).</li>
+              <li>Event Detection Engine – Analyzes enriched data for anomalies (spikes or clusters) indicating a potential event; uses statistical thresholds and spatial clustering to flag events with location context.</li>
+              <li>Data Presentation Engine – Feeds the processed data into a user-facing dashboard, visualizing maps, timelines, and alert banners for any detected events.</li>
+              <li>Evaluation Engine – Provides tools to evaluate system performance using historical test cases (e.g., retrospectively detecting the 2013 Boston Marathon bombing, 2017 Hepatitis A outbreak).</li>
+              <li>Collaboration &amp; Event Monitoring Engine – Facilitates coordinated response by sharing alert details with other systems and suggesting “next steps” (like conducting targeted surveys via Flu Near You in affected cities).</li>
+              <li>Geospatial and Temporal Analytics: An in-house geolocation engine maps Twitter data to locations (even from text when GPS not available) to identify where signals originate. The dashboard offers both map and timeline views for selected areas, enabling users to see where and when unusual reports are emerging.</li>
+              <li>Feedback Loop: The architecture allows iterative refinement – detected event feedback can adjust the keywords or sources the Data Extraction engine pulls (e.g., adding new symptom keywords that appeared) to continuously improve sensitivity.</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Results and Impacts</h2>
+            <ul>
+              <li>Successful Test Case Detections: Pandemic Pulse was evaluated on historical events. In a retrospective test, it detected anomalies corresponding to the 2013 Boston Marathon bombing using Twitter, search and transit alerts, and similarly flagged a cluster in the 2017 San Francisco Hepatitis A outbreak, demonstrating the system’s ability to catch real-world events. These validations build confidence in its real-time performance.</li>
+              <li>Challenge Winner – Real-world Recognition: The project won the DHS Hidden Signal National Challenge, outperforming 69 other solutions in bio-threat detection. Dr. Tuli was invited to the White House as a panelist, highlighting the tool’s significance and innovation on a national stage. This validation by DHS indicates the approach’s potential value to national biosurveillance efforts.</li>
+              <li>Operational Prototype: A functional prototype dashboard was delivered, providing public health officials a user-friendly interface to monitor integrated data streams and receive alerts. State and local public health personnel (the intended end-users) participated in testing to ensure the dashboard is intuitive and actionable.</li>
+              <li>Stakeholder Engagement: The development process involved collaboration with the National Biosurveillance Integration Center (NBIC) and other stakeholders, ensuring the solution meets practical needs. By demonstrating how informal data can enhance situational awareness, the project influenced how agencies consider using big data and AI for public health.</li>
+              <li>Spin-off Use Cases: Insights and techniques from Pandemic Pulse (e.g., using social media for health monitoring) were later applied to other domains. For example, similar NLP and anomaly-detection methods were used in COVID-19 surveillance collaborations with Meta and Google, illustrating cross-project synergies in Dr. Tuli’s work.</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Skills and Tools Used</h2>
+            <ul>
+              <li>Data Engineering &amp; APIs: Extensive use of APIs (Twitter, Google Trends) and RSS feeds to stream data in real-time. Developed robust ingestion pipelines in Python for high-volume, high-velocity data, handling millions of data points.</li>
+              <li>Natural Language Processing: Leveraged NLP for filtering and interpreting text signals (e.g., extracting symptom reports from tweets, running keyword-based classifiers). This included regex pattern matching for symptoms and using domain-specific keywords for bio-threats.</li>
+              <li>Cloud &amp; Scalable Systems: Deployed on AWS cloud infrastructure for scalability. Utilized AWS services for data storage and processing, ensuring the pipeline could handle surges in data during a potential outbreak.</li>
+              <li>Custom Algorithms &amp; Analytics: Implemented statistical anomaly detection and clustering algorithms to identify events. Integrated an in-house geolocation algorithm for social media, which was originally developed by Dr. Tuli to map billions of social posts to locations.</li>
+              <li>Visualization &amp; Dashboard Design: Used web development tools (D3.js, map APIs) to create the interactive dashboard interface. Focused on UI/UX principles so that non-technical public health officials could easily interpret complex multi-source data (e.g., tiered filters, map vs. list toggle).</li>
+              <li>Project Management &amp; Collaboration: Coordinated with cross-functional teams – data scientists, public health experts, and federal agencies – requiring strong communication skills. Employed tools like Trello and GitHub for project tracking and version control, and adhered to data governance considering privacy (especially for social media data).</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Cross-project Capabilities</h2>
+            <ul>
+              <li>Real-time Data Fusion: Experience in integrating diverse, noisy data sources in real-time (demonstrated here with social, web, and crowdsourced data) is applicable to many other domains (e.g., integrating IoT sensor data or hospital feeds in other projects).</li>
+              <li>AI for Public Health: This project solidified Dr. Tuli’s niche in applying AI to public health problems, a theme visible across his work. He has shown the ability to align technical solutions with public health needs – a skill later used in pandemic monitoring (COVID-19 Facebook surveys) and hospital safety models.</li>
+              <li>Stakeholder Alignment: Pandemic Pulse required uniting government agencies, healthcare providers, and tech (data providers) – a cross-sector collaboration skill that Dr. Tuli honed and replicated in later projects (like working with CDC, HHS, and big tech on COVID and clinical initiatives).</li>
+              <li>Modular System Design: The six-engine modular approach reflects a design philosophy of building flexible, extensible pipelines. This approach is mirrored in other projects (e.g., the structured pipelines in ML diagnostic projects and the multi-component dashboards) where systems are designed to be maintainable and upgradable with new data or algorithms.</li>
+              <li>Analytical Rigor: Combining domain knowledge (epidemiology) with data science, Dr. Tuli ensured the system wasn’t a “black box” – contextual validation via case studies and expert feedback was built-in. This rigorous approach to validating AI models is a capability he brings to all projects (e.g., validating ML models against clinical standards in later CDSS projects).</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Published Papers/Tools</h2>
+            <ul>
+              <li>White Paper: “Pandemic Pulse: Using Digital Exhaust of Syndromic Data to Detect Bio-threats” – Finalist paper submitted to DHS’s Hidden Signal Challenge. This internal white paper details the methodology and was the basis for the winning challenge entry.</li>
+              <li>Prototype Dashboard: An interactive web dashboard (not publicly released due to sensitive use) was developed as a proof-of-concept tool for agencies. (Screenshots and architecture diagrams available in the project documentation).</li>
+              <li>Related Publications: Techniques from this project contributed to scholarly work in digital epidemiology. Dr. Tuli’s earlier research on using Twitter for health surveillance (e.g., tracking foodborne illness with 742M tweets) provided foundational methods for Pandemic Pulse. While not a direct publication of Pandemic Pulse, the methodologies align with his contributions in academic papers and conference proceedings on social media surveillance.</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="wrapper project-footer">
+      <a class="btn btn--ghost" href="../index.html">Back to portfolio</a>
+    </footer>
+  </div>
+</body>
+</html>

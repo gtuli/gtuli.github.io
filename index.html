@@ -1,18 +1,154 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-light">
 <head>
-    <meta charset="UTF-8" />
-    <title>Gaurav Tuli Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gaurav Tuli | Portfolio</title>
+  <link rel="stylesheet" href="assets/css/al-folio.css" />
+  <link rel="stylesheet" href="assets/css/custom.css" />
 </head>
-<body>
-    <h1>Welcome to Gaurav Tuli’s Project Portfolio</h1>
-    <ul>
-        <li><a href="1_project/index.html">Project 1: Bio-chemical Threat Detection</a></li>
-        <li><a href="2_project/index.html">Project 2: Food Allergy Risk Stratification</a></li>
-        <li><a href="3_project/index.html">Project 3: Pediatric Vision Assessment</a></li>
-        <li><a href="4_project/index.html">Project 4: ICU Hypoxemia Monitoring</a></li>
-        <li><a href="5_project/index.html">Project 5: Maternal-Infant Health Data Integration</a></li>
-    </ul>
+<body class="page">
+  <div class="page__inner">
+    <header class="landing-header">
+      <div class="wrapper hero">
+        <span class="hero__eyebrow">Gaurav Tuli, MD MPH</span>
+        <h1 class="hero__title">Translating public health data into actionable intelligence.</h1>
+        <p class="hero__subtitle">
+          Clinician-data scientist building surveillance platforms, predictive models, and decision support tools that help
+          health systems and government agencies respond faster and smarter.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#projects">Explore signature projects</a>
+          <a class="btn btn--ghost" href="mailto:contact@gtuli.dev">Let’s collaborate</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="projects" class="wrapper landing-main">
+      <section class="section-intro">
+        <h2 class="section-title">Featured initiatives</h2>
+        <p class="section-subtitle">
+          Each project pairs rigorous analytics with compassionate healthcare delivery—spanning biosurveillance, precision
+          diagnostics, and clinical decision support.
+        </p>
+      </section>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <a class="project-card__link" href="1_project/index.html">
+            <figure class="project-card__figure">
+              <img src="1_project/placeholder.jpg" alt="Dashboards from the Pandemic Pulse biosurveillance platform" />
+            </figure>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Pandemic Pulse — Digital Biosurveillance</h3>
+              <p class="project-card__description">
+                Unified social media, search trends, and news data to detect emerging bio-threats weeks ahead of traditional
+                surveillance, winning DHS’s Hidden Signals Challenge.
+              </p>
+              <ul class="project-card__meta">
+                <li>Role: Principal investigator &amp; systems architect</li>
+                <li>Focus: Weak-signal detection, NLP pipelines, real-time dashboards</li>
+              </ul>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <a class="project-card__link" href="2_project/index.html">
+            <figure class="project-card__figure">
+              <img src="2_project/placeholder.jpg" alt="Charts showing allergy risk stratification results" />
+            </figure>
+            <div class="project-card__content">
+              <h3 class="project-card__title">ML-Allergy — Food Allergy Risk Stratification</h3>
+              <p class="project-card__description">
+                Built a composite biomarker panel powered by machine learning to safely predict oral food challenge outcomes and
+                personalize allergy care at Boston Children’s Hospital.
+              </p>
+              <ul class="project-card__meta">
+                <li>Role: Clinical data scientist</li>
+                <li>Focus: EHR integration, model interpretability, clinician workflows</li>
+              </ul>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <a class="project-card__link" href="3_project/index.html">
+            <figure class="project-card__figure">
+              <img src="3_project/placeholder.jpg" alt="Illustration of pediatric vision assessment technology" />
+            </figure>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Pediatric Vision AI — Early Screening</h3>
+              <p class="project-card__description">
+                Partnered with ophthalmology teams to translate predictive models and computer vision into a point-of-care vision
+                screening tool for pediatric populations.
+              </p>
+              <ul class="project-card__meta">
+                <li>Role: Product &amp; analytics lead</li>
+                <li>Focus: Computer vision, embedded hardware, clinical validation</li>
+              </ul>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <a class="project-card__link" href="4_project/index.html">
+            <figure class="project-card__figure">
+              <img src="4_project/placeholder.jpg" alt="Monitor displaying oxygen saturation predictions in the ICU" />
+            </figure>
+            <div class="project-card__content">
+              <h3 class="project-card__title">ICU Hypoxemia Prediction — Project Apollo</h3>
+              <p class="project-card__description">
+                Delivered a bedside decision support platform that forecasts critical oxygen drops minutes before they occur,
+                allowing clinicians to intervene early for vulnerable patients.
+              </p>
+              <ul class="project-card__meta">
+                <li>Role: Principal product owner</li>
+                <li>Focus: Time-series forecasting, clinician-in-the-loop design</li>
+              </ul>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <a class="project-card__link" href="5_project/index.html">
+            <figure class="project-card__figure">
+              <img src="5_project/placeholder.jpg" alt="Visualization of maternal-infant health data flows" />
+            </figure>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Maternal-Infant Health Data Integration</h3>
+              <p class="project-card__description">
+                Connected siloed public health, clinical, and social care datasets to close gaps in services for mothers and
+                newborns across state health systems.
+              </p>
+              <ul class="project-card__meta">
+                <li>Role: Program director</li>
+                <li>Focus: Interoperability, community health analytics, policy impact</li>
+              </ul>
+            </div>
+          </a>
+        </article>
+      </div>
+    </main>
+
+    <section class="wrapper landing-secondary">
+      <div class="callout">
+        <h2 class="callout__title">Beyond the portfolio</h2>
+        <p class="callout__description">
+          Gaurav collaborates with federal agencies, health systems, and startups to advance equitable care. Whether it is
+          architecting national-scale biosurveillance or deploying AI safely at the bedside, each engagement blends systems
+          thinking with compassionate leadership.
+        </p>
+        <a class="btn btn--primary" href="mailto:contact@gtuli.dev">Start a conversation</a>
+      </div>
+    </section>
+
+    <footer class="wrapper site-footer">
+      <p class="site-footer__text">&copy; <span id="year"></span> Gaurav Tuli. Built with the al-folio design system.</p>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
