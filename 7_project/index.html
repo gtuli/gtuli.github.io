@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>COVID-19 Vaccine Hesitancy in Bangkok (Facebook UMD-CTIS)</title>
+  <link rel="stylesheet" href="../assets/css/al-folio.css" />
+  <link rel="stylesheet" href="../assets/css/custom.css" />
+</head>
+<body class="page">
+  <div class="page__inner">
+    <header class="project-hero">
+      <div class="wrapper project-hero__inner">
+        <a class="back-link" href="../index.html">&larr; Back to portfolio</a>
+        <h1 class="project-hero__title">COVID-19 Vaccine Hesitancy in Bangkok (Facebook UMD-CTIS)</h1>
+        <p class="project-hero__subtitle">
+          Delivered rapid insights on vaccine attitudes during Bangkok’s third COVID-19 wave to guide local outreach and rollout decisions.
+        </p>
+      </div>
+    </header>
+
+    <main class="wrapper project-body">
+      <div class="project-body__grid">
+        <figure class="project-body__media">
+          <img src="placeholder.jpg" alt="Placeholder graphic – Bangkok vaccine hesitancy survey overview" />
+        </figure>
+        <div class="project-body__content">
+          <section class="project-section">
+            <h2>BLUF</h2>
+            <ul>
+              <li>Leveraged Facebook’s digital health survey to assess COVID-19 vaccine hesitancy in Bangkok’s mid-2021 outbreak, providing real-time insights to guide local vaccine rollout policy[22][23].</li>
+              <li>Revealed that vaccine hesitancy declined steadily during the campaign (about 7% decrease in hesitancy per week), as vaccination rates rose in parallel[24][23].</li>
+              <li>Identified top hesitancy drivers – concerns about side effects (~60% cited) and “wait and see” caution (~62%) – and found 96.9% of respondents (including the hesitant) trusted health experts for COVID information[25][26].</li>
+              <li>Proved that large-scale online surveys via social networks can yield critical urban health insights with minimal on-the-ground resources, informing region-specific public health strategies[27].</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Introduction</h2>
+            <ul>
+              <li>Bangkok’s third COVID-19 wave (June–Oct 2021) brought a severe surge, but vaccine rollout lagged due to limited supply and slow public uptake[28][29].</li>
+              <li>The Thai government focused initial vaccines on the “608” high-risk groups (age ≥60 or 1 of 8 chronic conditions), with incentives and even some mandates, yet vaccine hesitancy remained widespread[30][31].</li>
+              <li>Urgent need: Little data existed on local vaccine hesitancy trends or reasons, but understanding this was critical for tailoring interventions to persuade the unvaccinated[32].</li>
+              <li>Traditional surveys are resource-intensive and slow; by using Facebook’s UMD-CTIS daily survey, officials hoped to quickly gauge public sentiment at scale without straining local resources[33].</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Key Questions Addressed</h2>
+            <ul>
+              <li>How prevalent was COVID-19 vaccine hesitancy in Bangkok during the mid-2021 surge, and was it changing over time?[34]</li>
+              <li>What were the most common reasons for vaccine hesitancy among Bangkok residents (e.g., safety concerns, efficacy doubts, etc.)?[34]</li>
+              <li>Were vaccine-hesitant individuals engaging in protective behaviors (masking, distancing), or were they forgoing all precautions?[34]</li>
+              <li>Which information sources did people trust most for COVID-19 updates, and how could those be leveraged to combat hesitancy?[34]</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>The Problem</h2>
+            <ul>
+              <li>Severe wave &amp; limited vaccines: A major COVID-19 surge hit Bangkok in 2021, but vaccine supply was scarce and public acceptance lagged, undermining outbreak control[28][29].</li>
+              <li>Persistent hesitancy: Even among priority “608” groups, many were reluctant to get vaccinated despite expanded vaccine availability and incentives, threatening to prolong the crisis[31].</li>
+              <li>Data gap: Policymakers lacked timely information on why people were hesitant or if hesitancy was improving, leaving them unsure how to adjust the vaccination campaign[32].</li>
+              <li>Survey constraints: Conducting extensive in-person surveys during an outbreak is resource-heavy and slow, so a novel approach was needed to quickly gauge public opinion at scale[33].</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>The Importance</h2>
+            <ul>
+              <li>Informs strategy: Real-time insight into hesitancy trends allowed officials to validate that hesitancy was dropping and adjust outreach efforts in near real-time[23].</li>
+              <li>Focused messaging: Knowing the top hesitancy reasons (fear of side effects, etc.) helps target communications to address those specific concerns and misconceptions[35].</li>
+              <li>Trusted messengers: Discovering that virtually all respondents trust scientists/health experts (over politicians or others) indicated that expert voices should lead public messaging[26][23].</li>
+              <li>Low-cost surveillance: Demonstrated that a digital survey can rapidly provide city-level public health intelligence without large field teams – crucial for resource-constrained settings[27].</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>The Solution</h2>
+            <ul>
+              <li>Digital survey deployment: Leveraged the UMD-CTIS Facebook survey, collecting daily responses from Bangkok residents during June–October 2021 to monitor vaccine attitudes and behaviors[22][36].</li>
+              <li>Quality checks: Assessed the survey sample’s consistency and representativeness by comparing respondent demographics, priority “608” group coverage, and self-reported vaccination rates to known Bangkok data[36][37].</li>
+              <li>Trend tracking: Monitored vaccine hesitancy and acceptance rates week-by-week, and identified the most frequently cited reasons for hesitancy and most trusted information sources from survey questions[38][39].</li>
+              <li>Statistical analysis: Used Kendall tau correlation tests to examine relationships (e.g., how vaccine acceptance related to citing “don’t need vaccine”), adding rigor to interpretations of the survey data[40].</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Architecture Overview</h2>
+            <ul>
+              <li>Data scale: Collected and analyzed 34,423 survey responses from Bangkok over 5 months, providing a rich near-real-time dataset on public sentiment[41].</li>
+              <li>Representativeness validation: Ensured survey respondents mirrored Bangkok’s population – demographics and risk group proportions were cross-checked with census and health records for confidence in the data[36][42].</li>
+              <li>Dynamic dashboard: Created internal dashboards tracking key metrics (hesitancy %, vaccination uptake, etc.) over time, updated weekly for city officials to visualize trends quickly (declines, plateaus, spikes).</li>
+              <li>Deep dive analytics: Segmented responses by subgroup (e.g., elderly vs. younger, or by degree of hesitancy) to identify if certain groups had unique concerns or information needs, enabling targeted interventions.</li>
+              <li>Analytical toolkit: Employed statistical software (R/Python) for time-series analysis of hesitancy trends and chi-square tests for comparing distribution of reasons, ensuring findings were statistically sound and not random chance.</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Results and Impacts</h2>
+            <ul>
+              <li>Stable sampling: The Facebook survey achieved consistent weekly samples; respondent demographics were similar week-to-week and closely matched Bangkok’s overall population profile[37].</li>
+              <li>Vaccination vs. Hesitancy: Self-reported vaccine uptake in the survey rose in tandem with official vaccination stats, while hesitancy rates fell significantly (approximately 7% drop in “hesitant” per week) as the campaign progressed[24].</li>
+              <li>Hesitancy drivers: The most common reasons for hesitation were concerns about side effects (cited by ~60% of hesitant respondents) and a desire to “wait and see” (~62%) before getting the vaccine[35]. In contrast, classic anti-vaccine sentiments (disliking vaccines, religious objections) were rare (only ~7% and ~1% cited, respectively)[25].</li>
+              <li>Trust in information: Crucially, 96.9% of respondents—including those hesitant—identified scientists and health experts as their most trusted sources for COVID-19 information, far outpacing trust in government or religious leaders[26]. This supported the policy of using medical professionals to deliver vaccine communications.</li>
+              <li>Policy action: The evidence that hesitancy was already declining reassured officials that outreach was working and should continue. Insights into specific fears (side effects) guided the content of public messaging (e.g., emphasizing vaccine safety), and the trust data reinforced engaging healthcare experts in community forums[23].</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Skills and Tools Used</h2>
+            <ul>
+              <li>Survey data analysis: Processed tens of thousands of survey responses using Python (Pandas) and R, performing cleaning, weighting adjustments, and statistical analysis to extract actionable insights.</li>
+              <li>Public health collaboration: Worked closely with Thailand’s Ministry of Public Health and local partners, demonstrating ability to conduct culturally-sensitive research and align analysis with policy needs[19].</li>
+              <li>Statistical rigor: Employed nonparametric correlation (Kendall tau) and significance testing to ensure findings (like associations between hesitancy and attitudes) were statistically robust, not just by chance[40].</li>
+              <li>Communication &amp; visualization: Translated complex data into clear bulletins and visual dashboards for health officials, highlighting key trends and recommendations. This required strong data storytelling skills to influence policy.</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Cross-project Capabilities</h2>
+            <ul>
+              <li>Adaptable survey methodology: Showcased how a global survey platform (used internationally) could be zoomed into a single city’s needs – a flexibility later used in other projects (like adapting surveys to track vaccine effectiveness)[43][44].</li>
+              <li>Behavioral insight generation: Strengthened expertise in extracting behavioral and attitudinal insights from big data, which is applicable to numerous health domains (e.g., understanding patient sentiments in hospital studies or public attitudes in other countries).</li>
+              <li>Interdisciplinary coordination: The project’s success involved epidemiologists, data scientists, and government stakeholders – honing a cross-functional collaboration skill that is a common thread in Dr. Tuli’s projects.</li>
+              <li>Comprehensive pandemic perspective: Combined with global surveillance (Project 1) and privacy-preserving analytics (Project 3), this hesitancy study contributed to a 360° understanding of the pandemic (disease spread, behavior, vaccine impact)[18].</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Published Papers/Tools</h2>
+            <ul>
+              <li>Peer-reviewed Publication: <strong>JMIR Public Health and Surveillance (2023)</strong> – <em>“COVID-19 Vaccine Acceptance and Uptake in Bangkok, Thailand: Cross-sectional Online Survey”</em>[45][23], documenting the full study findings and methodology.</li>
+              <li>Policy Brief: Results were distilled into a policy report for Thai health authorities, providing recommendations on messaging and intervention strategies to increase vaccine uptake (e.g., focusing on safety communication and leveraging healthcare professionals as spokespeople).</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="wrapper project-footer">
+      <a class="btn btn--ghost" href="../index.html">Back to portfolio</a>
+    </footer>
+  </div>
+</body>
+</html>
