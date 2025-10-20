@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy-Preserving COVID-19 Behavior Study (Google Health)</title>
+  <link rel="stylesheet" href="../assets/css/al-folio.css" />
+  <link rel="stylesheet" href="../assets/css/custom.css" />
+</head>
+<body class="page">
+  <div class="page__inner">
+    <header class="project-hero">
+      <div class="wrapper project-hero__inner">
+        <a class="back-link" href="../index.html">&larr; Back to portfolio</a>
+        <h1 class="project-hero__title">Privacy-Preserving COVID-19 Behavior Study (Google Health)</h1>
+        <p class="project-hero__subtitle">
+          Launched one of the first federated public health studies to track mask and distancing behavior without moving raw personal data off participants’ phones.
+        </p>
+      </div>
+    </header>
+
+    <main class="wrapper project-body">
+      <div class="project-body__grid">
+        <figure class="project-body__media">
+          <img src="placeholder.jpg" alt="Placeholder graphic – Federated study architecture (Google Health Studies app)" />
+        </figure>
+        <div class="project-body__content">
+          <section class="project-section">
+            <h2>BLUF</h2>
+            <ul>
+              <li>Pioneered a federated cohort study via the Google Health Studies mobile app to monitor individuals’ mask-wearing and social distancing habits without collecting personal data centrally[46].</li>
+              <li>Showed that people largely maintained non-pharmaceutical interventions (NPIs like masking, distancing) until they were fully vaccinated; those who never intended to vaccinate had consistently lower adherence[47].</li>
+              <li>Demonstrated a successful blueprint for privacy-centric epidemiological research using federated analytics and differential privacy during a public health emergency[48][49].</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Introduction</h2>
+            <ul>
+              <li>Individual behavior (masking, social distancing) is crucial to pandemic control, but measuring personal adherence is challenging because people are reluctant to share sensitive behavior data with authorities[50].</li>
+              <li>Existing metrics (e.g., Google’s aggregate mobility reports) capture population movement trends but are aggregated to protect privacy, which obscures individual behavior changes and ties to outcomes[51].</li>
+              <li>Traditional surveys can ask about personal NPIs, but self-reports may be biased or inaccurate, especially if privacy isn’t guaranteed and people fear judgment[52].</li>
+              <li>Therefore, a new privacy-preserving approach was needed to directly study how vaccination affects individual behavior, without compromising participants’ data privacy[53][54].</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Key Questions Addressed</h2>
+            <ul>
+              <li>Do individuals change their mask-wearing and social distancing behavior after receiving COVID-19 vaccinations (partial or full)?[47]</li>
+              <li>Are those who refuse or delay vaccination less adherent to NPIs compared to those who plan to get vaccinated?[47]</li>
+              <li>Can we reliably monitor sensitive health behaviors on a large scale while keeping all personal data on users’ devices (i.e., using federated techniques)?[55]</li>
+              <li>Will a federated study design yield insights comparable to traditional studies, proving feasible for future privacy-sensitive public health research?[56][49]</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>The Problem</h2>
+            <ul>
+              <li>Behavior data hard to capture: Directly tracking if people wear masks or distance is invasive, and manual observation or apps raise privacy issues and often discourage honest participation[57][58].</li>
+              <li>Aggregate proxies insufficient: Available data (e.g., community mobility indices) are coarse and can’t link an individual’s behavior change to their vaccination status, leaving a gap in understanding cause-effect[59].</li>
+              <li>Privacy vs. insight tradeoff: Public health needed detailed behavior data during COVID, but traditional data collection (surveys, tracking) risked violating privacy, potentially leading to low participation or inaccurate self-reporting[52].</li>
+              <li>Lack of precedent: Before this study, no large-scale epidemiological research had tried a federated, privacy-preserving approach, so it was unclear how to execute such a study during an ongoing pandemic.</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>The Importance</h2>
+            <ul>
+              <li>Behavioral insights post-vaccine: Understanding whether people relax precautions after vaccination is key for predicting resurgence risks and crafting guidance (e.g., whether to continue masking)[50].</li>
+              <li>Privacy-preserving research: This project showcases a way to study sensitive individual behaviors without compromising privacy, which is crucial for public trust and could be applied to other health domains (mental health, chronic disease behavior)[53].</li>
+              <li>Federated approach proof-of-concept: Successfully conducting this study provides a model for future real-time, privacy-centric data collection in public health emergencies, where traditional data may be unavailable due to privacy laws or concerns[55][49].</li>
+              <li>Informs interventions: If certain groups (e.g., unvaccinated by choice) are found to be less compliant with NPIs, officials can tailor public health messaging or interventions (like targeted reminders or policies) to those groups specifically.</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>The Solution</h2>
+            <ul>
+              <li>Federated cohort design: Enrolled participants via the <strong>Google Health Studies</strong> mobile app in a novel “federated” study, meaning participants’ raw data (survey answers, device sensors) stayed on their phones; only aggregated, anonymized insights were shared[46].</li>
+              <li>Participant data collection: 3,808 people across the US joined (Nov 2020–Aug 2021) and each provided weekly self-reports on mask and distancing behavior, plus consented to share mobility data from their Android devices (to objectively gauge movement patterns)[60].</li>
+              <li>Privacy tech stack: Implemented <strong>federated analytics</strong> and <strong>differential privacy</strong> – analyses were performed on-device and only summary statistics (with noise added to protect individuals) were sent to researchers, ensuring no individual-level data left the device[61].</li>
+              <li>Analytical plan: Monitored NPI adherence over five consecutive 6-week periods that spanned from pre-vaccination through post-vaccination phases of the pandemic, allowing comparison of behavior before vs. after people got vaccinated[62].</li>
+              <li>Blueprint for future: Documented the federated study process in detail (technology, governance, and analytics) to serve as a template for conducting privacy-preserving research during ongoing health crises[56][49].</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Architecture Overview</h2>
+            <ul>
+              <li>Mobile app as a research platform: The Google Health Studies app handled participant recruitment, consent, and data collection, pushing weekly survey questions and collecting sensor data – effectively turning smartphones into research devices[60].</li>
+              <li>Data types integrated: Combined <strong>active data</strong> (survey responses on NPI practices) with <strong>passive data</strong> (GPS-based mobility logs) for a holistic view of behavior, all stored locally on each user’s phone until aggregated results were computed[61].</li>
+              <li>Federated server &amp; secure aggregation: A central server coordinated model updates – devices computed intermediate results (like average time spent at home) and sent encrypted, noise-added summaries. Secure aggregation ensured individual contributions could not be discerned[63].</li>
+              <li>Differential privacy layer: Introduced statistical noise into the aggregated data to prevent any possible re-identification, meaning even after aggregation, the data could not reveal any single participant’s behavior with high confidence[63].</li>
+              <li>Analysis pipeline: After each 6-week block, federated analysis produced metrics on NPI adherence stratified by vaccination status. These metrics were then analyzed by researchers to observe trends (e.g., did mobility increase post-vaccination?) and perform statistical tests, all while raw data never left user devices.</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Results and Impacts</h2>
+            <ul>
+              <li>Maintained precautions until fully vaccinated: Participants generally continued wearing masks and social distancing up to the point of full vaccination. There was little evidence of behavior change after just one dose; precaution levels stayed high until people completed their vaccine series[47].</li>
+              <li>Post-vaccination relaxation: Once fully vaccinated, some reduction in NPI adherence was observed (e.g., people spent more time in public or were less stringent with masking), but overall behavior did not dramatically change overnight – indicating gradual adjustment rather than immediate abandonment of precautions.</li>
+              <li>Unvaccinated behavior gap: Individuals who did not plan to get vaccinated exhibited consistently lower adherence to NPIs throughout the study compared to those who were vaccinated or awaiting vaccination[47]. This group maintained relatively higher risk behavior, highlighting a need for targeted outreach or policies for vaccine-resistant populations.</li>
+              <li>Privacy-first success: The study proved that meaningful epidemiological insights (like behavior trends and subgroup differences) can be obtained without ever collecting personal raw data. It was a real-world validation of federated and differential privacy techniques for health research[64][49].</li>
+              <li>Blueprint impact: This project offers a template for future studies (e.g., tracking chronic disease management or other infectious diseases) where privacy is paramount. It has already influenced thinking on how tech companies and health researchers can partner without compromising user trust or data security.</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Skills and Tools Used</h2>
+            <ul>
+              <li>Federated learning &amp; analytics: Implemented a federated data analysis approach using Google’s technology stack, showcasing ability to work with cutting-edge privacy-preserving tools and frameworks (e.g., TensorFlow Federated, secure aggregation protocols)[18].</li>
+              <li>Mobile data integration: Gained expertise in collecting and processing mobile sensor data (GPS-based mobility) alongside survey data, bridging knowledge between smartphone app development and epidemiological analysis.</li>
+              <li>Privacy engineering: Applied differential privacy techniques to real-world data, requiring strong understanding of privacy mathematics and the ability to collaborate with Google’s engineers to embed privacy into the study design[18].</li>
+              <li>Multidisciplinary collaboration: Coordinated among academia and industry (Google’s team) – blending public health science with software engineering – to execute the study. This involved aligning on data governance, security, and analysis methods in a cross-functional setting[18].</li>
+              <li>Statistical analysis: Performed longitudinal cohort analysis on the federated results using R/Python, including comparing adherence rates across different time periods and vaccination statuses, and interpreting statistical significance in trends.</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Cross-project Capabilities</h2>
+            <ul>
+              <li>Privacy-by-design mindset: Experience from this project enables applying privacy-preserving strategies (federated analysis, DP) in other domains of Dr. Tuli’s work – for instance, handling sensitive hospital data or future health surveys with enhanced privacy safeguards.</li>
+              <li>Industry partnership model: Successfully executing a large-scale study with a tech giant (Google) demonstrated skills in cross-sector collaboration, a model that can be replicated for future projects involving big tech (e.g., partnering with device makers or social media firms for health innovation).</li>
+              <li>Holistic data synthesis: This project combined behavioral surveys with sensor data; such multi-modal data integration capability is transferable to other projects (e.g., combining clinical data with patient-reported outcomes in hospital settings).</li>
+              <li>Comprehensive pandemic analytics: Alongside the Facebook survey studies, this Google-federated project completed the picture – adding an individual behavior lens to population surveys. Dr. Tuli’s involvement across these projects provided a uniquely broad perspective on COVID-19 (spanning global trends, individual behaviors, and vaccination effects)[65].</li>
+            </ul>
+          </section>
+
+          <section class="project-section">
+            <h2>Published Papers/Tools</h2>
+            <ul>
+              <li>Peer-reviewed Publication: <strong>npj Digital Medicine (Nature)</strong> 2024 – <em>“Adherence to non-pharmaceutical interventions following COVID-19 vaccination: a federated cohort study”</em>[66], detailing the study design and outcomes, published as one of the first real-world federated health studies.</li>
+              <li>Google Health Studies App: The study was one of the inaugural projects on Google’s research app platform, establishing that tool as a viable means for large-scale, privacy-preserving health data collection (a resource that can be reused for future studies).</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="wrapper project-footer">
+      <a class="btn btn--ghost" href="../index.html">Back to portfolio</a>
+    </footer>
+  </div>
+</body>
+</html>
