@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cybersecurity — DNS Command-and-Control Detection</title>
+  <link rel="stylesheet" href="../assets/css/al-folio.css" />
+  <link rel="stylesheet" href="../assets/css/custom.css" />
+</head>
+<body class="page">
+  <div class="page__inner">
+    <header class="project-hero">
+      <div class="wrapper project-hero__inner">
+        <a class="back-link" href="../index.html">&larr; Back to portfolio</a>
+        <h1 class="project-hero__title">Cybersecurity — DNS Command-and-Control Detection</h1>
+        <p class="project-hero__subtitle">Real-time DNS analytics pipeline detecting covert malware command-and-control traffic.</p>
+      </div>
+    </header>
+
+    <main class="wrapper project-body">
+      <div class="project-body__grid">
+        <figure class="project-body__media project-body__media--hero">
+          <img src="11.1.Cybersecurity.Detect-and-control-channel-in-DNS-Logs.image.png" alt="Architecture for DNS command-and-control detection" />
+        </figure>
+        <div class="project-body__content">
+          <section class="project-section">
+            <h2>At a glance</h2>
+            <ul>
+              <li>Designed streaming DNS analytics to surface covert C2 communications.</li>
+              <li>Built microservices pipeline enriching logs with threat intelligence context.</li>
+              <li>Delivered alerting dashboards for security operations teams.</li>
+            </ul>
+          </section>
+          <section class="project-section">
+            <h2>Problem</h2>
+            <ul>
+              <li>Attackers hide command channels inside ordinary DNS traffic.</li>
+              <li>Massive DNS volume overwhelms manual triage and review.</li>
+              <li>Slow detection leaves malicious domains active for weeks.</li>
+            </ul>
+          </section>
+          <section class="project-section">
+            <h2>Solution</h2>
+            <ul>
+              <li>Built Kafka-backed ingestion with GeoIP and WHOIS enrichment.</li>
+              <li>Applied short- and long-window anomaly detection for fast and stealthy tunnels.</li>
+              <li>Integrated threat intel feeds and automated multi-channel alert routing.</li>
+            </ul>
+          </section>
+          <section class="project-section">
+            <h2>Impact</h2>
+            <ul>
+              <li>Cut attacker dwell time by triggering near real-time DNS alerts.</li>
+              <li>Improved detection accuracy across bursty and low-and-slow behaviors.</li>
+              <li>Shared new indicators with the broader security community.</li>
+            </ul>
+          </section>
+          <section class="project-section">
+            <h2>Role &amp; toolkit</h2>
+            <ul>
+              <li>Led architecture spanning data engineering and security operations.</li>
+              <li>Used Python, Kafka, Elastic, and containerized microservices.</li>
+              <li>Coordinated SOC workflows, knowledge base updates, and dashboard UX.</li>
+            </ul>
+          </section>
+          <section class="project-section project-section--gallery">
+            <h2>Visual highlights</h2>
+            <div class="project-gallery">
+            <figure class="project-gallery__item project-gallery__item--pdf">
+              <object data="11.1.Cybersecurity.Detect-and-control-channel-in-DNS-Logs.image.pdf" type="application/pdf" aria-label="Detailed DNS C2 detection system design"></object>
+              <figcaption>Detailed system blueprint shared with security operations teams.</figcaption>
+            </figure>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="wrapper project-footer">
+      <a class="btn btn--ghost" href="../index.html">Back to portfolio</a>
+    </footer>
+  </div>
+</body>
+</html>
