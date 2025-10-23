@@ -1,245 +1,230 @@
 <!DOCTYPE html>
+
 <html class="theme-light" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
    ICU Clinical Decision Support – Continuous Hypoxemia Monitoring
   </title>
-  <link href="../assets/css/al-folio.css" rel="stylesheet"/>
-  <link href="../assets/css/custom.css" rel="stylesheet"/>
- </head>
- <body class="page">
-  <div class="page__inner">
-   <header class="project-hero">
-    <div class="wrapper project-hero__inner">
-     <a class="back-link" href="../index.html">
+<link href="../assets/css/al-folio.css" rel="stylesheet"/>
+<link href="../assets/css/custom.css" rel="stylesheet"/>
+</head>
+<body class="page">
+<div class="page__inner">
+<header class="project-hero">
+<div class="wrapper project-hero__inner">
+<a class="back-link" href="../index.html">
       ← Back to portfolio
      </a>
-     <h1 class="project-hero__title">
+<h1 class="project-hero__title">
       ICU Clinical Decision Support – Continuous Hypoxemia Monitoring
      </h1>
-     <p class="project-hero__subtitle">
+<p class="project-hero__subtitle">
       Developed a continuous, noninvasive method to estimate arterial blood oxygen (PaO₂) using standard ICU monitor data.
      </p>
-     <div class="project-hero__meta">
-      <p>
-       <strong>
+<div class="project-hero__meta">
+<p>
+<strong>
         Role:
        </strong>
        Principal Data Scientist &amp; Senior Author
       </p>
-      <p>
-       <strong>
+<p>
+<strong>
         Focus:
        </strong>
        Time-Series Forecasting, Clinician-In-The-Loop Design
       </p>
-     </div>
-    </div>
-   </header>
-   <main class="wrapper project-body">
-    <div class="project-body__grid">
-     <figure class="project-body__media project-body__media--hero">
-      <a href="4.1.icu-hypoxemia-alert-console.png" rel="noopener" target="_blank">
-       <img alt="ICU hypoxemia prediction console highlighting rising risk" src="4.1.icu-hypoxemia-alert-console.png"/>
-      </a>
-     </figure>
-     <div class="project-body__content">
-      <section class="project-section project-section--at-a-glance">
-       <h2>
+</div>
+</div>
+</header>
+<main class="wrapper project-body">
+<div class="project-body__grid"><div class="project-body__sidebar"><section class="project-section project-section--at-a-glance">
+<h2>
         At a Glance
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Developed a continuous, noninvasive method to estimate arterial blood oxygen (PaO₂) using standard ICU monitor data.
         </li>
-        <li>
+<li>
          Enabled real-time tracking of patient oxygenation in the ICU, outperforming traditional static formulas especially at high oxygen saturation levels.
         </li>
-        <li>
+<li>
          Published in a peer-reviewed study, demonstrating improved guidance for managing ventilator settings and oxygen therapy in critical care.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section project-section--gallery" data-gallery-count="1"><h2>Visual highlights</h2><div class="project-gallery"><figure class="project-gallery__item project-gallery__item--feature"><a href="4.1.icu-hypoxemia-alert-console.png" rel="noopener" target="_blank"><img alt="ICU hypoxemia prediction console highlighting rising risk" decoding="async" loading="lazy" src="4.1.icu-hypoxemia-alert-console.png"/></a><figcaption>ICU hypoxemia prediction console highlighting rising risk</figcaption></figure></div></section></div><div class="project-body__main"><section class="project-section">
+<h2>
         The Problem
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Dangerous drops in blood oxygen (hypoxemia) can occur between intermittent arterial blood gas tests, since these invasive checks are done only a few times a day.
         </li>
-        <li>
+<li>
          Pulse oximeter readings (SpO₂) are continuous but become unreliable at the top end (97–100% SpO₂) – they can’t distinguish a safe patient from one with dangerously high oxygen levels.
         </li>
-        <li>
+<li>
          Existing surrogate formulas for PaO₂ are often inaccurate, especially at saturation extremes, and don’t adapt to individual patient differences, making clinicians hesitant to trust them.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         The Solution
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Collected a large dataset of paired ABG measurements and bedside monitor readings (~52,000 samples) from ICU patients, and used it to develop better estimation models.
         </li>
-        <li>
+<li>
          Explored machine learning approaches (including neural networks using inputs like recent SpO₂ trends and heart rate) and also optimized a conventional oxygenation equation by tuning physiological parameters to fit real patient data.
         </li>
-        <li>
+<li>
          Selected a new empirically tuned equation (“Sauthier ePaO₂”) that provided the best accuracy. Implemented it for continuous use: the ICU monitor (or a linked computer) takes in streaming SpO₂ and heart rate and computes an estimated PaO₂ every minute, displaying it to clinicians and triggering alerts if oxygen drops.
         </li>
-        <li>
+<li>
          Built in real-time quality control: the algorithm watches the difference between pulse oximeter heart rate and EKG heart rate as a noise indicator – if they diverge, it treats the SpO₂ data as unreliable and adjusts or flags accordingly.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Architecture Overview
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Data Pipeline: Retrieved high-frequency vital signs data around each ABG draw from two hospitals’ systems (merging data logged every 5 seconds from one system and every 1 second from another, standardized to 5-second intervals). Stored all combined data in a PostgreSQL database for analysis.
         </li>
-        <li>
+<li>
          Analysis &amp; Modeling Environment: Used Python and R extensively (Pandas, NumPy, SciPy, scikit-learn, Keras/TensorFlow) to clean data, engineer features (e.g., recent SpO₂ averages, slopes, heart-rate disparities), and train/test multiple candidate models.
         </li>
-        <li>
+<li>
          Model Evaluation: Employed rigorous statistical evaluation – generated Bland-Altman plots to assess agreement between estimated and actual PaO₂, calculated intraclass correlation coefficients (agreement), and examined error across different SpO₂ ranges to ensure reliability even at high saturations.
         </li>
-        <li>
+<li>
          Deployment Design: Specified how the final algorithm would run on existing ICU monitors: a lightweight script or plugin continuously ingests real-time vitals, applies the estimation formula, and outputs a refreshed PaO₂ estimate every few seconds. This can feed into the bedside monitor display (trend graphs, ARDS index calculations) and alarm systems for immediate clinical use.
         </li>
-        <li>
+<li>
          Safety Considerations: Built into the design fail-safes like capping displayed values beyond validated ranges (e.g., instead of an implausible number at extreme highs, show an indicator like “PaO₂ very high”) and ignoring data during sensor disconnections or extreme noise, ensuring the tool would be trusted by clinicians.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Results and Impacts
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          The optimized estimator provided sensible, stable PaO₂ readings even when SpO₂ was 100%, overcoming the “infinite reading” problem of traditional equations and giving clinicians meaningful data at the high end of oxygenation.
         </li>
-        <li>
+<li>
          Continuous monitoring enabled earlier detection of hypoxemia trends – for example, the system could alert if a patient’s oxygen was quietly deteriorating between blood gas tests, allowing interventions (like ventilator adjustments) sooner and improving ARDS management by tracking severity in real time.
         </li>
-        <li>
+<li>
          The work was published in Critical Care Explorations (2021) and has since been cited in multiple studies, influencing the field of digital critical care. It provided a blueprint for integrating predictive algorithms into ICU workflows, with discussions underway to pilot the estimator in a real ICU setting.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Skills and Tools Used
        </h2>
-       <div class="project-table-wrapper">
-        <table class="project-table">
-         <tr>
-          <th>
+<div class="project-table-wrapper">
+<table class="project-table">
+<tr>
+<th>
            Skill/Tool Category
           </th>
-          <th>
+<th>
            Application in ICU Clinical Decision Support – Continuous Hypoxemia Monitoring
           </th>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Data Engineering (ICU)
           </td>
-          <td>
+<td>
            SQL (PostgreSQL) and Python to manage ~65k blood gas records with high-frequency vital sign data; automated data extraction around events
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Statistical Analysis
           </td>
-          <td>
+<td>
            Advanced stats: Bland-Altman agreement analysis, bootstrapped confidence intervals, hypothesis tests to validate model accuracy and bias
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Machine Learning &amp; Modeling
           </td>
-          <td>
+<td>
            Keras/TensorFlow to prototype neural networks for regression; exhaustive parameter search to optimize a physiological equation for best fit
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Domain Knowledge (Critical Care)
           </td>
-          <td>
+<td>
            Integrated understanding of oxyhemoglobin dissociation curves, ARDS criteria, and physiological factors (P50 shifts) to guide modeling and interpret results
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Software Development
           </td>
-          <td>
+<td>
            Python scripting for simulating real-time monitoring (feeding sequential data to the model); implemented the final formula in an efficient form suitable for bedside device integration
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Collaboration &amp; Publication
           </td>
-          <td>
+<td>
            Coordinated a multi-center team (Boston &amp; Montreal) under data-sharing agreements; co-authored a peer-reviewed journal paper and produced publication-quality figures (e.g., error distribution charts)
           </td>
-         </tr>
-        </table>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
+</tr>
+</table>
+</div>
+</section><section class="project-section">
+<h2>
         Cross-Project Capabilities
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Translating data science research into a clinical tool: experience in going from retrospective analysis to a validated model ready for real-world use (as done here) is directly applicable to other projects where ML models must be deployment-ready (e.g., the allergy risk model or mother-infant dashboard logic).
         </li>
-        <li>
+<li>
          Time-series data expertise: skills in handling and analyzing high-frequency time-series (ICU monitor streams) are transferable to other domains, including real-time social media feeds in outbreak surveillance or sensor data in IoT health projects.
         </li>
-        <li>
+<li>
          Multi-site data integration: learned to standardize and combine data across different hospital systems, a capability that proved valuable in later projects focused on data interoperability (such as linking records in the mother-infant health information exchange project).
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Published Papers/Tools
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Journal Publication: Critical Care Explorations (Oct 2021) – “Estimated PaO₂: A Continuous and Noninvasive Method to Estimate PaO₂ and Oxygenation Index.” This open-access paper details the methodology and validation results, serving as the primary reference for this work.
         </li>
-        <li>
+<li>
          Open Science Resources: The team shared portions of the de-identified dataset and analysis code via an online repository referenced in the publication, enabling other researchers to reproduce or build upon the findings.
         </li>
-        <li>
+<li>
          Community Impact: The method has been discussed in critical care forums and was highlighted in a critical care innovation newsletter, indicating its relevance. Its successful publication and citations (including by a 2024 digital medicine article) underscore its influence on subsequent research in noninvasive monitoring.
         </li>
-       </ul>
-      </section>
-     </div>
-    </div>
-   </main>
-   <footer class="wrapper project-footer">
-    <a class="btn btn--ghost" href="../index.html">
+</ul>
+</section></div></div>
+</main>
+<footer class="wrapper project-footer">
+<a class="btn btn--ghost" href="../index.html">
      Back to portfolio
     </a>
-   </footer>
-  </div>
- </body>
+</footer>
+</div>
+</body>
 </html>

@@ -1,257 +1,243 @@
 <!DOCTYPE html>
+
 <html class="theme-light" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
    Pandemic Pulse — Digital Biosurveillance
   </title>
-  <link href="../assets/css/al-folio.css" rel="stylesheet"/>
-  <link href="../assets/css/custom.css" rel="stylesheet"/>
- </head>
- <body class="page">
-  <div class="page__inner">
-   <header class="project-hero">
-    <div class="wrapper project-hero__inner">
-     <a class="back-link" href="../index.html">
+<link href="../assets/css/al-folio.css" rel="stylesheet"/>
+<link href="../assets/css/custom.css" rel="stylesheet"/>
+</head>
+<body class="page">
+<div class="page__inner">
+<header class="project-hero">
+<div class="wrapper project-hero__inner">
+<a class="back-link" href="../index.html">
       ← Back to portfolio
      </a>
-     <h1 class="project-hero__title">
+<h1 class="project-hero__title">
       Pandemic Pulse — Digital Biosurveillance
      </h1>
-     <p class="project-hero__subtitle">
+<p class="project-hero__subtitle">
       Developed a real-time bio-threat surveillance tool integrating social, search, and health data.
      </p>
-     <div class="project-hero__meta">
-      <p>
-       <strong>
+<div class="project-hero__meta">
+<p>
+<strong>
         Role:
        </strong>
        Lead Investigator &amp; AI Systems Architect
       </p>
-      <p>
-       <strong>
+<p>
+<strong>
         Focus:
        </strong>
        Weak-Signal Detection, Data Fusion, Real-Time Dashboards
       </p>
-     </div>
-    </div>
-   </header>
-   <main class="wrapper project-body">
-    <div class="project-body__grid">
-     <figure class="project-body__media project-body__media--hero">
-      <a href="1.1.pandemic-pulse-dashboard.png" rel="noopener" target="_blank">
-       <img alt="Dashboards from the Pandemic Pulse biosurveillance platform" src="1.1.pandemic-pulse-dashboard.png"/>
-      </a>
-     </figure>
-     <div class="project-body__content">
-      <section class="project-section project-section--at-a-glance">
-       <h2>
+</div>
+</div>
+</header>
+<main class="wrapper project-body">
+<div class="project-body__grid"><div class="project-body__sidebar"><section class="project-section project-section--at-a-glance">
+<h2>
         At a Glance
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Developed a real-time bio-threat surveillance tool integrating social, search, and health data.
         </li>
-        <li>
+<li>
          Won a national innovation challenge, gaining White House recognition for bio-threat detection.
         </li>
-        <li>
+<li>
          Enabled outbreak alerts days ahead of official reports, showcasing AI’s public health impact.
         </li>
-       </ul>
-      </section>
-      <section class="project-section project-section--gallery">
-       <h2>
+</ul>
+</section><section class="project-section project-section--gallery" data-gallery-count="2">
+<h2>
         Visual highlights
        </h2>
-       <div class="project-gallery">
-        <figure class="project-gallery__item">
-         <a href="1.2.pandemic-pulse-system-architecture.png" rel="noopener" target="_blank">
-          <img alt="Pandemic Pulse system architecture diagram" src="1.2.pandemic-pulse-system-architecture.png"/>
-         </a>
-         <figcaption>
+<div class="project-gallery"><figure class="project-gallery__item project-gallery__item--feature"><a href="1.1.pandemic-pulse-dashboard.png" rel="noopener" target="_blank">
+<img alt="Dashboards from the Pandemic Pulse biosurveillance platform" decoding="async" loading="lazy" src="1.1.pandemic-pulse-dashboard.png"/>
+</a><figcaption>Dashboards from the Pandemic Pulse biosurveillance platform</figcaption></figure>
+<figure class="project-gallery__item">
+<a href="1.2.pandemic-pulse-system-architecture.png" rel="noopener" target="_blank">
+<img alt="Pandemic Pulse system architecture diagram" decoding="async" loading="lazy" src="1.2.pandemic-pulse-system-architecture.png"/>
+</a>
+<figcaption>
           System architecture showing multi-engine streaming pipeline.
          </figcaption>
-        </figure>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
+</figure>
+</div>
+</section></div><div class="project-body__main"><section class="project-section">
+<h2>
         The Problem
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Traditional outbreak surveillance lags weeks behind, missing early signals of new threats.
         </li>
-        <li>
+<li>
          Critical signals spread across social media, web searches, and news are siloed and hard to monitor in real time.
         </li>
-        <li>
+<li>
          Novel bio-threats start with sparse, noisy digital indicators that conventional systems often overlook.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         The Solution
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Unified data pipeline continuously ingests multi-source feeds (Twitter, Google Trends, news) for anomaly detection.
         </li>
-        <li>
+<li>
          Tiered filtering by pathogen priority and source credibility isolates the most credible weak signals.
         </li>
-        <li>
+<li>
          Automated NLP and statistical algorithms flag unusual symptom clusters or location-based spikes in real time.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Architecture Overview
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Modular cloud pipeline on AWS with engines for data extraction, enrichment, event detection, visualization, evaluation, and alert sharing.
         </li>
-        <li>
+<li>
          Real-time ingestion from APIs (Twitter, Google) and RSS feeds funnels into a processing queue with feedback loops to refine signal quality.
         </li>
-        <li>
+<li>
          Custom NLP enrichment and geo-clustering components clean data and add context (e.g., mapping tweets to locations) for accurate detection.
         </li>
-        <li>
+<li>
          An interactive dashboard displays mapped alerts and timelines, updating continuously for early situational awareness.
         </li>
-        <li>
+<li>
          A feedback mechanism updates keywords and data sources based on detected events, improving sensitivity over time.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Results and Impacts
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Successfully flagged real events (e.g., Boston Marathon bombing, Hepatitis A outbreak) in retrospective tests, proving earlier detection than official reports.
         </li>
-        <li>
+<li>
          Outperformed 69 other solutions to win DHS’s Hidden Signal Challenge, earning national recognition and stakeholder buy-in (including a White House panel invitation).
         </li>
-        <li>
+<li>
          Delivered a functional prototype dashboard tested by public health officials, validating the tool’s practical use for early outbreak warning.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Skills and Tools Used
        </h2>
-       <div class="project-table-wrapper">
-        <table class="project-table">
-         <tr>
-          <th>
+<div class="project-table-wrapper">
+<table class="project-table">
+<tr>
+<th>
            Skill/Tool Category
           </th>
-          <th>
+<th>
            Application in Pandemic Pulse — Digital Biosurveillance
           </th>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Data Engineering &amp; APIs
           </td>
-          <td>
+<td>
            Python pipelines for real-time ingestion (Twitter API, Google Trends, RSS feeds)
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Natural Language Processing
           </td>
-          <td>
+<td>
            Regex filtering and keyword extraction to identify health threat signals
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Cloud Infrastructure
           </td>
-          <td>
+<td>
            AWS cloud deployment for scalable processing of high-volume streaming data
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Algorithms &amp; Analytics
           </td>
-          <td>
+<td>
            Statistical anomaly detection, clustering algorithms, and custom social-media geolocation
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Visualization &amp; Dashboard
           </td>
-          <td>
+<td>
            D3.js and map libraries to build an interactive outbreak monitoring dashboard
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Collaboration &amp; Management
           </td>
-          <td>
+<td>
            Cross-sector coordination (federal agencies, health officials) and agile project management (Trello, GitHub) with strict data governance
           </td>
-         </tr>
-        </table>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
+</tr>
+</table>
+</div>
+</section><section class="project-section">
+<h2>
         Cross-Project Capabilities
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Real-time integration of diverse, noisy data sources – a skill later applied to other domains (e.g., fusing IoT sensor feeds or hospital data streams).
         </li>
-        <li>
+<li>
          Applying AI to public health: experience aligning technical solutions with epidemiological needs, a theme continued in pandemic monitoring and clinical ML projects.
         </li>
-        <li>
+<li>
          Cross-sector collaboration: honed ability to unite government, healthcare, and tech partners, replicated in later projects like COVID-19 surveys and hospital safety models.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Published Papers/Tools
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Challenge White Paper: “Pandemic Pulse: Using Digital Exhaust to Detect Bio-threats” – internal paper outlining the winning methodology.
         </li>
-        <li>
+<li>
          Prototype Dashboard: Interactive web dashboard (internal) demonstrated multi-source outbreak alerts in one view for agencies.
         </li>
-        <li>
+<li>
          Related Research: Prior social-media surveillance studies (e.g., detecting foodborne illness from Twitter) provided the foundational methods used in this project.
         </li>
-       </ul>
-      </section>
-     </div>
-    </div>
-   </main>
-   <footer class="wrapper project-footer">
-    <a class="btn btn--ghost" href="../index.html">
+</ul>
+</section></div></div>
+</main>
+<footer class="wrapper project-footer">
+<a class="btn btn--ghost" href="../index.html">
      Back to portfolio
     </a>
-   </footer>
-  </div>
- </body>
+</footer>
+</div>
+</body>
 </html>

@@ -1,230 +1,216 @@
 <!DOCTYPE html>
+
 <html class="theme-light" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
    Variant-Responsive Vaccine Effectiveness
   </title>
-  <link href="../assets/css/al-folio.css" rel="stylesheet"/>
-  <link href="../assets/css/custom.css" rel="stylesheet"/>
- </head>
- <body class="page">
-  <div class="page__inner">
-   <header class="project-hero">
-    <div class="wrapper project-hero__inner">
-     <a class="back-link" href="../index.html">
+<link href="../assets/css/al-folio.css" rel="stylesheet"/>
+<link href="../assets/css/custom.css" rel="stylesheet"/>
+</head>
+<body class="page">
+<div class="page__inner">
+<header class="project-hero">
+<div class="wrapper project-hero__inner">
+<a class="back-link" href="../index.html">
       ← Back to portfolio
      </a>
-     <h1 class="project-hero__title">
+<h1 class="project-hero__title">
       Variant-Responsive Vaccine Effectiveness
      </h1>
-     <p class="project-hero__subtitle">
+<p class="project-hero__subtitle">
       Analyzed global survey data to assess COVID-19 vaccine protection as new variants (Delta, Omicron) emerged.
      </p>
-     <div class="project-hero__meta">
-      <p>
-       <strong>
+<div class="project-hero__meta">
+<p>
+<strong>
         Role:
        </strong>
        Principal Data Scientist &amp; Collaborator
       </p>
-      <p>
-       <strong>
+<p>
+<strong>
         Focus:
        </strong>
        Survey-Based VE Modeling, Global Health
       </p>
-     </div>
-    </div>
-   </header>
-   <main class="wrapper project-body">
-    <div class="project-body__grid">
-     <figure class="project-body__media project-body__media--hero">
-      <a href="10.1.covid-vaccine-effectiveness-against-mild-vs-severe-illness.png" rel="noopener" target="_blank">
-       <img alt="Vaccine effectiveness against mild versus severe illness" src="10.1.covid-vaccine-effectiveness-against-mild-vs-severe-illness.png"/>
-      </a>
-     </figure>
-     <div class="project-body__content">
-      <section class="project-section project-section--at-a-glance">
-       <h2>
+</div>
+</div>
+</header>
+<main class="wrapper project-body">
+<div class="project-body__grid"><div class="project-body__sidebar"><section class="project-section project-section--at-a-glance">
+<h2>
         At a Glance
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Analyzed global survey data to assess COVID-19 vaccine protection as new variants (Delta, Omicron) emerged.
         </li>
-        <li>
+<li>
          Compared infection rates among vaccinated vs unvaccinated groups during major variant waves.
         </li>
-        <li>
+<li>
          Provided real-world evidence of vaccine efficacy changes against variants, informing booster strategies.
         </li>
-       </ul>
-      </section>
-      <section class="project-section project-section--gallery">
-       <h2>
+</ul>
+</section><section class="project-section project-section--gallery" data-gallery-count="2">
+<h2>
         Visual highlights
        </h2>
-       <div class="project-gallery">
-        <figure class="project-gallery__item">
-         <a href="10.2.covid-vaccine-effectiveness-change-from-delta-to-omnicron.png" rel="noopener" target="_blank">
-          <img alt="Change in vaccine effectiveness from Delta to Omicron" src="10.2.covid-vaccine-effectiveness-change-from-delta-to-omnicron.png"/>
-         </a>
-         <figcaption>
+<div class="project-gallery"><figure class="project-gallery__item project-gallery__item--feature"><a href="10.1.covid-vaccine-effectiveness-against-mild-vs-severe-illness.png" rel="noopener" target="_blank">
+<img alt="Vaccine effectiveness against mild versus severe illness" decoding="async" loading="lazy" src="10.1.covid-vaccine-effectiveness-against-mild-vs-severe-illness.png"/>
+</a><figcaption>Vaccine effectiveness against mild versus severe illness</figcaption></figure>
+<figure class="project-gallery__item">
+<a href="10.2.covid-vaccine-effectiveness-change-from-delta-to-omnicron.png" rel="noopener" target="_blank">
+<img alt="Change in vaccine effectiveness from Delta to Omicron" decoding="async" loading="lazy" src="10.2.covid-vaccine-effectiveness-change-from-delta-to-omnicron.png"/>
+</a>
+<figcaption>
           Variant comparison chart informed timing of booster recommendations.
          </figcaption>
-        </figure>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
+</figure>
+</div>
+</section></div><div class="project-body__main"><section class="project-section">
+<h2>
         The Problem
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Emerging variants threatened to erode vaccine protection, creating need for real-time effectiveness data.
         </li>
-        <li>
+<li>
          Traditional clinical studies lagged in measuring vaccine performance across diverse regions and variant strains.
         </li>
-        <li>
+<li>
          Policymakers lacked timely insight on whether vaccines remained protective, risking delayed booster responses.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         The Solution
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Leveraged a global Facebook user survey to gather self-reported vaccination status and COVID outcomes daily across 100+ countries.
         </li>
-        <li>
+<li>
          Analyzed millions of responses to compare COVID-like illness rates in vaccinated vs unvaccinated populations over variant waves.
         </li>
-        <li>
+<li>
          Used statistical models to estimate infection risk reduction by vaccine status for each variant, adjusting for demographics.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Architecture Overview
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Data Integration: Aggregated daily survey responses and aligned them with variant prevalence timelines from genomic surveillance.
         </li>
-        <li>
+<li>
          Variant Segmentation: Tagged survey data by time and region to correlate infection rates with dominant variants (e.g. Delta, Omicron).
         </li>
-        <li>
+<li>
          Effectiveness Modeling: Employed statistical and ML models to compute odds ratios of infection for vaccinated vs unvaccinated groups per variant.
         </li>
-        <li>
+<li>
          Dashboard &amp; Visualization: Built a dashboard to visualize vaccine performance trends over time and across regions as variants arose.
         </li>
-        <li>
+<li>
          Quality Control: Weighted survey data for representation and validated model outputs against external case and hospitalization data.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Results and Impacts
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Demonstrated high vaccine effectiveness (~85%) against early COVID strains, with moderate declines against Delta and further reduction against Omicron.
         </li>
-        <li>
+<li>
          Real-time analysis flagged waning vaccine protection with new variants, supporting timely public health decisions on booster recommendations.
         </li>
-        <li>
+<li>
          Showed that participatory survey data can rapidly evaluate vaccine performance globally, influencing policy in areas lacking formal studies.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Skills and Tools Used
        </h2>
-       <div class="project-table-wrapper">
-        <table class="project-table">
-         <tr>
-          <th>
+<div class="project-table-wrapper">
+<table class="project-table">
+<tr>
+<th>
            Data Analysis
           </th>
-          <th>
+<th>
            Large-scale survey data processing (Python, R)
           </th>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Epidemiological Modeling
           </td>
-          <td>
+<td>
            Vaccine effectiveness calculations (odds ratios, risk reduction)
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Data Integration
           </td>
-          <td>
+<td>
            Merged survey outcomes with variant prevalence data
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Cloud &amp; Collaboration
           </td>
-          <td>
+<td>
            Scalable cloud pipeline; coordinated analysis across institutions
           </td>
-         </tr>
-        </table>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
+</tr>
+</table>
+</div>
+</section><section class="project-section">
+<h2>
         Cross-Project Capabilities
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Rapid Public Health Analysis: Ability to quickly analyze global data for urgent health decisions (e.g., pandemic response).
         </li>
-        <li>
+<li>
          Adaptive Modeling: Experience adjusting models for evolving conditions (new variants) transferable to other dynamic scenarios.
         </li>
-        <li>
+<li>
          Global Survey Expertise: Strengthened skills in using large participatory datasets to complement traditional surveillance in various domains.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Published Papers/Tools
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Study results published in Nature Communications Medicine (2024), detailing vaccine efficacy trends across variants.
         </li>
-        <li>
+<li>
          Findings shared with global health authorities, providing data-driven guidance for booster policies and pandemic planning.
         </li>
-       </ul>
-      </section>
-     </div>
-    </div>
-   </main>
-   <footer class="wrapper project-footer">
-    <a class="btn btn--ghost" href="../index.html">
+</ul>
+</section></div></div>
+</main>
+<footer class="wrapper project-footer">
+<a class="btn btn--ghost" href="../index.html">
      Back to portfolio
     </a>
-   </footer>
-  </div>
- </body>
+</footer>
+</div>
+</body>
 </html>

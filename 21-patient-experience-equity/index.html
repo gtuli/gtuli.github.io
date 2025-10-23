@@ -1,234 +1,219 @@
 <!DOCTYPE html>
+
 <html class="theme-light" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
    Patient Experience — Racial Equity Signals
   </title>
-  <link href="../assets/css/al-folio.css" rel="stylesheet"/>
-  <link href="../assets/css/custom.css" rel="stylesheet"/>
- </head>
- <body class="page">
-  <div class="page__inner">
-   <header class="project-hero">
-    <div class="wrapper project-hero__inner">
-     <a class="back-link" href="../index.html">
+<link href="../assets/css/al-folio.css" rel="stylesheet"/>
+<link href="../assets/css/custom.css" rel="stylesheet"/>
+</head>
+<body class="page">
+<div class="page__inner">
+<header class="project-hero">
+<div class="wrapper project-hero__inner">
+<a class="back-link" href="../index.html">
       ← Back to portfolio
      </a>
-     <h1 class="project-hero__title">
+<h1 class="project-hero__title">
       Patient Experience — Racial Equity Signals
      </h1>
-     <p class="project-hero__subtitle">
+<p class="project-hero__subtitle">
       Analyzed ~852K patient experience tweets (2013–2016) to examine racial/ethnic sentiment trends and ACA impact.
      </p>
-     <div class="project-hero__meta">
-      <p>
-       <strong>
+<div class="project-hero__meta">
+<p>
+<strong>
         Role:
        </strong>
        Lead ML Enginner
       </p>
-      <p>
-       <strong>
+<p>
+<strong>
         Focus:
        </strong>
        ML Classification, Fairness Analytics, Patient Experience, Responsible AI
       </p>
-     </div>
-    </div>
-   </header>
-   <main class="wrapper project-body">
-    <div class="project-body__grid">
-     <figure class="project-body__media project-body__media--hero">
-      <a href="21.1.patient-experience-user-race-correlation-with-census-last-name-across-all-states.png" rel="noopener" target="_blank">
-       <img alt="Correlation between patient sentiment and inferred race across states" src="21.1.patient-experience-user-race-correlation-with-census-last-name-across-all-states.png"/>
-      </a>
-     </figure>
-     <div class="project-body__content">
-      <section class="project-section project-section--at-a-glance">
-       <h2>
+</div>
+</div>
+</header>
+<main class="wrapper project-body">
+<div class="project-body__grid"><div class="project-body__sidebar"><section class="project-section project-section--at-a-glance">
+<h2>
         At a Glance
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Analyzed ~852K patient experience tweets (2013–2016) to examine racial/ethnic sentiment trends and ACA impact.
         </li>
-        <li>
+<li>
          Verified that Twitter’s user race distribution closely matches the U.S. population, allowing robust group comparisons.
         </li>
-        <li>
+<li>
          Found all groups’ sentiment improved over time; Hispanic/Latino users had the largest gain and Black users the largest post-ACA boost.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section project-section--gallery" data-gallery-count="1"><h2>Visual highlights</h2><div class="project-gallery"><figure class="project-gallery__item project-gallery__item--feature"><a href="21.1.patient-experience-user-race-correlation-with-census-last-name-across-all-states.png" rel="noopener" target="_blank"><img alt="Correlation between patient sentiment and inferred race across states" decoding="async" loading="lazy" src="21.1.patient-experience-user-race-correlation-with-census-last-name-across-all-states.png"/></a><figcaption>Correlation between patient sentiment and inferred race across states</figcaption></figure></div></section></div><div class="project-body__main"><section class="project-section">
+<h2>
         The Problem
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Minority patient experiences are underrepresented in surveys, masking disparities in feedback.
         </li>
-        <li>
+<li>
          Without inclusive data, health systems struggle to identify patient experience gaps in minority communities.
         </li>
-        <li>
+<li>
          Policymakers lacked timely tools to evaluate if reforms like the ACA reduced care disparities.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         The Solution
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Filtered and analyzed 851,973 geolocated patient experience tweets (2013–2016) with inferred user race/ethnicity.
         </li>
-        <li>
+<li>
          Verified Twitter’s racial composition (r²=0.99 with Census) to confirm validity.
         </li>
-        <li>
+<li>
          Classified tweets by inferred race/ethnicity and computed yearly average sentiment per group with regression analysis to detect trends and ACA effects.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Architecture Overview
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Extracted tweets from users with identifiable race/ethnicity and US location.
         </li>
-        <li>
+<li>
          Applied algorithms to infer each user’s racial/ethnic group (validated against Census data).
         </li>
-        <li>
+<li>
          Used previously labeled tweet sentiments (positive/neutral/negative) for analysis.
         </li>
-        <li>
+<li>
          Aggregated sentiment per group per year and applied regression to measure changes pre- vs post-ACA.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Results and Impacts
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Twitter’s racial/ethnic distribution mirrored the U.S. population, confirming data representativeness.
         </li>
-        <li>
+<li>
          All groups’ average sentiment became more positive from 2013 to 2016.
         </li>
-        <li>
+<li>
          Hispanic/Latino users’ sentiment improved the most (1.5× the gain of White users); post-ACA, Black users’ sentiment rose 2.2× more than White users’.
         </li>
-        <li>
+<li>
          These findings suggest ACA implementation coincided with improved experiences for minority patients.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Skills and Tools Used
        </h2>
-       <div class="project-table-wrapper">
-        <table class="project-table">
-         <tr>
-          <th>
+<div class="project-table-wrapper">
+<table class="project-table">
+<tr>
+<th>
            Technique/Skill
           </th>
-          <th>
+<th>
            Tools/Implementation
           </th>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Demographic inference
           </td>
-          <td>
+<td>
            Algorithms to assign race/ethnicity to users
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Statistical modeling
           </td>
-          <td>
+<td>
            Regression analysis of sentiment trends
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Public policy analysis
           </td>
-          <td>
+<td>
            Interpreting ACA impact through data
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Big data handling
           </td>
-          <td>
+<td>
            Processing nearly 1M tweets with multiple attributes
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Collaborative research
           </td>
-          <td>
+<td>
            Work with epidemiologists; journal publication
           </td>
-         </tr>
-        </table>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
+</tr>
+</table>
+</div>
+</section><section class="project-section">
+<h2>
         Cross-Project Capabilities
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Built on the earlier patient experience pipeline, demonstrating scalability to demographic analysis.
         </li>
-        <li>
+<li>
          Combining social data with demographic inference is a model for evaluating policy impacts in other domains.
         </li>
-        <li>
+<li>
          Emphasized equity-focused analytics, aligning with other projects targeting vulnerable groups.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Published Papers/Tools
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Racial and Ethnic Disparities in Patient Experiences in the United States: 4-Year Content Analysis of Twitter (J. Med. Internet Res. 2020).
         </li>
-        <li>
+<li>
          Developed an analytical framework for social media-based health disparity research.
         </li>
-        <li>
+<li>
          Shared findings with public health stakeholders to inform ACA evaluation.
         </li>
-       </ul>
-      </section>
-     </div>
-    </div>
-   </main>
-   <footer class="wrapper project-footer">
-    <a class="btn btn--ghost" href="../index.html">
+</ul>
+</section></div></div>
+</main>
+<footer class="wrapper project-footer">
+<a class="btn btn--ghost" href="../index.html">
      Back to portfolio
     </a>
-   </footer>
-  </div>
- </body>
+</footer>
+</div>
+</body>
 </html>

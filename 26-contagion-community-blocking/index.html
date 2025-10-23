@@ -1,252 +1,238 @@
 <!DOCTYPE html>
+
 <html class="theme-light" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
    Social Contagion — Community Blocking Strategies
   </title>
-  <link href="../assets/css/al-folio.css" rel="stylesheet"/>
-  <link href="../assets/css/custom.css" rel="stylesheet"/>
- </head>
- <body class="page">
-  <div class="page__inner">
-   <header class="project-hero">
-    <div class="wrapper project-hero__inner">
-     <a class="back-link" href="../index.html">
+<link href="../assets/css/al-folio.css" rel="stylesheet"/>
+<link href="../assets/css/custom.css" rel="stylesheet"/>
+</head>
+<body class="page">
+<div class="page__inner">
+<header class="project-hero">
+<div class="wrapper project-hero__inner">
+<a class="back-link" href="../index.html">
       ← Back to portfolio
      </a>
-     <h1 class="project-hero__title">
+<h1 class="project-hero__title">
       Social Contagion — Community Blocking Strategies
      </h1>
-     <p class="project-hero__subtitle">
+<p class="project-hero__subtitle">
       Created a hybrid contagion-blocking strategy using community detection and targeted inter-community links.
      </p>
-     <div class="project-hero__meta">
-      <p>
-       <strong>
+<div class="project-hero__meta">
+<p>
+<strong>
         Role:
        </strong>
        Lead Modeling and Simulations Engineer &amp; First Author
       </p>
-      <p>
-       <strong>
+<p>
+<strong>
         Focus:
        </strong>
        Contagion Blocking, Community Structure, Hybrid Algorithms
       </p>
-     </div>
-    </div>
-   </header>
-   <main class="wrapper project-body">
-    <div class="project-body__grid">
-     <figure class="project-body__media project-body__media--hero">
-      <a href="26.1.community-based-social-contagion-blocking-illustration.png" rel="noopener" target="_blank">
-       <img alt="Community-based social contagion blocking illustration" src="26.1.community-based-social-contagion-blocking-illustration.png"/>
-      </a>
-     </figure>
-     <div class="project-body__content">
-      <section class="project-section project-section--at-a-glance">
-       <h2>
+</div>
+</div>
+</header>
+<main class="wrapper project-body">
+<div class="project-body__grid"><div class="project-body__sidebar"><section class="project-section project-section--at-a-glance">
+<h2>
         At a Glance
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Created a hybrid contagion-blocking strategy using community detection and targeted inter-community links.
         </li>
-        <li>
+<li>
          This approach outperformed purely structural or dynamic methods, especially for complex contagions.
         </li>
-        <li>
+<li>
          Demonstrated that combining network structure and contagion dynamics yields better containment.
         </li>
-       </ul>
-      </section>
-      <section class="project-section project-section--gallery">
-       <h2>
+</ul>
+</section><section class="project-section project-section--gallery" data-gallery-count="2">
+<h2>
         Visual highlights
        </h2>
-       <div class="project-gallery">
-        <figure class="project-gallery__item">
-         <a href="26.2.a-heuristic-for-community-based-social-contagion-blocking.png" rel="noopener" target="_blank">
-          <img alt="Heuristic for community-based blocking" src="26.2.a-heuristic-for-community-based-social-contagion-blocking.png"/>
-         </a>
-         <figcaption>
+<div class="project-gallery"><figure class="project-gallery__item project-gallery__item--feature"><a href="26.1.community-based-social-contagion-blocking-illustration.png" rel="noopener" target="_blank">
+<img alt="Community-based social contagion blocking illustration" decoding="async" loading="lazy" src="26.1.community-based-social-contagion-blocking-illustration.png"/>
+</a><figcaption>Community-based social contagion blocking illustration</figcaption></figure>
+<figure class="project-gallery__item">
+<a href="26.2.a-heuristic-for-community-based-social-contagion-blocking.png" rel="noopener" target="_blank">
+<img alt="Heuristic for community-based blocking" decoding="async" loading="lazy" src="26.2.a-heuristic-for-community-based-social-contagion-blocking.png"/>
+</a>
+<figcaption>
           Hybrid heuristic balancing structural speed with dynamic accuracy.
          </figcaption>
-        </figure>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
+</figure>
+</div>
+</section></div><div class="project-body__main"><section class="project-section">
+<h2>
         The Problem
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Pure structural (proactive) blocking can fail to stop spread, especially for complex contagions.
         </li>
-        <li>
+<li>
          Pure dynamics-based (reactive) methods are effective but slow and require detailed model data.
         </li>
-        <li>
+<li>
          Little prior work addressed blocking contagions that require multiple confirmations (complex contagions).
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         The Solution
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Developed a cluster-based algorithm: partition the network into communities, then focus blocking on inter-community connections.
         </li>
-        <li>
+<li>
          Assumed contagion spreads quickly inside communities, so prioritized preventing cross-community transmission.
         </li>
-        <li>
+<li>
          Implemented a hybrid node selection approach combining structural metrics and contagion simulations.
         </li>
-        <li>
+<li>
          Tested on multiple networks, showing this hybrid method outperformed purely centrality- or simulation-based strategies.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Architecture Overview
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Used a progressive threshold model (complex contagion) for simulations (nodes require ≥2 infected neighbors to activate).
         </li>
-        <li>
+<li>
          Applied community detection (e.g., modularity clustering) to divide the network into dense clusters.
         </li>
-        <li>
+<li>
          Identified all edges between communities as potential “choke points” for contagion crossing.
         </li>
-        <li>
+<li>
          Applied reactive blocking on these boundary regions: after limited spread, froze a minimal set of boundary nodes to stop transmission.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Results and Impacts
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          The community-based hybrid method contained complex contagions more effectively than degree-based interventions.
         </li>
-        <li>
+<li>
          It matched or surpassed the performance of state-of-the-art simulation-only methods, validating the hybrid approach.
         </li>
-        <li>
+<li>
          Tested on three real networks, demonstrating the strategy’s scalability and generality.
         </li>
-        <li>
+<li>
          Provided an effective strategy for complex contagions, influencing later contagion intervention research.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Skills and Tools Used
        </h2>
-       <div class="project-table-wrapper">
-        <table class="project-table">
-         <tr>
-          <th>
+<div class="project-table-wrapper">
+<table class="project-table">
+<tr>
+<th>
            Technique/Skill
           </th>
-          <th>
+<th>
            Tools/Implementation
           </th>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Community detection
           </td>
-          <td>
+<td>
            Graph clustering (modularity algorithms)
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Complex contagion simulation
           </td>
-          <td>
+<td>
            Threshold model testing and refinement
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Hybrid algorithm design
           </td>
-          <td>
+<td>
            Combined structural metrics with simulation feedback
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Empirical evaluation
           </td>
-          <td>
+<td>
            Contagion diffusion code and statistical analysis
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Multi-domain insight
           </td>
-          <td>
+<td>
            Combined social network analysis with contagion modeling
           </td>
-         </tr>
-        </table>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
+</tr>
+</table>
+</div>
+</section><section class="project-section">
+<h2>
         Cross-Project Capabilities
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Community-based blocking complements edge removal by focusing on cross-community links as critical cuts.
         </li>
-        <li>
+<li>
          Approach applies to other domains (e.g., immunization or cybersecurity) that can leverage community structure.
         </li>
-        <li>
+<li>
          Hybrid proactive-reactive concept influenced integrated strategies across contagion projects, showing combined methods yield better results.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Published Papers/Tools
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Blocking Complex Contagions Using Community Structure – AAMAS Workshop 2013.
         </li>
-        <li>
+<li>
          Developed the Community-based Node Selection (CNS) hybrid blocking algorithm.
         </li>
-        <li>
+<li>
          Extended results in a journal submission, with this work incorporated into broader contagion intervention studies.
         </li>
-       </ul>
-      </section>
-     </div>
-    </div>
-   </main>
-   <footer class="wrapper project-footer">
-    <a class="btn btn--ghost" href="../index.html">
+</ul>
+</section></div></div>
+</main>
+<footer class="wrapper project-footer">
+<a class="btn btn--ghost" href="../index.html">
      Back to portfolio
     </a>
-   </footer>
-  </div>
- </body>
+</footer>
+</div>
+</body>
 </html>

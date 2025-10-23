@@ -1,222 +1,208 @@
 <!DOCTYPE html>
+
 <html class="theme-light" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
    COVID-19 Trial Leadership Equity
   </title>
-  <link href="../assets/css/al-folio.css" rel="stylesheet"/>
-  <link href="../assets/css/custom.css" rel="stylesheet"/>
- </head>
- <body class="page">
-  <div class="page__inner">
-   <header class="project-hero">
-    <div class="wrapper project-hero__inner">
-     <a class="back-link" href="../index.html">
+<link href="../assets/css/al-folio.css" rel="stylesheet"/>
+<link href="../assets/css/custom.css" rel="stylesheet"/>
+</head>
+<body class="page">
+<div class="page__inner">
+<header class="project-hero">
+<div class="wrapper project-hero__inner">
+<a class="back-link" href="../index.html">
       ← Back to portfolio
      </a>
-     <h1 class="project-hero__title">
+<h1 class="project-hero__title">
       COVID-19 Trial Leadership Equity
      </h1>
-     <p class="project-hero__subtitle">
+<p class="project-hero__subtitle">
       Analyzed 7,500+ US COVID-19 clinical trials to quantify gender gaps in study leadership.
      </p>
-     <div class="project-hero__meta">
-      <p>
-       <strong>
+<div class="project-hero__meta">
+<p>
+<strong>
         Role:
        </strong>
        Principal Data Scientist &amp; Senior Author
       </p>
-      <p>
-       <strong>
+<p>
+<strong>
         Focus:
        </strong>
        Clinical Data Mining, Equity Analytics, Natural Language Processing
       </p>
-     </div>
-    </div>
-   </header>
-   <main class="wrapper project-body">
-    <div class="project-body__grid">
-     <figure class="project-body__media project-body__media--hero">
-      <a href="9.1.clinical-trial-leadership-gender-by-disease.png" rel="noopener" target="_blank">
-       <img alt="Gender representation across COVID-19 clinical trial leadership" src="9.1.clinical-trial-leadership-gender-by-disease.png"/>
-      </a>
-     </figure>
-     <div class="project-body__content">
-      <section class="project-section project-section--at-a-glance">
-       <h2>
+</div>
+</div>
+</header>
+<main class="wrapper project-body">
+<div class="project-body__grid"><div class="project-body__sidebar"><section class="project-section project-section--at-a-glance">
+<h2>
         At a Glance
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Analyzed 7,500+ US COVID-19 clinical trials to quantify gender gaps in study leadership.
         </li>
-        <li>
+<li>
          Found women made up ~37% of trial principal investigators, rising to ~49% by 2022.
         </li>
-        <li>
+<li>
          Highlighted underrepresentation of women vs ~50% in other diseases, prompting equity awareness efforts.
         </li>
-       </ul>
-      </section>
-      <section class="project-section project-section--gallery">
-       <h2>
+</ul>
+</section><section class="project-section project-section--gallery" data-gallery-count="2">
+<h2>
         Visual highlights
        </h2>
-       <div class="project-gallery">
-        <figure class="project-gallery__item">
-         <a href="9.2.clinical-trial-leadership-study-selection.png" rel="noopener" target="_blank">
-          <img alt="Study selection workflow for clinical trial leadership analysis" src="9.2.clinical-trial-leadership-study-selection.png"/>
-         </a>
-         <figcaption>
+<div class="project-gallery"><figure class="project-gallery__item project-gallery__item--feature"><a href="9.1.clinical-trial-leadership-gender-by-disease.png" rel="noopener" target="_blank">
+<img alt="Gender representation across COVID-19 clinical trial leadership" decoding="async" loading="lazy" src="9.1.clinical-trial-leadership-gender-by-disease.png"/>
+</a><figcaption>Gender representation across COVID-19 clinical trial leadership</figcaption></figure>
+<figure class="project-gallery__item">
+<a href="9.2.clinical-trial-leadership-study-selection.png" rel="noopener" target="_blank">
+<img alt="Study selection workflow for clinical trial leadership analysis" decoding="async" loading="lazy" src="9.2.clinical-trial-leadership-study-selection.png"/>
+</a>
+<figcaption>
           Study selection pipeline ensured comprehensive, comparable trial coverage.
          </figcaption>
-        </figure>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
+</figure>
+</div>
+</section></div><div class="project-body__main"><section class="project-section">
+<h2>
         The Problem
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Urgent pandemic trials initially favored established male-led networks, limiting women’s opportunities.
         </li>
-        <li>
+<li>
          Some research fields had historically fewer women leaders, likely exacerbating COVID-19 leadership gaps.
         </li>
-        <li>
+<li>
          Lack of data left the gender imbalance anecdotal, hindering recognition and action to address it.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         The Solution
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Compiled a comprehensive dataset of ~8,000 COVID-19 trials (2020–2022) and comparable non-COVID trials.
         </li>
-        <li>
+<li>
          Applied an ML-based tool to infer each investigator’s gender from their name with high confidence.
         </li>
-        <li>
+<li>
          Analyzed gender proportions over time and versus other diseases, using statistical tests to validate differences.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Architecture Overview
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Automated Data Pipeline: Gathered trial records from ClinicalTrials.gov for COVID-19 and baseline disease areas.
         </li>
-        <li>
+<li>
          Gender Inference Module: Used a name-based ML service to probabilistically assign investigator gender.
         </li>
-        <li>
+<li>
          Data Filtering: Excluded trials lacking listed investigators or without confident gender classification.
         </li>
-        <li>
+<li>
          Analytic Engine: Computed female-leadership percentages by time period and ran cross-disease comparisons.
         </li>
-        <li>
+<li>
          Advanced Analysis: Linked leader gender to trial participant gender and segmented outcomes by trial type.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Results and Impacts
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Women constituted ~37% of COVID-19 trial leaders overall, climbing to ~49% by 2022.
         </li>
-        <li>
+<li>
          Female-led trials tended to enroll more female participants, suggesting leadership influences inclusivity.
         </li>
-        <li>
+<li>
          The study spotlighted gender gaps and urged institutions to support women in research leadership roles.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Skills and Tools Used
        </h2>
-       <div class="project-table-wrapper">
-        <table class="project-table">
-         <tr>
-          <th>
+<div class="project-table-wrapper">
+<table class="project-table">
+<tr>
+<th>
            Data Pipeline
           </th>
-          <th>
+<th>
            Automated trial data extraction (Python, APIs)
           </th>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            ML Tools
           </td>
-          <td>
+<td>
            Name-based gender classifier service (Genderize API)
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Statistical Analysis
           </td>
-          <td>
+<td>
            Chi-square tests and regression modeling (R, Python)
           </td>
-         </tr>
-        </table>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
+</tr>
+</table>
+</div>
+</section><section class="project-section">
+<h2>
         Cross-Project Capabilities
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Analytical Rigor: Demonstrated a robust data-analysis approach applicable to diverse research questions.
         </li>
-        <li>
+<li>
          Data Insight: Combined domain expertise with data science, a skill applied across projects.
         </li>
-        <li>
+<li>
          Equity Analysis: Experience quantifying representation gaps informs efforts to address bias in other domains.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Published Papers/Tools
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Findings published in Lancet Digital Health (2023), raising awareness of gender disparities in clinical trials.
         </li>
-        <li>
+<li>
          Reproducible analysis pipeline documented for sharing, enabling further research on trial diversity.
         </li>
-       </ul>
-      </section>
-     </div>
-    </div>
-   </main>
-   <footer class="wrapper project-footer">
-    <a class="btn btn--ghost" href="../index.html">
+</ul>
+</section></div></div>
+</main>
+<footer class="wrapper project-footer">
+<a class="btn btn--ghost" href="../index.html">
      Back to portfolio
     </a>
-   </footer>
-  </div>
- </body>
+</footer>
+</div>
+</body>
 </html>

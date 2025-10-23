@@ -1,235 +1,221 @@
 <!DOCTYPE html>
+
 <html class="theme-light" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
    Social Contagion — Structured Resistance Model
   </title>
-  <link href="../assets/css/al-folio.css" rel="stylesheet"/>
-  <link href="../assets/css/custom.css" rel="stylesheet"/>
- </head>
- <body class="page">
-  <div class="page__inner">
-   <header class="project-hero">
-    <div class="wrapper project-hero__inner">
-     <a class="back-link" href="../index.html">
+<link href="../assets/css/al-folio.css" rel="stylesheet"/>
+<link href="../assets/css/custom.css" rel="stylesheet"/>
+</head>
+<body class="page">
+<div class="page__inner">
+<header class="project-hero">
+<div class="wrapper project-hero__inner">
+<a class="back-link" href="../index.html">
       ← Back to portfolio
      </a>
-     <h1 class="project-hero__title">
+<h1 class="project-hero__title">
       Social Contagion — Structured Resistance Model
      </h1>
-     <p class="project-hero__subtitle">
+<p class="project-hero__subtitle">
       Introduced a multi-stage contagion model for smoking that incorporates addiction and resistance.
      </p>
-     <div class="project-hero__meta">
-      <p>
-       <strong>
+<div class="project-hero__meta">
+<p>
+<strong>
         Role:
        </strong>
        Lead Modeling and Simulations Engineer &amp; First Author
       </p>
-      <p>
-       <strong>
+<p>
+<strong>
         Focus:
        </strong>
        Behavioral Epidemiology, Nonlinear Dynamics
       </p>
-     </div>
-    </div>
-   </header>
-   <main class="wrapper project-body">
-    <div class="project-body__grid">
-     <figure class="project-body__media project-body__media--hero">
-      <a href="22.1.Smoking-behavior-structured-resistance-model.png" rel="noopener" target="_blank">
-       <img alt="Structured resistance model for smoking contagion" src="22.1.Smoking-behavior-structured-resistance-model.png"/>
-      </a>
-     </figure>
-     <div class="project-body__content">
-      <section class="project-section project-section--at-a-glance">
-       <h2>
+</div>
+</div>
+</header>
+<main class="wrapper project-body">
+<div class="project-body__grid"><div class="project-body__sidebar"><section class="project-section project-section--at-a-glance">
+<h2>
         At a Glance
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Introduced a multi-stage contagion model for smoking that incorporates addiction and resistance.
         </li>
-        <li>
+<li>
          Found that addiction creates a “structured resistance,” making smoking persist longer.
         </li>
-        <li>
+<li>
          Explained the slow decline in smoking rates by showing that once endemic, eradication becomes very difficult.
         </li>
-       </ul>
-      </section>
-      <section class="project-section project-section--gallery">
-       <h2>
+</ul>
+</section><section class="project-section project-section--gallery" data-gallery-count="2">
+<h2>
         Visual highlights
        </h2>
-       <div class="project-gallery">
-        <figure class="project-gallery__item">
-         <a href="22.2.overview-of-network-centric-intervenstions-for-controlling-smoking-epidemic.png" rel="noopener" target="_blank">
-          <img alt="Network-centric interventions for smoking control" src="22.2.overview-of-network-centric-intervenstions-for-controlling-smoking-epidemic.png"/>
-         </a>
-         <figcaption>
+<div class="project-gallery"><figure class="project-gallery__item project-gallery__item--feature"><a href="22.1.Smoking-behavior-structured-resistance-model.png" rel="noopener" target="_blank">
+<img alt="Structured resistance model for smoking contagion" decoding="async" loading="lazy" src="22.1.Smoking-behavior-structured-resistance-model.png"/>
+</a><figcaption>Structured resistance model for smoking contagion</figcaption></figure>
+<figure class="project-gallery__item">
+<a href="22.2.overview-of-network-centric-intervenstions-for-controlling-smoking-epidemic.png" rel="noopener" target="_blank">
+<img alt="Network-centric interventions for smoking control" decoding="async" loading="lazy" src="22.2.overview-of-network-centric-intervenstions-for-controlling-smoking-epidemic.png"/>
+</a>
+<figcaption>
           Intervention playbook derived from structured resistance modeling.
          </figcaption>
-        </figure>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
+</figure>
+</div>
+</section></div><div class="project-body__main"><section class="project-section">
+<h2>
         The Problem
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Standard epidemic models predicted quick smoking eradication, contrary to real slow declines.
         </li>
-        <li>
+<li>
          Real-world data show smoking rates fell only gradually over decades.
         </li>
-        <li>
+<li>
          Existing models ignored nicotine addiction, failing to capture persistent smoking dynamics.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         The Solution
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Extended the classic SIS epidemic model with multi-level addiction and resistance states.
         </li>
-        <li>
+<li>
          Created a “structured resistance” model where quitting raises an individual’s susceptibility to relapse.
         </li>
-        <li>
+<li>
          Validated the model with simulations on longitudinal social network data (Framingham Heart Study).
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Architecture Overview
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Multi-level contagion model with multiple Susceptible (S1…Sn) and Infected (I1…In) states by addiction level.
         </li>
-        <li>
+<li>
          Quitting raises an individual’s susceptibility tier, reflecting higher relapse risk after quitting.
         </li>
-        <li>
+<li>
          Sustained abstinence can slowly lower susceptibility over time, modeling gradual recovery.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Results and Impacts
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          The model exhibits backward bifurcation: once smoking is endemic, it is very hard to eradicate.
         </li>
-        <li>
+<li>
          Simulated smoking trends closely matched the empirically observed slow historical decline.
         </li>
-        <li>
+<li>
          Concluded that ending the smoking epidemic requires substantially greater effort due to addiction effects.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Skills and Tools Used
        </h2>
-       <div class="project-table-wrapper">
-        <table class="project-table">
-         <tr>
-          <th>
+<div class="project-table-wrapper">
+<table class="project-table">
+<tr>
+<th>
            Technique/Skill
           </th>
-          <th>
+<th>
            Tools/Implementation
           </th>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Network epidemic modeling
           </td>
-          <td>
+<td>
            Custom contagion models with addiction levels
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Social network simulation
           </td>
-          <td>
+<td>
            Framingham longitudinal data simulation
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Mathematical analysis
           </td>
-          <td>
+<td>
            Epidemic threshold and bifurcation theory
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Data interpretation
           </td>
-          <td>
+<td>
            Matching model output to public health trends
           </td>
-         </tr>
-        </table>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
+</tr>
+</table>
+</div>
+</section><section class="project-section">
+<h2>
         Cross-Project Capabilities
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Developed a multi-level contagion framework applicable to other addiction-like behaviors.
         </li>
-        <li>
+<li>
          Insights on threshold dynamics informed intervention strategy designs in later projects.
         </li>
-        <li>
+<li>
          Provided groundwork for targeted network interventions (edge-removal methods) in subsequent work.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Published Papers/Tools
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Addiction Dynamics May Explain the Slow Decline of Smoking Prevalence (LNCS, 2012).
         </li>
-        <li>
+<li>
          Introduced the Structured Resistance Model concept for “policy-resistant” problems.
         </li>
-        <li>
+<li>
          Integrated findings into social simulation platforms for public health policy experimentation.
         </li>
-       </ul>
-      </section>
-     </div>
-    </div>
-   </main>
-   <footer class="wrapper project-footer">
-    <a class="btn btn--ghost" href="../index.html">
+</ul>
+</section></div></div>
+</main>
+<footer class="wrapper project-footer">
+<a class="btn btn--ghost" href="../index.html">
      Back to portfolio
     </a>
-   </footer>
-  </div>
- </body>
+</footer>
+</div>
+</body>
 </html>

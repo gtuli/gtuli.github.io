@@ -1,223 +1,208 @@
 <!DOCTYPE html>
+
 <html class="theme-light" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
    Humanitarian Demining Analytics Dashboard
   </title>
-  <link href="../assets/css/al-folio.css" rel="stylesheet"/>
-  <link href="../assets/css/custom.css" rel="stylesheet"/>
- </head>
- <body class="page">
-  <div class="page__inner">
-   <header class="project-hero">
-    <div class="wrapper project-hero__inner">
-     <a class="back-link" href="../index.html">
+<link href="../assets/css/al-folio.css" rel="stylesheet"/>
+<link href="../assets/css/custom.css" rel="stylesheet"/>
+</head>
+<body class="page">
+<div class="page__inner">
+<header class="project-hero">
+<div class="wrapper project-hero__inner">
+<a class="back-link" href="../index.html">
       ← Back to portfolio
      </a>
-     <h1 class="project-hero__title">
+<h1 class="project-hero__title">
       Humanitarian Demining Analytics Dashboard
      </h1>
-     <p class="project-hero__subtitle">
+<p class="project-hero__subtitle">
       Created a geospatial analytics platform that fuses data from multiple landmine detection sensors into a unified risk heatmap.
      </p>
-     <div class="project-hero__meta">
-      <p>
-       <strong>
+<div class="project-hero__meta">
+<p>
+<strong>
         Role:
        </strong>
        Product Strategist &amp; ML Systems Architect
       </p>
-      <p>
-       <strong>
+<p>
+<strong>
         Focus:
        </strong>
        Geospatial Analytics, Humanitarian Tech, Decision Support
       </p>
-     </div>
-    </div>
-   </header>
-   <main class="wrapper project-body">
-    <div class="project-body__grid">
-     <figure class="project-body__media project-body__media--hero">
-      <a href="16.1.Demining-dashboard-sys-design-location-focused-with-KPI.png" rel="noopener" target="_blank">
-       <img alt="Demining dashboard system design" src="16.1.Demining-dashboard-sys-design-location-focused-with-KPI.png"/>
-      </a>
-     </figure>
-     <div class="project-body__content">
-      <section class="project-section project-section--at-a-glance">
-       <h2>
+</div>
+</div>
+</header>
+<main class="wrapper project-body">
+<div class="project-body__grid"><div class="project-body__sidebar"><section class="project-section project-section--at-a-glance">
+<h2>
         At a Glance
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Created a geospatial analytics platform that fuses data from multiple landmine detection sensors into a unified risk heatmap.
         </li>
-        <li>
+<li>
          The interactive dashboard highlights likely landmine hotspots, enabling demining teams to prioritize and track clearance operations more effectively.
         </li>
-        <li>
+<li>
          Designed a modular system architecture allowing new algorithms or sensors to be added without disrupting the whole platform.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section project-section--gallery" data-gallery-count="1"><h2>Visual highlights</h2><div class="project-gallery"><figure class="project-gallery__item project-gallery__item--feature"><a href="16.1.Demining-dashboard-sys-design-location-focused-with-KPI.png" rel="noopener" target="_blank"><img alt="Demining dashboard system design" decoding="async" loading="lazy" src="16.1.Demining-dashboard-sys-design-location-focused-with-KPI.png"/></a><figcaption>Demining dashboard system design</figcaption></figure></div></section></div><div class="project-body__main"><section class="project-section">
+<h2>
         The Problem
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Fragmented data: Each landmine detection sensor (e.g., metal detectors, ground-penetrating radar, drones) produced separate data, making it hard to see the overall mine risk landscape.
         </li>
-        <li>
+<li>
          High false positives from sensors wasted teams’ time on non-threats, underscoring the need for smarter data analysis to filter out “noise.”
         </li>
-        <li>
+<li>
          No real-time geospatial tool existed to help mission planners decide which suspected mine areas to clear first, leading to less efficient use of limited resources.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         The Solution
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Architected a five-layer microservice system to ingest various sensor data streams, analyze and fuse them, and present the results in a cohesive way.
         </li>
-        <li>
+<li>
          Continuously generated an updated probability heatmap highlighting likely mine locations (“hot zones”), serving as the core decision-support visual for teams.
         </li>
-        <li>
+<li>
          Incorporated field feedback (reports of found or cleared mines) back into the model, so the system learns over time and improves its predictive accuracy.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Architecture Overview
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Layered Microservices: Separate services handled data ingestion from each sensor type, data fusion and analysis, risk modeling, user feedback integration, and the user interface.
         </li>
-        <li>
+<li>
          Heatmap Generator: The analysis engine produced a geospatial probability heatmap of landmine presence, updating in near real time as new sensor readings and field reports came in.
         </li>
-        <li>
+<li>
          Interactive Map UI: A front-end map dashboard allowed users to explore high-risk areas, see details on each zone (e.g., sensor readings, last sweep date), and view progress over time as areas are cleared.
         </li>
-        <li>
+<li>
          Feedback Loop: A dedicated module took input from demining teams (confirmed mine finds or cleared areas) and fed that data back into the risk models, continuously refining the system’s predictions.
         </li>
-        <li>
+<li>
          Planning Module: An operations planning service combined the latest risk map with external data (terrain, accessibility, team locations) to suggest which suspected areas to address next for optimal safety and efficiency.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Results and Impacts
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Delivered a complete system design for a next-generation demining decision-support tool, demonstrating how modern data integration can improve mine clearance strategy.
         </li>
-        <li>
+<li>
          Stakeholders in humanitarian demining reviewed the prototype positively, and plans were initiated to pilot the dashboard in a real demining field operation.
         </li>
-        <li>
+<li>
          Highlighted how advanced analytics and AI can significantly enhance safety and efficiency in post-conflict demining, influencing organizations to invest in smarter demining technologies.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Skills and Tools Used
        </h2>
-       <div class="project-table-wrapper">
-        <table class="project-table">
-         <tr>
-          <th>
+<div class="project-table-wrapper">
+<table class="project-table">
+<tr>
+<th>
            Sensor Data Fusion
           </th>
-          <th>
+<th>
            Combined outputs from multiple detection sensors (metal detectors, GPR, drones)
           </th>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Microservice Architecture
           </td>
-          <td>
+<td>
            Modular system design for ingestion, analysis, feedback, and visualization
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Geospatial Analytics
           </td>
-          <td>
+<td>
            Heatmap generation and spatial risk modeling (GIS tools)
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Continuous Learning
           </td>
-          <td>
+<td>
            Integrated field feedback loops to update risk models in real time
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            UI/UX Design
           </td>
-          <td>
+<td>
            Interactive map dashboard for mission planning and progress tracking
           </td>
-         </tr>
-        </table>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
+</tr>
+</table>
+</div>
+</section><section class="project-section">
+<h2>
         Cross-Project Capabilities
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Modular Architecture: The five-layer microservice approach exemplifies a scalable design pattern Dr. Tuli applies in various domains (from healthcare dashboards to security analytics).
         </li>
-        <li>
+<li>
          Real-Time Geospatial Analysis: Skills in creating live risk maps here transfer to other projects involving spatial data (e.g., epidemic spread mapping, environmental monitoring).
         </li>
-        <li>
+<li>
          Continuous Improvement Loop: Experience building feedback loops (learning from new field data) is leveraged in other ML systems to ensure they adapt and remain accurate over time.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Published Papers/Tools
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Design Documentation: Produced an internal white paper and architecture presentation detailing the demining dashboard design (2025).
         </li>
-        <li>
+<li>
          Early-Stage Project: This was a prototype/plan for humanitarian organizations, so no public release or academic publication was made at the time of writing.
         </li>
-       </ul>
-      </section>
-     </div>
-    </div>
-   </main>
-   <footer class="wrapper project-footer">
-    <a class="btn btn--ghost" href="../index.html">
+</ul>
+</section></div></div>
+</main>
+<footer class="wrapper project-footer">
+<a class="btn btn--ghost" href="../index.html">
      Back to portfolio
     </a>
-   </footer>
-  </div>
- </body>
+</footer>
+</div>
+</body>
 </html>

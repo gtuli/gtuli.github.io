@@ -1,237 +1,222 @@
 <!DOCTYPE html>
+
 <html class="theme-light" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
    Social Contagion — E-cig Exposure Hotspots
   </title>
-  <link href="../assets/css/al-folio.css" rel="stylesheet"/>
-  <link href="../assets/css/custom.css" rel="stylesheet"/>
- </head>
- <body class="page">
-  <div class="page__inner">
-   <header class="project-hero">
-    <div class="wrapper project-hero__inner">
-     <a class="back-link" href="../index.html">
+<link href="../assets/css/al-folio.css" rel="stylesheet"/>
+<link href="../assets/css/custom.css" rel="stylesheet"/>
+</head>
+<body class="page">
+<div class="page__inner">
+<header class="project-hero">
+<div class="wrapper project-hero__inner">
+<a class="back-link" href="../index.html">
       ← Back to portfolio
      </a>
-     <h1 class="project-hero__title">
+<h1 class="project-hero__title">
       Social Contagion — E-cig Exposure Hotspots
      </h1>
-     <p class="project-hero__subtitle">
+<p class="project-hero__subtitle">
       Identified geographic hotspots of e-cigarette–related tweets across the US.
      </p>
-     <div class="project-hero__meta">
-      <p>
-       <strong>
+<div class="project-hero__meta">
+<p>
+<strong>
         Role:
        </strong>
        Lead Social Data Scientist &amp; First Author
       </p>
-      <p>
-       <strong>
+<p>
+<strong>
         Focus:
        </strong>
        ML Classification, Geospatial Social Analytics, Youth Tobacco Prevention
       </p>
-     </div>
-    </div>
-   </header>
-   <main class="wrapper project-body">
-    <div class="project-body__grid">
-     <figure class="project-body__media project-body__media--hero">
-      <a href="24.1.e-cig-socialmedia-exposure-westcoast-hotspots.png" rel="noopener" target="_blank">
-       <img alt="E-cig social media exposure hotspots map" src="24.1.e-cig-socialmedia-exposure-westcoast-hotspots.png"/>
-      </a>
-     </figure>
-     <div class="project-body__content">
-      <section class="project-section project-section--at-a-glance">
-       <h2>
+</div>
+</div>
+</header>
+<main class="wrapper project-body">
+<div class="project-body__grid"><div class="project-body__sidebar"><section class="project-section project-section--at-a-glance">
+<h2>
         At a Glance
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Identified geographic hotspots of e-cigarette–related tweets across the US.
         </li>
-        <li>
+<li>
          Found that most hotspots had high pro-vaping sentiment and many underage participants.
         </li>
-        <li>
+<li>
          Highlighted West Coast regions where youth engagement with vaping messages was particularly high.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section project-section--gallery" data-gallery-count="1"><h2>Visual highlights</h2><div class="project-gallery"><figure class="project-gallery__item project-gallery__item--feature"><a href="24.1.e-cig-socialmedia-exposure-westcoast-hotspots.png" rel="noopener" target="_blank"><img alt="E-cig social media exposure hotspots map" decoding="async" loading="lazy" src="24.1.e-cig-socialmedia-exposure-westcoast-hotspots.png"/></a><figcaption>E-cig social media exposure hotspots map</figcaption></figure></div></section></div><div class="project-body__main"><section class="project-section">
+<h2>
         The Problem
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Earlier e-cigarette Twitter studies had small samples and missed broader patterns.
         </li>
-        <li>
+<li>
          No prior work had spatially mapped e-cig tweet clusters to find significant hotspots.
         </li>
-        <li>
+<li>
          Differentiating genuine public tweets from overwhelming commercial promotions was challenging.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         The Solution
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Collected two years of geotagged e-cigarette tweets (~83,000) nationwide.
         </li>
-        <li>
+<li>
          Removed commercial spam via machine learning classifiers to focus on genuine user content.
         </li>
-        <li>
+<li>
          Applied spatiotemporal scan statistics to detect clusters with unusually high e-cig tweet volumes.
         </li>
-        <li>
+<li>
          Analyzed each hotspot’s sentiment (pro vs. anti vaping) and fraction of underage users.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Architecture Overview
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Twitter Streaming API captured a 1% sample of geotagged tweets (Oct 2012–Oct 2014).
         </li>
-        <li>
+<li>
          Filtered by e-cigarette keywords, yielding 62,894 US geotagged e-cig tweets.
         </li>
-        <li>
+<li>
          Used an SVM classifier to separate non-commercial e-cig tweets from advertising content.
         </li>
-        <li>
+<li>
          Employed SaTScan-like spatiotemporal scanning to find statistically significant hotspots.
         </li>
-        <li>
+<li>
          Computed sentiment scores and age metrics for each detected cluster.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Results and Impacts
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Discovered multiple e-cigarette tweet hotspots, mostly on the US West Coast.
         </li>
-        <li>
+<li>
          About 75% of hotspots had above-average pro-vaping sentiment and higher youth participation.
         </li>
-        <li>
+<li>
          Identified regions with intense pro-vaping influence among youth, underscoring need for targeted monitoring.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Skills and Tools Used
        </h2>
-       <div class="project-table-wrapper">
-        <table class="project-table">
-         <tr>
-          <th>
+<div class="project-table-wrapper">
+<table class="project-table">
+<tr>
+<th>
            Technique/Skill
           </th>
-          <th>
+<th>
            Tools/Implementation
           </th>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Geospatial analysis
           </td>
-          <td>
+<td>
            Spatiotemporal scan statistics (hotspot detection)
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Big data processing
           </td>
-          <td>
+<td>
            Twitter streaming and filtering (~83K tweets)
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Machine learning
           </td>
-          <td>
+<td>
            Text classification to filter commercial posts
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Sentiment and demographic analysis
           </td>
-          <td>
+<td>
            NLP plus age inference for user demographics
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Data visualization
           </td>
-          <td>
+<td>
            Mapping hotspots and trends on dashboards
           </td>
-         </tr>
-        </table>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
+</tr>
+</table>
+</div>
+</section><section class="project-section">
+<h2>
         Cross-Project Capabilities
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Adapted the flexible Twitter surveillance pipeline to a new topic (e-cigarettes).
         </li>
-        <li>
+<li>
          Applied spatial analysis of social data, a technique transferable to other public health signals.
         </li>
-        <li>
+<li>
          Content filtering methods here (distinguishing organic vs. commercial posts) informed other contagion analyses.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Published Papers/Tools
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          PhD Thesis (Chapter 5): Find and Analyze Hotspots of E-cigarette-related Tweets.
         </li>
-        <li>
+<li>
          Developed spatiotemporal hotspot detection and analysis tools for social media data.
         </li>
-        <li>
+<li>
          Produced the first spatial analysis of vaping discourse, cited in later health social media studies.
         </li>
-       </ul>
-      </section>
-     </div>
-    </div>
-   </main>
-   <footer class="wrapper project-footer">
-    <a class="btn btn--ghost" href="../index.html">
+</ul>
+</section></div></div>
+</main>
+<footer class="wrapper project-footer">
+<a class="btn btn--ghost" href="../index.html">
      Back to portfolio
     </a>
-   </footer>
-  </div>
- </body>
+</footer>
+</div>
+</body>
 </html>

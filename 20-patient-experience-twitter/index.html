@@ -1,231 +1,216 @@
 <!DOCTYPE html>
+
 <html class="theme-light" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
    Patient Experience — Hospital Twitter Signals
   </title>
-  <link href="../assets/css/al-folio.css" rel="stylesheet"/>
-  <link href="../assets/css/custom.css" rel="stylesheet"/>
- </head>
- <body class="page">
-  <div class="page__inner">
-   <header class="project-hero">
-    <div class="wrapper project-hero__inner">
-     <a class="back-link" href="../index.html">
+<link href="../assets/css/al-folio.css" rel="stylesheet"/>
+<link href="../assets/css/custom.css" rel="stylesheet"/>
+</head>
+<body class="page">
+<div class="page__inner">
+<header class="project-hero">
+<div class="wrapper project-hero__inner">
+<a class="back-link" href="../index.html">
       ← Back to portfolio
      </a>
-     <h1 class="project-hero__title">
+<h1 class="project-hero__title">
       Patient Experience — Hospital Twitter Signals
      </h1>
-     <p class="project-hero__subtitle">
+<p class="project-hero__subtitle">
       Analyzed 404,065 tweets @-mentioned to 2,349 US hospitals (2012), identifying ~34.7K patient experience posts.
      </p>
-     <div class="project-hero__meta">
-      <p>
-       <strong>
+<div class="project-hero__meta">
+<p>
+<strong>
         Role:
        </strong>
        Lead ML Engineer
       </p>
-      <p>
-       <strong>
+<p>
+<strong>
         Focus:
        </strong>
        ML Classification, Social Listening, Healthcare Quality, Data Visualization
       </p>
-     </div>
-    </div>
-   </header>
-   <main class="wrapper project-body">
-    <div class="project-body__grid">
-     <figure class="project-body__media project-body__media--hero">
-      <a href="20.1.patient-experience-across-US-Hospitals.png" rel="noopener" target="_blank">
-       <img alt="Patient experience sentiment across US hospitals" src="20.1.patient-experience-across-US-Hospitals.png"/>
-      </a>
-     </figure>
-     <div class="project-body__content">
-      <section class="project-section project-section--at-a-glance">
-       <h2>
+</div>
+</div>
+</header>
+<main class="wrapper project-body">
+<div class="project-body__grid"><div class="project-body__sidebar"><section class="project-section project-section--at-a-glance">
+<h2>
         At a Glance
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Analyzed 404,065 tweets @-mentioned to 2,349 US hospitals (2012), identifying ~34.7K patient experience posts.
         </li>
-        <li>
+<li>
          Found Twitter feedback covered diverse aspects of care and provided immediate patient insights.
         </li>
-        <li>
+<li>
          Twitter sentiment only weakly matched traditional survey results, indicating it is mainly a supplemental indicator.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section project-section--gallery" data-gallery-count="1"><h2>Visual highlights</h2><div class="project-gallery"><figure class="project-gallery__item project-gallery__item--feature"><a href="20.1.patient-experience-across-US-Hospitals.png" rel="noopener" target="_blank"><img alt="Patient experience sentiment across US hospitals" decoding="async" loading="lazy" src="20.1.patient-experience-across-US-Hospitals.png"/></a><figcaption>Patient experience sentiment across US hospitals</figcaption></figure></div></section></div><div class="project-body__main"><section class="project-section">
+<h2>
         The Problem
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Formal patient experience surveys have long delays and low response rates, missing timely feedback.
         </li>
-        <li>
+<li>
          Hospitals lacked immediate, unfiltered patient feedback outside official channels.
         </li>
-        <li>
+<li>
          It was unclear if social media sentiment could reliably complement established quality measures.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         The Solution
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Collected 404,065 tweets (2012) directed at official hospital Twitter accounts.
         </li>
-        <li>
+<li>
          Used a machine learning classifier to filter ~34,725 patient experience tweets.
         </li>
-        <li>
+<li>
          Performed sentiment analysis and manually coded topics for a sample of patient-feedback tweets.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Architecture Overview
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Aggregated all @-mention tweets to official hospital accounts via API.
         </li>
-        <li>
+<li>
          Machine learning model filtered patient experience-related tweets from general mentions.
         </li>
-        <li>
+<li>
          Applied NLP for sentiment scoring and manually categorized sample tweets by topic.
         </li>
-        <li>
+<li>
          Merged Twitter results with hospital quality datasets (HCAHPS survey scores, readmission rates).
         </li>
-        <li>
+<li>
          Conducted statistical analysis comparing social media feedback to hospital performance.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Results and Impacts
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Only about 10% of tweets at US hospitals were patient-experience related.
         </li>
-        <li>
+<li>
          These patient-feedback tweets covered diverse aspects of care, reflecting varied real-time concerns.
         </li>
-        <li>
+<li>
          Hospital Twitter sentiment was only weakly related to formal quality measures.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Skills and Tools Used
        </h2>
-       <div class="project-table-wrapper">
-        <table class="project-table">
-         <tr>
-          <th>
+<div class="project-table-wrapper">
+<table class="project-table">
+<tr>
+<th>
            Technique/Skill
           </th>
-          <th>
+<th>
            Tools/Implementation
           </th>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Social media mining
           </td>
-          <td>
+<td>
            Twitter API to capture hospital mentions
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Text classification
           </td>
-          <td>
+<td>
            ML classifier to isolate experience tweets
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Sentiment analysis and coding
           </td>
-          <td>
+<td>
            NLP plus manual content coding
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Data integration
           </td>
-          <td>
+<td>
            Merged Twitter data with hospital metrics
           </td>
-         </tr>
-         <tr>
-          <td>
+</tr>
+<tr>
+<td>
            Statistical analysis
           </td>
-          <td>
+<td>
            Correlation and regression analysis
           </td>
-         </tr>
-        </table>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
+</tr>
+</table>
+</div>
+</section><section class="project-section">
+<h2>
         Cross-Project Capabilities
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          Built on prior methods of combining social media with formal data (from the longitudinal study).
         </li>
-        <li>
+<li>
          Refined tweet classification and sentiment techniques that informed the racial disparities analysis.
         </li>
-        <li>
+<li>
          Engaging hospital stakeholders with data parallels engaging policymakers in other projects.
         </li>
-       </ul>
-      </section>
-      <section class="project-section">
-       <h2>
+</ul>
+</section><section class="project-section">
+<h2>
         Published Papers/Tools
        </h2>
-       <ul>
-        <li>
+<ul>
+<li>
          A BMJ Quality &amp; Safety paper (2016) documented this hospital Twitter analysis.
         </li>
-        <li>
+<li>
          Developed a dataset of hospital-related tweets and a survey instrument for hospital social media practices.
         </li>
-       </ul>
-      </section>
-     </div>
-    </div>
-   </main>
-   <footer class="wrapper project-footer">
-    <a class="btn btn--ghost" href="../index.html">
+</ul>
+</section></div></div>
+</main>
+<footer class="wrapper project-footer">
+<a class="btn btn--ghost" href="../index.html">
      Back to portfolio
     </a>
-   </footer>
-  </div>
- </body>
+</footer>
+</div>
+</body>
 </html>
