@@ -1,84 +1,246 @@
 <!DOCTYPE html>
-<html lang="en" class="theme-light">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MAS-1 — MOTL-based ISR Supervision</title>
-  <link rel="stylesheet" href="../assets/css/al-folio.css" />
-  <link rel="stylesheet" href="../assets/css/custom.css" />
-</head>
-<body class="page">
+<html class="theme-light" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Man On The Loop (MOTL) ISR Supervision
+  </title>
+  <link href="../assets/css/al-folio.css" rel="stylesheet"/>
+  <link href="../assets/css/custom.css" rel="stylesheet"/>
+ </head>
+ <body class="page">
   <div class="page__inner">
-    <header class="project-hero">
-      <div class="wrapper project-hero__inner">
-        <a class="back-link" href="../index.html">&larr; Back to portfolio</a>
-        <h1 class="project-hero__title">MAS-1 — MOTL-based ISR Supervision</h1>
-        <p class="project-hero__subtitle">Multi-agent teaming strategies that dynamically reassign ISR roles using MOTL principles.</p>
-      </div>
-    </header>
-
-    <main class="wrapper project-body">
-      <div class="project-body__grid">
-        <figure class="project-body__media project-body__media--hero">
-          <img src="17.1.Multi-agent-system-MOTL-based-ISR-Supervision.png" alt="Multi-agent ISR supervision concept" />
+   <header class="project-hero">
+    <div class="wrapper project-hero__inner">
+     <a class="back-link" href="../index.html">
+      ← Back to portfolio
+     </a>
+     <h1 class="project-hero__title">
+      Man On The Loop (MOTL) ISR Supervision
+     </h1>
+     <p class="project-hero__subtitle">
+      Investigated a “Man-On-The-Loop” approach for supervising autonomous agent teams in an ISR mission.
+     </p>
+     <div class="project-hero__meta">
+      <p>
+       <strong>
+        Role:
+       </strong>
+       Autonomy Research Lead
+      </p>
+      <p>
+       <strong>
+        Focus:
+       </strong>
+       Multi-Agent Systems, Reinforcement Learning, Defense ISR
+      </p>
+     </div>
+    </div>
+   </header>
+   <main class="wrapper project-body">
+    <div class="project-body__grid">
+     <figure class="project-body__media project-body__media--hero">
+      <a href="17.1.Multi-agent-system-MOTL-based-ISR-Supervision.png" rel="noopener" target="_blank">
+       <img alt="Multi-agent ISR supervision concept" src="17.1.Multi-agent-system-MOTL-based-ISR-Supervision.png"/>
+      </a>
+     </figure>
+     <div class="project-body__content">
+      <section class="project-section project-section--at-a-glance">
+       <h2>
+        At a Glance
+       </h2>
+       <ul>
+        <li>
+         Investigated a “Man-On-The-Loop” approach for supervising autonomous agent teams in an ISR mission.
+        </li>
+        <li>
+         Used high-level cultural parameters (e.g., risk aversion, individualism) as global control inputs.
+        </li>
+        <li>
+         Demonstrated that adjusting these group traits significantly influenced collective behavior and mission success.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section project-section--gallery">
+       <h2>
+        Visual highlights
+       </h2>
+       <div class="project-gallery">
+        <figure class="project-gallery__item">
+         <a href="17.2.ISR-agent-role-exchange-partner-selection.png" rel="noopener" target="_blank">
+          <img alt="Agent role exchange and partner selection workflow" src="17.2.ISR-agent-role-exchange-partner-selection.png"/>
+         </a>
+         <figcaption>
+          Role exchange workflow illustrates adaptive task redistribution.
+         </figcaption>
         </figure>
-        <div class="project-body__content">
-          <section class="project-section">
-            <h2>At a glance</h2>
-            <ul>
-              <li>Developed MOTL-based multi-agent supervision for ISR mission coordination.</li>
-              <li>Automated dynamic role assignment among unmanned assets.</li>
-              <li>Enabled adaptive teaming with minimal operator load.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Problem</h2>
-            <ul>
-              <li>ISR missions must balance coverage, persistence, and scarce assets.</li>
-              <li>Static tasking fails when conditions change mid-mission.</li>
-              <li>Operators cannot micromanage every asset in contested environments.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Solution</h2>
-            <ul>
-              <li>Applied MOTL for agent role allocation under competing objectives.</li>
-              <li>Implemented negotiation and partner selection to swap tasks on the fly.</li>
-              <li>Built simulation framework to evaluate strategies across scenarios.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Impact</h2>
-            <ul>
-              <li>Improved mission coverage and resilience under asset attrition.</li>
-              <li>Reduced operator interventions while maintaining ISR objectives.</li>
-              <li>Informed future multi-agent control architectures for defense partners.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Role &amp; toolkit</h2>
-            <ul>
-              <li>Led analytics bridging autonomy research with operational requirements.</li>
-              <li>Used multi-agent simulations, reinforcement learning, and optimization.</li>
-              <li>Collaborated with defense labs to validate algorithms and concepts.</li>
-            </ul>
-          </section>
-          <section class="project-section project-section--gallery">
-            <h2>Visual highlights</h2>
-            <div class="project-gallery">
-            <figure class="project-gallery__item">
-              <img src="17.2.ISR-agent-role-exchange-partner-selection.png" alt="Agent role exchange and partner selection workflow" />
-              <figcaption>Role exchange workflow illustrates adaptive task redistribution.</figcaption>
-            </figure>
-            </div>
-          </section>
-        </div>
-      </div>
-    </main>
-
-    <footer class="wrapper project-footer">
-      <a class="btn btn--ghost" href="../index.html">Back to portfolio</a>
-    </footer>
+       </div>
+      </section>
+      <section class="project-section">
+       <h2>
+        The Problem
+       </h2>
+       <ul>
+        <li>
+         Individual oversight of large agent teams is impractical in time-critical ISR scenarios.
+        </li>
+        <li>
+         Direct micromanagement cannot scale, creating the need for new high-level control methods.
+        </li>
+        <li>
+         No existing method allowed indirect influence on group behavior via global parameter tuning.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        The Solution
+       </h2>
+       <ul>
+        <li>
+         Built a custom agent-based simulation to test the MOTL concept in a surveillance mission.
+        </li>
+        <li>
+         Modeled two cultural dimensions (uncertainty avoidance and individualism) affecting all agents’ decisions.
+        </li>
+        <li>
+         Provided a user interface for adjusting trait sliders and observing group performance in real time.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Architecture Overview
+       </h2>
+       <ul>
+        <li>
+         Simulated a team of autonomous agents on a mission with adjustable cultural parameters.
+        </li>
+        <li>
+         Implemented a supervisory console where the operator could adjust global trait values.
+        </li>
+        <li>
+         Tracked group and individual performance metrics to evaluate each trait configuration.
+        </li>
+        <li>
+         Agents followed utility-based norms that enabled cooperative, group-oriented behavior.
+        </li>
+        <li>
+         A front-end dashboard visualized updated state metrics as parameters changed.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Results and Impacts
+       </h2>
+       <ul>
+        <li>
+         Small trait adjustments caused significant shifts in team behavior and mission outcomes.
+        </li>
+        <li>
+         Validated the MOTL approach: global parameter changes steered agents effectively without low-level commands.
+        </li>
+        <li>
+         Operators learned trait–outcome relationships and tuned parameters to improve coordination.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Skills and Tools Used
+       </h2>
+       <div class="project-table-wrapper">
+        <table class="project-table">
+         <tr>
+          <th>
+           Technique/Skill
+          </th>
+          <th>
+           Tools/Implementation
+          </th>
+         </tr>
+         <tr>
+          <td>
+           Multi-agent simulation
+          </td>
+          <td>
+           Custom testbed development
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Cultural modeling
+          </td>
+          <td>
+           Hofstede cultural dimensions
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Optimization analysis
+          </td>
+          <td>
+           Utility theory, Pareto rules
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Data analysis
+          </td>
+          <td>
+           Statistical analysis of simulation outputs
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Research and collaboration
+          </td>
+          <td>
+           Academic writing (IEEE publication)
+          </td>
+         </tr>
+        </table>
+       </div>
+      </section>
+      <section class="project-section">
+       <h2>
+        Cross-Project Capabilities
+       </h2>
+       <ul>
+        <li>
+         Introduced the MOTL supervision concept, which shaped later multi-agent control research (MAS-2).
+        </li>
+        <li>
+         Developed agent-based modeling techniques applied to other domains (human factors, robotics).
+        </li>
+        <li>
+         Combined AI with social science modeling, an interdisciplinary approach reused in other projects.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Published Papers/Tools
+       </h2>
+       <ul>
+        <li>
+         Influencing Agent Group Behavior by Adjusting Cultural Trait Values (IEEE Trans. SMC-B, 2010).
+        </li>
+        <li>
+         Prototype multi-agent simulation platform for MOTL experiments (USAF-funded research tool).
+        </li>
+       </ul>
+      </section>
+     </div>
+    </div>
+   </main>
+   <footer class="wrapper project-footer">
+    <a class="btn btn--ghost" href="../index.html">
+     Back to portfolio
+    </a>
+   </footer>
   </div>
-</body>
+ </body>
 </html>

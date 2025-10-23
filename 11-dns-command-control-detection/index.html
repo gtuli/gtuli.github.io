@@ -1,84 +1,237 @@
 <!DOCTYPE html>
-<html lang="en" class="theme-light">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cybersecurity — DNS Command-and-Control Detection</title>
-  <link rel="stylesheet" href="../assets/css/al-folio.css" />
-  <link rel="stylesheet" href="../assets/css/custom.css" />
-</head>
-<body class="page">
+<html class="theme-light" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Cybersecurity — DNS Command-and-Control Detection
+  </title>
+  <link href="../assets/css/al-folio.css" rel="stylesheet"/>
+  <link href="../assets/css/custom.css" rel="stylesheet"/>
+ </head>
+ <body class="page">
   <div class="page__inner">
-    <header class="project-hero">
-      <div class="wrapper project-hero__inner">
-        <a class="back-link" href="../index.html">&larr; Back to portfolio</a>
-        <h1 class="project-hero__title">Cybersecurity — DNS Command-and-Control Detection</h1>
-        <p class="project-hero__subtitle">Real-time DNS analytics pipeline detecting covert malware command-and-control traffic.</p>
-      </div>
-    </header>
-
-    <main class="wrapper project-body">
-      <div class="project-body__grid">
-        <figure class="project-body__media project-body__media--hero">
-          <img src="11.1.Cybersecurity.Detect-and-control-channel-in-DNS-Logs.image.png" alt="Architecture for DNS command-and-control detection" />
+   <header class="project-hero">
+    <div class="wrapper project-hero__inner">
+     <a class="back-link" href="../index.html">
+      ← Back to portfolio
+     </a>
+     <h1 class="project-hero__title">
+      Cybersecurity — DNS Command-and-Control Detection
+     </h1>
+     <p class="project-hero__subtitle">
+      Developed a streaming analytics pipeline for real-time detection of covert malware communications hidden in DNS traffic.
+     </p>
+     <div class="project-hero__meta">
+      <p>
+       <strong>
+        Role:
+       </strong>
+       Lead Security Analytics Architect
+      </p>
+      <p>
+       <strong>
+        Focus:
+       </strong>
+       Streaming Detection, Threat Intelligence, SOC Enablement
+      </p>
+     </div>
+    </div>
+   </header>
+   <main class="wrapper project-body">
+    <div class="project-body__grid">
+     <figure class="project-body__media project-body__media--hero">
+      <a href="11.1.Cybersecurity.Detect-and-control-channel-in-DNS-Logs.image.png" rel="noopener" target="_blank">
+       <img alt="Architecture for DNS command-and-control detection" src="11.1.Cybersecurity.Detect-and-control-channel-in-DNS-Logs.image.png"/>
+      </a>
+     </figure>
+     <div class="project-body__content">
+      <section class="project-section project-section--at-a-glance">
+       <h2>
+        At a Glance
+       </h2>
+       <ul>
+        <li>
+         Developed a streaming analytics pipeline for real-time detection of covert malware communications hidden in DNS traffic.
+        </li>
+        <li>
+         Identified both fast and stealthy “low-and-slow” malicious DNS patterns that evaded traditional batch detection.
+        </li>
+        <li>
+         Enabled immediate security alerts from DNS logs, greatly improving response time to early-stage breaches.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section project-section--gallery">
+       <h2>
+        Visual highlights
+       </h2>
+       <div class="project-gallery">
+        <figure class="project-gallery__item project-gallery__item--pdf">
+         <object aria-label="Detailed DNS C2 detection system design" data="11.1.Cybersecurity.Detect-and-control-channel-in-DNS-Logs.image.pdf" type="application/pdf">
+         </object>
+         <figcaption>
+          Detailed system blueprint shared with security operations teams.
+         </figcaption>
         </figure>
-        <div class="project-body__content">
-          <section class="project-section">
-            <h2>At a glance</h2>
-            <ul>
-              <li>Designed streaming DNS analytics to surface covert C2 communications.</li>
-              <li>Built microservices pipeline enriching logs with threat intelligence context.</li>
-              <li>Delivered alerting dashboards for security operations teams.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Problem</h2>
-            <ul>
-              <li>Attackers hide command channels inside ordinary DNS traffic.</li>
-              <li>Massive DNS volume overwhelms manual triage and review.</li>
-              <li>Slow detection leaves malicious domains active for weeks.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Solution</h2>
-            <ul>
-              <li>Built Kafka-backed ingestion with GeoIP and WHOIS enrichment.</li>
-              <li>Applied short- and long-window anomaly detection for fast and stealthy tunnels.</li>
-              <li>Integrated threat intel feeds and automated multi-channel alert routing.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Impact</h2>
-            <ul>
-              <li>Cut attacker dwell time by triggering near real-time DNS alerts.</li>
-              <li>Improved detection accuracy across bursty and low-and-slow behaviors.</li>
-              <li>Shared new indicators with the broader security community.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Role &amp; toolkit</h2>
-            <ul>
-              <li>Led architecture spanning data engineering and security operations.</li>
-              <li>Used Python, Kafka, Elastic, and containerized microservices.</li>
-              <li>Coordinated SOC workflows, knowledge base updates, and dashboard UX.</li>
-            </ul>
-          </section>
-          <section class="project-section project-section--gallery">
-            <h2>Visual highlights</h2>
-            <div class="project-gallery">
-            <figure class="project-gallery__item project-gallery__item--pdf">
-              <object data="11.1.Cybersecurity.Detect-and-control-channel-in-DNS-Logs.image.pdf" type="application/pdf" aria-label="Detailed DNS C2 detection system design"></object>
-              <figcaption>Detailed system blueprint shared with security operations teams.</figcaption>
-            </figure>
-            </div>
-          </section>
-        </div>
-      </div>
-    </main>
-
-    <footer class="wrapper project-footer">
-      <a class="btn btn--ghost" href="../index.html">Back to portfolio</a>
-    </footer>
+       </div>
+      </section>
+      <section class="project-section">
+       <h2>
+        The Problem
+       </h2>
+       <ul>
+        <li>
+         Attackers can hide command-and-control signals in ordinary DNS queries, bypassing standard network defenses.
+        </li>
+        <li>
+         Organizations face huge volumes of DNS data, and manual monitoring can’t catch subtle malicious patterns.
+        </li>
+        <li>
+         Stealthy DNS “tunnels” blend into normal traffic, often escaping detection until significant damage is done.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        The Solution
+       </h2>
+       <ul>
+        <li>
+         Built a microservice pipeline to continuously ingest and enrich DNS logs (e.g., adding GeoIP and WHOIS context) for live analysis.
+        </li>
+        <li>
+         Implemented multi-scale anomaly detection: short-window analytics to flag immediate threats and long-window analytics to uncover slow, stealthy DNS tunnels.
+        </li>
+        <li>
+         Integrated threat intelligence feeds to flag known malicious domains and deployed a real-time alerting dashboard for security teams.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Architecture Overview
+       </h2>
+       <ul>
+        <li>
+         Modular Microservices: Independent services handled data ingestion, threat intel updates, anomaly detection, analytics, alerting, and the user interface.
+        </li>
+        <li>
+         Streaming Pipeline: A Kafka message broker streamed DNS events between services, enabling scalable, real-time processing of log data.
+        </li>
+        <li>
+         Tiered Storage: Combined in-memory caching for instant analysis with a persistent datastore for historical pattern detection over longer windows.
+        </li>
+        <li>
+         Tiered Deployment: Services were grouped by function (data ingestion, analysis, storage, presentation) to optimize performance and scalability.
+        </li>
+        <li>
+         Resilient Design: The microservice architecture allowed isolated scaling and updates, ensuring robust, fault-tolerant operation of the system.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Results and Impacts
+       </h2>
+       <ul>
+        <li>
+         Achieved near-instant alerts for emerging DNS-based threats, vastly reducing attacker “dwell time” in networks.
+        </li>
+        <li>
+         Improved detection accuracy by combining real-time anomaly flags with historical context and threat intelligence (catching both abrupt spikes and subtle slow attacks).
+        </li>
+        <li>
+         Delivered actionable dashboards and alerts that empower security teams to swiftly contain incidents and share new threat indicators with the broader community.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Skills and Tools Used
+       </h2>
+       <div class="project-table-wrapper">
+        <table class="project-table">
+         <tr>
+          <th>
+           Streaming &amp; Processing
+          </th>
+          <th>
+           Apache Kafka for high-volume, real-time DNS log ingestion
+          </th>
+         </tr>
+         <tr>
+          <td>
+           Microservices &amp; DevOps
+          </td>
+          <td>
+           Containerized services (Docker) for scalable, modular deployment
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Data Enrichment
+          </td>
+          <td>
+           GeoIP and WHOIS lookups to add context to DNS query data
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Threat Intelligence
+          </td>
+          <td>
+           Integrated domain blacklists/whitelists via APIs and databases
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Visualization &amp; Alerting
+          </td>
+          <td>
+           Interactive security dashboard and automated notification system
+          </td>
+         </tr>
+        </table>
+       </div>
+      </section>
+      <section class="project-section">
+       <h2>
+        Cross-Project Capabilities
+       </h2>
+       <ul>
+        <li>
+         Real-Time Analytics: Streaming anomaly detection methods here can be reused for live data monitoring in other domains (e.g., social media trends).
+        </li>
+        <li>
+         Data Fusion: Combined internal logs with external intel feeds, mirroring multi-source integration techniques used in other projects.
+        </li>
+        <li>
+         Dashboard Design: Created intuitive security dashboards – a skill transferable to other analytics platforms (such as public health dashboards).
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Published Papers/Tools
+       </h2>
+       <ul>
+        <li>
+         Internal Design Blueprint (2025): Architecture and findings documented in an internal presentation for the cybersecurity team.
+        </li>
+        <li>
+         Proprietary Solution: This project was delivered as an internal security tool (no public release due to sensitivity).
+        </li>
+       </ul>
+      </section>
+     </div>
+    </div>
+   </main>
+   <footer class="wrapper project-footer">
+    <a class="btn btn--ghost" href="../index.html">
+     Back to portfolio
+    </a>
+   </footer>
   </div>
-</body>
+ </body>
 </html>

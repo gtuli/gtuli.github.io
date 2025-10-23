@@ -1,84 +1,274 @@
 <!DOCTYPE html>
-<html lang="en" class="theme-light">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Global COVID-19 Impact Monitoring</title>
-  <link rel="stylesheet" href="../assets/css/al-folio.css" />
-  <link rel="stylesheet" href="../assets/css/custom.css" />
-</head>
-<body class="page">
+<html class="theme-light" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Maternal-Infant Dyad Care Dashboard
+  </title>
+  <link href="../assets/css/al-folio.css" rel="stylesheet"/>
+  <link href="../assets/css/custom.css" rel="stylesheet"/>
+ </head>
+ <body class="page">
   <div class="page__inner">
-    <header class="project-hero">
-      <div class="wrapper project-hero__inner">
-        <a class="back-link" href="../index.html">&larr; Back to portfolio</a>
-        <h1 class="project-hero__title">Global COVID-19 Impact Monitoring</h1>
-        <p class="project-hero__subtitle">Scaled the Facebook UMD-CTIS survey to deliver daily global COVID-19 situational awareness.</p>
-      </div>
-    </header>
-
-    <main class="wrapper project-body">
-      <div class="project-body__grid">
-        <figure class="project-body__media project-body__media--hero">
-          <img src="6.1.covid-CTIS-banchmarking.png" alt="Global benchmarking of Facebook UMD-CTIS survey signals" />
+   <header class="project-hero">
+    <div class="wrapper project-hero__inner">
+     <a class="back-link" href="../index.html">
+      ← Back to portfolio
+     </a>
+     <h1 class="project-hero__title">
+      Maternal-Infant Dyad Care Dashboard
+     </h1>
+     <p class="project-hero__subtitle">
+      Built a prototype “Dyad Dashboard” that links a mother’s and her infant’s electronic health records into one combined view.
+     </p>
+     <div class="project-hero__meta">
+      <p>
+       <strong>
+        Role:
+       </strong>
+       Lead ML Engineer &amp; Co-first Author
+      </p>
+      <p>
+       <strong>
+        Focus:
+       </strong>
+       UI/UX Design, FHIR Integration, Clinical Workflow Mapping, Usability Testing
+      </p>
+     </div>
+    </div>
+   </header>
+   <main class="wrapper project-body">
+    <div class="project-body__grid">
+     <figure class="project-body__media project-body__media--hero">
+      <a href="6.1.covid-CTIS-banchmarking.png" rel="noopener" target="_blank">
+       <img alt="Global benchmarking of Facebook UMD-CTIS survey signals" src="6.1.covid-CTIS-banchmarking.png"/>
+      </a>
+     </figure>
+     <div class="project-body__content">
+      <section class="project-section project-section--at-a-glance">
+       <h2>
+        At a Glance
+       </h2>
+       <ul>
+        <li>
+         Built a prototype “Dyad Dashboard” that links a mother’s and her infant’s electronic health records into one combined view.
+        </li>
+        <li>
+         Displays critical maternal and infant health data side-by-side, allowing clinicians to coordinate care for substance-exposed mother–baby pairs at a glance.
+        </li>
+        <li>
+         Implemented using real standards (FHIR/USCDI) on synthetic data, demonstrating a user-friendly solution for integrated mother-infant care within existing hospital workflows.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section project-section--gallery">
+       <h2>
+        Visual highlights
+       </h2>
+       <div class="project-gallery">
+        <figure class="project-gallery__item">
+         <a href="6.2.covid-CTIS-ML-model-features.png" rel="noopener" target="_blank">
+          <img alt="Features informing COVID-19 survey models" src="6.2.covid-CTIS-ML-model-features.png"/>
+         </a>
+         <figcaption>
+          Feature pipeline supporting predictive models and data quality checks.
+         </figcaption>
         </figure>
-        <div class="project-body__content">
-          <section class="project-section">
-            <h2>At a glance</h2>
-            <ul>
-              <li>Led global expansion of the Facebook UMD-CTIS COVID-19 survey program.</li>
-              <li>Delivered daily dashboards benchmarking symptoms, behaviors, and policy metrics.</li>
-              <li>Partnered with academia and governments for actionable insights.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Problem</h2>
-            <ul>
-              <li>Official reporting lagged across countries, obscuring emerging hotspots.</li>
-              <li>Inconsistent data quality complicated cross-country comparisons.</li>
-              <li>Leaders needed privacy-conscious ways to leverage social survey data.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Solution</h2>
-            <ul>
-              <li>Scaled sampling, weighting, and translation for billions of daily impressions.</li>
-              <li>Built analytics comparing survey signals against public health benchmarks.</li>
-              <li>Implemented stringent privacy and quality controls for partners and respondents.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Impact</h2>
-            <ul>
-              <li>Provided near real-time metrics adopted by WHO and national agencies.</li>
-              <li>Validated survey indicators against case data to prove policy relevance.</li>
-              <li>Guided resource allocation and messaging campaigns through shared dashboards.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Role &amp; toolkit</h2>
-            <ul>
-              <li>Served as global survey co-lead with Meta and university partners.</li>
-              <li>Applied Python, R, and Bayesian weighting for rapid global analytics.</li>
-              <li>Coordinated localization, QA, and stakeholder briefings across continents.</li>
-            </ul>
-          </section>
-          <section class="project-section project-section--gallery">
-            <h2>Visual highlights</h2>
-            <div class="project-gallery">
-            <figure class="project-gallery__item">
-              <img src="6.2.covid-CTIS-ML-model-features.png" alt="Features informing COVID-19 survey models" />
-              <figcaption>Feature pipeline supporting predictive models and data quality checks.</figcaption>
-            </figure>
-            </div>
-          </section>
-        </div>
-      </div>
-    </main>
-
-    <footer class="wrapper project-footer">
-      <a class="btn btn--ghost" href="../index.html">Back to portfolio</a>
-    </footer>
+       </div>
+      </section>
+      <section class="project-section">
+       <h2>
+        The Problem
+       </h2>
+       <ul>
+        <li>
+         Often a mother’s health record (in an adult or OB system) is completely separate from her baby’s record (in a pediatric system), forcing providers to flip between systems or request records and risking that important information (e.g., mother’s infectious disease status or treatment history) might be missed in the baby’s care.
+        </li>
+        <li>
+         Even if data sharing is technically possible, without a dedicated interface, relevant details can be buried in lengthy documents. For instance, a pediatrician might overlook the mother’s medication-assisted therapy details if it’s hidden in discharge paperwork, which could be crucial for interpreting the newborn’s condition.
+        </li>
+        <li>
+         Care coordination among OB, neonatal, and social work teams relies on manual communication (meetings, calls). Without a unified view, critical context can fall through the cracks. At the same time, simply dumping both charts together could overwhelm clinicians with information, so a carefully designed solution is needed to present combined data clearly.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        The Solution
+       </h2>
+       <ul>
+        <li>
+         Designed and prototyped a web-based dashboard that securely pulls in data from both mother’s and infant’s health records and presents them in one synchronized interface (e.g., mother on the left, baby on the right).
+        </li>
+        <li>
+         Followed user-centered design: consulted with clinicians to determine what information is most vital for dyad care (e.g., maternal medications, recent toxicology results, infant NAS scores, feeding plans) and how to layout the interface for clarity (parallel timelines, matching sections for mother and baby).
+        </li>
+        <li>
+         Built the prototype as a SMART-on-FHIR app, meaning it can plug into an EHR system using standard FHIR APIs to fetch patient data if mother-infant linkage exists. It uses existing authentication (OAuth) and respects privacy settings while drawing the data together. The use of FHIR ensures the solution can work across different EHR systems with minimal custom integration.
+        </li>
+        <li>
+         Populated the prototype with realistic synthetic data (including using a large language model to generate sample patient records for testing). This allowed demonstration of the dashboard’s functionality (e.g., showing a mother’s methadone treatment alongside the baby’s withdrawal score trend) without using real patient data.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Architecture Overview
+       </h2>
+       <ul>
+        <li>
+         UI/UX Design Process: Started with wireframes and user journey mapping. Used tools like Balsamiq and Figma to design the dashboard screens, iterating on layout based on feedback from healthcare providers to ensure the interface was intuitive and not cluttered.
+        </li>
+        <li>
+         Front-End Development: Implemented the dashboard as a standalone web application using HTML/CSS/JavaScript. Leveraged SMART-on-FHIR JavaScript libraries to handle authentication and querying the FHIR server for patient data. For the prototype, an open-source FHIR server loaded with synthetic dyad data served as the backend.
+        </li>
+        <li>
+         FHIR Integration: Utilized FHIR resource queries to gather relevant data – e.g., pulling MedicationStatement and ProblemList from the mother’s record, and pediatric vitals and scores from the baby’s record. The app logic matches a mother-infant pair via a shared identifier or linking table (as would be configured in an HIE or hospital system).
+        </li>
+        <li>
+         Generative Data Simulation: When real data was unavailable, used GPT-4 and other tools to generate synthetic but plausible clinical data (like a sequence of NAS scores or progress notes), ensuring the prototype had rich content to display. This creative approach allowed testing features like trend graphs and alert flags in the UI with lifelike scenarios.
+        </li>
+        <li>
+         Testing &amp; Iteration: Conducted informal usability testing sessions with a small group of NICU and OB clinicians. Observed how they interacted with the dashboard and noted any confusion or suggestions. For example, if testers had trouble finding a specific piece of information, the design was tweaked (such as adding a highlight for maternal labs that impact the baby). Repeated this cycle to refine the interface and functionality.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Results and Impacts
+       </h2>
+       <ul>
+        <li>
+         The prototype clearly demonstrated how bringing mother and infant data together improves situational awareness. Clinicians in feedback sessions noted the immediate benefit of seeing, for example, the mother’s last substance use treatment update right next to the infant’s latest withdrawal score – something that previously required digging through separate records.
+        </li>
+        <li>
+         Project sponsors (including HHS officials focused on the opioid crisis) were given a detailed demo and were impressed by the concept. This buy-in is crucial for moving toward a pilot; it showed stakeholders a tangible solution rather than just a concept, making it easier to secure support for next steps.
+        </li>
+        <li>
+         The concept gained national visibility: one of the prototype’s dashboard snapshots was featured (with permission) in an ONC interoperability presentation as a forward-looking example of using data standards to solve real clinical needs. Additionally, a health IT newsletter highlighted the Dyad Dashboard as an innovative use of FHIR to improve care coordination, bringing recognition to the approach.
+        </li>
+        <li>
+         The work is on track to proceed to a formal pilot within the hospital’s EHR environment. If successful, it can significantly streamline care for substance-exposed dyads – making it easier for care teams to collaborate and potentially becoming a model for other integrated care dashboards (e.g., linking records for other family-centric care scenarios).
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Skills and Tools Used
+       </h2>
+       <div class="project-table-wrapper">
+        <table class="project-table">
+         <tr>
+          <th>
+           Skill/Tool Category
+          </th>
+          <th>
+           Application in Maternal-Infant Dyad Care Dashboard
+          </th>
+         </tr>
+         <tr>
+          <td>
+           UI/UX Design
+          </td>
+          <td>
+           User-centered design with wireframing (Balsamiq) and high-fidelity prototyping (Figma); created intuitive layouts for dual-patient data display
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Web Development
+          </td>
+          <td>
+           HTML/CSS/JavaScript front-end build; implemented the SMART-on-FHIR framework for secure EHR integration and data retrieval
+          </td>
+         </tr>
+         <tr>
+          <td>
+           FHIR API Integration
+          </td>
+          <td>
+           Queried FHIR resources (e.g., medications, labs, notes) for two linked patients; used OAuth2 for authentication and handled JSON data parsing in the app
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Synthetic Data Generation
+          </td>
+          <td>
+           Utilized GPT-4 and custom scripts to create realistic synthetic patient data (mother-infant pairs) for testing, ensuring the prototype had valid scenarios and datasets
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Usability Testing
+          </td>
+          <td>
+           Planned and conducted hands-on tests with clinicians; gathered feedback and applied iterative improvements to the dashboard’s interface and features
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Project Management
+          </td>
+          <td>
+           Managed multi-phase development (requirements -&gt; data prep -&gt; development -&gt; testing -&gt; demo); coordinated inputs from designers, developers, and clinical advisors using agile practices
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Clinical Workflow Mapping
+          </td>
+          <td>
+           Ensured the app fit naturally into existing workflows by designing it as an in-EHR module (SMART-on-FHIR launch) so clinicians can access the dyad view without extra steps; accounted for privacy consent handling in design
+          </td>
+         </tr>
+        </table>
+       </div>
+      </section>
+      <section class="project-section">
+       <h2>
+        Cross-Project Capabilities
+       </h2>
+       <ul>
+        <li>
+         Integrating Multi-Source Data: Demonstrated the ability to synthesize disparate data streams into one coherent output, much like combining varied data in Pandemic Pulse or melding model outputs with UI in the ICU project. This skill of unifying information for better insight runs through Dr. Tuli’s portfolio.
+        </li>
+        <li>
+         Marrying AI with UX: Highlighted the importance of presenting analytical outputs in an accessible way. Dr. Tuli carries this forward, ensuring that complex model results (from allergy risk scores to outbreak alerts) are delivered via intuitive interfaces that busy end-users can easily interpret and act on.
+        </li>
+        <li>
+         Innovation Leadership: By spearheading the development of an entirely new type of dashboard, he showed he can lead cross-disciplinary teams to build not just models but full solutions (data backend to user interface). This holistic view – connecting technical backends to front-end usability – enhances the impact of his projects and is a common thread in his leadership roles.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Published Papers/Tools
+       </h2>
+       <ul>
+        <li>
+         Internal Report &amp; Demo: Produced a comprehensive internal project report and a demonstration video for stakeholders and sponsors (including HHS opioid policy advisors). While not public, this documentation captures design decisions, UI screenshots, and summarizes usability test findings – serving as a blueprint for implementation and a case study for potential publication.
+        </li>
+        <li>
+         Conference Dissemination: Plans are underway to submit an abstract to AMIA 2025 or HIMSS 2025 detailing the Dyad Dashboard development and initial feedback. Sharing this work with the broader informatics community will invite collaboration and position the project as a leading example of standards-driven innovation in care coordination.
+        </li>
+        <li>
+         Open-Source Prototype Code: The code for the dashboard prototype (excluding any proprietary styling or data) has been made available in a GitHub repository under an open-source license. It includes sample synthetic FHIR data, allowing other hospitals or developers to explore and build upon the concept. This open approach encourages adoption and iterative improvement beyond the initial project.
+        </li>
+        <li>
+         Recognition: Featured in a 2025 healthcare IT innovation newsletter and included in an ONC presentation, the Dyad Dashboard has already achieved a degree of national recognition as a showcase of how leveraging interoperability standards can directly improve patient care for a high-need population.
+        </li>
+       </ul>
+      </section>
+     </div>
+    </div>
+   </main>
+   <footer class="wrapper project-footer">
+    <a class="btn btn--ghost" href="../index.html">
+     Back to portfolio
+    </a>
+   </footer>
   </div>
-</body>
+ </body>
 </html>

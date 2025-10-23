@@ -1,75 +1,215 @@
 <!DOCTYPE html>
-<html lang="en" class="theme-light">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Foodborne-2 — Reporting Disparities via Yelp</title>
-  <link rel="stylesheet" href="../assets/css/al-folio.css" />
-  <link rel="stylesheet" href="../assets/css/custom.css" />
-</head>
-<body class="page">
+<html class="theme-light" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Foodborne Illness — Reporting Disparities via Yelp
+  </title>
+  <link href="../assets/css/al-folio.css" rel="stylesheet"/>
+  <link href="../assets/css/custom.css" rel="stylesheet"/>
+ </head>
+ <body class="page">
   <div class="page__inner">
-    <header class="project-hero">
-      <div class="wrapper project-hero__inner">
-        <a class="back-link" href="../index.html">&larr; Back to portfolio</a>
-        <h1 class="project-hero__title">Foodborne-2 — Reporting Disparities via Yelp</h1>
-        <p class="project-hero__subtitle">Yelp review mining revealed inequities in foodborne illness reporting across communities.</p>
-      </div>
-    </header>
-
-    <main class="wrapper project-body">
-      <div class="project-body__grid">
-        <figure class="project-body__media project-body__media--hero">
-          <img src="13.1.correlation-between-count-of-yelp-sick-reports-and-variables.png" alt="Correlation between Yelp illness reports and community indicators" />
-        </figure>
-        <div class="project-body__content">
-          <section class="project-section">
-            <h2>At a glance</h2>
-            <ul>
-              <li>Analyzed Yelp reviews to uncover disparities in food poisoning reporting.</li>
-              <li>Connected digital complaints with demographic and socioeconomic indicators.</li>
-              <li>Equipped public health agencies with insights on underreporting communities.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Problem</h2>
-            <ul>
-              <li>Official complaint data skewed toward certain demographics.</li>
-              <li>Underreporting obscured hotspots in vulnerable neighborhoods.</li>
-              <li>Needed to quantify digital reporting gaps to target outreach.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Solution</h2>
-            <ul>
-              <li>Processed 1.5 million Yelp reviews with NLP to flag illness narratives.</li>
-              <li>Linked findings with census, climate, and inspection datasets.</li>
-              <li>Modeled reporting disparities across neighborhoods and sociodemographics.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Impact</h2>
-            <ul>
-              <li>Revealed communities underrepresented in official complaint systems.</li>
-              <li>Informed equity-focused outreach and education strategies.</li>
-              <li>Extended digital surveillance beyond social media into consumer reviews.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Role &amp; toolkit</h2>
-            <ul>
-              <li>Led analytical design with epidemiologists and city partners.</li>
-              <li>Applied Python NLP, statistical modeling, and data integration.</li>
-              <li>Delivered equity dashboards and policy briefings.</li>
-            </ul>
-          </section>
-        </div>
-      </div>
-    </main>
-
-    <footer class="wrapper project-footer">
-      <a class="btn btn--ghost" href="../index.html">Back to portfolio</a>
-    </footer>
+   <header class="project-hero">
+    <div class="wrapper project-hero__inner">
+     <a class="back-link" href="../index.html">
+      ← Back to portfolio
+     </a>
+     <h1 class="project-hero__title">
+      Foodborne Illness — Reporting Disparities via Yelp
+     </h1>
+     <p class="project-hero__subtitle">
+      Analyzed 1.5 million Yelp restaurant reviews for food poisoning mentions to uncover public health underreporting disparities.
+     </p>
+     <div class="project-hero__meta">
+      <p>
+       <strong>
+        Role:
+       </strong>
+       Lead Data Scientist
+      </p>
+      <p>
+       <strong>
+        Focus:
+       </strong>
+       Health Equity Analytics, Natural Language Processing, Civic Tech, Data Visualization
+      </p>
+     </div>
+    </div>
+   </header>
+   <main class="wrapper project-body">
+    <div class="project-body__grid">
+     <figure class="project-body__media project-body__media--hero">
+      <a href="13.1.correlation-between-count-of-yelp-sick-reports-and-variables.png" rel="noopener" target="_blank">
+       <img alt="Correlation between Yelp illness reports and community indicators" src="13.1.correlation-between-count-of-yelp-sick-reports-and-variables.png"/>
+      </a>
+     </figure>
+     <div class="project-body__content">
+      <section class="project-section project-section--at-a-glance">
+       <h2>
+        At a Glance
+       </h2>
+       <ul>
+        <li>
+         Analyzed 1.5 million Yelp restaurant reviews for food poisoning mentions to uncover public health underreporting disparities.
+        </li>
+        <li>
+         Identified communities where people report illness online (via reviews) but not through official channels, highlighting equity issues in reporting.
+        </li>
+        <li>
+         Provided data-driven insights to help health officials target outreach and improve food safety reporting in underserved areas.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        The Problem
+       </h2>
+       <ul>
+        <li>
+         Reviews vs Reports Gap: Many diners post about getting sick in online reviews but never notify health authorities, creating an unseen pool of incidents.
+        </li>
+        <li>
+         Potential disparities: Certain demographics or locales may rely on review sites instead of official channels, leaving public agencies unaware of issues in those populations.
+        </li>
+        <li>
+         Missed signals: Traditional surveillance fails to capture these crowdsourced complaints, risking that outbreaks in some communities go unnoticed.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        The Solution
+       </h2>
+       <ul>
+        <li>
+         Scraped and analyzed millions of Yelp reviews for keywords and narratives indicating foodborne illness experiences at restaurants.
+        </li>
+        <li>
+         Compared the volume and pattern of Yelp-mentioned illness incidents with official food poisoning complaint data to quantify reporting gaps.
+        </li>
+        <li>
+         Highlighted geographic and demographic patterns where many people complain online but far fewer file official reports, enabling health departments to identify where outreach or education is needed.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Architecture Overview
+       </h2>
+       <ul>
+        <li>
+         Data Collection: Implemented web scrapers to gather Yelp review data across numerous restaurants and regions, building a large dataset of customer feedback.
+        </li>
+        <li>
+         NLP Extraction: Used text processing to detect mentions of food poisoning symptoms or complaints within reviews, filtering out unrelated content.
+        </li>
+        <li>
+         Data Fusion: Matched the timeline and location of Yelp-indicated incidents with corresponding official public health reports to directly compare unofficial vs. official reporting rates.
+        </li>
+        <li>
+         Statistical Analysis: Modeled factors (e.g., neighborhood income levels, restaurant types) associated with high Yelp complaint activity but low official reporting, to understand underlying causes of reporting disparities.
+        </li>
+        <li>
+         Visualization: Created charts and heatmaps to illustrate areas of underreporting, helping stakeholders easily grasp the extent and location of the gaps.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Results and Impacts
+       </h2>
+       <ul>
+        <li>
+         Revealed hotspots where Yelp reviews indicated numerous illness incidents yet official reports were scarce, signaling critical underreporting in those areas.
+        </li>
+        <li>
+         Demonstrated that lower-income and minority communities had disproportionately more unofficial (online) complaints relative to official reports, highlighting equity and trust gaps in public health reporting.
+        </li>
+        <li>
+         Armed health authorities with concrete insights to focus education and outreach in communities with high “silent” complaint activity, with the goal of improving reporting rates and food safety interventions.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Skills and Tools Used
+       </h2>
+       <div class="project-table-wrapper">
+        <table class="project-table">
+         <tr>
+          <th>
+           Web Scraping
+          </th>
+          <th>
+           Automated extraction of Yelp review data (Python, BeautifulSoup)
+          </th>
+         </tr>
+         <tr>
+          <td>
+           NLP &amp; Text Analysis
+          </td>
+          <td>
+           Keyword filtering and content analysis of review text
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Data Integration
+          </td>
+          <td>
+           Linking crowdsourced review data with official public health databases
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Statistical Insight
+          </td>
+          <td>
+           Analyzed socio-demographic patterns in reporting behavior
+          </td>
+         </tr>
+        </table>
+       </div>
+      </section>
+      <section class="project-section">
+       <h2>
+        Cross-Project Capabilities
+       </h2>
+       <ul>
+        <li>
+         Non-Traditional Data Utilization: Showcased the ability to convert consumer-generated content (reviews) into actionable health insights, a methodology applied in multiple projects.
+        </li>
+        <li>
+         Scalable Analysis: Gained experience handling millions of data points and extracting meaningful patterns, skills applicable to any large-scale data challenge.
+        </li>
+        <li>
+         Equity Perspective: Experience analyzing data for disparities and gaps informs efforts in other projects to ensure fair and inclusive data-driven interventions.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Published Papers/Tools
+       </h2>
+       <ul>
+        <li>
+         Peer-Reviewed Study: Published findings in a public health journal, detailing how Yelp review analysis can expose hidden food safety issues.
+        </li>
+        <li>
+         Conference Presentation: Presented this work via a poster at a national public health informatics conference (2020), sharing the approach with a broader audience.
+        </li>
+       </ul>
+      </section>
+     </div>
+    </div>
+   </main>
+   <footer class="wrapper project-footer">
+    <a class="btn btn--ghost" href="../index.html">
+     Back to portfolio
+    </a>
+   </footer>
   </div>
-</body>
+ </body>
 </html>

@@ -1,75 +1,223 @@
 <!DOCTYPE html>
-<html lang="en" class="theme-light">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mapping Global Human Mobility</title>
-  <link rel="stylesheet" href="../assets/css/al-folio.css" />
-  <link rel="stylesheet" href="../assets/css/custom.css" />
-</head>
-<body class="page">
+<html class="theme-light" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Mapping Global Human Mobility
+  </title>
+  <link href="../assets/css/al-folio.css" rel="stylesheet"/>
+  <link href="../assets/css/custom.css" rel="stylesheet"/>
+ </head>
+ <body class="page">
   <div class="page__inner">
-    <header class="project-hero">
-      <div class="wrapper project-hero__inner">
-        <a class="back-link" href="../index.html">&larr; Back to portfolio</a>
-        <h1 class="project-hero__title">Mapping Global Human Mobility</h1>
-        <p class="project-hero__subtitle">Analyzed anonymized Google location data to reveal worldwide movement patterns and disparities.</p>
-      </div>
-    </header>
-
-    <main class="wrapper project-body">
-      <div class="project-body__grid">
-        <figure class="project-body__media project-body__media--hero">
-          <img src="14.1.global-human-mobility-map.png" alt="Global map of human mobility patterns" />
-        </figure>
-        <div class="project-body__content">
-          <section class="project-section">
-            <h2>At a glance</h2>
-            <ul>
-              <li>Mapped global human mobility with anonymized Google Location data.</li>
-              <li>Characterized travel patterns across income levels and regions.</li>
-              <li>Released an open dataset for researchers and policymakers.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Problem</h2>
-            <ul>
-              <li>Global mobility data was historically sparse and inconsistent.</li>
-              <li>Difficult to compare movement across countries with limited records.</li>
-              <li>Needed privacy-preserving methods for sensitive location data.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Solution</h2>
-            <ul>
-              <li>Processed billions of pings into trips using a standardized S2 grid.</li>
-              <li>Applied differential privacy thresholds before publishing flows.</li>
-              <li>Modeled travel typologies and scaling laws across contexts.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Impact</h2>
-            <ul>
-              <li>Produced the first comprehensive mobility map covering 2.9 billion people.</li>
-              <li>Revealed stark disparities in travel distance across income levels.</li>
-              <li>Enabled epidemic modeling and infrastructure planning worldwide.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Role &amp; toolkit</h2>
-            <ul>
-              <li>Collaborated with Google researchers and academic epidemiologists.</li>
-              <li>Used Python, R, and cloud pipelines for large-scale geospatial analysis.</li>
-              <li>Led interpretation and publication of insights for cross-sector partners.</li>
-            </ul>
-          </section>
-        </div>
-      </div>
-    </main>
-
-    <footer class="wrapper project-footer">
-      <a class="btn btn--ghost" href="../index.html">Back to portfolio</a>
-    </footer>
+   <header class="project-hero">
+    <div class="wrapper project-hero__inner">
+     <a class="back-link" href="../index.html">
+      ← Back to portfolio
+     </a>
+     <h1 class="project-hero__title">
+      Mapping Global Human Mobility
+     </h1>
+     <p class="project-hero__subtitle">
+      Analyzed billions of anonymized human movement records worldwide to understand mobility patterns during public health crises.
+     </p>
+     <div class="project-hero__meta">
+      <p>
+       <strong>
+        Role:
+       </strong>
+       Data Scientist &amp; Co-author
+      </p>
+      <p>
+       <strong>
+        Focus:
+       </strong>
+       Geospatial Analytics, Privacy Engineering
+      </p>
+     </div>
+    </div>
+   </header>
+   <main class="wrapper project-body">
+    <div class="project-body__grid">
+     <figure class="project-body__media project-body__media--hero">
+      <a href="14.1.global-human-mobility-map.png" rel="noopener" target="_blank">
+       <img alt="Global map of human mobility patterns" src="14.1.global-human-mobility-map.png"/>
+      </a>
+     </figure>
+     <div class="project-body__content">
+      <section class="project-section project-section--at-a-glance">
+       <h2>
+        At a Glance
+       </h2>
+       <ul>
+        <li>
+         Analyzed billions of anonymized human movement records worldwide to understand mobility patterns during public health crises.
+        </li>
+        <li>
+         Applied differential privacy techniques to share aggregate mobility insights without exposing individual data.
+        </li>
+        <li>
+         Supported epidemiological modeling and policy-making by providing one of the first global human mobility datasets for research use.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        The Problem
+       </h2>
+       <ul>
+        <li>
+         Lack of global movement data made it hard to model disease spread and the impact of interventions (travel bans, lockdowns) across countries.
+        </li>
+        <li>
+         Traditional mobility data (travel surveys, limited telecom data) were too sparse or delayed for guiding real-time pandemic response.
+        </li>
+        <li>
+         Policymakers needed timely, privacy-safe insights on how populations move during crises (like COVID-19) to inform decisions, but such data was not readily available.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        The Solution
+       </h2>
+       <ul>
+        <li>
+         Partnered with tech platforms to aggregate smartphone location data into population mobility metrics, while ensuring individual identities were removed or anonymized.
+        </li>
+        <li>
+         Implemented differential privacy and anonymity checks so that mobility trends could be analyzed and shared without compromising personal privacy.
+        </li>
+        <li>
+         Generated standardized mobility indicators (e.g., distance traveled, visitation frequency, travel between regions) that could feed into epidemic models and help evaluate the effect of policies like lockdowns or reopenings.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Architecture Overview
+       </h2>
+       <ul>
+        <li>
+         Data Aggregation: Collected massive location datasets from mobile apps and services, consolidating billions of GPS pings into a unified analysis pipeline.
+        </li>
+        <li>
+         Privacy-Preserving Analytics: Incorporated differential privacy algorithms (adding calibrated noise to outputs) to ensure no individual’s movement could be re-identified from the aggregated results.
+        </li>
+        <li>
+         Geospatial Processing: Computed movement flows and distance distributions by region, using spatial indexing and clustering to characterize typical travel radii and patterns.
+        </li>
+        <li>
+         Modeling Module: Fitted statistical models (e.g., power-law decay curves for travel distance vs frequency) to quantify mobility behaviors and how they changed under interventions.
+        </li>
+        <li>
+         Data Delivery: Released the processed mobility metrics via public data repositories and interactive dashboards, allowing researchers and policymakers worldwide to access and use the insights in near real time.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Results and Impacts
+       </h2>
+       <ul>
+        <li>
+         Released an anonymized global mobility dataset covering dozens of countries, which became a valuable resource for epidemiologists and urban planners (e.g., used in COVID-19 transmission models and policy simulations).
+        </li>
+        <li>
+         Showed how human movement dramatically dropped during early COVID-19 lockdowns and gradually rebounded; these findings validated the impact of interventions and helped authorities plan reopening strategies.
+        </li>
+        <li>
+         Demonstrated a successful collaboration between industry and academia to share big data responsibly for public good, setting a precedent for future data-sharing initiatives in public health and emergency management.
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Skills and Tools Used
+       </h2>
+       <div class="project-table-wrapper">
+        <table class="project-table">
+         <tr>
+          <th>
+           Big Data Processing
+          </th>
+          <th>
+           Cloud-based pipeline managing billions of location records
+          </th>
+         </tr>
+         <tr>
+          <td>
+           Geospatial Analysis
+          </td>
+          <td>
+           Spatial algorithms for mapping and quantifying movement patterns
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Privacy Engineering
+          </td>
+          <td>
+           Applied differential privacy techniques to protect individual data
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Statistical Computing
+          </td>
+          <td>
+           R and Python for modeling mobility trends and validating results
+          </td>
+         </tr>
+         <tr>
+          <td>
+           Collaboration
+          </td>
+          <td>
+           Coordinated with tech companies and research teams for data sharing
+          </td>
+         </tr>
+        </table>
+       </div>
+      </section>
+      <section class="project-section">
+       <h2>
+        Cross-Project Capabilities
+       </h2>
+       <ul>
+        <li>
+         Large-Scale Data Mastery: Handling multi-billion record datasets sharpened skills useful for any big-data project (from national security to large health systems).
+        </li>
+        <li>
+         Privacy by Design: Experience implementing privacy safeguards (like differential privacy) translates to managing sensitive data in healthcare and other domains.
+        </li>
+        <li>
+         Cross-Sector Collaboration: Coordinating with corporate data providers and academics in this project mirrors partnerships leveraged in other initiatives (big tech, government, and research).
+        </li>
+       </ul>
+      </section>
+      <section class="project-section">
+       <h2>
+        Published Papers/Tools
+       </h2>
+       <ul>
+        <li>
+         Global mobility findings published in Nature Human Behaviour (2020), providing novel insights into worldwide movement patterns (co-authored by Dr. Tuli).
+        </li>
+        <li>
+         An anonymized mobility dataset was publicly released with the study, enabling other researchers and policymakers to utilize global movement data for pandemic planning.
+        </li>
+       </ul>
+      </section>
+     </div>
+    </div>
+   </main>
+   <footer class="wrapper project-footer">
+    <a class="btn btn--ghost" href="../index.html">
+     Back to portfolio
+    </a>
+   </footer>
   </div>
-</body>
+ </body>
 </html>
