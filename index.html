@@ -1,448 +1,931 @@
 <!DOCTYPE html>
-<html lang="en" class="theme-light">
+
+<html class="theme-light" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gaurav Tuli | Portfolio</title>
-  <link rel="stylesheet" href="assets/css/al-folio.css" />
-  <link rel="stylesheet" href="assets/css/custom.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
+   Gaurav Tuli | Portfolio
+  </title>
+<link href="assets/css/al-folio.css" rel="stylesheet"/>
+<link href="assets/css/custom.css" rel="stylesheet"/>
 </head>
 <body class="page">
-  <div class="page__inner">
-    <header class="landing-header">
-      <div class="wrapper hero">
-        <span class="hero__eyebrow">Gaurav Tuli, PhD (Applied ML / Network Science)</span>
-        <h1 class="hero__title">Transforming research prototypes into operational, high-value solutions across government, industry, and academia.</h1>
-        <p class="hero__subtitle">
-          This portfolio presents various applied machine learning and data science projects spanning public health, clinical AI, informatics, and multi-sector innovation.      
-</p>
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="#projects">Explore signature projects</a>
-          <a class="btn btn--ghost" href="mailto:contact@gtuli.dev">Let’s collaborate</a>
-        </div>
-      </div>
-    </header>
-
-    <main id="projects" class="wrapper landing-main">
-      <section class="section-intro">
-        <h2 class="section-title">Featured initiatives</h2>
-        <p class="section-subtitle">
-          Each project blends technical rigor of data engineering, ML modeling, and AI system architecture with measurable real-world impact in healthcare, national security, and policy. The concise summaries highlight what was built, why it mattered, and how it advanced data-driven decision-making. 
-        </p>
-      </section>
-
-      <div class="project-grid">
-        <article class="project-card">
-          <a class="project-card__link" href="01-pandemic-pulse/index.html">
-            <figure class="project-card__figure">
-              <img src="01-pandemic-pulse/1.1.pandemic-pulse-dashboard.png" alt="Dashboards from the Pandemic Pulse biosurveillance platform" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Pandemic Pulse — Digital Biosurveillance</h3>
-              <p class="project-card__description">Unified digital exhaust to detect novel outbreaks weeks earlier.</p>
-              <ul class="project-card__meta">
-                <li>Role: Lead Investigator &amp; AI Systems Architect</li>
-                <li>Focus: Weak-signal detection, Data fusion, Real-time dashboards</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="02-ml-allergy/index.html">
-            <figure class="project-card__figure">
-              <img src="02-ml-allergy/2.1.Allergy-AI-system-architecture.png" alt="ML-Allergy system architecture diagram" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">ML-Allergy — Food Allergy Risk Stratification</h3>
-              <p class="project-card__description">Composite biomarker ML panel predicting oral food challenge outcomes.</p>
-              <ul class="project-card__meta">
-                <li>Role: Lead Clinical Data Scientist</li>
-                <li>Focus: EHR integration, Model interpretability, Clinician workflows</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="03-pediatric-vision-ai/index.html">
-            <figure class="project-card__figure">
-              <img src="03-pediatric-vision-ai/3.1.Vision-ninja-gaze-and-optotypes.png" alt="Prototype interface illustrating pediatric gaze tracking" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Pediatric Vision AI — Early Screening</h3>
-              <p class="project-card__description">Computer Vision screening tool for pediatric amblyopia detection.</p>
-              <ul class="project-card__meta">
-                <li>Role: Principal Data Scientist &amp; Analytics lead</li>
-                <li>Focus: Computer Vision, Agile development, Clinical validation</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="04-project-apollo-icu-hypoxemia/index.html">
-            <figure class="project-card__figure">
-              <img src="04-project-apollo-icu-hypoxemia/4.1.SPO2-prediction-model-bias-comparison.jpeg" alt="ICU hypoxemia prediction console highlighting rising risk" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">ICU Clinical Decision Support – Continuous Hypoxemia Monitoring</h3>
-              <p class="project-card__description">Enabling better real-time tracking of hypoxemia severity in critical care.</p>
-              <ul class="project-card__meta">
-                <li>Role:  Principal Data Scientist &amp; Senior Author </li>
-                <li>Focus: Time-series forecasting, clinician-in-the-loop design</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="05-maternal-infant-integration/index.html">
-            <figure class="project-card__figure">
-              <img src="05-maternal-infant-integration/5.1.mother-infant-diad-infant-clinical-data-elements-mapping-USCDI.png" alt="Maternal-infant clinical data elements mapped to USCDI" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Maternal-Infant Health Data Integration</h3>
-              <p class="project-card__description">Built visual analytics tools and dashboards to support integrated maternal-infant care.</p>
-              <ul class="project-card__meta">
-                <li>Role: Principal Data Scientist </li>
-                <li>Focus: Interoperability, Generative AI, Visual analytics, Policy impact</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="06-global-covid-impact-monitoring/index.html">
-            <figure class="project-card__figure">
-              <img src="06-global-covid-impact-monitoring/6.1.covid-CTIS-banchmarking.png" alt="Global benchmarking of Facebook UMD-CTIS survey signals" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Global COVID-19 Impact Monitoring</h3>
-              <p class="project-card__description">Partned with Meta to utilze their survey to Monitor the Pandemic across 114-countries.</p>
-              <ul class="project-card__meta">
-                <li>Role: Lead ML Engineer &amp; Co-first Author</li>
-                <li>Focus: Pandemic preparedness, Cross-country collaboration, Global health, Data Visualization</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="07-bangkok-vaccine-insights/index.html">
-            <figure class="project-card__figure">
-              <img src="07-bangkok-vaccine-insights/7.1.CITS-Thiland-premedical-conditon.png" alt="Bangkok vaccine concerns segmented by pre-existing conditions" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Bangkok COVID-19 Vaccine Hesitancy Insights</h3>
-              <p class="project-card__description">Provided near-real time vaccine sentiments to guide Thailand's vaccination strategy.</p>
-              <ul class="project-card__meta">
-                <li>Role: Principal Data Scientist &amp; Co-first Author</li>
-                <li>Focus: Urban health analytics, Behavior monitoring, Policy impact, Civic Tech, Data Visualization</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="08-federated-npi-behavior/index.html">
-            <figure class="project-card__figure">
-              <img src="08-federated-npi-behavior/8.1.Accute-Respiratory-Infection-Google-Health-Study-Launch.png" alt="Google Health federated NPI study launch graphic" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Privacy-Preserving COVID-19 Behavior Study </h3>
-              <p class="project-card__description">Partnered with Google Health to deploy and utilize the first privacy-preserving participatory public health surveillance app.</p>
-              <ul class="project-card__meta">
-                <li>Role: Epidemiology &amp; Analytics lead</li>
-                <li>Focus: Federated analytics, Differential Privacy, Human mobility, Intervention Adherence, Civic Tech</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="09-covid-trial-equity/index.html">
-            <figure class="project-card__figure">
-              <img src="09-covid-trial-equity/9.1.clinical-trial-leadership-gender-by-disease.png" alt="Gender representation across COVID-19 clinical trial leadership" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">COVID-19 Trial Leadership Equity</h3>
-              <p class="project-card__description">Audited gender representation across thousands of US COVID-19 trials.</p>
-              <ul class="project-card__meta">
-                <li>Role: Principal Data Scientist &amp; Senior Author</li>
-                <li>Focus: Clinical Data mining, Equity Analytics, Natural Language Processing</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="10-variant-vaccine-effectiveness/index.html">
-            <figure class="project-card__figure">
-              <img src="10-variant-vaccine-effectiveness/10.1.covid-vaccine-effectiveness-against-mild-vs-severe-illness.png" alt="Vaccine effectiveness against mild versus severe illness" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Variant-Responsive Vaccine Effectiveness</h3>
-              <p class="project-card__description">Built a rapid estimation pipeline using global survey data to quantify vaccine performance shifts.</p>
-              <ul class="project-card__meta">
-                <li>Role: Principal Data Scientist &amp; Collaborator </li>
-                <li>Focus: Survey-based VE modeling, Global Health</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="11-dns-command-control-detection/index.html">
-            <figure class="project-card__figure">
-              <img src="11-dns-command-control-detection/11.1.Cybersecurity.Detect-and-control-channel-in-DNS-Logs.image.png" alt="Architecture for DNS command-and-control detection" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Cybersecurity — DNS Command-and-Control Detection</h3>
-              <p class="project-card__description">Built streaming DNS analytics to detect covert malware command channels.</p>
-              <ul class="project-card__meta">
-                <li>Role: Lead Security Analytics Architect</li>
-                <li>Focus: Streaming detection, Threat Intelligence, SOC Enablement</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="12-foodborne-twitter-surveillance/index.html">
-            <figure class="project-card__figure">
-              <img src="12-foodborne-twitter-surveillance/12.1.foodborne-illness-tweet-detailed.png" alt="Tweet flagged by the HealthMap foodborne dashboard" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Foodborne-1 — Twitter Surveillance</h3>
-              <p class="project-card__description">Created a Twitter-monitoring dashboard that converts tweets into actionable food safety reports.</p>
-              <ul class="project-card__meta">
-                <li>Role: Public Health Data Scientist  &amp; ML Engineer</li>
-                <li>Focus: Digital epidemiology, ML Classification, Rapid response workflows, Civic Tech, Data Visualization</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="13-foodborne-yelp-disparities/index.html">
-            <figure class="project-card__figure">
-              <img src="13-foodborne-yelp-disparities/13.1.correlation-between-count-of-yelp-sick-reports-and-variables.png" alt="Correlation between Yelp illness reports and community indicators" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Foodborne-2 — Reporting Disparities via Yelp</h3>
-              <p class="project-card__description">Mined Yelp reviews to expose who reports foodborne illness—and who gets overlooked.</p>
-              <ul class="project-card__meta">
-                <li>Role: Lead Data Scientist</li>
-                <li>Focus: Health equity analytics, Natural Language Processing, Civic Tech, Data Visualization</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="14-global-mobility-mapping/index.html">
-            <figure class="project-card__figure">
-              <img src="14-global-mobility-mapping/14.1.global-human-mobility-map.png" alt="Global map of human mobility patterns" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Mapping Global Human Mobility</h3>
-              <p class="project-card__description">Mapped global variation in human mobility using anonymized Google location history.</p>
-              <ul class="project-card__meta">
-                <li>Role: Data Scientist  &amp; Co-author</li>
-                <li>Focus: Geospatial Analytics, Privacy Engineering</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="15-gun-violence-platform/index.html">
-            <figure class="project-card__figure">
-              <img src="15-gun-violence-platform/15.1.gunviolence-map-dashboard-views.png" alt="Gun violence map dashboard views" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Gun Violence Surveillance Platform</h3>
-              <p class="project-card__description">Built a real-time platform that fuses digital exhaust to track US gun violence.</p>
-              <ul class="project-card__meta">
-                <li>Role: Co-Prinicipal Investigator &amp; ML Systems Architect </li>
-                <li>Focus: Social data integration, ML Classification, Civic Tech, Visual Analytics</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="16-demining-analytics-dashboard/index.html">
-            <figure class="project-card__figure">
-              <img src="16-demining-analytics-dashboard/16.1.Demining-dashboard-sys-design-location-focused-with-KPI.png" alt="Demining dashboard system design" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Humanitarian Demining Analytics Dashboard</h3>
-              <p class="project-card__description">Designed a modular geospatial system that guides humanitarian demining priorities.</p>
-              <ul class="project-card__meta">
-                <li>Role: Product Strategist  &amp; ML Systems Architect </li>
-                <li>Focus: Geospatial Analytics, Humanitarian Tech, Decision support</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="17-masl-isr-supervision/index.html">
-            <figure class="project-card__figure">
-              <img src="17-masl-isr-supervision/17.1.Multi-agent-system-MOTL-based-ISR-Supervision.png" alt="Multi-agent ISR supervision concept" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Man On The Loop (MOTL)-based ISR Supervision</h3>
-              <p class="project-card__description">Applied MOTL to coordinate ISR agents that swap roles as missions evolve.</p>
-              <ul class="project-card__meta">
-                <li>Role: Autonomy Research Lead</li>
-                <li>Focus: Multi-agent systems, Reinforcement Learning, Defense ISR</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="18-masl-control-paradigm/index.html">
-            <figure class="project-card__figure">
-              <img src="18-masl-control-paradigm/18.1.John-Boyds-Control-loop.png" alt="Control loop inspired by Boyd&#x27;s OODA framework" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Man On The Loop (MOTL) Control Paradigm</h3>
-              <p class="project-card__description">Defined a resilient MOTL control paradigm for coordinating autonomous mission teams.</p>
-              <ul class="project-card__meta">
-                <li>Role: Systems Research Lead</li>
-                <li>Focus: Multi-agent systems, Autonomy Doctrine, Control Systems</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="19-patient-experience-longitudinal/index.html">
-            <figure class="project-card__figure">
-              <img src="19-patient-experience-longitudinal/19.1.patient-experience-across-US-states-four-year-logitudinal-study.png" alt="Longitudinal patient experience trends across US states" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Patient Experience — US Longitudinal Study</h3>
-              <p class="project-card__description">Measured four years of patient experience trends and equity gaps across every state.</p>
-              <ul class="project-card__meta">
-                <li>Role: Principal Data Scientist &amp; Co-first Author</li>
-                <li>Focus: ML Classification, Social Media Analytics, Longitudinal Study, Health Equity, Visual Analytics</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="20-patient-experience-twitter/index.html">
-            <figure class="project-card__figure">
-              <img src="20-patient-experience-twitter/20.1.patient-experience-across-US-Hospitals.png" alt="Patient experience sentiment across US hospitals" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Patient Experience — Hospital Twitter Signals</h3>
-              <p class="project-card__description">Mapped hospital patient experience by mining and contextualizing social media feedback.</p>
-              <ul class="project-card__meta">
-                <li>Role: Lead ML Engineer </li>
-                <li>Focus: ML Classification, Social listening, Healthcare quality, Data Visualization</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="21-patient-experience-equity/index.html">
-            <figure class="project-card__figure">
-              <img src="21-patient-experience-equity/21.1.patient-experience-user-race-correlation-with-census-last-name-across-all-states.png" alt="Correlation between patient sentiment and inferred race across states" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Patient Experience — Racial Equity Signals</h3>
-              <p class="project-card__description">Exposed racial disparities in patient experience by fusing sentiment and demographic inference.</p>
-              <ul class="project-card__meta">
-                <li>Role: Lead ML Enginner </li>
-                <li>Focus: ML Classification, Fairness analytics, Patient experience, responsible AI</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="22-smoking-structured-resistance/index.html">
-            <figure class="project-card__figure">
-              <img src="22-smoking-structured-resistance/22.1.Smoking-behavior-structured-resistance-model.png" alt="Structured resistance model for smoking contagion" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Social Contagion 1 — Structured Resistance Model</h3>
-              <p class="project-card__description">Modeled smoking as a structured contagion to explain why prevalence declines so slowly.</p>
-              <ul class="project-card__meta">
-                <li>Role: Lead Modeling and Simulations Engineer &amp; First Author </li>
-                <li>Focus: Behavioral epidemiology, nonlinear dynamics</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="23-smoking-online-exposure/index.html">
-            <figure class="project-card__figure">
-              <img src="23-smoking-online-exposure/23.1.social-media-supervised-ML-model-building-workflow.png" alt="Workflow for supervised ML smoking exposure study" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Social Contagion 2 — Online Exposure</h3>
-              <p class="project-card__description">Quantified how underage audiences encounter smoking promotion across Twitter networks.</p>
-              <ul class="project-card__meta">
-                <li>Role: Lead Social Data Scientist &amp; First Author</li>
-                <li>Focus: ML Classification, Network Analytics, Exposure Modeling, Youth tobacco prevention</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="24-ecig-exposure-hotspots/index.html">
-            <figure class="project-card__figure">
-              <img src="24-ecig-exposure-hotspots/24.1.e-cig-socialmedia-exposure-westcoast-hotspots.png" alt="E-cig social media exposure hotspots map" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Social Contagion 3 — E-cig Exposure Hotspots</h3>
-              <p class="project-card__description">Mapped where e-cigarette messaging concentrates so prevention teams can respond quickly.</p>
-              <ul class="project-card__meta">
-                <li>Role: Lead Social Data Scientist &amp; First Author</li>
-                <li>Focus: ML Classification, Geospatial social analytics, Youth tobacco prevention, </li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="25-contagion-edge-blocking/index.html">
-            <figure class="project-card__figure">
-              <img src="25-contagion-edge-blocking/25.1.an-efficient-algorithm-for-edge-removal-based-social-contagion-blocking.png" alt="Edge removal algorithm performance comparison" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Social Contagion 4 — Edge Blocking</h3>
-              <p class="project-card__description">Engineered edge-removal strategies that stop contagion spread with minimal disruption.</p>
-              <ul class="project-card__meta">
-                <li>Role: Lead Modeling and Simulations Enginee</li>
-                <li>Focus: Contagion blocking, Alogithm design and analysis, Modeling and Simulations</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-        <article class="project-card">
-          <a class="project-card__link" href="26-contagion-community-blocking/index.html">
-            <figure class="project-card__figure">
-              <img src="26-contagion-community-blocking/26.1.community-based-social-contagion-blocking-illustration.png" alt="Community-based social contagion blocking illustration" />
-            </figure>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Social Contagion 5 — Community Blocking</h3>
-              <p class="project-card__description">Combined community detection and simulations to halt complex contagions efficiently.</p>
-              <ul class="project-card__meta">
-                <li>Role: Lead Modeling and Simulations Engineer &amp; First Author</li>
-                <li>Focus: Contagion blocking, community structure, hybrid algorithms</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-      </div>
-    </main>
-
-    <section class="wrapper landing-secondary">
-      <div class="callout">
-        <h2 class="callout__title">Beyond the portfolio</h2>
-        <p class="callout__description">
-          Gaurav collaborates with federal agencies, health systems, and startups to advance equitable care. Whether it is
+<div class="page__inner">
+<header class="landing-header">
+<div class="wrapper hero">
+<span class="hero__eyebrow">
+      Gaurav Tuli, PhD (Applied ML / Network Science)
+     </span>
+<h1 class="hero__title">
+      Transforming research prototypes into operational, high-value solutions across government, industry, and academia.
+     </h1>
+<p class="hero__subtitle">
+      This portfolio presents various applied machine learning and data science projects spanning public health, clinical AI, informatics, and multi-sector innovation.
+     </p>
+<div class="hero__actions">
+<a class="btn btn--primary" href="#projects">
+       Explore signature projects
+      </a>
+<a class="btn btn--ghost" href="mailto:contact@gtuli.dev">
+       Let’s collaborate
+      </a>
+</div>
+</div>
+</header>
+<main class="wrapper landing-main" id="projects">
+<section class="section-intro">
+<h2 class="section-title">
+      Featured initiatives
+     </h2>
+<p class="section-subtitle">
+      Each project blends technical rigor of data engineering, ML modeling, and AI system architecture with measurable real-world impact in healthcare, national security, and policy. The concise summaries highlight what was built, why it mattered, and how it advanced data-driven decision-making.
+     </p>
+</section>
+<div class="project-search">
+<label for="project-search">
+      Search projects
+     </label>
+<input aria-describedby="project-search-help" id="project-search" list="project-search-suggestions" placeholder="Search by title, focus, or skills" type="search"/>
+<datalist id="project-search-suggestions"><option value="Agile Development"></option><option value="Algorithm Design and Analysis"></option><option value="Autonomy Doctrine"></option><option value="Behavior Monitoring"></option><option value="Behavioral Epidemiology"></option><option value="Civic Tech"></option><option value="Clinical Data Mining"></option><option value="Clinical UX"></option><option value="Clinical Validation"></option><option value="Clinician Workflows"></option><option value="Clinician-In-The-Loop Design"></option><option value="Community Structure"></option><option value="Computer Vision"></option><option value="Contagion Blocking"></option><option value="Control Systems"></option><option value="Data Fusion"></option><option value="Data Visualization"></option><option value="Decision Support"></option><option value="Defense ISR"></option><option value="Differential Privacy"></option><option value="Digital Epidemiology"></option><option value="EHR Integration"></option><option value="Equity Analytics"></option><option value="Exposure Modeling"></option><option value="Fairness Analytics"></option><option value="Federated Analytics"></option><option value="Generative Prototyping"></option><option value="Geospatial Analytics"></option><option value="Geospatial Social Analytics"></option><option value="Global Health"></option><option value="Health Equity"></option><option value="Health Equity Analytics"></option><option value="Healthcare Quality"></option><option value="Human Mobility"></option><option value="Humanitarian Tech"></option><option value="Hybrid Algorithms"></option><option value="Interoperability"></option><option value="Intervention Adherence"></option><option value="Longitudinal Study"></option><option value="ML Classification"></option><option value="Model Interpretability"></option><option value="Modeling and Simulations"></option><option value="Multi-Agent Systems"></option><option value="Natural Language Processing"></option><option value="Network Analytics"></option><option value="Nonlinear Dynamics"></option><option value="Pandemic Intelligence"></option><option value="Patient Experience"></option><option value="Policy Impact"></option><option value="Privacy Engineering"></option><option value="Privacy-Aware Analytics"></option><option value="Public-Private Collaboration"></option><option value="Rapid Response Workflows"></option><option value="Real-Time Dashboards"></option><option value="Reinforcement Learning"></option><option value="Responsible AI"></option><option value="SOC Enablement"></option><option value="Social Data Integration"></option><option value="Social Listening"></option><option value="Social Media Analytics"></option><option value="Standards Engineering"></option><option value="Streaming Detection"></option><option value="Survey-Based VE Modeling"></option><option value="Threat Intelligence"></option><option value="Time-Series Forecasting"></option><option value="Urban Health Analytics"></option><option value="Visual Analytics"></option><option value="Weak-Signal Detection"></option><option value="Youth Tobacco Prevention"></option></datalist>
+<p class="project-search__help" id="project-search-help">
+      Filter projects by keywords found in their focus areas, skills, or titles.
+     </p>
+</div>
+<div class="project-groups">
+<section class="project-group" data-project-group="biosurveillance">
+<h3 class="project-group__title">
+       Biosurveillance &amp; Pandemic Preparedness
+      </h3>
+<p class="project-group__description">Principal-level biosurveillance programs spanning global monitoring, pandemic intelligence, and privacy-first public health analytics.</p>
+<div class="project-grid">
+<article class="project-card" data-filter-text="pandemic pulse — digital biosurveillance lead investigator &amp; ai systems architect weak-signal detection data fusion real-time dashboards" data-focus="weak-signal detection data fusion real-time dashboards" data-focus-list="Weak-Signal Detection|Data Fusion|Real-Time Dashboards" data-project-card="true" data-search-keywords="pandemic pulse — digital biosurveillance lead investigator &amp; ai systems architect weak-signal detection data fusion real-time dashboards" data-skills="" data-skills-list="">
+<a class="project-card__link" href="01-pandemic-pulse/index.html">
+<figure class="project-card__figure">
+<img alt="Dashboards from the Pandemic Pulse biosurveillance platform" loading="lazy" src="01-pandemic-pulse/1.1.pandemic-pulse-dashboard.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Pandemic Pulse — Digital Biosurveillance
+          </h3>
+<p class="project-card__description">
+           Developed a real-time bio-threat surveillance tool integrating social, search, and health data.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Lead Investigator &amp; AI Systems Architect
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Weak-Signal Detection</span><span class="project-card__focus-tag">Data Fusion</span><span class="project-card__focus-tag">Real-Time Dashboards</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="bangkok covid-19 vaccine hesitancy insights principal data scientist &amp; co-first author urban health analytics behavior monitoring policy impact civic tech data visualization" data-focus="urban health analytics behavior monitoring policy impact civic tech data visualization" data-focus-list="Urban Health Analytics|Behavior Monitoring|Policy Impact|Civic Tech|Data Visualization" data-project-card="true" data-search-keywords="bangkok covid-19 vaccine hesitancy insights principal data scientist &amp; co-first author urban health analytics behavior monitoring policy impact civic tech data visualization" data-skills="" data-skills-list="">
+<a class="project-card__link" href="07-bangkok-vaccine-insights/index.html">
+<figure class="project-card__figure">
+<img alt="Bangkok vaccine concerns segmented by pre-existing conditions" loading="lazy" src="07-bangkok-vaccine-insights/7.1.CITS-Thiland-premedical-conditon.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Bangkok COVID-19 Vaccine Hesitancy Insights
+          </h3>
+<p class="project-card__description">
+           Used Facebook’s city-scale digital health survey to rapidly assess COVID-19 vaccine hesitancy during Bangkok’s mid-2021 outbreak.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Principal Data Scientist &amp; Co-first Author
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Urban Health Analytics</span><span class="project-card__focus-tag">Behavior Monitoring</span><span class="project-card__focus-tag">Policy Impact</span><span class="project-card__focus-tag">Civic Tech</span><span class="project-card__focus-tag">Data Visualization</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="privacy-preserving covid-19 behavior study epidemiology &amp; analytics lead federated analytics differential privacy human mobility intervention adherence civic tech" data-focus="federated analytics differential privacy human mobility intervention adherence civic tech" data-focus-list="Federated Analytics|Differential Privacy|Human Mobility|Intervention Adherence|Civic Tech" data-project-card="true" data-search-keywords="privacy-preserving covid-19 behavior study epidemiology &amp; analytics lead federated analytics differential privacy human mobility intervention adherence civic tech" data-skills="" data-skills-list="">
+<a class="project-card__link" href="08-federated-npi-behavior/index.html">
+<figure class="project-card__figure">
+<img alt="Google Health federated NPI study launch graphic" loading="lazy" src="08-federated-npi-behavior/8.1.Accute-Respiratory-Infection-Google-Health-Study-Launch.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Privacy-Preserving COVID-19 Behavior Study
+          </h3>
+<p class="project-card__description">
+           Pioneered a federated mobile health study via the Google Health Studies app to track people’s mask-wearing and social distancing habits without collecting personal data centrally.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Epidemiology &amp; Analytics lead
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Federated Analytics</span><span class="project-card__focus-tag">Differential Privacy</span><span class="project-card__focus-tag">Human Mobility</span><span class="project-card__focus-tag">Intervention Adherence</span><span class="project-card__focus-tag">Civic Tech</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="variant-responsive vaccine effectiveness principal data scientist &amp; collaborator survey-based ve modeling global health" data-focus="survey-based ve modeling global health" data-focus-list="Survey-Based VE Modeling|Global Health" data-project-card="true" data-search-keywords="variant-responsive vaccine effectiveness principal data scientist &amp; collaborator survey-based ve modeling global health" data-skills="" data-skills-list="">
+<a class="project-card__link" href="10-variant-vaccine-effectiveness/index.html">
+<figure class="project-card__figure">
+<img alt="Vaccine effectiveness against mild versus severe illness" loading="lazy" src="10-variant-vaccine-effectiveness/10.1.covid-vaccine-effectiveness-against-mild-vs-severe-illness.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Variant-Responsive Vaccine Effectiveness
+          </h3>
+<p class="project-card__description">
+           Analyzed global survey data to assess COVID-19 vaccine protection as new variants (Delta, Omicron) emerged.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Principal Data Scientist &amp; Collaborator
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Survey-Based VE Modeling</span><span class="project-card__focus-tag">Global Health</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="foodborne illness — twitter surveillance public health data scientist &amp; ml engineer digital epidemiology ml classification rapid response workflows civic tech data visualization" data-focus="digital epidemiology ml classification rapid response workflows civic tech data visualization" data-focus-list="Digital Epidemiology|ML Classification|Rapid Response Workflows|Civic Tech|Data Visualization" data-project-card="true" data-search-keywords="foodborne illness — twitter surveillance public health data scientist &amp; ml engineer digital epidemiology ml classification rapid response workflows civic tech data visualization" data-skills="" data-skills-list="">
+<a class="project-card__link" href="12-foodborne-twitter-surveillance/index.html">
+<figure class="project-card__figure">
+<img alt="Tweet flagged by the HealthMap foodborne dashboard" loading="lazy" src="12-foodborne-twitter-surveillance/12.1.foodborne-illness-tweet-detailed.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Foodborne Illness — Twitter Surveillance
+          </h3>
+<p class="project-card__description">
+           Built a Twitter-driven monitoring dashboard to catch local food poisoning outbreaks in real time.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Public Health Data Scientist &amp; ML Engineer
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Digital Epidemiology</span><span class="project-card__focus-tag">ML Classification</span><span class="project-card__focus-tag">Rapid Response Workflows</span><span class="project-card__focus-tag">Civic Tech</span><span class="project-card__focus-tag">Data Visualization</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="mapping global human mobility data scientist &amp; co-author geospatial analytics privacy engineering" data-focus="geospatial analytics privacy engineering" data-focus-list="Geospatial Analytics|Privacy Engineering" data-project-card="true" data-search-keywords="mapping global human mobility data scientist &amp; co-author geospatial analytics privacy engineering" data-skills="" data-skills-list="">
+<a class="project-card__link" href="14-global-mobility-mapping/index.html">
+<figure class="project-card__figure">
+<img alt="Global map of human mobility patterns" loading="lazy" src="14-global-mobility-mapping/14.1.global-human-mobility-map.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Mapping Global Human Mobility
+          </h3>
+<p class="project-card__description">
+           Analyzed billions of anonymized human movement records worldwide to understand mobility patterns during public health crises.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Data Scientist &amp; Co-author
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Geospatial Analytics</span><span class="project-card__focus-tag">Privacy Engineering</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+</div>
+</section>
+<section class="project-group" data-project-group="clinical-ai">
+<h3 class="project-group__title">
+       Clinical AI &amp; Care Delivery
+      </h3>
+<p class="project-group__description">Principal data science and ML engineering solutions that bring decision support, diagnostics, and integrated care orchestration to the bedside.</p>
+<div class="project-grid">
+<article class="project-card" data-filter-text="ml-allergy — food allergy risk stratification lead clinical data scientist ehr integration model interpretability clinician workflows" data-focus="ehr integration model interpretability clinician workflows" data-focus-list="EHR Integration|Model Interpretability|Clinician Workflows" data-project-card="true" data-search-keywords="ml-allergy — food allergy risk stratification lead clinical data scientist ehr integration model interpretability clinician workflows" data-skills="" data-skills-list="">
+<a class="project-card__link" href="02-ml-allergy/index.html">
+<figure class="project-card__figure">
+<img alt="ML-Allergy system architecture diagram" loading="lazy" src="02-ml-allergy/2.1.Allergy-AI-system-architecture.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           ML-Allergy — Food Allergy Risk Stratification
+          </h3>
+<p class="project-card__description">
+           Created a machine learning–based composite biomarker panel for accurate food allergy risk assessment.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Lead Clinical Data Scientist
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">EHR Integration</span><span class="project-card__focus-tag">Model Interpretability</span><span class="project-card__focus-tag">Clinician Workflows</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="pediatric vision ai — early screening principal data scientist &amp; analytics lead computer vision agile development clinical validation" data-focus="computer vision agile development clinical validation" data-focus-list="Computer Vision|Agile Development|Clinical Validation" data-project-card="true" data-search-keywords="pediatric vision ai — early screening principal data scientist &amp; analytics lead computer vision agile development clinical validation" data-skills="" data-skills-list="">
+<a class="project-card__link" href="03-pediatric-vision-ai/index.html">
+<figure class="project-card__figure">
+<img alt="Prototype interface illustrating pediatric gaze tracking" loading="lazy" src="03-pediatric-vision-ai/3.1.Vision-ninja-gaze-and-optotypes.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Pediatric Vision AI — Early Screening
+          </h3>
+<p class="project-card__description">
+           Created an iPad-based gaze-tracking app (“Vision Ninja”) to objectively measure visual acuity in infants and toddlers.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Principal Data Scientist &amp; Analytics lead
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Computer Vision</span><span class="project-card__focus-tag">Agile Development</span><span class="project-card__focus-tag">Clinical Validation</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="icu clinical decision support – continuous hypoxemia monitoring principal data scientist &amp; senior author time-series forecasting clinician-in-the-loop design" data-focus="time-series forecasting clinician-in-the-loop design" data-focus-list="Time-Series Forecasting|Clinician-In-The-Loop Design" data-project-card="true" data-search-keywords="icu clinical decision support – continuous hypoxemia monitoring principal data scientist &amp; senior author time-series forecasting clinician-in-the-loop design" data-skills="" data-skills-list="">
+<a class="project-card__link" href="04-project-apollo-icu-hypoxemia/index.html">
+<figure class="project-card__figure">
+<img alt="ICU hypoxemia prediction console highlighting rising risk" loading="lazy" src="04-project-apollo-icu-hypoxemia/4.1.SPO2-prediction-model-bias-comparison.jpeg"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           ICU Clinical Decision Support – Continuous Hypoxemia Monitoring
+          </h3>
+<p class="project-card__description">
+           Developed a continuous, noninvasive method to estimate arterial blood oxygen (PaO₂) using standard ICU monitor data.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Principal Data Scientist &amp; Senior Author
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Time-Series Forecasting</span><span class="project-card__focus-tag">Clinician-In-The-Loop Design</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="maternal-infant health integration &amp; dyad dashboard principal data scientist &amp; product lead interoperability clinical ux standards engineering generative prototyping healthcare data standards fhir integration ui/ux design synthetic data generation stakeholder collaboration" data-focus="interoperability clinical ux standards engineering generative prototyping" data-focus-list="Interoperability|Clinical UX|Standards Engineering|Generative Prototyping" data-project-card="true" data-search-keywords="maternal-infant health integration &amp; dyad dashboard principal data scientist &amp; product lead interoperability clinical ux standards engineering generative prototyping healthcare data standards fhir integration ui/ux design synthetic data generation stakeholder collaboration" data-skills="healthcare data standards fhir integration ui/ux design synthetic data generation stakeholder collaboration" data-skills-list="Healthcare Data Standards|FHIR Integration|UI/UX Design|Synthetic Data Generation|Stakeholder Collaboration">
+<a class="project-card__link" href="05-maternal-infant-integration/index.html">
+<figure class="project-card__figure">
+<img alt="Maternal-infant clinical data elements mapped to USCDI" loading="lazy" src="05-maternal-infant-integration/5.1.mother-infant-diad-infant-clinical-data-elements-mapping-USCDI.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">Maternal-Infant Health Integration &amp; Dyad Dashboard</h3>
+<p class="project-card__description">Linked national standards mapping with a SMART-on-FHIR dyad dashboard to accelerate coordinated care.</p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">Principal Data Scientist &amp; Product Lead</span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Interoperability</span><span class="project-card__focus-tag">Clinical UX</span><span class="project-card__focus-tag">Standards Engineering</span><span class="project-card__focus-tag">Generative Prototyping</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="global covid-19 impact monitoring global survey co-lead pandemic intelligence privacy-aware analytics public-private collaboration global program leadership analytics &amp; weighting survey infrastructure privacy &amp; governance stakeholder engagement" data-focus="pandemic intelligence privacy-aware analytics public-private collaboration" data-focus-list="Pandemic Intelligence|Privacy-Aware Analytics|Public-Private Collaboration" data-project-card="true" data-search-keywords="global covid-19 impact monitoring global survey co-lead pandemic intelligence privacy-aware analytics public-private collaboration global program leadership analytics &amp; weighting survey infrastructure privacy &amp; governance stakeholder engagement" data-skills="global program leadership analytics &amp; weighting survey infrastructure privacy &amp; governance stakeholder engagement" data-skills-list="Global Program Leadership|Analytics &amp; Weighting|Survey Infrastructure|Privacy &amp; Governance|Stakeholder Engagement">
+<a class="project-card__link" href="06-global-covid-impact-monitoring/index.html">
+<figure class="project-card__figure">
+<img alt="Global benchmarking of Facebook UMD-CTIS survey signals" loading="lazy" src="06-global-covid-impact-monitoring/6.1.covid-CTIS-banchmarking.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">Global COVID-19 Impact Monitoring</h3>
+<p class="project-card__description">Delivered daily global COVID-19 situational awareness by scaling the Facebook UMD-CTIS survey program.</p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">Global Survey Co-Lead</span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Pandemic Intelligence</span><span class="project-card__focus-tag">Privacy-Aware Analytics</span><span class="project-card__focus-tag">Public-Private Collaboration</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+</div>
+</section>
+<section class="project-group" data-project-group="equity-population">
+<h3 class="project-group__title">
+       Health Equity &amp; Population Insights
+      </h3>
+<p class="project-group__description">Advanced population analytics for principal data leaders focused on equity, sentiment intelligence, and policy readiness.</p>
+<div class="project-grid">
+<article class="project-card" data-filter-text="covid-19 trial leadership equity principal data scientist &amp; senior author clinical data mining equity analytics natural language processing" data-focus="clinical data mining equity analytics natural language processing" data-focus-list="Clinical Data Mining|Equity Analytics|Natural Language Processing" data-project-card="true" data-search-keywords="covid-19 trial leadership equity principal data scientist &amp; senior author clinical data mining equity analytics natural language processing" data-skills="" data-skills-list="">
+<a class="project-card__link" href="09-covid-trial-equity/index.html">
+<figure class="project-card__figure">
+<img alt="Gender representation across COVID-19 clinical trial leadership" loading="lazy" src="09-covid-trial-equity/9.1.clinical-trial-leadership-gender-by-disease.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           COVID-19 Trial Leadership Equity
+          </h3>
+<p class="project-card__description">
+           Analyzed 7,500+ US COVID-19 clinical trials to quantify gender gaps in study leadership.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Principal Data Scientist &amp; Senior Author
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Clinical Data Mining</span><span class="project-card__focus-tag">Equity Analytics</span><span class="project-card__focus-tag">Natural Language Processing</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="foodborne illness — reporting disparities via yelp lead data scientist health equity analytics natural language processing civic tech data visualization" data-focus="health equity analytics natural language processing civic tech data visualization" data-focus-list="Health Equity Analytics|Natural Language Processing|Civic Tech|Data Visualization" data-project-card="true" data-search-keywords="foodborne illness — reporting disparities via yelp lead data scientist health equity analytics natural language processing civic tech data visualization" data-skills="" data-skills-list="">
+<a class="project-card__link" href="13-foodborne-yelp-disparities/index.html">
+<figure class="project-card__figure">
+<img alt="Correlation between Yelp illness reports and community indicators" loading="lazy" src="13-foodborne-yelp-disparities/13.1.correlation-between-count-of-yelp-sick-reports-and-variables.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Foodborne Illness — Reporting Disparities via Yelp
+          </h3>
+<p class="project-card__description">
+           Analyzed 1.5 million Yelp restaurant reviews for food poisoning mentions to uncover public health underreporting disparities.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Lead Data Scientist
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Health Equity Analytics</span><span class="project-card__focus-tag">Natural Language Processing</span><span class="project-card__focus-tag">Civic Tech</span><span class="project-card__focus-tag">Data Visualization</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="gun violence surveillance platform co-prinicipal investigator &amp; ml systems architect social data integration ml classification civic tech visual analytics" data-focus="social data integration ml classification civic tech visual analytics" data-focus-list="Social Data Integration|ML Classification|Civic Tech|Visual Analytics" data-project-card="true" data-search-keywords="gun violence surveillance platform co-prinicipal investigator &amp; ml systems architect social data integration ml classification civic tech visual analytics" data-skills="" data-skills-list="">
+<a class="project-card__link" href="15-gun-violence-platform/index.html">
+<figure class="project-card__figure">
+<img alt="Gun violence map dashboard views" loading="lazy" src="15-gun-violence-platform/15.1.gunviolence-map-dashboard-views.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Gun Violence Surveillance Platform
+          </h3>
+<p class="project-card__description">
+           Built a real-time platform aggregating Twitter, news, and search data to map gun violence incidents across the United States.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Co-Prinicipal Investigator &amp; ML Systems Architect
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Social Data Integration</span><span class="project-card__focus-tag">ML Classification</span><span class="project-card__focus-tag">Civic Tech</span><span class="project-card__focus-tag">Visual Analytics</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="patient experience — us longitudinal study principal data scientist &amp; co-first author ml classification social media analytics longitudinal study health equity visual analytics" data-focus="ml classification social media analytics longitudinal study health equity visual analytics" data-focus-list="ML Classification|Social Media Analytics|Longitudinal Study|Health Equity|Visual Analytics" data-project-card="true" data-search-keywords="patient experience — us longitudinal study principal data scientist &amp; co-first author ml classification social media analytics longitudinal study health equity visual analytics" data-skills="" data-skills-list="">
+<a class="project-card__link" href="19-patient-experience-longitudinal/index.html">
+<figure class="project-card__figure">
+<img alt="Longitudinal patient experience trends across US states" loading="lazy" src="19-patient-experience-longitudinal/19.1.patient-experience-across-US-states-four-year-logitudinal-study.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Patient Experience — US Longitudinal Study
+          </h3>
+<p class="project-card__description">
+           Collected and analyzed 2.76 million patient experience tweets (2013–2017) from across the US.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Principal Data Scientist &amp; Co-first Author
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">ML Classification</span><span class="project-card__focus-tag">Social Media Analytics</span><span class="project-card__focus-tag">Longitudinal Study</span><span class="project-card__focus-tag">Health Equity</span><span class="project-card__focus-tag">Visual Analytics</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="patient experience — hospital twitter signals lead ml engineer ml classification social listening healthcare quality data visualization" data-focus="ml classification social listening healthcare quality data visualization" data-focus-list="ML Classification|Social Listening|Healthcare Quality|Data Visualization" data-project-card="true" data-search-keywords="patient experience — hospital twitter signals lead ml engineer ml classification social listening healthcare quality data visualization" data-skills="" data-skills-list="">
+<a class="project-card__link" href="20-patient-experience-twitter/index.html">
+<figure class="project-card__figure">
+<img alt="Patient experience sentiment across US hospitals" loading="lazy" src="20-patient-experience-twitter/20.1.patient-experience-across-US-Hospitals.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Patient Experience — Hospital Twitter Signals
+          </h3>
+<p class="project-card__description">
+           Analyzed 404,065 tweets @-mentioned to 2,349 US hospitals (2012), identifying ~34.7K patient experience posts.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Lead ML Engineer
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">ML Classification</span><span class="project-card__focus-tag">Social Listening</span><span class="project-card__focus-tag">Healthcare Quality</span><span class="project-card__focus-tag">Data Visualization</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="patient experience — racial equity signals lead ml enginner ml classification fairness analytics patient experience responsible ai" data-focus="ml classification fairness analytics patient experience responsible ai" data-focus-list="ML Classification|Fairness Analytics|Patient Experience|Responsible AI" data-project-card="true" data-search-keywords="patient experience — racial equity signals lead ml enginner ml classification fairness analytics patient experience responsible ai" data-skills="" data-skills-list="">
+<a class="project-card__link" href="21-patient-experience-equity/index.html">
+<figure class="project-card__figure">
+<img alt="Correlation between patient sentiment and inferred race across states" loading="lazy" src="21-patient-experience-equity/21.1.patient-experience-user-race-correlation-with-census-last-name-across-all-states.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Patient Experience — Racial Equity Signals
+          </h3>
+<p class="project-card__description">
+           Analyzed ~852K patient experience tweets (2013–2016) to examine racial/ethnic sentiment trends and ACA impact.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Lead ML Enginner
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">ML Classification</span><span class="project-card__focus-tag">Fairness Analytics</span><span class="project-card__focus-tag">Patient Experience</span><span class="project-card__focus-tag">Responsible AI</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+</div>
+</section>
+<section class="project-group" data-project-group="mission-analytics">
+<h3 class="project-group__title">
+       Mission Analytics &amp; Autonomous Systems
+      </h3>
+<p class="project-group__description">Principal ML and analytics leadership for mission-critical cybersecurity, geospatial intelligence, and human-in-the-loop autonomy.</p>
+<div class="project-grid">
+<article class="project-card" data-filter-text="cybersecurity — dns command-and-control detection lead security analytics architect streaming detection threat intelligence soc enablement" data-focus="streaming detection threat intelligence soc enablement" data-focus-list="Streaming Detection|Threat Intelligence|SOC Enablement" data-project-card="true" data-search-keywords="cybersecurity — dns command-and-control detection lead security analytics architect streaming detection threat intelligence soc enablement" data-skills="" data-skills-list="">
+<a class="project-card__link" href="11-dns-command-control-detection/index.html">
+<figure class="project-card__figure">
+<img alt="Architecture for DNS command-and-control detection" loading="lazy" src="11-dns-command-control-detection/11.1.Cybersecurity.Detect-and-control-channel-in-DNS-Logs.image.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Cybersecurity — DNS Command-and-Control Detection
+          </h3>
+<p class="project-card__description">
+           Developed a streaming analytics pipeline for real-time detection of covert malware communications hidden in DNS traffic.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Lead Security Analytics Architect
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Streaming Detection</span><span class="project-card__focus-tag">Threat Intelligence</span><span class="project-card__focus-tag">SOC Enablement</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="humanitarian demining analytics dashboard product strategist &amp; ml systems architect geospatial analytics humanitarian tech decision support" data-focus="geospatial analytics humanitarian tech decision support" data-focus-list="Geospatial Analytics|Humanitarian Tech|Decision Support" data-project-card="true" data-search-keywords="humanitarian demining analytics dashboard product strategist &amp; ml systems architect geospatial analytics humanitarian tech decision support" data-skills="" data-skills-list="">
+<a class="project-card__link" href="16-demining-analytics-dashboard/index.html">
+<figure class="project-card__figure">
+<img alt="Demining dashboard system design" loading="lazy" src="16-demining-analytics-dashboard/16.1.Demining-dashboard-sys-design-location-focused-with-KPI.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Humanitarian Demining Analytics Dashboard
+          </h3>
+<p class="project-card__description">
+           Created a geospatial analytics platform that fuses data from multiple landmine detection sensors into a unified risk heatmap.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Product Strategist &amp; ML Systems Architect
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Geospatial Analytics</span><span class="project-card__focus-tag">Humanitarian Tech</span><span class="project-card__focus-tag">Decision Support</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="man on the loop (motl) isr supervision autonomy research lead multi-agent systems reinforcement learning defense isr" data-focus="multi-agent systems reinforcement learning defense isr" data-focus-list="Multi-Agent Systems|Reinforcement Learning|Defense ISR" data-project-card="true" data-search-keywords="man on the loop (motl) isr supervision autonomy research lead multi-agent systems reinforcement learning defense isr" data-skills="" data-skills-list="">
+<a class="project-card__link" href="17-masl-isr-supervision/index.html">
+<figure class="project-card__figure">
+<img alt="Multi-agent ISR supervision concept" loading="lazy" src="17-masl-isr-supervision/17.1.Multi-agent-system-MOTL-based-ISR-Supervision.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Man On The Loop (MOTL) ISR Supervision
+          </h3>
+<p class="project-card__description">
+           Investigated a “Man-On-The-Loop” approach for supervising autonomous agent teams in an ISR mission.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Autonomy Research Lead
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Multi-Agent Systems</span><span class="project-card__focus-tag">Reinforcement Learning</span><span class="project-card__focus-tag">Defense ISR</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="man on the loop (motl) control paradigm systems research lead multi-agent systems autonomy doctrine control systems" data-focus="multi-agent systems autonomy doctrine control systems" data-focus-list="Multi-Agent Systems|Autonomy Doctrine|Control Systems" data-project-card="true" data-search-keywords="man on the loop (motl) control paradigm systems research lead multi-agent systems autonomy doctrine control systems" data-skills="" data-skills-list="">
+<a class="project-card__link" href="18-masl-control-paradigm/index.html">
+<figure class="project-card__figure">
+<img alt="Control loop inspired by Boyd's OODA framework" loading="lazy" src="18-masl-control-paradigm/18.1.John-Boyds-Control-loop.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Man On The Loop (MOTL) Control Paradigm
+          </h3>
+<p class="project-card__description">
+           Proposed and validated a “Man-On-The-Loop” paradigm for human supervision of large agent networks.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Systems Research Lead
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Multi-Agent Systems</span><span class="project-card__focus-tag">Autonomy Doctrine</span><span class="project-card__focus-tag">Control Systems</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+</div>
+</section>
+<section class="project-group" data-project-group="network-contagion">
+<h3 class="project-group__title">
+       Network &amp; Contagion Modeling
+      </h3>
+<p class="project-group__description">Principal-level network science toolkits for forecasting and interrupting complex contagion and influence dynamics.</p>
+<div class="project-grid">
+<article class="project-card" data-filter-text="social contagion — structured resistance model lead modeling and simulations engineer &amp; first author behavioral epidemiology nonlinear dynamics" data-focus="behavioral epidemiology nonlinear dynamics" data-focus-list="Behavioral Epidemiology|Nonlinear Dynamics" data-project-card="true" data-search-keywords="social contagion — structured resistance model lead modeling and simulations engineer &amp; first author behavioral epidemiology nonlinear dynamics" data-skills="" data-skills-list="">
+<a class="project-card__link" href="22-smoking-structured-resistance/index.html">
+<figure class="project-card__figure">
+<img alt="Structured resistance model for smoking contagion" loading="lazy" src="22-smoking-structured-resistance/22.1.Smoking-behavior-structured-resistance-model.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Social Contagion — Structured Resistance Model
+          </h3>
+<p class="project-card__description">
+           Introduced a multi-stage contagion model for smoking that incorporates addiction and resistance.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Lead Modeling and Simulations Engineer &amp; First Author
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Behavioral Epidemiology</span><span class="project-card__focus-tag">Nonlinear Dynamics</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="social contagion — online exposure estimation lead social data scientist &amp; first author ml classification network analytics exposure modeling youth tobacco prevention" data-focus="ml classification network analytics exposure modeling youth tobacco prevention" data-focus-list="ML Classification|Network Analytics|Exposure Modeling|Youth Tobacco Prevention" data-project-card="true" data-search-keywords="social contagion — online exposure estimation lead social data scientist &amp; first author ml classification network analytics exposure modeling youth tobacco prevention" data-skills="" data-skills-list="">
+<a class="project-card__link" href="23-smoking-online-exposure/index.html">
+<figure class="project-card__figure">
+<img alt="Workflow for supervised ML smoking exposure study" loading="lazy" src="23-smoking-online-exposure/23.1.social-media-supervised-ML-model-building-workflow.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Social Contagion — Online Exposure Estimation
+          </h3>
+<p class="project-card__description">
+           Analyzed Twitter data to quantify teens’ exposure to pro-tobacco messages, finding substantial underage visibility.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Lead Social Data Scientist &amp; First Author
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">ML Classification</span><span class="project-card__focus-tag">Network Analytics</span><span class="project-card__focus-tag">Exposure Modeling</span><span class="project-card__focus-tag">Youth Tobacco Prevention</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="social contagion — e-cig exposure hotspots lead social data scientist &amp; first author ml classification geospatial social analytics youth tobacco prevention" data-focus="ml classification geospatial social analytics youth tobacco prevention" data-focus-list="ML Classification|Geospatial Social Analytics|Youth Tobacco Prevention" data-project-card="true" data-search-keywords="social contagion — e-cig exposure hotspots lead social data scientist &amp; first author ml classification geospatial social analytics youth tobacco prevention" data-skills="" data-skills-list="">
+<a class="project-card__link" href="24-ecig-exposure-hotspots/index.html">
+<figure class="project-card__figure">
+<img alt="E-cig social media exposure hotspots map" loading="lazy" src="24-ecig-exposure-hotspots/24.1.e-cig-socialmedia-exposure-westcoast-hotspots.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Social Contagion — E-cig Exposure Hotspots
+          </h3>
+<p class="project-card__description">
+           Identified geographic hotspots of e-cigarette–related tweets across the US.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Lead Social Data Scientist &amp; First Author
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">ML Classification</span><span class="project-card__focus-tag">Geospatial Social Analytics</span><span class="project-card__focus-tag">Youth Tobacco Prevention</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="social contagion — edge blocking strategies lead modeling and simulations engineer contagion blocking algorithm design and analysis modeling and simulations" data-focus="contagion blocking algorithm design and analysis modeling and simulations" data-focus-list="Contagion Blocking|Algorithm Design and Analysis|Modeling and Simulations" data-project-card="true" data-search-keywords="social contagion — edge blocking strategies lead modeling and simulations engineer contagion blocking algorithm design and analysis modeling and simulations" data-skills="" data-skills-list="">
+<a class="project-card__link" href="25-contagion-edge-blocking/index.html">
+<figure class="project-card__figure">
+<img alt="Edge removal algorithm performance comparison" loading="lazy" src="25-contagion-edge-blocking/25.1.an-efficient-algorithm-for-edge-removal-based-social-contagion-blocking.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Social Contagion — Edge Blocking Strategies
+          </h3>
+<p class="project-card__description">
+           Studied how to stop contagion spread by cutting network links (edges).
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Lead Modeling and Simulations Engineer
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Contagion Blocking</span><span class="project-card__focus-tag">Algorithm Design and Analysis</span><span class="project-card__focus-tag">Modeling and Simulations</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="social contagion — community blocking strategies lead modeling and simulations engineer &amp; first author contagion blocking community structure hybrid algorithms" data-focus="contagion blocking community structure hybrid algorithms" data-focus-list="Contagion Blocking|Community Structure|Hybrid Algorithms" data-project-card="true" data-search-keywords="social contagion — community blocking strategies lead modeling and simulations engineer &amp; first author contagion blocking community structure hybrid algorithms" data-skills="" data-skills-list="">
+<a class="project-card__link" href="26-contagion-community-blocking/index.html">
+<figure class="project-card__figure">
+<img alt="Community-based social contagion blocking illustration" loading="lazy" src="26-contagion-community-blocking/26.1.community-based-social-contagion-blocking-illustration.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Social Contagion — Community Blocking Strategies
+          </h3>
+<p class="project-card__description">
+           Created a hybrid contagion-blocking strategy using community detection and targeted inter-community links.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Lead Modeling and Simulations Engineer &amp; First Author
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Contagion Blocking</span><span class="project-card__focus-tag">Community Structure</span><span class="project-card__focus-tag">Hybrid Algorithms</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+</div>
+</section>
+</div>
+<p class="project-search__empty" data-search-empty="true" hidden="">
+     No projects match your search. Try a different keyword or focus area.
+    </p>
+</main>
+<section class="wrapper landing-secondary">
+<div class="callout">
+<h2 class="callout__title">
+      Beyond the portfolio
+     </h2>
+<p class="callout__description">
+      Gaurav collaborates with federal agencies, health systems, and startups to advance equitable care. Whether it is
           architecting national-scale biosurveillance or deploying AI safely at the bedside, each engagement blends systems
           thinking with compassionate leadership.
-        </p>
-        <a class="btn btn--primary" href="mailto:contact@gtuli.dev">Start a conversation</a>
-      </div>
-    </section>
-
-    <footer class="wrapper site-footer">
-      <p class="site-footer__text">&copy; <span id="year"></span> Gaurav Tuli. Built with the al-folio design system.</p>
-    </footer>
-  </div>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+     </p>
+<a class="btn btn--primary" href="mailto:contact@gtuli.dev">
+      Start a conversation
+     </a>
+</div>
+</section>
+<footer class="wrapper site-footer">
+<p class="site-footer__text">
+     ©
+     <span id="year">
+</span>
+     Gaurav Tuli. Built with the al-folio design system.
+    </p>
+</footer>
+</div>
+<script>
+(function() {
+  const yearEl = document.getElementById('year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+  const searchInput = document.getElementById('project-search');
+  const cards = Array.from(document.querySelectorAll('[data-project-card]'));
+  const groups = Array.from(document.querySelectorAll('[data-project-group]'));
+  const emptyState = document.querySelector('[data-search-empty]');
+  const filterProjects = () => {
+    const query = (searchInput ? searchInput.value : '').trim().toLowerCase();
+    const tokens = query.split(/\s+/).filter(Boolean);
+    let visibleCount = 0;
+    cards.forEach((card) => {
+      const keywords = card.dataset.searchKeywords || '';
+      const matches = tokens.length === 0 || tokens.every((token) => keywords.includes(token));
+      card.classList.toggle('is-hidden', !matches);
+      if (matches) {
+        visibleCount += 1;
+      }
+    });
+    groups.forEach((group) => {
+      const hasVisible = group.querySelector('[data-project-card]:not(.is-hidden)');
+      group.classList.toggle('is-hidden', !hasVisible);
+    });
+    if (emptyState) {
+      emptyState.hidden = visibleCount > 0;
+    }
+  };
+  if (searchInput) {
+    searchInput.addEventListener('input', filterProjects);
+    searchInput.addEventListener('change', filterProjects);
+  }
+  filterProjects();
+})();
+</script>
 </body>
 </html>

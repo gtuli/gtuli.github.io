@@ -1,75 +1,227 @@
 <!DOCTYPE html>
-<html lang="en" class="theme-light">
+
+<html class="theme-light" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pediatric Vision AI — Early Screening</title>
-  <link rel="stylesheet" href="../assets/css/al-folio.css" />
-  <link rel="stylesheet" href="../assets/css/custom.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
+   Pediatric Vision AI — Early Screening
+  </title>
+<link href="../assets/css/al-folio.css" rel="stylesheet"/>
+<link href="../assets/css/custom.css" rel="stylesheet"/>
 </head>
 <body class="page">
-  <div class="page__inner">
-    <header class="project-hero">
-      <div class="wrapper project-hero__inner">
-        <a class="back-link" href="../index.html">&larr; Back to portfolio</a>
-        <h1 class="project-hero__title">Pediatric Vision AI — Early Screening</h1>
-        <p class="project-hero__subtitle">Computer vision and analytics delivering rapid pediatric vision screening in primary care settings.</p>
-      </div>
-    </header>
-
-    <main class="wrapper project-body">
-      <div class="project-body__grid">
-        <figure class="project-body__media project-body__media--hero">
-          <img src="3.1.Vision-ninja-gaze-and-optotypes.png" alt="Prototype interface illustrating pediatric gaze tracking" />
-        </figure>
-        <div class="project-body__content">
-          <section class="project-section">
-            <h2>At a glance</h2>
-            <ul>
-              <li>Created computer vision workflows for rapid pediatric vision screening.</li>
-              <li>Partnered with ophthalmology teams to align hardware, analytics, and workflow.</li>
-              <li>Planned path from prototype to clinic-ready screening toolkit.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Problem</h2>
-            <ul>
-              <li>Traditional screenings miss amblyopia because tools are slow or subjective.</li>
-              <li>Primary care sites lack specialized equipment or trained vision technicians.</li>
-              <li>Capture quality varies with lighting, movement, and young patient behavior.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Solution</h2>
-            <ul>
-              <li>Engineered gaze tracking and optotype detection using embedded cameras.</li>
-              <li>Standardized capture protocols with simple calibration for non-specialist staff.</li>
-              <li>Combined on-device guidance with cloud analytics for reliable scoring.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Impact</h2>
-            <ul>
-              <li>Cut screening time while improving early amblyopia detection confidence.</li>
-              <li>Enabled deployment beyond specialty clinics, expanding access to early screening.</li>
-              <li>Aligned stakeholders on regulatory, reimbursement, and commercialization milestones.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Role &amp; toolkit</h2>
-            <ul>
-              <li>Led product strategy across clinicians, engineers, and data scientists.</li>
-              <li>Applied Python computer vision, embedded firmware integration, and UX testing.</li>
-              <li>Authored validation plans linking algorithm metrics to clinical endpoints.</li>
-            </ul>
-          </section>
-        </div>
-      </div>
-    </main>
-
-    <footer class="wrapper project-footer">
-      <a class="btn btn--ghost" href="../index.html">Back to portfolio</a>
-    </footer>
-  </div>
+<div class="page__inner">
+<header class="project-hero">
+<div class="wrapper project-hero__inner">
+<a class="back-link" href="../index.html">
+      ← Back to portfolio
+     </a>
+<h1 class="project-hero__title">
+      Pediatric Vision AI — Early Screening
+     </h1>
+<p class="project-hero__subtitle">
+      Created an iPad-based gaze-tracking app (“Vision Ninja”) to objectively measure visual acuity in infants and toddlers.
+     </p>
+<div class="project-hero__meta">
+<p>
+<strong>
+        Role:
+       </strong>
+       Principal Data Scientist &amp; Analytics lead
+      </p>
+<p>
+<strong>
+        Focus:
+       </strong>
+       Computer Vision, Agile Development, Clinical Validation
+      </p>
+</div>
+</div>
+</header>
+<main class="wrapper project-body">
+<div class="project-body__grid"><div class="project-body__sidebar"><section class="project-section project-section--at-a-glance">
+<h2>
+        At a Glance
+       </h2>
+<ul>
+<li>
+         Created an iPad-based gaze-tracking app (“Vision Ninja”) to objectively measure visual acuity in infants and toddlers.
+        </li>
+<li>
+         Cut infant eye exam time by ~30%, replacing slow manual methods with a quick, engaging digital test.
+        </li>
+<li>
+         Leveraged machine vision (OpenCV) to assess eyesight in pre-verbal children, enabling detection of vision issues at ages where standard eye charts fail.
+        </li>
+</ul>
+</section><section class="project-section project-section--gallery" data-gallery-count="1"><h2>Visual highlights</h2><div class="project-gallery"><figure class="project-gallery__item project-gallery__item--feature"><a href="3.1.Vision-ninja-gaze-and-optotypes.png" rel="noopener" target="_blank"><img alt="Prototype interface illustrating pediatric gaze tracking" decoding="async" loading="lazy" src="3.1.Vision-ninja-gaze-and-optotypes.png"/></a><figcaption>Prototype interface illustrating pediatric gaze tracking</figcaption></figure></div></section></div><div class="project-body__main"><section class="project-section">
+<h2>
+        The Problem
+       </h2>
+<ul>
+<li>
+         Standard infant vision exams (like observing if a baby follows objects or using cards) are slow, subjective, and often imprecise.
+        </li>
+<li>
+         Subtle vision problems (e.g., mild lazy eye or focus issues) can go undetected until a child is older and able to cooperate with traditional tests, missing a crucial early treatment window.
+        </li>
+<li>
+         Exams for toddlers can be stressful and inefficient – keeping a young child’s attention is hard, and lengthy appointments often yield incomplete or unreliable results due to fatigue or fussiness.
+        </li>
+</ul>
+</section><section class="project-section">
+<h2>
+        The Solution
+       </h2>
+<ul>
+<li>
+         Developed a tablet “game” that displays high-contrast shapes (optotypes) and uses the device’s front camera with OpenCV to track the infant’s eye movements in real time.
+        </li>
+<li>
+         The app employs an adaptive algorithm: it shows a shape and detects if the baby’s gaze fixes on it. If the child looks, the shape gets smaller next round; if not, it gets bigger – homing in on the smallest visible size (like a digital eye chart).
+        </li>
+<li>
+         The testing process is mostly automated – the examiner just starts the test and the system adjusts stimulus size, logs each response, and determines the infant’s visual acuity threshold without requiring verbal input from the child.
+        </li>
+</ul>
+</section><section class="project-section">
+<h2>
+        Architecture Overview
+       </h2>
+<ul>
+<li>
+         Device &amp; Vision Components: An iPad with its camera runs the app; OpenCV-based gaze detection identifies whether the infant looks at each shown shape within a set time window.
+        </li>
+<li>
+         Adaptive Staircase Algorithm: The app’s logic dynamically adjusts the optotype size up or down based on the infant’s responses, following a staircase strategy to pinpoint the smallest discernible shape.
+        </li>
+<li>
+         Minimal Manual Interaction: The interface is simple for clinicians – enter basic patient info and tap start. The system handles presenting stimuli and deciding when to stop (once acuity threshold is found), while logging all gaze responses.
+        </li>
+<li>
+         Data Logging: Every stimulus presentation and outcome is recorded internally. These logs can be analyzed (in Python) to fine-tune parameters (e.g., how long to display shapes, how long a “meaningful gaze” must last) and improve future test versions.
+        </li>
+<li>
+         Prototype Platform: Built as an iOS app (Swift) with integration of OpenCV libraries. The design emphasizes engaging visuals (simple shapes, sounds) to maintain the baby’s attention and uses on-device processing for immediate feedback.
+        </li>
+</ul>
+</section><section class="project-section">
+<h2>
+        Results and Impacts
+       </h2>
+<ul>
+<li>
+         Early prototype testing showed exam times reduced by roughly one-third, making the vision test much faster and less taxing for infants and parents.
+        </li>
+<li>
+         Provided quantitative eye exam results for infants (e.g., exact smallest shape recognized), replacing subjective judgments with objective metrics that can be tracked over time.
+        </li>
+<li>
+         Promises earlier identification of vision issues (like amblyopia or high refractive errors) in babies, allowing interventions (glasses, patching) to begin during a crucial developmental window rather than waiting years.
+        </li>
+</ul>
+</section><section class="project-section">
+<h2>
+        Skills and Tools Used
+       </h2>
+<div class="project-table-wrapper">
+<table class="project-table">
+<tr>
+<th>
+           Skill/Tool Category
+          </th>
+<th>
+           Application in Pediatric Vision AI — Early Screening
+          </th>
+</tr>
+<tr>
+<td>
+           Computer Vision (OpenCV)
+          </td>
+<td>
+           Real-time face and eye detection to track infant gaze on an iPad camera feed; customized for infant face proportions
+          </td>
+</tr>
+<tr>
+<td>
+           Mobile App Development
+          </td>
+<td>
+           Built an iOS app in Swift, integrating camera APIs and OpenCV frameworks for on-device processing
+          </td>
+</tr>
+<tr>
+<td>
+           UX/UI Design (Toddlers)
+          </td>
+<td>
+           Created a baby-friendly interface with high-contrast shapes and engaging feedback; timed presentations to align with infant attention spans
+          </td>
+</tr>
+<tr>
+<td>
+           Data Logging &amp; Analysis
+          </td>
+<td>
+           Implemented in-app logging of stimuli and responses; used Python (pandas) offline to analyze gaze response patterns and adjust algorithm thresholds
+          </td>
+</tr>
+<tr>
+<td>
+           Usability Testing (Agile)
+          </td>
+<td>
+           Conducted iterative tests with infants and gathered feedback from pediatric ophthalmologists, rapidly refining the prototype in short development cycles
+          </td>
+</tr>
+<tr>
+<td>
+           Clinician Collaboration
+          </td>
+<td>
+           Worked closely with eye specialists to translate gaze-tracking results into familiar clinical terms (approximate Snellen equivalents) and ensure trust in the new method
+          </td>
+</tr>
+</table>
+</div>
+</section><section class="project-section">
+<h2>
+        Cross-Project Capabilities
+       </h2>
+<ul>
+<li>
+         Human-centered design of AI tools: this project shows the importance of tailoring technology to end-users (babies and clinicians), a user-first approach that Dr. Tuli applies when designing clinician dashboards or patient-facing AI tools in other projects.
+        </li>
+<li>
+         Real-time signal processing: experience gained in processing video feedback within seconds parallels his work in streaming data analysis for outbreak detection and ICU monitoring, demonstrating proficiency in developing time-sensitive analytics.
+        </li>
+<li>
+         Rapid prototyping &amp; stakeholder buy-in: by building a compelling prototype with clear “wow factor,” he secured stakeholder support – a tactic he repeated in other initiatives (e.g., quick demos for the mother-infant dashboard) to accelerate funding and adoption.
+        </li>
+</ul>
+</section><section class="project-section">
+<h2>
+        Published Papers/Tools
+       </h2>
+<ul>
+<li>
+         Prototype Documentation: “Vision Ninja – Validation Prototype Definition Notes (Oct 2022)” – an internal design and results report used to brief the project team and hospital innovation leaders.
+        </li>
+<li>
+         Conference Abstract: Prepared “Gaze-Tracking for Infant Visual Acuity: Feasibility Study” for submission to a vision science conference (ARVO), aiming to present the methodology and early results to the research community.
+        </li>
+<li>
+         Prototype App &amp; Demo: The Vision Ninja iPad app (prototype) was demonstrated internally via a video and live demos, helping the team win a FastTrack Innovation in Pediatric Healthcare 2022 award. (Not yet a public app, but recognized in-house for its innovative approach.)
+        </li>
+</ul>
+</section></div></div>
+</main>
+<footer class="wrapper project-footer">
+<a class="btn btn--ghost" href="../index.html">
+     Back to portfolio
+    </a>
+</footer>
+</div>
 </body>
 </html>

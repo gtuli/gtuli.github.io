@@ -1,75 +1,227 @@
 <!DOCTYPE html>
-<html lang="en" class="theme-light">
+
+<html class="theme-light" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ML-Allergy — Food Allergy Risk Stratification</title>
-  <link rel="stylesheet" href="../assets/css/al-folio.css" />
-  <link rel="stylesheet" href="../assets/css/custom.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
+   ML-Allergy — Food Allergy Risk Stratification
+  </title>
+<link href="../assets/css/al-folio.css" rel="stylesheet"/>
+<link href="../assets/css/custom.css" rel="stylesheet"/>
 </head>
 <body class="page">
-  <div class="page__inner">
-    <header class="project-hero">
-      <div class="wrapper project-hero__inner">
-        <a class="back-link" href="../index.html">&larr; Back to portfolio</a>
-        <h1 class="project-hero__title">ML-Allergy — Food Allergy Risk Stratification</h1>
-        <p class="project-hero__subtitle">Composite biomarker decision support predicting oral food challenge outcomes for pediatric patients.</p>
-      </div>
-    </header>
-
-    <main class="wrapper project-body">
-      <div class="project-body__grid">
-        <figure class="project-body__media project-body__media--hero">
-          <img src="2.1.Allergy-AI-system-architecture.png" alt="ML-Allergy system architecture diagram" />
-        </figure>
-        <div class="project-body__content">
-          <section class="project-section">
-            <h2>At a glance</h2>
-            <ul>
-              <li>Developed ML-Allergy decision support to stratify pediatric food allergy risk.</li>
-              <li>Combined biomarkers, histories, and machine learning scores for clinic visits.</li>
-              <li>Embedded outputs within Boston Children’s allergy workflows.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Problem</h2>
-            <ul>
-              <li>Single tests left families stuck in diagnostic gray zones for years.</li>
-              <li>Inconclusive results triggered unnecessary avoidance or risky challenges.</li>
-              <li>Clinicians required interpretable predictions aligned with existing EHR data.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Solution</h2>
-            <ul>
-              <li>Curated composite features across IgE, SPT, history, and demographics.</li>
-              <li>Trained regularized classifiers on retrospective oral challenge outcomes.</li>
-              <li>Delivered clear risk tiers and guidance inside clinic decision reports.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Impact</h2>
-            <ul>
-              <li>Improved triage for patients needing supervised challenges versus observation.</li>
-              <li>Enabled earlier reintroduction for confidently low-risk children.</li>
-              <li>Provided blueprint for expanding ML biomarker panels to new allergens.</li>
-            </ul>
-          </section>
-          <section class="project-section">
-            <h2>Role &amp; toolkit</h2>
-            <ul>
-              <li>Led collaboration with hospital allergy clinics and informatics partners.</li>
-              <li>Applied Python, scikit-learn, and careful feature engineering for transparency.</li>
-              <li>Designed clinician-friendly reports with uncertainty cues and next steps.</li>
-            </ul>
-          </section>
-        </div>
-      </div>
-    </main>
-
-    <footer class="wrapper project-footer">
-      <a class="btn btn--ghost" href="../index.html">Back to portfolio</a>
-    </footer>
-  </div>
+<div class="page__inner">
+<header class="project-hero">
+<div class="wrapper project-hero__inner">
+<a class="back-link" href="../index.html">
+      ← Back to portfolio
+     </a>
+<h1 class="project-hero__title">
+      ML-Allergy — Food Allergy Risk Stratification
+     </h1>
+<p class="project-hero__subtitle">
+      Created a machine learning–based composite biomarker panel for accurate food allergy risk assessment.
+     </p>
+<div class="project-hero__meta">
+<p>
+<strong>
+        Role:
+       </strong>
+       Lead Clinical Data Scientist
+      </p>
+<p>
+<strong>
+        Focus:
+       </strong>
+       EHR Integration, Model Interpretability, Clinician Workflows
+      </p>
+</div>
+</div>
+</header>
+<main class="wrapper project-body">
+<div class="project-body__grid"><div class="project-body__sidebar"><section class="project-section project-section--at-a-glance">
+<h2>
+        At a Glance
+       </h2>
+<ul>
+<li>
+         Created a machine learning–based composite biomarker panel for accurate food allergy risk assessment.
+        </li>
+<li>
+         Outperformed any single test, reducing unnecessary oral food challenges and associated risks.
+        </li>
+<li>
+         Improved patient safety by identifying which children can safely undergo allergen exposure versus those at high risk.
+        </li>
+</ul>
+</section><section class="project-section project-section--gallery" data-gallery-count="1"><h2>Visual highlights</h2><div class="project-gallery"><figure class="project-gallery__item project-gallery__item--feature"><a href="2.1.Allergy-AI-system-architecture.png" rel="noopener" target="_blank"><img alt="ML-Allergy system architecture diagram" decoding="async" loading="lazy" src="2.1.Allergy-AI-system-architecture.png"/></a><figcaption>ML-Allergy system architecture diagram</figcaption></figure></div></section></div><div class="project-body__main"><section class="project-section">
+<h2>
+        The Problem
+       </h2>
+<ul>
+<li>
+         Standard allergy tests (IgE, skin prick) often yield ambiguous results and can’t predict true allergic reactions reliably.
+        </li>
+<li>
+         The gold-standard oral food challenge is risky, resource-intensive, and used sparingly, leaving many patients undiagnosed or in limbo.
+        </li>
+<li>
+         Rising food allergy rates heighten the need for better diagnostics to distinguish truly allergic patients without putting them through dangerous procedures.
+        </li>
+</ul>
+</section><section class="project-section">
+<h2>
+        The Solution
+       </h2>
+<ul>
+<li>
+         Built an ML model that combines multiple inputs (specific IgE levels, skin test results, patient history) to predict if a patient is truly allergic or likely tolerant.
+        </li>
+<li>
+         Trained on real hospital data (patients with known oral challenge outcomes) so the model “learns” the patterns of feature combinations that signal a true allergy.
+        </li>
+<li>
+         Designed a prototype pipeline (“ML-Allergy”) integrated with the EHR: it pulls a patient’s lab results and history, runs the ML risk algorithm, and outputs a risk score with guidance to clinicians.
+        </li>
+</ul>
+</section><section class="project-section">
+<h2>
+        Architecture Overview
+       </h2>
+<ul>
+<li>
+         Six-component ML pipeline from data extraction to decision support. It automatically pulls relevant lab results and clinical history from the EHR data warehouse via ETL processes.
+        </li>
+<li>
+         Feature engineering handles ~20+ predictors (IgE, ratios, symptoms, etc.), accommodates missing data, and uses regularization to rank important features and avoid overfit.
+        </li>
+<li>
+         Iterative model training with cross-validation tests various algorithms (logistic regression, random forest, gradient boosting) to maximize predictive AUC while maintaining generalizability.
+        </li>
+<li>
+         The final model achieved high performance (AUC ~0.96) and was configured to emphasize safety (e.g., tuning thresholds to minimize false negatives for allergies).
+        </li>
+<li>
+         The output is presented in a clinician-friendly format within workflow: a risk score (“High risk – 85% chance of reaction”) along with key contributing factors, seamlessly delivered alongside existing lab reports.
+        </li>
+</ul>
+</section><section class="project-section">
+<h2>
+        Results and Impacts
+       </h2>
+<ul>
+<li>
+         The ML risk model reached ~96% accuracy (AUC ~0.96) in validation, far exceeding the predictive power of any single test, which translates to much more confident clinical decision-making.
+        </li>
+<li>
+         Combining multiple test results proved its value: the model clearly separated allergic vs. tolerant patients, confirming that multiple weak indicators together create a strong signal.
+        </li>
+<li>
+         In practice, this enables doctors to avoid unnecessary and risky food challenges for low-risk patients and to focus resources on those truly at risk, improving safety and reducing patient anxiety.
+        </li>
+</ul>
+</section><section class="project-section">
+<h2>
+        Skills and Tools Used
+       </h2>
+<div class="project-table-wrapper">
+<table class="project-table">
+<tr>
+<th>
+           Skill/Tool Category
+          </th>
+<th>
+           Application in ML-Allergy — Food Allergy Risk Stratification
+          </th>
+</tr>
+<tr>
+<td>
+           Data Collection (EHR)
+          </td>
+<td>
+           SQL and Python (Pandas) to extract and merge allergy test results and clinical notes from hospital databases (Epic EHR)
+          </td>
+</tr>
+<tr>
+<td>
+           Machine Learning (Python)
+          </td>
+<td>
+           Scikit-learn &amp; LightGBM for model development; cross-validation, grid search, and regularization (L1/L2) for feature selection and tuning
+          </td>
+</tr>
+<tr>
+<td>
+           Statistical Analysis
+          </td>
+<td>
+           ROC/AUC analysis, bootstrapped confidence intervals, and custom threshold tuning to maximize negative predictive value (safety first)
+          </td>
+</tr>
+<tr>
+<td>
+           Clinical Domain Integration
+          </td>
+<td>
+           Incorporated medical expertise (e.g., weighting “history of anaphylaxis” appropriately); close collaboration with allergists to embed domain logic in the model
+          </td>
+</tr>
+<tr>
+<td>
+           Healthcare Data Standards
+          </td>
+<td>
+           Used ICD-10 and LOINC codes to identify data in EHR; leveraged FHIR resources to integrate the model output into clinical systems (ensuring compatibility and privacy)
+          </td>
+</tr>
+<tr>
+<td>
+           Communication &amp; Visualization
+          </td>
+<td>
+           Presented results in clinician-friendly terms (e.g., “avoid X% of unnecessary challenges”) and used clear visual aids (calibration plots, decision curves) to gain physician buy-in
+          </td>
+</tr>
+</table>
+</div>
+</section><section class="project-section">
+<h2>
+        Cross-Project Capabilities
+       </h2>
+<ul>
+<li>
+         Clinical Decision Support Development: End-to-end experience building a clinical ML tool (data ingestion, model, workflow integration) carried into later projects like ICU decision support and maternal-infant care tools.
+        </li>
+<li>
+         Interdisciplinary Collaboration: Skill in partnering with clinicians (allergists in this case) to ensure ML solutions meet real-world needs – later applied with ophthalmologists (Vision project) and intensivists (ICU project).
+        </li>
+<li>
+         Regulatory/Ethical ML Practice: Navigated patient data privacy (HIPAA, IRB approvals) and clearly communicated model limitations to stakeholders – a critical skill in all healthcare AI projects dealing with sensitive data.
+        </li>
+</ul>
+</section><section class="project-section">
+<h2>
+        Published Papers/Tools
+       </h2>
+<ul>
+<li>
+         Internal White Paper: “ML Composite Biomarker Panel for Food Allergy Diagnosis” – detailed proposal circulated within the hospital to outline the project’s design and rationale.
+        </li>
+<li>
+         Hospital Knowledge Sharing: Findings presented at Boston Children’s Hospital grand rounds and an innovation showcase, raising awareness of ML’s potential in diagnostics.
+        </li>
+<li>
+         Prototype Tool: Developed a pilot “Allergy ML Risk Calculator” (Excel interface + Python backend) for clinicians to input patient data and get a risk estimate, now undergoing evaluation for integration into the EHR’s decision support system.
+        </li>
+</ul>
+</section></div></div>
+</main>
+<footer class="wrapper project-footer">
+<a class="btn btn--ghost" href="../index.html">
+     Back to portfolio
+    </a>
+</footer>
+</div>
 </body>
 </html>
