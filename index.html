@@ -21,7 +21,7 @@
       Transforming research prototypes into operational, high-value solutions across government, industry, and academia.
      </h1>
 <p class="hero__subtitle">
-      This portfolio presents various applied machine learning and data science projects spanning public health, clinical AI, informatics, and multi-sector innovation.
+      This portfolio presents various applied machine learning and data science projects spanning public health, clinical AI, informatics, and multi-sector innovation. The concise summaries highlight what was built, why it mattered, and how it advanced data-driven decision-making. Projects may surface in multiple groups to reflect cross-cutting mission impact.
      </p>
 <div class="hero__actions">
 <a class="btn btn--primary" href="#projects">
@@ -34,31 +34,80 @@
 </div>
 </header>
 <main class="wrapper landing-main" id="projects">
-<section class="section-intro">
-<h2 class="section-title">
+ <div class="project-search" id="project-search-container">
+  <input aria-label="Search projects" autocomplete="off" id="project-search" placeholder="Search by project details, focus, or skills" type="search"/>
+  <div aria-live="polite" class="project-search__suggestions" id="project-search-suggestions" role="listbox"></div>
+ </div>
+ <section class="section-intro" id="featured-projects">
+  <h2 class="section-title">
       Featured initiatives
      </h2>
-<p class="section-subtitle">
-      Each project blends technical rigor of data engineering, ML modeling, and AI system architecture with measurable real-world impact in healthcare, national security, and policy. The concise summaries highlight what was built, why it mattered, and how it advanced data-driven decision-making.
-     </p>
-</section>
-<div class="project-search">
-<label for="project-search">
-      Search projects
-     </label>
-<input aria-describedby="project-search-help" id="project-search" list="project-search-suggestions" placeholder="Search by title, focus, or skills" type="search"/>
-<datalist id="project-search-suggestions"><option value="Agile Development"></option><option value="Algorithm Design and Analysis"></option><option value="Autonomy Doctrine"></option><option value="Behavior Monitoring"></option><option value="Behavioral Epidemiology"></option><option value="Civic Tech"></option><option value="Clinical Data Mining"></option><option value="Clinical UX"></option><option value="Clinical Validation"></option><option value="Clinician Workflows"></option><option value="Clinician-In-The-Loop Design"></option><option value="Community Structure"></option><option value="Computer Vision"></option><option value="Contagion Blocking"></option><option value="Control Systems"></option><option value="Data Fusion"></option><option value="Data Visualization"></option><option value="Decision Support"></option><option value="Defense ISR"></option><option value="Differential Privacy"></option><option value="Digital Epidemiology"></option><option value="EHR Integration"></option><option value="Equity Analytics"></option><option value="Exposure Modeling"></option><option value="Fairness Analytics"></option><option value="Federated Analytics"></option><option value="Generative Prototyping"></option><option value="Geospatial Analytics"></option><option value="Geospatial Social Analytics"></option><option value="Global Health"></option><option value="Health Equity"></option><option value="Health Equity Analytics"></option><option value="Healthcare Quality"></option><option value="Human Mobility"></option><option value="Humanitarian Tech"></option><option value="Hybrid Algorithms"></option><option value="Interoperability"></option><option value="Intervention Adherence"></option><option value="Longitudinal Study"></option><option value="ML Classification"></option><option value="Model Interpretability"></option><option value="Modeling and Simulations"></option><option value="Multi-Agent Systems"></option><option value="Natural Language Processing"></option><option value="Network Analytics"></option><option value="Nonlinear Dynamics"></option><option value="Pandemic Intelligence"></option><option value="Patient Experience"></option><option value="Policy Impact"></option><option value="Privacy Engineering"></option><option value="Privacy-Aware Analytics"></option><option value="Public-Private Collaboration"></option><option value="Rapid Response Workflows"></option><option value="Real-Time Dashboards"></option><option value="Reinforcement Learning"></option><option value="Responsible AI"></option><option value="SOC Enablement"></option><option value="Social Data Integration"></option><option value="Social Listening"></option><option value="Social Media Analytics"></option><option value="Standards Engineering"></option><option value="Streaming Detection"></option><option value="Survey-Based VE Modeling"></option><option value="Threat Intelligence"></option><option value="Time-Series Forecasting"></option><option value="Urban Health Analytics"></option><option value="Visual Analytics"></option><option value="Weak-Signal Detection"></option><option value="Youth Tobacco Prevention"></option></datalist>
-<p class="project-search__help" id="project-search-help">
-      Filter projects by keywords found in their focus areas, skills, or titles.
-     </p>
-</div>
+ </section>
+ <nav aria-label="Project sections" class="project-nav">
+  <div class="project-nav__inner">
+   <a aria-label="Featured" class="project-nav__link" data-label="Featured" href="#featured-projects" title="Featured">
+    <span aria-hidden="true" class="project-nav__icon">⭐</span>
+    <span class="project-nav__label">Featured</span>
+   </a>
+   <a aria-label="Mission Ops" class="project-nav__link" data-label="Mission Ops" href="#mission-analytics" title="Mission Ops">
+    <span aria-hidden="true" class="project-nav__icon">🛰️</span>
+    <span class="project-nav__label">Mission Ops</span>
+   </a>
+   <a aria-label="Clinical AI" class="project-nav__link" data-label="Clinical AI" href="#clinical-ai" title="Clinical AI">
+    <span aria-hidden="true" class="project-nav__icon">🩺</span>
+    <span class="project-nav__label">Clinical AI</span>
+   </a>
+   <a aria-label="Equity" class="project-nav__link" data-label="Equity" href="#health-equity" title="Equity">
+    <span aria-hidden="true" class="project-nav__icon">⚖️</span>
+    <span class="project-nav__label">Equity</span>
+   </a>
+   <a aria-label="Bio Readiness" class="project-nav__link" data-label="Bio Readiness" href="#biosurveillance" title="Bio Readiness">
+    <span aria-hidden="true" class="project-nav__icon">🦠</span>
+    <span class="project-nav__label">Bio Readiness</span>
+   </a>
+   <a aria-label="Networks" class="project-nav__link" data-label="Networks" href="#network-contagion" title="Networks">
+    <span aria-hidden="true" class="project-nav__icon">🕸️</span>
+    <span class="project-nav__label">Networks</span>
+   </a>
+  </div>
+ </nav>
 <div class="project-groups">
-<section class="project-group" data-project-group="biosurveillance">
+<section class="project-group" id="mission-analytics" data-project-group="mission-analytics">
 <h3 class="project-group__title">
-       Biosurveillance &amp; Pandemic Preparedness
+       Mission Analytics &amp; Autonomous Systems
       </h3>
-<p class="project-group__description">Principal-level biosurveillance programs spanning global monitoring, pandemic intelligence, and privacy-first public health analytics.</p>
+<p class="project-group__description">Mission-critical analytics, autonomy, and decision science for defense, security, and humanitarian operations.</p>
 <div class="project-grid">
+<article class="project-card" data-filter-text="cybersecurity — dns command-and-control detection lead security analytics architect streaming detection threat intelligence soc enablement" data-focus="streaming detection threat intelligence soc enablement" data-focus-list="Streaming Detection|Threat Intelligence|SOC Enablement" data-project-card="true" data-search-keywords="cybersecurity — dns command-and-control detection lead security analytics architect streaming detection threat intelligence soc enablement" data-skills="" data-skills-list="">
+<a class="project-card__link" href="11-dns-command-control-detection/index.html">
+<figure class="project-card__figure">
+<img alt="Architecture for DNS command-and-control detection" loading="lazy" src="11-dns-command-control-detection/11.1.Cybersecurity.Detect-and-control-channel-in-DNS-Logs.image.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Cybersecurity — DNS Command-and-Control Detection
+          </h3>
+<p class="project-card__description">
+           Developed a streaming analytics pipeline for real-time detection of covert malware communications hidden in DNS traffic.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Lead Security Analytics Architect
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Streaming Detection</span><span class="project-card__focus-tag">Threat Intelligence</span><span class="project-card__focus-tag">SOC Enablement</span></div></li>
+</ul>
+</div>
+</a>
+</article>
 <article class="project-card" data-filter-text="pandemic pulse — digital biosurveillance lead investigator &amp; ai systems architect weak-signal detection data fusion real-time dashboards" data-focus="weak-signal detection data fusion real-time dashboards" data-focus-list="Weak-Signal Detection|Data Fusion|Real-Time Dashboards" data-project-card="true" data-search-keywords="pandemic pulse — digital biosurveillance lead investigator &amp; ai systems architect weak-signal detection data fusion real-time dashboards" data-skills="" data-skills-list="">
 <a class="project-card__link" href="01-pandemic-pulse/index.html">
 <figure class="project-card__figure">
@@ -89,47 +138,41 @@
 </div>
 </a>
 </article>
-<article class="project-card" data-filter-text="bangkok covid-19 vaccine hesitancy insights principal data scientist &amp; co-first author urban health analytics behavior monitoring policy impact civic tech data visualization" data-focus="urban health analytics behavior monitoring policy impact civic tech data visualization" data-focus-list="Urban Health Analytics|Behavior Monitoring|Policy Impact|Civic Tech|Data Visualization" data-project-card="true" data-search-keywords="bangkok covid-19 vaccine hesitancy insights principal data scientist &amp; co-first author urban health analytics behavior monitoring policy impact civic tech data visualization" data-skills="" data-skills-list="">
-<a class="project-card__link" href="07-bangkok-vaccine-insights/index.html">
+<article class="project-card" data-filter-text="global covid-19 impact monitoring global survey co-lead pandemic intelligence privacy-aware analytics public-private collaboration global program leadership analytics &amp; weighting survey infrastructure privacy &amp; governance stakeholder engagement" data-focus="pandemic intelligence privacy-aware analytics public-private collaboration" data-focus-list="Pandemic Intelligence|Privacy-Aware Analytics|Public-Private Collaboration" data-project-card="true" data-search-keywords="global covid-19 impact monitoring global survey co-lead pandemic intelligence privacy-aware analytics public-private collaboration global program leadership analytics &amp; weighting survey infrastructure privacy &amp; governance stakeholder engagement" data-skills="global program leadership analytics &amp; weighting survey infrastructure privacy &amp; governance stakeholder engagement" data-skills-list="Global Program Leadership|Analytics &amp; Weighting|Survey Infrastructure|Privacy &amp; Governance|Stakeholder Engagement">
+<a class="project-card__link" href="06-global-covid-impact-monitoring/index.html">
 <figure class="project-card__figure">
-<img alt="Bangkok vaccine concerns segmented by pre-existing conditions" loading="lazy" src="07-bangkok-vaccine-insights/7.1.CITS-Thiland-premedical-conditon.png"/>
+<img alt="Global benchmarking of Facebook UMD-CTIS survey signals" loading="lazy" src="06-global-covid-impact-monitoring/6.1.covid-CTIS-banchmarking.png"/>
 </figure>
 <div class="project-card__content">
-<h3 class="project-card__title">
-           Bangkok COVID-19 Vaccine Hesitancy Insights
-          </h3>
-<p class="project-card__description">
-           Used Facebook’s city-scale digital health survey to rapidly assess COVID-19 vaccine hesitancy during Bangkok’s mid-2021 outbreak.
-          </p>
+<h3 class="project-card__title">Global COVID-19 Impact Monitoring</h3>
+<p class="project-card__description">Delivered daily global COVID-19 situational awareness by scaling the Facebook UMD-CTIS survey program.</p>
 <ul class="project-card__meta">
 <li>
 <span class="project-card__meta-label">
              Role
             </span>
-<span class="project-card__meta-value">
-             Principal Data Scientist &amp; Co-first Author
-            </span>
+<span class="project-card__meta-value">Global Survey Co-Lead</span>
 </li>
 <li>
 <span class="project-card__meta-label">
              Focus
             </span>
-<div class="project-card__focus-tags"><span class="project-card__focus-tag">Urban Health Analytics</span><span class="project-card__focus-tag">Behavior Monitoring</span><span class="project-card__focus-tag">Policy Impact</span><span class="project-card__focus-tag">Civic Tech</span><span class="project-card__focus-tag">Data Visualization</span></div></li>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Pandemic Intelligence</span><span class="project-card__focus-tag">Privacy-Aware Analytics</span><span class="project-card__focus-tag">Public-Private Collaboration</span></div></li>
 </ul>
 </div>
 </a>
 </article>
-<article class="project-card" data-filter-text="privacy-preserving covid-19 behavior study epidemiology &amp; analytics lead federated analytics differential privacy human mobility intervention adherence civic tech" data-focus="federated analytics differential privacy human mobility intervention adherence civic tech" data-focus-list="Federated Analytics|Differential Privacy|Human Mobility|Intervention Adherence|Civic Tech" data-project-card="true" data-search-keywords="privacy-preserving covid-19 behavior study epidemiology &amp; analytics lead federated analytics differential privacy human mobility intervention adherence civic tech" data-skills="" data-skills-list="">
-<a class="project-card__link" href="08-federated-npi-behavior/index.html">
+<article class="project-card" data-filter-text="humanitarian demining analytics dashboard product strategist &amp; ml systems architect geospatial analytics humanitarian tech decision support" data-focus="geospatial analytics humanitarian tech decision support" data-focus-list="Geospatial Analytics|Humanitarian Tech|Decision Support" data-project-card="true" data-search-keywords="humanitarian demining analytics dashboard product strategist &amp; ml systems architect geospatial analytics humanitarian tech decision support" data-skills="" data-skills-list="">
+<a class="project-card__link" href="16-demining-analytics-dashboard/index.html">
 <figure class="project-card__figure">
-<img alt="Google Health federated NPI study launch graphic" loading="lazy" src="08-federated-npi-behavior/8.1.Accute-Respiratory-Infection-Google-Health-Study-Launch.png"/>
+<img alt="Demining dashboard system design" loading="lazy" src="16-demining-analytics-dashboard/16.1.Demining-dashboard-sys-design-location-focused-with-KPI.png"/>
 </figure>
 <div class="project-card__content">
 <h3 class="project-card__title">
-           Privacy-Preserving COVID-19 Behavior Study
+           Humanitarian Demining Analytics Dashboard
           </h3>
 <p class="project-card__description">
-           Pioneered a federated mobile health study via the Google Health Studies app to track people’s mask-wearing and social distancing habits without collecting personal data centrally.
+           Created a geospatial analytics platform that fuses data from multiple landmine detection sensors into a unified risk heatmap.
           </p>
 <ul class="project-card__meta">
 <li>
@@ -137,14 +180,104 @@
              Role
             </span>
 <span class="project-card__meta-value">
-             Epidemiology &amp; Analytics lead
+             Product Strategist &amp; ML Systems Architect
             </span>
 </li>
 <li>
 <span class="project-card__meta-label">
              Focus
             </span>
-<div class="project-card__focus-tags"><span class="project-card__focus-tag">Federated Analytics</span><span class="project-card__focus-tag">Differential Privacy</span><span class="project-card__focus-tag">Human Mobility</span><span class="project-card__focus-tag">Intervention Adherence</span><span class="project-card__focus-tag">Civic Tech</span></div></li>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Geospatial Analytics</span><span class="project-card__focus-tag">Humanitarian Tech</span><span class="project-card__focus-tag">Decision Support</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="man on the loop (motl) isr supervision autonomy research lead multi-agent systems reinforcement learning defense isr" data-focus="multi-agent systems reinforcement learning defense isr" data-focus-list="Multi-Agent Systems|Reinforcement Learning|Defense ISR" data-project-card="true" data-search-keywords="man on the loop (motl) isr supervision autonomy research lead multi-agent systems reinforcement learning defense isr" data-skills="" data-skills-list="">
+<a class="project-card__link" href="17-masl-isr-supervision/index.html">
+<figure class="project-card__figure">
+<img alt="Multi-agent ISR supervision concept" loading="lazy" src="17-masl-isr-supervision/17.1.Multi-agent-system-MOTL-based-ISR-Supervision.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Man On The Loop (MOTL) ISR Supervision
+          </h3>
+<p class="project-card__description">
+           Investigated a “Man-On-The-Loop” approach for supervising autonomous agent teams in an ISR mission.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Autonomy Research Lead
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Multi-Agent Systems</span><span class="project-card__focus-tag">Reinforcement Learning</span><span class="project-card__focus-tag">Defense ISR</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="man on the loop (motl) control paradigm systems research lead multi-agent systems autonomy doctrine control systems" data-focus="multi-agent systems autonomy doctrine control systems" data-focus-list="Multi-Agent Systems|Autonomy Doctrine|Control Systems" data-project-card="true" data-search-keywords="man on the loop (motl) control paradigm systems research lead multi-agent systems autonomy doctrine control systems" data-skills="" data-skills-list="">
+<a class="project-card__link" href="18-masl-control-paradigm/index.html">
+<figure class="project-card__figure">
+<img alt="Control loop inspired by Boyd's OODA framework" loading="lazy" src="18-masl-control-paradigm/18.1.John-Boyds-Control-loop.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Man On The Loop (MOTL) Control Paradigm
+          </h3>
+<p class="project-card__description">
+           Proposed and validated a “Man-On-The-Loop” paradigm for human supervision of large agent networks.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Systems Research Lead
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Multi-Agent Systems</span><span class="project-card__focus-tag">Autonomy Doctrine</span><span class="project-card__focus-tag">Control Systems</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="gun violence surveillance platform co-prinicipal investigator &amp; ml systems architect social data integration ml classification civic tech visual analytics" data-focus="social data integration ml classification civic tech visual analytics" data-focus-list="Social Data Integration|ML Classification|Civic Tech|Visual Analytics" data-project-card="true" data-search-keywords="gun violence surveillance platform co-prinicipal investigator &amp; ml systems architect social data integration ml classification civic tech visual analytics" data-skills="" data-skills-list="">
+<a class="project-card__link" href="15-gun-violence-platform/index.html">
+<figure class="project-card__figure">
+<img alt="Gun violence map dashboard views" loading="lazy" src="15-gun-violence-platform/15.1.gunviolence-map-dashboard-views.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Gun Violence Surveillance Platform
+          </h3>
+<p class="project-card__description">
+           Built a real-time platform aggregating Twitter, news, and search data to map gun violence incidents across the United States.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Co-Prinicipal Investigator &amp; ML Systems Architect
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Social Data Integration</span><span class="project-card__focus-tag">ML Classification</span><span class="project-card__focus-tag">Civic Tech</span><span class="project-card__focus-tag">Visual Analytics</span></div></li>
 </ul>
 </div>
 </a>
@@ -209,17 +342,17 @@
 </div>
 </a>
 </article>
-<article class="project-card" data-filter-text="mapping global human mobility data scientist &amp; co-author geospatial analytics privacy engineering" data-focus="geospatial analytics privacy engineering" data-focus-list="Geospatial Analytics|Privacy Engineering" data-project-card="true" data-search-keywords="mapping global human mobility data scientist &amp; co-author geospatial analytics privacy engineering" data-skills="" data-skills-list="">
-<a class="project-card__link" href="14-global-mobility-mapping/index.html">
+<article class="project-card" data-filter-text="privacy-preserving covid-19 behavior study epidemiology &amp; analytics lead federated analytics differential privacy human mobility intervention adherence civic tech" data-focus="federated analytics differential privacy human mobility intervention adherence civic tech" data-focus-list="Federated Analytics|Differential Privacy|Human Mobility|Intervention Adherence|Civic Tech" data-project-card="true" data-search-keywords="privacy-preserving covid-19 behavior study epidemiology &amp; analytics lead federated analytics differential privacy human mobility intervention adherence civic tech" data-skills="" data-skills-list="">
+<a class="project-card__link" href="08-federated-npi-behavior/index.html">
 <figure class="project-card__figure">
-<img alt="Global map of human mobility patterns" loading="lazy" src="14-global-mobility-mapping/14.1.global-human-mobility-map.png"/>
+<img alt="Google Health federated NPI study launch graphic" loading="lazy" src="08-federated-npi-behavior/8.1.Accute-Respiratory-Infection-Google-Health-Study-Launch.png"/>
 </figure>
 <div class="project-card__content">
 <h3 class="project-card__title">
-           Mapping Global Human Mobility
+           Privacy-Preserving COVID-19 Behavior Study
           </h3>
 <p class="project-card__description">
-           Analyzed billions of anonymized human movement records worldwide to understand mobility patterns during public health crises.
+           Pioneered a federated mobile health study via the Google Health Studies app to track people’s mask-wearing and social distancing habits without collecting personal data centrally.
           </p>
 <ul class="project-card__meta">
 <li>
@@ -227,25 +360,25 @@
              Role
             </span>
 <span class="project-card__meta-value">
-             Data Scientist &amp; Co-author
+             Epidemiology &amp; Analytics lead
             </span>
 </li>
 <li>
 <span class="project-card__meta-label">
              Focus
             </span>
-<div class="project-card__focus-tags"><span class="project-card__focus-tag">Geospatial Analytics</span><span class="project-card__focus-tag">Privacy Engineering</span></div></li>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Federated Analytics</span><span class="project-card__focus-tag">Differential Privacy</span><span class="project-card__focus-tag">Human Mobility</span><span class="project-card__focus-tag">Intervention Adherence</span><span class="project-card__focus-tag">Civic Tech</span></div></li>
 </ul>
 </div>
 </a>
 </article>
 </div>
 </section>
-<section class="project-group" data-project-group="clinical-ai">
+<section class="project-group" id="clinical-ai" data-project-group="clinical-ai">
 <h3 class="project-group__title">
        Clinical AI &amp; Care Delivery
       </h3>
-<p class="project-group__description">Principal data science and ML engineering solutions that bring decision support, diagnostics, and integrated care orchestration to the bedside.</p>
+<p class="project-group__description">Clinician-centered AI delivering bedside decision support, diagnostics, and integrated care orchestration.</p>
 <div class="project-grid">
 <article class="project-card" data-filter-text="ml-allergy — food allergy risk stratification lead clinical data scientist ehr integration model interpretability clinician workflows" data-focus="ehr integration model interpretability clinician workflows" data-focus-list="EHR Integration|Model Interpretability|Clinician Workflows" data-project-card="true" data-search-keywords="ml-allergy — food allergy risk stratification lead clinical data scientist ehr integration model interpretability clinician workflows" data-skills="" data-skills-list="">
 <a class="project-card__link" href="02-ml-allergy/index.html">
@@ -361,37 +494,14 @@
 </div>
 </a>
 </article>
-<article class="project-card" data-filter-text="global covid-19 impact monitoring global survey co-lead pandemic intelligence privacy-aware analytics public-private collaboration global program leadership analytics &amp; weighting survey infrastructure privacy &amp; governance stakeholder engagement" data-focus="pandemic intelligence privacy-aware analytics public-private collaboration" data-focus-list="Pandemic Intelligence|Privacy-Aware Analytics|Public-Private Collaboration" data-project-card="true" data-search-keywords="global covid-19 impact monitoring global survey co-lead pandemic intelligence privacy-aware analytics public-private collaboration global program leadership analytics &amp; weighting survey infrastructure privacy &amp; governance stakeholder engagement" data-skills="global program leadership analytics &amp; weighting survey infrastructure privacy &amp; governance stakeholder engagement" data-skills-list="Global Program Leadership|Analytics &amp; Weighting|Survey Infrastructure|Privacy &amp; Governance|Stakeholder Engagement">
-<a class="project-card__link" href="06-global-covid-impact-monitoring/index.html">
-<figure class="project-card__figure">
-<img alt="Global benchmarking of Facebook UMD-CTIS survey signals" loading="lazy" src="06-global-covid-impact-monitoring/6.1.covid-CTIS-banchmarking.png"/>
-</figure>
-<div class="project-card__content">
-<h3 class="project-card__title">Global COVID-19 Impact Monitoring</h3>
-<p class="project-card__description">Delivered daily global COVID-19 situational awareness by scaling the Facebook UMD-CTIS survey program.</p>
-<ul class="project-card__meta">
-<li>
-<span class="project-card__meta-label">
-             Role
-            </span>
-<span class="project-card__meta-value">Global Survey Co-Lead</span>
-</li>
-<li>
-<span class="project-card__meta-label">
-             Focus
-            </span>
-<div class="project-card__focus-tags"><span class="project-card__focus-tag">Pandemic Intelligence</span><span class="project-card__focus-tag">Privacy-Aware Analytics</span><span class="project-card__focus-tag">Public-Private Collaboration</span></div></li>
-</ul>
-</div>
-</a>
-</article>
+
 </div>
 </section>
-<section class="project-group" data-project-group="equity-population">
+<section class="project-group" id="health-equity" data-project-group="equity-population">
 <h3 class="project-group__title">
        Health Equity &amp; Population Insights
       </h3>
-<p class="project-group__description">Advanced population analytics for principal data leaders focused on equity, sentiment intelligence, and policy readiness.</p>
+<p class="project-group__description">Population-scale analytics revealing equity gaps, lived experience, and policy-responsive insights.</p>
 <div class="project-grid">
 <article class="project-card" data-filter-text="covid-19 trial leadership equity principal data scientist &amp; senior author clinical data mining equity analytics natural language processing" data-focus="clinical data mining equity analytics natural language processing" data-focus-list="Clinical Data Mining|Equity Analytics|Natural Language Processing" data-project-card="true" data-search-keywords="covid-19 trial leadership equity principal data scientist &amp; senior author clinical data mining equity analytics natural language processing" data-skills="" data-skills-list="">
 <a class="project-card__link" href="09-covid-trial-equity/index.html">
@@ -575,23 +685,23 @@
 </article>
 </div>
 </section>
-<section class="project-group" data-project-group="mission-analytics">
+<section class="project-group" id="biosurveillance" data-project-group="biosurveillance">
 <h3 class="project-group__title">
-       Mission Analytics &amp; Autonomous Systems
+       Biosurveillance &amp; Pandemic Preparedness
       </h3>
-<p class="project-group__description">Principal ML and analytics leadership for mission-critical cybersecurity, geospatial intelligence, and human-in-the-loop autonomy.</p>
+<p class="project-group__description">Global biosurveillance, pandemic readiness, and privacy-first health intelligence programs.</p>
 <div class="project-grid">
-<article class="project-card" data-filter-text="cybersecurity — dns command-and-control detection lead security analytics architect streaming detection threat intelligence soc enablement" data-focus="streaming detection threat intelligence soc enablement" data-focus-list="Streaming Detection|Threat Intelligence|SOC Enablement" data-project-card="true" data-search-keywords="cybersecurity — dns command-and-control detection lead security analytics architect streaming detection threat intelligence soc enablement" data-skills="" data-skills-list="">
-<a class="project-card__link" href="11-dns-command-control-detection/index.html">
+<article class="project-card" data-filter-text="pandemic pulse — digital biosurveillance lead investigator &amp; ai systems architect weak-signal detection data fusion real-time dashboards" data-focus="weak-signal detection data fusion real-time dashboards" data-focus-list="Weak-Signal Detection|Data Fusion|Real-Time Dashboards" data-project-card="true" data-search-keywords="pandemic pulse — digital biosurveillance lead investigator &amp; ai systems architect weak-signal detection data fusion real-time dashboards" data-skills="" data-skills-list="">
+<a class="project-card__link" href="01-pandemic-pulse/index.html">
 <figure class="project-card__figure">
-<img alt="Architecture for DNS command-and-control detection" loading="lazy" src="11-dns-command-control-detection/11.1.Cybersecurity.Detect-and-control-channel-in-DNS-Logs.image.png"/>
+<img alt="Dashboards from the Pandemic Pulse biosurveillance platform" loading="lazy" src="01-pandemic-pulse/1.1.pandemic-pulse-dashboard.png"/>
 </figure>
 <div class="project-card__content">
 <h3 class="project-card__title">
-           Cybersecurity — DNS Command-and-Control Detection
+           Pandemic Pulse — Digital Biosurveillance
           </h3>
 <p class="project-card__description">
-           Developed a streaming analytics pipeline for real-time detection of covert malware communications hidden in DNS traffic.
+           Developed a real-time bio-threat surveillance tool integrating social, search, and health data.
           </p>
 <ul class="project-card__meta">
 <li>
@@ -599,59 +709,53 @@
              Role
             </span>
 <span class="project-card__meta-value">
-             Lead Security Analytics Architect
+             Lead Investigator &amp; AI Systems Architect
             </span>
 </li>
 <li>
 <span class="project-card__meta-label">
              Focus
             </span>
-<div class="project-card__focus-tags"><span class="project-card__focus-tag">Streaming Detection</span><span class="project-card__focus-tag">Threat Intelligence</span><span class="project-card__focus-tag">SOC Enablement</span></div></li>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Weak-Signal Detection</span><span class="project-card__focus-tag">Data Fusion</span><span class="project-card__focus-tag">Real-Time Dashboards</span></div></li>
 </ul>
 </div>
 </a>
 </article>
-<article class="project-card" data-filter-text="humanitarian demining analytics dashboard product strategist &amp; ml systems architect geospatial analytics humanitarian tech decision support" data-focus="geospatial analytics humanitarian tech decision support" data-focus-list="Geospatial Analytics|Humanitarian Tech|Decision Support" data-project-card="true" data-search-keywords="humanitarian demining analytics dashboard product strategist &amp; ml systems architect geospatial analytics humanitarian tech decision support" data-skills="" data-skills-list="">
-<a class="project-card__link" href="16-demining-analytics-dashboard/index.html">
+<article class="project-card" data-filter-text="global covid-19 impact monitoring global survey co-lead pandemic intelligence privacy-aware analytics public-private collaboration global program leadership analytics &amp; weighting survey infrastructure privacy &amp; governance stakeholder engagement" data-focus="pandemic intelligence privacy-aware analytics public-private collaboration" data-focus-list="Pandemic Intelligence|Privacy-Aware Analytics|Public-Private Collaboration" data-project-card="true" data-search-keywords="global covid-19 impact monitoring global survey co-lead pandemic intelligence privacy-aware analytics public-private collaboration global program leadership analytics &amp; weighting survey infrastructure privacy &amp; governance stakeholder engagement" data-skills="global program leadership analytics &amp; weighting survey infrastructure privacy &amp; governance stakeholder engagement" data-skills-list="Global Program Leadership|Analytics &amp; Weighting|Survey Infrastructure|Privacy &amp; Governance|Stakeholder Engagement">
+<a class="project-card__link" href="06-global-covid-impact-monitoring/index.html">
 <figure class="project-card__figure">
-<img alt="Demining dashboard system design" loading="lazy" src="16-demining-analytics-dashboard/16.1.Demining-dashboard-sys-design-location-focused-with-KPI.png"/>
+<img alt="Global benchmarking of Facebook UMD-CTIS survey signals" loading="lazy" src="06-global-covid-impact-monitoring/6.1.covid-CTIS-banchmarking.png"/>
 </figure>
 <div class="project-card__content">
-<h3 class="project-card__title">
-           Humanitarian Demining Analytics Dashboard
-          </h3>
-<p class="project-card__description">
-           Created a geospatial analytics platform that fuses data from multiple landmine detection sensors into a unified risk heatmap.
-          </p>
+<h3 class="project-card__title">Global COVID-19 Impact Monitoring</h3>
+<p class="project-card__description">Delivered daily global COVID-19 situational awareness by scaling the Facebook UMD-CTIS survey program.</p>
 <ul class="project-card__meta">
 <li>
 <span class="project-card__meta-label">
              Role
             </span>
-<span class="project-card__meta-value">
-             Product Strategist &amp; ML Systems Architect
-            </span>
+<span class="project-card__meta-value">Global Survey Co-Lead</span>
 </li>
 <li>
 <span class="project-card__meta-label">
              Focus
             </span>
-<div class="project-card__focus-tags"><span class="project-card__focus-tag">Geospatial Analytics</span><span class="project-card__focus-tag">Humanitarian Tech</span><span class="project-card__focus-tag">Decision Support</span></div></li>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Pandemic Intelligence</span><span class="project-card__focus-tag">Privacy-Aware Analytics</span><span class="project-card__focus-tag">Public-Private Collaboration</span></div></li>
 </ul>
 </div>
 </a>
 </article>
-<article class="project-card" data-filter-text="man on the loop (motl) isr supervision autonomy research lead multi-agent systems reinforcement learning defense isr" data-focus="multi-agent systems reinforcement learning defense isr" data-focus-list="Multi-Agent Systems|Reinforcement Learning|Defense ISR" data-project-card="true" data-search-keywords="man on the loop (motl) isr supervision autonomy research lead multi-agent systems reinforcement learning defense isr" data-skills="" data-skills-list="">
-<a class="project-card__link" href="17-masl-isr-supervision/index.html">
+<article class="project-card" data-filter-text="bangkok covid-19 vaccine hesitancy insights principal data scientist &amp; co-first author urban health analytics behavior monitoring policy impact civic tech data visualization" data-focus="urban health analytics behavior monitoring policy impact civic tech data visualization" data-focus-list="Urban Health Analytics|Behavior Monitoring|Policy Impact|Civic Tech|Data Visualization" data-project-card="true" data-search-keywords="bangkok covid-19 vaccine hesitancy insights principal data scientist &amp; co-first author urban health analytics behavior monitoring policy impact civic tech data visualization" data-skills="" data-skills-list="">
+<a class="project-card__link" href="07-bangkok-vaccine-insights/index.html">
 <figure class="project-card__figure">
-<img alt="Multi-agent ISR supervision concept" loading="lazy" src="17-masl-isr-supervision/17.1.Multi-agent-system-MOTL-based-ISR-Supervision.png"/>
+<img alt="Bangkok vaccine concerns segmented by pre-existing conditions" loading="lazy" src="07-bangkok-vaccine-insights/7.1.CITS-Thiland-premedical-conditon.png"/>
 </figure>
 <div class="project-card__content">
 <h3 class="project-card__title">
-           Man On The Loop (MOTL) ISR Supervision
+           Bangkok COVID-19 Vaccine Hesitancy Insights
           </h3>
 <p class="project-card__description">
-           Investigated a “Man-On-The-Loop” approach for supervising autonomous agent teams in an ISR mission.
+           Used Facebook’s city-scale digital health survey to rapidly assess COVID-19 vaccine hesitancy during Bangkok’s mid-2021 outbreak.
           </p>
 <ul class="project-card__meta">
 <li>
@@ -659,29 +763,29 @@
              Role
             </span>
 <span class="project-card__meta-value">
-             Autonomy Research Lead
+             Principal Data Scientist &amp; Co-first Author
             </span>
 </li>
 <li>
 <span class="project-card__meta-label">
              Focus
             </span>
-<div class="project-card__focus-tags"><span class="project-card__focus-tag">Multi-Agent Systems</span><span class="project-card__focus-tag">Reinforcement Learning</span><span class="project-card__focus-tag">Defense ISR</span></div></li>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Urban Health Analytics</span><span class="project-card__focus-tag">Behavior Monitoring</span><span class="project-card__focus-tag">Policy Impact</span><span class="project-card__focus-tag">Civic Tech</span><span class="project-card__focus-tag">Data Visualization</span></div></li>
 </ul>
 </div>
 </a>
 </article>
-<article class="project-card" data-filter-text="man on the loop (motl) control paradigm systems research lead multi-agent systems autonomy doctrine control systems" data-focus="multi-agent systems autonomy doctrine control systems" data-focus-list="Multi-Agent Systems|Autonomy Doctrine|Control Systems" data-project-card="true" data-search-keywords="man on the loop (motl) control paradigm systems research lead multi-agent systems autonomy doctrine control systems" data-skills="" data-skills-list="">
-<a class="project-card__link" href="18-masl-control-paradigm/index.html">
+<article class="project-card" data-filter-text="privacy-preserving covid-19 behavior study epidemiology &amp; analytics lead federated analytics differential privacy human mobility intervention adherence civic tech" data-focus="federated analytics differential privacy human mobility intervention adherence civic tech" data-focus-list="Federated Analytics|Differential Privacy|Human Mobility|Intervention Adherence|Civic Tech" data-project-card="true" data-search-keywords="privacy-preserving covid-19 behavior study epidemiology &amp; analytics lead federated analytics differential privacy human mobility intervention adherence civic tech" data-skills="" data-skills-list="">
+<a class="project-card__link" href="08-federated-npi-behavior/index.html">
 <figure class="project-card__figure">
-<img alt="Control loop inspired by Boyd's OODA framework" loading="lazy" src="18-masl-control-paradigm/18.1.John-Boyds-Control-loop.png"/>
+<img alt="Google Health federated NPI study launch graphic" loading="lazy" src="08-federated-npi-behavior/8.1.Accute-Respiratory-Infection-Google-Health-Study-Launch.png"/>
 </figure>
 <div class="project-card__content">
 <h3 class="project-card__title">
-           Man On The Loop (MOTL) Control Paradigm
+           Privacy-Preserving COVID-19 Behavior Study
           </h3>
 <p class="project-card__description">
-           Proposed and validated a “Man-On-The-Loop” paradigm for human supervision of large agent networks.
+           Pioneered a federated mobile health study via the Google Health Studies app to track people’s mask-wearing and social distancing habits without collecting personal data centrally.
           </p>
 <ul class="project-card__meta">
 <li>
@@ -689,25 +793,115 @@
              Role
             </span>
 <span class="project-card__meta-value">
-             Systems Research Lead
+             Epidemiology &amp; Analytics lead
             </span>
 </li>
 <li>
 <span class="project-card__meta-label">
              Focus
             </span>
-<div class="project-card__focus-tags"><span class="project-card__focus-tag">Multi-Agent Systems</span><span class="project-card__focus-tag">Autonomy Doctrine</span><span class="project-card__focus-tag">Control Systems</span></div></li>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Federated Analytics</span><span class="project-card__focus-tag">Differential Privacy</span><span class="project-card__focus-tag">Human Mobility</span><span class="project-card__focus-tag">Intervention Adherence</span><span class="project-card__focus-tag">Civic Tech</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="variant-responsive vaccine effectiveness principal data scientist &amp; collaborator survey-based ve modeling global health" data-focus="survey-based ve modeling global health" data-focus-list="Survey-Based VE Modeling|Global Health" data-project-card="true" data-search-keywords="variant-responsive vaccine effectiveness principal data scientist &amp; collaborator survey-based ve modeling global health" data-skills="" data-skills-list="">
+<a class="project-card__link" href="10-variant-vaccine-effectiveness/index.html">
+<figure class="project-card__figure">
+<img alt="Vaccine effectiveness against mild versus severe illness" loading="lazy" src="10-variant-vaccine-effectiveness/10.1.covid-vaccine-effectiveness-against-mild-vs-severe-illness.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Variant-Responsive Vaccine Effectiveness
+          </h3>
+<p class="project-card__description">
+           Analyzed global survey data to assess COVID-19 vaccine protection as new variants (Delta, Omicron) emerged.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Principal Data Scientist &amp; Collaborator
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Survey-Based VE Modeling</span><span class="project-card__focus-tag">Global Health</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="foodborne illness — twitter surveillance public health data scientist &amp; ml engineer digital epidemiology ml classification rapid response workflows civic tech data visualization" data-focus="digital epidemiology ml classification rapid response workflows civic tech data visualization" data-focus-list="Digital Epidemiology|ML Classification|Rapid Response Workflows|Civic Tech|Data Visualization" data-project-card="true" data-search-keywords="foodborne illness — twitter surveillance public health data scientist &amp; ml engineer digital epidemiology ml classification rapid response workflows civic tech data visualization" data-skills="" data-skills-list="">
+<a class="project-card__link" href="12-foodborne-twitter-surveillance/index.html">
+<figure class="project-card__figure">
+<img alt="Tweet flagged by the HealthMap foodborne dashboard" loading="lazy" src="12-foodborne-twitter-surveillance/12.1.foodborne-illness-tweet-detailed.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Foodborne Illness — Twitter Surveillance
+          </h3>
+<p class="project-card__description">
+           Built a Twitter-driven monitoring dashboard to catch local food poisoning outbreaks in real time.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Public Health Data Scientist &amp; ML Engineer
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Digital Epidemiology</span><span class="project-card__focus-tag">ML Classification</span><span class="project-card__focus-tag">Rapid Response Workflows</span><span class="project-card__focus-tag">Civic Tech</span><span class="project-card__focus-tag">Data Visualization</span></div></li>
+</ul>
+</div>
+</a>
+</article>
+<article class="project-card" data-filter-text="mapping global human mobility data scientist &amp; co-author geospatial analytics privacy engineering" data-focus="geospatial analytics privacy engineering" data-focus-list="Geospatial Analytics|Privacy Engineering" data-project-card="true" data-search-keywords="mapping global human mobility data scientist &amp; co-author geospatial analytics privacy engineering" data-skills="" data-skills-list="">
+<a class="project-card__link" href="14-global-mobility-mapping/index.html">
+<figure class="project-card__figure">
+<img alt="Global map of human mobility patterns" loading="lazy" src="14-global-mobility-mapping/14.1.global-human-mobility-map.png"/>
+</figure>
+<div class="project-card__content">
+<h3 class="project-card__title">
+           Mapping Global Human Mobility
+          </h3>
+<p class="project-card__description">
+           Analyzed billions of anonymized human movement records worldwide to understand mobility patterns during public health crises.
+          </p>
+<ul class="project-card__meta">
+<li>
+<span class="project-card__meta-label">
+             Role
+            </span>
+<span class="project-card__meta-value">
+             Data Scientist &amp; Co-author
+            </span>
+</li>
+<li>
+<span class="project-card__meta-label">
+             Focus
+            </span>
+<div class="project-card__focus-tags"><span class="project-card__focus-tag">Geospatial Analytics</span><span class="project-card__focus-tag">Privacy Engineering</span></div></li>
 </ul>
 </div>
 </a>
 </article>
 </div>
 </section>
-<section class="project-group" data-project-group="network-contagion">
+<section class="project-group" id="network-contagion" data-project-group="network-contagion">
 <h3 class="project-group__title">
        Network &amp; Contagion Modeling
       </h3>
-<p class="project-group__description">Principal-level network science toolkits for forecasting and interrupting complex contagion and influence dynamics.</p>
+<p class="project-group__description">Network science, contagion modeling, and resilience analytics to stress-test interventions.</p>
 <div class="project-grid">
 <article class="project-card" data-filter-text="social contagion — structured resistance model lead modeling and simulations engineer &amp; first author behavioral epidemiology nonlinear dynamics" data-focus="behavioral epidemiology nonlinear dynamics" data-focus-list="Behavioral Epidemiology|Nonlinear Dynamics" data-project-card="true" data-search-keywords="social contagion — structured resistance model lead modeling and simulations engineer &amp; first author behavioral epidemiology nonlinear dynamics" data-skills="" data-skills-list="">
 <a class="project-card__link" href="22-smoking-structured-resistance/index.html">
@@ -876,7 +1070,7 @@
           architecting national-scale biosurveillance or deploying AI safely at the bedside, each engagement blends systems
           thinking with compassionate leadership.
      </p>
-<a class="btn btn--primary" href="mailto:contact@gtuli.dev">
+<a class="btn btn--primary" href="mailto:gtuli.ml@gmail.com">
       Start a conversation
      </a>
 </div>
@@ -897,15 +1091,55 @@
     yearEl.textContent = new Date().getFullYear();
   }
   const searchInput = document.getElementById('project-search');
+  const suggestionsEl = document.getElementById('project-search-suggestions');
+  const searchContainer = document.getElementById('project-search-container');
   const cards = Array.from(document.querySelectorAll('[data-project-card]'));
   const groups = Array.from(document.querySelectorAll('[data-project-group]'));
   const emptyState = document.querySelector('[data-search-empty]');
+  const cardIndex = new Map();
+  const suggestionSet = new Set();
+
+  cards.forEach((card) => {
+    const combined = [
+      card.dataset.searchKeywords || '',
+      card.dataset.filterText || '',
+      card.dataset.focusList || '',
+      card.dataset.skillsList || '',
+      card.textContent || ''
+    ].join(' ');
+    const normalized = combined.replace(/\s+/g, ' ').trim().toLowerCase();
+    cardIndex.set(card, normalized);
+
+    const focusTerms = (card.dataset.focusList || '')
+      .split('|')
+      .map((term) => term.trim())
+      .filter(Boolean);
+    focusTerms.forEach((term) => suggestionSet.add(term));
+
+    const skillTerms = (card.dataset.skillsList || '')
+      .split('|')
+      .map((term) => term.trim())
+      .filter(Boolean);
+    skillTerms.forEach((term) => suggestionSet.add(term));
+
+    const titleEl = card.querySelector('.project-card__title');
+    if (titleEl) {
+      suggestionSet.add(titleEl.textContent.trim());
+    }
+  });
+
+  const suggestionTerms = Array.from(suggestionSet).sort((a, b) => a.localeCompare(b));
+
+  if (suggestionsEl) {
+    suggestionsEl.hidden = true;
+  }
+
   const filterProjects = () => {
     const query = (searchInput ? searchInput.value : '').trim().toLowerCase();
     const tokens = query.split(/\s+/).filter(Boolean);
     let visibleCount = 0;
     cards.forEach((card) => {
-      const keywords = card.dataset.searchKeywords || '';
+      const keywords = cardIndex.get(card) || '';
       const matches = tokens.length === 0 || tokens.every((token) => keywords.includes(token));
       card.classList.toggle('is-hidden', !matches);
       if (matches) {
@@ -920,10 +1154,110 @@
       emptyState.hidden = visibleCount > 0;
     }
   };
+
+  const focusSearchField = () => {
+    if (!searchInput) {
+      return;
+    }
+    try {
+      searchInput.focus({ preventScroll: true });
+    } catch (error) {
+      searchInput.focus();
+    }
+  };
+
+  const revealSearch = () => {
+    if (searchContainer) {
+      searchContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    window.setTimeout(focusSearchField, 220);
+  };
+
+  const renderSuggestions = (value) => {
+    if (!suggestionsEl) {
+      return;
+    }
+    const query = (value || '').trim().toLowerCase();
+    suggestionsEl.innerHTML = '';
+    if (!query) {
+      suggestionsEl.hidden = true;
+      return;
+    }
+    const matches = suggestionTerms
+      .filter((term) => term.toLowerCase().includes(query))
+      .slice(0, 8);
+    if (matches.length === 0) {
+      suggestionsEl.hidden = true;
+      return;
+    }
+    matches.forEach((term) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'project-search__suggestion';
+      button.setAttribute('role', 'option');
+      button.textContent = term;
+      button.addEventListener('click', () => {
+        if (searchInput) {
+          searchInput.value = term;
+          filterProjects();
+          renderSuggestions(term);
+        }
+        revealSearch();
+      });
+      suggestionsEl.appendChild(button);
+    });
+    suggestionsEl.hidden = false;
+  };
+
+  const applyFocusFilter = (value) => {
+    if (!searchInput) {
+      return;
+    }
+    searchInput.value = value;
+    filterProjects();
+    renderSuggestions(value);
+    revealSearch();
+  };
+
+  const focusTags = Array.from(document.querySelectorAll('.project-card__focus-tag'));
+  focusTags.forEach((tag) => {
+    tag.setAttribute('role', 'button');
+    tag.setAttribute('tabindex', '0');
+    tag.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      applyFocusFilter(tag.textContent.trim());
+    });
+    tag.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        event.stopPropagation();
+        applyFocusFilter(tag.textContent.trim());
+      }
+    });
+  });
+
   if (searchInput) {
-    searchInput.addEventListener('input', filterProjects);
-    searchInput.addEventListener('change', filterProjects);
+    searchInput.addEventListener('input', () => {
+      filterProjects();
+      renderSuggestions(searchInput.value);
+    });
+    searchInput.addEventListener('change', () => {
+      filterProjects();
+      renderSuggestions(searchInput.value);
+    });
+    searchInput.addEventListener('focus', () => {
+      renderSuggestions(searchInput.value);
+    });
+    searchInput.addEventListener('blur', () => {
+      if (suggestionsEl) {
+        setTimeout(() => {
+          suggestionsEl.hidden = true;
+        }, 150);
+      }
+    });
   }
+
   filterProjects();
 })();
 </script>

@@ -1757,7 +1757,7 @@ def build_index() -> str:
         '        </p>\n'
         '        <div class="hero__actions">\n'
         '          <a class="btn btn--primary" href="#projects">Explore signature projects</a>\n'
-        '          <a class="btn btn--ghost" href="mailto:contact@gtuli.dev">Let’s collaborate</a>\n'
+        '          <a class="btn btn--ghost" href="mailto:gtuli.ml@gmail.com">Let’s collaborate</a>\n'
         '        </div>\n'
         '      </div>\n'
         '    </header>\n'
@@ -1788,7 +1788,7 @@ def build_index() -> str:
         '          architecting national-scale biosurveillance or deploying AI safely at the bedside, each engagement blends systems\n'
         '          thinking with compassionate leadership.\n'
         '        </p>\n'
-        '        <a class="btn btn--primary" href="mailto:contact@gtuli.dev">Start a conversation</a>\n'
+        '        <a class="btn btn--primary" href="mailto:gtuli.ml@gmail.com">Start a conversation</a>\n'
         '      </div>\n'
         '    </section>\n'
         "\n"
