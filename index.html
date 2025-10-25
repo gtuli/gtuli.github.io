@@ -21,7 +21,7 @@
       Transforming research prototypes into operational, high-value solutions across government, industry, and academia.
      </h1>
 <p class="hero__subtitle">
-      This portfolio spotlights applied machine learning and data science engagements across public health, clinical AI, informatics, and cross-sector innovation. Each summary shares what was built, why it mattered, and the mission outcomes delivered, with select initiatives surfacing in multiple groups to reflect cross-cutting impact.
+      This portfolio presents various applied machine learning and data science projects spanning public health, clinical AI, informatics, and multi-sector innovation. The concise summaries highlight what was built, why it mattered, and how it advanced data-driven decision-making. Projects may surface in multiple groups to reflect cross-cutting mission impact.
      </p>
 <div class="hero__actions">
 <a class="btn btn--primary" href="#projects">
@@ -34,15 +34,21 @@
 </div>
 </header>
 <main class="wrapper landing-main" id="projects">
- <div class="project-search" id="project-search-container">
-  <input aria-label="Search projects" autocomplete="off" id="project-search" placeholder="Search by project details, focus, or skills" type="search"/>
-  <div aria-live="polite" class="project-search__suggestions" id="project-search-suggestions" role="listbox"></div>
- </div>
- <section class="section-intro" id="featured-projects">
-  <h2 class="section-title">
+<section class="section-intro" id="featured-projects">
+<h2 class="section-title">
       Featured initiatives
      </h2>
- </section>
+</section>
+<div class="project-search">
+<label for="project-search">
+      Search projects
+     </label>
+<input aria-describedby="project-search-help" autocomplete="off" id="project-search" placeholder="Search by project details, focus, or skills" type="search"/>
+<div aria-live="polite" class="project-search__suggestions" id="project-search-suggestions" role="listbox"></div>
+<p class="project-search__help" id="project-search-help">
+      Filter projects by keywords across titles, roles, descriptions, focus areas, and skills. Suggestions appear as you type.
+     </p>
+</div>
  <nav aria-label="Project sections" class="project-nav">
   <div class="project-nav__inner">
    <a aria-label="Featured" class="project-nav__link" data-label="Featured" href="#featured-projects" title="Featured">
@@ -1092,7 +1098,6 @@
   }
   const searchInput = document.getElementById('project-search');
   const suggestionsEl = document.getElementById('project-search-suggestions');
-  const searchContainer = document.getElementById('project-search-container');
   const cards = Array.from(document.querySelectorAll('[data-project-card]'));
   const groups = Array.from(document.querySelectorAll('[data-project-group]'));
   const emptyState = document.querySelector('[data-search-empty]');
@@ -1155,24 +1160,6 @@
     }
   };
 
-  const focusSearchField = () => {
-    if (!searchInput) {
-      return;
-    }
-    try {
-      searchInput.focus({ preventScroll: true });
-    } catch (error) {
-      searchInput.focus();
-    }
-  };
-
-  const revealSearch = () => {
-    if (searchContainer) {
-      searchContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-    window.setTimeout(focusSearchField, 220);
-  };
-
   const renderSuggestions = (value) => {
     if (!suggestionsEl) {
       return;
@@ -1201,8 +1188,8 @@
           searchInput.value = term;
           filterProjects();
           renderSuggestions(term);
+          searchInput.focus();
         }
-        revealSearch();
       });
       suggestionsEl.appendChild(button);
     });
@@ -1216,22 +1203,17 @@
     searchInput.value = value;
     filterProjects();
     renderSuggestions(value);
-    revealSearch();
+    searchInput.focus();
   };
 
   const focusTags = Array.from(document.querySelectorAll('.project-card__focus-tag'));
   focusTags.forEach((tag) => {
     tag.setAttribute('role', 'button');
     tag.setAttribute('tabindex', '0');
-    tag.addEventListener('click', (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      applyFocusFilter(tag.textContent.trim());
-    });
+    tag.addEventListener('click', () => applyFocusFilter(tag.textContent.trim()));
     tag.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
-        event.stopPropagation();
         applyFocusFilter(tag.textContent.trim());
       }
     });
