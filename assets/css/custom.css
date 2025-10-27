@@ -346,15 +346,17 @@ body {
 
 @media (min-width: var(--project-break-medium)) {
   .project-body__grid {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
     align-items: start;
     gap: 3rem;
   }
   .project-body__sidebar {
-    max-width: none;
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+    gap: 1.5rem;
+    max-width: 360px;
     width: 100%;
-    align-items: stretch;
-    margin: 0;
   }
   .project-body__sidebar .project-section {
     width: 100%;
@@ -369,6 +371,12 @@ body {
   }
   .project-gallery__item img {
     max-height: min(32vh, 340px);
+  }
+}
+
+@media (max-width: calc(var(--project-break-medium) - 1px)) {
+  .project-body__sidebar {
+    display: none;
   }
 }
 
