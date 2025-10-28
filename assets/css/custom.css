@@ -344,7 +344,7 @@ body {
   gap: 2rem;
 }
 
-@media (min-width: var(--project-break-medium)) {
+@media (min-width: 1008px) {
   .project-body__grid {
     grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
     align-items: start;
@@ -445,7 +445,7 @@ body {
   color: rgba(15, 23, 42, 0.92);
 }
 
-@media (min-width: var(--project-break-small)) and (max-width: calc(var(--project-break-medium) - 1px)) {
+@media (min-width: 641px) and (max-width: 1007px) {
   .project-body__grid {
     max-width: min(960px, 100%);
     margin: 0 auto;
@@ -495,7 +495,7 @@ body {
   text-align: center;
 }
 
-@media (max-width: calc(var(--project-break-small) - 1px)) {
+@media (max-width: 640px) {
   .hero {
     text-align: center;
     align-items: center;
@@ -895,7 +895,7 @@ body {
   }
 }
 
-@media (min-width: var(--project-break-medium)) {
+@media (min-width: 1008px) {
   .project-layout {
     display: grid;
     grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
