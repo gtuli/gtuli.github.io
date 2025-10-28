@@ -49,7 +49,7 @@
       Filter projects by keywords across titles, roles, descriptions, focus areas, and skills. Suggestions appear as you type.
      </p>
 </div>
- <nav aria-label="Project sections" class="project-nav">
+<nav aria-label="Project sections" class="project-nav">
   <div class="project-nav__inner">
    <a aria-label="Featured" class="project-nav__link" data-label="Featured" href="#featured-projects" title="Featured">
     <span aria-hidden="true" class="project-nav__icon">⭐</span>
@@ -75,8 +75,8 @@
     <span aria-hidden="true" class="project-nav__icon">🕸️</span>
     <span class="project-nav__label">Networks</span>
    </a>
-  </div>
- </nav>
+</div>
+</nav>
 <div class="project-groups">
 <section class="project-group" id="mission-analytics" data-project-group="mission-analytics">
 <h3 class="project-group__title">
@@ -1103,6 +1103,81 @@
   const emptyState = document.querySelector('[data-search-empty]');
   const cardIndex = new Map();
   const suggestionSet = new Set();
+  const navTargets = Array.from(document.querySelectorAll('.project-nav__link'))
+    .map((link) => {
+      const href = link.getAttribute('href') || '';
+      if (!href.startsWith('#')) {
+        return null;
+      }
+      const target = document.querySelector(href);
+      if (!target) {
+        return null;
+      }
+      return { link, target };
+    })
+    .filter(Boolean);
+
+  let activeNavLink = null;
+  const setActiveNavLink = (link) => {
+    if (activeNavLink === link) {
+      return;
+    }
+    if (activeNavLink) {
+      activeNavLink.classList.remove('is-active');
+      activeNavLink.removeAttribute('aria-current');
+    }
+    activeNavLink = link || null;
+    if (activeNavLink) {
+      activeNavLink.classList.add('is-active');
+      activeNavLink.setAttribute('aria-current', 'true');
+    }
+  };
+
+  const calculateActiveNavLink = () => {
+    if (navTargets.length === 0) {
+      return;
+    }
+    const viewportAnchor = window.scrollY + window.innerHeight * 0.25;
+    let candidate = null;
+    for (const { link, target } of navTargets) {
+      if (target.offsetParent === null) {
+        continue;
+      }
+      if (target.offsetTop <= viewportAnchor) {
+        candidate = link;
+      }
+    }
+    if (!candidate) {
+      candidate = navTargets[0].link;
+    }
+    setActiveNavLink(candidate);
+  };
+
+  let navUpdateScheduled = false;
+  const scheduleNavUpdate = () => {
+    if (navTargets.length === 0) {
+      return;
+    }
+    if (navUpdateScheduled) {
+      return;
+    }
+    navUpdateScheduled = true;
+    const update = () => {
+      calculateActiveNavLink();
+      navUpdateScheduled = false;
+    };
+    if (typeof window.requestAnimationFrame === 'function') {
+      window.requestAnimationFrame(update);
+    } else {
+      setTimeout(update, 16);
+    }
+  };
+
+  if (navTargets.length > 0) {
+    scheduleNavUpdate();
+    window.addEventListener('scroll', scheduleNavUpdate, { passive: true });
+    window.addEventListener('resize', scheduleNavUpdate);
+  }
 
   cards.forEach((card) => {
     const combined = [
@@ -1158,6 +1233,7 @@
     if (emptyState) {
       emptyState.hidden = visibleCount > 0;
     }
+    scheduleNavUpdate();
   };
 
   const renderSuggestions = (value) => {
@@ -1241,6 +1317,7 @@
   }
 
   filterProjects();
+  scheduleNavUpdate();
 })();
 </script>
 </body>
