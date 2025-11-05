@@ -1,262 +1,329 @@
 <!DOCTYPE html>
-
 <html class="theme-light" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>
-   Privacy-Preserving COVID-19 Behavior Study
-  </title>
-<link href="../assets/css/al-folio.css" rel="stylesheet"/>
-<link href="../assets/css/custom.css" rel="stylesheet"/>
-</head>
-<body class="page">
-<div class="page__inner">
-<header class="project-hero">
-<div class="wrapper project-hero__inner">
-<a class="back-link" href="../index.html">
-      ← Back to portfolio
-     </a>
-<h1 class="project-hero__title">
-      Privacy-Preserving COVID-19 Behavior Study
-     </h1>
-<p class="project-hero__subtitle">
-      Pioneered a federated mobile health study via the Google Health Studies app to track people’s mask-wearing and social distancing habits without collecting personal data centrally.
-     </p>
-<div class="project-hero__meta">
-<p>
-<strong>
-        Role:
-       </strong>
-       Epidemiology &amp; Analytics lead
-      </p>
-<p>
-<strong>
-        Focus:
-       </strong>
-       Federated Analytics, Differential Privacy, Human Mobility, Intervention Adherence, Civic Tech
-      </p>
-<p>
-        <strong>
-         Outcome:
-        </strong>
-</p>
-</div>
-</div>
-</header>
-<main class="wrapper project-body">
-<div class="project-body__grid"><div class="project-body__sidebar"><section class="project-section project-section--at-a-glance">
-<h2>
-        At a Glance
-       </h2>
-<ul>
-<li>
-         Pioneered a federated mobile health study via the Google Health Studies app to track people’s mask-wearing and social distancing habits without collecting personal data centrally.
-        </li>
-<li>
-         Found that most individuals maintained masking and distancing until they were fully vaccinated, whereas those who never intended to vaccinate exhibited consistently lower adherence to these behaviors.
-        </li>
-<li>
-         Demonstrated a successful blueprint for privacy-centric public health research using federated analytics and differential privacy during a pandemic, proving that valuable insights can be gained without compromising individual privacy.
-        </li>
-</ul>
-</section><section class="project-section project-section--gallery" data-gallery-count="3">
-<h2>
-        Visual highlights
-       </h2>
-<div class="project-gallery"><figure class="project-gallery__item project-gallery__item--feature"><a href="8.1.Accute-Respiratory-Infection-Google-Health-Study-Launch.png" rel="noopener" target="_blank">
-<img alt="Google Health federated NPI study launch graphic" decoding="async" loading="lazy" src="8.1.Accute-Respiratory-Infection-Google-Health-Study-Launch.png"/>
-</a><figcaption>Google Health federated NPI study launch graphic</figcaption></figure>
-<figure class="project-gallery__item">
-<a href="8.2.federated-analytics-and-differential-privacy-preserved-data-collection.png" rel="noopener" target="_blank">
-<img alt="Federated analytics and differential privacy workflow" decoding="async" loading="lazy" src="8.2.federated-analytics-and-differential-privacy-preserved-data-collection.png"/>
-</a>
-<figcaption>
-          Federated pipeline balancing utility with strong privacy protections.
-         </figcaption>
-</figure>
-<figure class="project-gallery__item">
-<a href="8.3.participant-engaguement-in-mobility-based-NPI-intervention.png" rel="noopener" target="_blank">
-<img alt="Participant engagement in NPI interventions" decoding="async" loading="lazy" src="8.3.participant-engaguement-in-mobility-based-NPI-intervention.png"/>
-</a>
-<figcaption>
-          Engagement metrics informed outreach strategies over the study period.
-         </figcaption>
-</figure>
-</div>
-</section></div><div class="project-body__main"><section class="project-section">
-<h2>
-        The Problem
-       </h2>
-<ul>
-<li>
-         Measuring personal preventive behaviors (like mask usage and social distancing) on a large scale is challenging because traditional methods either invade privacy (tracking apps, direct observation) or rely on self-reports that people may censor if they fear judgment.
-        </li>
-<li>
-         Available data sources during COVID (such as aggregated mobility reports) were too coarse to tie behavior changes to individual factors like vaccination status, making it hard to understand cause-and-effect (did getting vaccinated change one’s behavior?).
-        </li>
-<li>
-         Public health officials needed detailed insights into behavior changes as vaccines rolled out, but any centralized data collection of such sensitive information risked low participation or public distrust. No large-scale study had attempted a federated (data-stays-on-device) approach, so it was unclear how to implement one effectively in the middle of a public health crisis.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        The Solution
-       </h2>
-<ul>
-<li>
-         Launched a study through the Google Health Studies smartphone app, which invited participants to opt-in and answer questions about their masking and distancing habits over time. Importantly, the study used a federated analytics approach: individual response data stayed on each person’s phone. Instead of raw data being sent up, only aggregated model updates or summary statistics computed on-device were shared with researchers.
-        </li>
-<li>
-         Employed differential privacy techniques to ensure that even the aggregated data transmitted could not be traced back to any individual. This added noise and other privacy safeguards to the collected statistics, meaning participants could contribute to findings without risking personal exposure.
-        </li>
-<li>
-         Analyzed how participants’ behaviors changed after vaccination. The app quietly linked each person’s behavior data with their self-reported vaccination status within the device, so the central analysis only saw anonymous pattern information (e.g., “X% of fully vaccinated individuals reduced mask usage after two weeks” versus “Y% of unvaccinated individuals never wore masks”).
-        </li>
-<li>
-         Proved out a new study design: rather than collecting potentially sensitive behavior logs, the research questions were answered by training a model collaboratively across devices or by combining privacy-protected summaries from each phone. This was one of the first practical demonstrations that such federated studies can work for epidemiological purposes.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Architecture Overview
-       </h2>
-<ul>
-<li>
-         Federated Study Setup: Participants’ phones acted as individual data nodes. The study coordinator defined analysis tasks (such as calculating average mask-wearing frequency by vaccination status) that were sent to each device. Each phone processed its owner’s data (survey answers, possibly phone sensor data if used) locally.
-        </li>
-<li>
-         Secure Aggregation: Devices then sent back only encrypted, partial results. Using a secure aggregation protocol, the server could only decrypt the sum of all participants’ contributions, not any single participant’s data. For example, the system might compute “total number of days masked in a week across all participants” without ever seeing individual entries, then divide by population to get an average.
-        </li>
-<li>
-         Differential Privacy Layer: Noise was injected into these aggregated results to obscure individual contributions further. This ensured that even if someone’s behavior was unique, it could not be picked out from the final data. The noise was calibrated so it didn’t drown out meaningful population-level signals but provided strong privacy guarantees.
-        </li>
-<li>
-         Data Validation: The app and analysis included checks for data quality – e.g., ensuring sufficient participants contributed to an aggregate before trusting it (to avoid a scenario where one person’s data dominates a noisy result). Also, because no central raw dataset existed, the team developed novel validation methods, such as simulation testing: they would simulate devices with known behavior patterns to ensure the federated process could successfully recover those patterns in aggregate.
-        </li>
-<li>
-         Result Synthesis: After multiple federated computation rounds, the collected insights were assembled into interpretable findings. The architecture allowed tracking trends over time: for instance, each week the study could federate a calculation like “proportion of each group always wearing a mask” and observe how those proportions shifted as vaccination coverage increased.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Results and Impacts
-       </h2>
-<ul>
-<li>
-         The study found clear behavior patterns: individuals generally continued practicing mask-wearing and social distancing until they completed their full vaccination course. Once fully vaccinated, some gradually relaxed these measures, but there wasn’t an immediate drop-off until they reached full immunity. In contrast, those who were vaccine-resistant (people who never planned to get a shot) had significantly lower adherence to mask and distancing guidelines from the start, even when COVID risk was high.
-        </li>
-<li>
-         These insights provided evidence to public health experts about the interplay between vaccination and personal behavior. It suggested that vaccination campaigns did not lead to a precipitous abandonment of other precautions until after full vaccination – alleviating concerns that early vaccination might cause people to drop their guard too soon. It also highlighted that the group refusing vaccination was less likely to follow any guidelines, underlining a need for different public health messaging or interventions for that segment.
-        </li>
-<li>
-         Importantly, the project proved the feasibility of conducting large-scale, privacy-preserving research in real-world conditions. It demonstrated that federated data collection can yield useful epidemiological insights without ever collecting raw personal data. This has opened the door for future studies on sensitive topics (mental health, sexual health, etc.) where privacy is paramount – researchers can study patterns without individuals having to surrender their private information.
-        </li>
-<li>
-         The success of this approach during COVID-19 was documented in a publication in Nature Digital Medicine (2024), positioning the work as a milestone in digital public health methodology. It has since been referenced as a template for privacy-preserving analytics, influencing how tech companies and health researchers approach data ethics in population studies.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Skills and Tools Used
-       </h2>
-<div class="project-table-wrapper">
-<table class="project-table">
-<tr>
-<th>
-           Skill/Tool Category
-          </th>
-<th>
-           Application in Privacy-Preserving COVID-19 Behavior Study
-          </th>
-</tr>
-<tr>
-<td>
-           Federated Learning &amp; Analytics
-          </td>
-<td>
-           Implemented a federated analysis approach using Google’s privacy-preserving technology stack; orchestrated distributed data processing on user devices and aggregated results securely
-          </td>
-</tr>
-<tr>
-<td>
-           Differential Privacy
-          </td>
-<td>
-           Applied differential privacy techniques to ensure that aggregated data releases could not reveal any individual’s behavior, balancing noise addition with analytical usefulness
-          </td>
-</tr>
-<tr>
-<td>
-           Mobile App Deployment
-          </td>
-<td>
-           Collaborated on the Google Health Studies app deployment for the study, ensuring smooth user enrollment and data collection via a smartphone platform
-          </td>
-</tr>
-<tr>
-<td>
-           Data Science Innovation
-          </td>
-<td>
-           Developed novel validation and analysis strategies for a dataset that cannot be seen centrally; used simulation and advanced statistical reasoning to interpret federated results with confidence
-          </td>
-</tr>
-<tr>
-<td>
-           Collaboration (Public-Private)
-          </td>
-<td>
-           Worked closely with a major tech company’s research team (Google Health) and academic partners, coordinating cross-organization efforts in study design, IRB approvals, and result interpretation under a tight timeline
-          </td>
-</tr>
-<tr>
-<td>
-           Privacy &amp; Ethics in Research
-          </td>
-<td>
-           Navigated complex privacy considerations, ensuring compliance with data protection standards and transparently communicating the privacy guarantees to participants to build trust in the study
-          </td>
-</tr>
-</table>
-</div>
-</section><section class="project-section">
-<h2>
-        Cross-Project Capabilities
-       </h2>
-<ul>
-<li>
-         Privacy-first data science: This project expanded Dr. Tuli’s toolkit for analyzing sensitive data in a way that protects individual privacy. That expertise is transferrable to any future work dealing with confidential information (patient data, social data, etc.), allowing him to design studies that earn participant trust and meet strict privacy requirements.
-        </li>
-<li>
-         Methodological innovation: Showcased ability to combine epidemiological questions with cutting-edge computing methods (federated learning, secure aggregation). This inventive mindset – solving public health problems with unconventional but effective techniques – is a hallmark of his approach across projects (e.g., using social media for surveillance, or generative AI for data simulation).
-        </li>
-<li>
-         Industry collaboration: Reinforced experience in partnering with technology companies to tackle health challenges. As with prior projects involving Facebook and others, he effectively bridged the gap between tech capabilities and public health objectives, a valuable skill for executing large-scale, multi-stakeholder initiatives.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Published Papers/Tools
-       </h2>
-<ul>
-<li>
-         Peer-Reviewed Publication: Nature Digital Medicine (2024) – documented the federated study methodology and key behavioral findings, marking one of the first papers to show a real application of federated analytics in public health research. <a class="paper-link" href="https://www.nature.com/articles/s41746-024-01223-4" rel="noopener" target="_blank">Paper</a>
-        </li>
-<li>
-         Framework for Future Studies: While not a traditional “tool,” the protocols and lessons from this project have been shared as a blueprint for future privacy-preserving studies. The publication and follow-up materials serve as a how-to guide for health researchers interested in adopting federated approaches, including discussions of technical challenges and how they were overcome.
-        </li>
-<li>
-         (Note: Due to the nature of federated studies, no raw dataset or app tool is publicly released, since data remained on user devices. Instead, the value lies in the documented approach and the validation that this new model works. The insights gained have been communicated to public health policy circles and are influencing the design of ongoing behavioral studies in other health domains.)
-        </li>
-</ul>
-</section></div></div>
-</main>
-<footer class="wrapper project-footer">
-<a class="btn btn--ghost" href="../index.html">
-     Back to portfolio
-    </a>
-</footer>
-</div>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Privacy-Preserving COVID-19 Behavior Study</title>
+    <link href="../assets/css/al-folio.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+  </head>
+  <body class="page">
+    <div class="page__inner">
+      <header class="project-hero">
+        <div class="wrapper project-hero__inner">
+          <a class="back-link" href="../index.html"> ← Back to portfolio </a>
+          <h1 class="project-hero__title">
+            Privacy-Preserving COVID-19 Behavior Study
+          </h1>
+          <p class="project-hero__subtitle">
+            Pioneered a federated mobile health study via the Google Health
+            Studies app to track people’s mask-wearing and social distancing
+            habits without collecting personal data centrally.
+          </p>
+          <div class="project-hero__meta">
+            <p>
+              <strong> Role: </strong> Senior Epidemiology &amp; Analytics lead
+            </p>
+            <p>
+              <strong> Focus: </strong> Federated Analytics, Differential
+              Privacy, Human Mobility, Intervention Adherence, Civic Tech
+            </p>
+            <p>
+              <strong> Outcome: </strong>
+              Published and Demonstrated the feasibility of a privacy preserving
+              real-world federated public-health research, influencing future
+              digital health studies.<a
+                class="paper-link"
+                href="https://www.nature.com/articles/s41746-024-01223-4"
+                rel="noopener"
+                target="_blank"
+                >Paper</a
+              >
+            </p>
+          </div>
+        </div>
+      </header>
+      <main class="wrapper project-body">
+        <div class="project-body__grid">
+          <div class="project-body__sidebar">
+            <section class="project-section project-section--at-a-glance">
+              <h2>At a Glance</h2>
+              <ul>
+                <li>
+                  Led Google Health’s federated study tracking masking and
+                  distancing without central data.
+                </li>
+                <li>
+                  Most maintained masking/distancing until fully vaccinated;
+                  vaccine-hesitant showed lower adherence.
+                </li>
+                <li>
+                  Showcased a privacy-centric blueprint using federated
+                  analytics and differential privacy.
+                </li>
+              </ul>
+            </section>
+            <section
+              class="project-section project-section--gallery"
+              data-gallery-count="3"
+            >
+              <h2>Visual highlights</h2>
+              <div class="project-gallery">
+                <figure
+                  class="project-gallery__item project-gallery__item--feature"
+                >
+                  <a
+                    href="8.1.Accute-Respiratory-Infection-Google-Health-Study-Launch.png"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <img
+                      alt="Google Health federated NPI study launch graphic"
+                      decoding="async"
+                      loading="lazy"
+                      src="8.1.Accute-Respiratory-Infection-Google-Health-Study-Launch.png"
+                    />
+                  </a>
+                  <figcaption>
+                    Google Health federated NPI study launch graphic
+                  </figcaption>
+                </figure>
+                <figure class="project-gallery__item">
+                  <a
+                    href="8.2.federated-analytics-and-differential-privacy-preserved-data-collection.png"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <img
+                      alt="Federated analytics and differential privacy workflow"
+                      decoding="async"
+                      loading="lazy"
+                      src="8.2.federated-analytics-and-differential-privacy-preserved-data-collection.png"
+                    />
+                  </a>
+                  <figcaption>
+                    Federated pipeline balancing utility with strong privacy
+                    protections.
+                  </figcaption>
+                </figure>
+                <figure class="project-gallery__item">
+                  <a
+                    href="8.3.participant-engaguement-in-mobility-based-NPI-intervention.png"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <img
+                      alt="Participant engagement in NPI interventions"
+                      decoding="async"
+                      loading="lazy"
+                      src="8.3.participant-engaguement-in-mobility-based-NPI-intervention.png"
+                    />
+                  </a>
+                  <figcaption>
+                    Engagement metrics informed outreach strategies over the
+                    study period.
+                  </figcaption>
+                </figure>
+              </div>
+            </section>
+          </div>
+          <div class="project-body__main">
+            <section class="project-section">
+              <h2>The Problem</h2>
+              <ul>
+                <li>
+                  Measuring masking/distancing at scale is hard: intrusive
+                  tracking or biased self-reports.
+                </li>
+                <li>
+                  COVID mobility data was too coarse to link behavior changes to
+                  vaccination status.
+                </li>
+                <li>
+                  Officials needed detailed behavior insights without
+                  centralized sensitive data, risking distrust.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>The Solution</h2>
+              <ul>
+                <li>
+                  Used Google Health Studies with opt-in surveys and on-device
+                  analysis; raw data stayed on phones.
+                </li>
+                <li>
+                  Applied differential privacy so shared aggregates couldn’t
+                  expose individuals.
+                </li>
+                <li>
+                  Linked vaccination status locally to analyze behavioral shifts
+                  anonymously.
+                </li>
+                <li>
+                  Demonstrated federated designs can answer epidemiologic
+                  questions without central data.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Architecture Overview</h2>
+              <ul>
+                <li>
+                  Phones acted as local nodes processing surveys and any sensor
+                  data.
+                </li>
+                <li>
+                  Secure aggregation returned only encrypted, population-level
+                  totals.
+                </li>
+                <li>
+                  Added calibrated DP noise to obscure unique contributions
+                  while preserving signal.
+                </li>
+                <li>
+                  Validated with participation thresholds and simulations to
+                  test recovery of patterns.
+                </li>
+                <li>
+                  Weekly federated rounds produced interpretable, time-trended
+                  findings.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Results and Impacts</h2>
+              <ul>
+                <li>
+                  Masking/distancing stayed high until full vaccination;
+                  resistant groups stayed low.
+                </li>
+                <li>
+                  Showed vaccination didn’t trigger early drop-offs; tailored
+                  messaging needed for resisters.
+                </li>
+                <li>
+                  Proved large-scale, privacy-preserving research feasible in
+                  real settings.
+                </li>
+                <li>
+                  Published in Nature Digital Medicine (2024), now a reference
+                  for ethical digital health.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Skills and Tools Used</h2>
+              <div class="project-table-wrapper">
+                <table class="project-table">
+                  <tr>
+                    <th>Skill/Tool Category</th>
+                    <th>
+                      Application in Privacy-Preserving COVID-19 Behavior Study
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>Federated Learning &amp; Analytics</td>
+                    <td>
+                      Implemented a federated analysis approach using Google’s
+                      privacy-preserving technology stack; orchestrated
+                      distributed data processing on user devices and aggregated
+                      results securely
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Differential Privacy</td>
+                    <td>
+                      Applied differential privacy techniques to ensure that
+                      aggregated data releases could not reveal any individual’s
+                      behavior, balancing noise addition with analytical
+                      usefulness
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Mobile App Deployment</td>
+                    <td>
+                      Collaborated on the Google Health Studies app deployment
+                      for the study, ensuring smooth user enrollment and data
+                      collection via a smartphone platform
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Data Science Innovation</td>
+                    <td>
+                      Developed novel validation and analysis strategies for a
+                      dataset that cannot be seen centrally; used simulation and
+                      advanced statistical reasoning to interpret federated
+                      results with confidence
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Collaboration (Public-Private)</td>
+                    <td>
+                      Worked closely with a major tech company’s research team
+                      (Google Health) and academic partners, coordinating
+                      cross-organization efforts in study design, IRB approvals,
+                      and result interpretation under a tight timeline
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Privacy &amp; Ethics in Research</td>
+                    <td>
+                      Navigated complex privacy considerations, ensuring
+                      compliance with data protection standards and
+                      transparently communicating the privacy guarantees to
+                      participants to build trust in the study
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+            <section class="project-section">
+              <h2>Cross-Project Capabilities</h2>
+              <ul>
+                <li>
+                  Privacy-first analytics transferable to sensitive domains like
+                  patient or social data.
+                </li>
+                <li>
+                  Blended epidemiology with federated/secure computing for
+                  creative ML solutions.
+                </li>
+                <li>
+                  Bridged tech, academia, and public health for
+                  multi-stakeholder initiatives.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Published Papers/Tools</h2>
+              <ul>
+                <li>
+                  Peer-Reviewed Publication: Nature Digital Medicine (2024) –
+                  real-world federated public-health analytics.<a
+                    class="paper-link"
+                    href="https://www.nature.com/articles/s41746-024-01223-4"
+                    rel="noopener"
+                    target="_blank"
+                    >Paper</a
+                  >
+                </li>
+                <li>
+                  Framework for Future Studies: Shared protocols as a blueprint
+                  for privacy-preserving research.
+                </li>
+                <li>
+                  (Note: No raw dataset or app released; impact is methodology
+                  and influence on future studies.)
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </main>
+      <footer class="wrapper project-footer">
+        <a class="btn btn--ghost" href="../index.html"> Back to portfolio </a>
+      </footer>
+    </div>
+  </body>
 </html>
