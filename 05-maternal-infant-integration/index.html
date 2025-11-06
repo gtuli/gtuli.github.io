@@ -1,503 +1,554 @@
 <!DOCTYPE html>
 <html class="theme-light" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   Maternal-Infant Health Integration &amp; Dyad Dashboard
-  </title>
-  <link href="../assets/css/al-folio.css" rel="stylesheet"/>
-  <link href="../assets/css/custom.css" rel="stylesheet"/>
- </head>
- <body class="page">
-  <div class="page__inner">
-   <header class="project-hero">
-    <div class="wrapper project-hero__inner">
-     <a class="back-link" href="../index.html">
-      ← Back to portfolio
-     </a>
-     <h1 class="project-hero__title">
-      Maternal-Infant Health Integration &amp; Dyad Dashboard
-     </h1>
-     <p class="project-hero__subtitle">
-      Mapped national standards for substance-exposed mother–infant care and prototyped an interoperable dyad dashboard to operationalize them at the point of care.
-     </p>
-     <div class="project-hero__meta">
-      <p>
-       <strong>
-        Role:
-       </strong>
-       Principal Data Scientist &amp; Product Lead
-      </p>
-      <p>
-       <strong>
-        Focus:
-       </strong>
-       Interoperability · Clinical UX · Standards Engineering · Generative Prototyping
-      </p>
-     </div>
-    </div>
-   </header>
-   <main class="wrapper project-body">
-    <div class="project-body__grid">
-     <div class="project-body__sidebar">
-      <section class="project-section project-section--at-a-glance">
-       <h2>
-        At a Glance
-       </h2>
-       <div class="project-subsection">
-        <h3>
-         Part A — Maternal-Infant Data Standards Framework
-        </h3>
-        <ul>
-         <li>
-          Mapped 180 critical data elements for substance-exposed mother–infant dyads to national health data standards, exposing interoperability gaps.
-         </li>
-         <li>
-          Demonstrated that over 91% of required dyad data can already flow through USCDI v4 and FHIR R4, enabling near-term implementation.
-         </li>
-         <li>
-          Published the framework in JAMIA (2025), influencing federal interoperability guidance for maternal-infant care.
-         </li>
-        </ul>
-       </div>
-       <div class="project-subsection">
-        <h3>
-         Part B — Maternal-Infant Dyad Care Dashboard Prototype
-        </h3>
-        <ul>
-         <li>
-          Built a SMART-on-FHIR dashboard that unifies mother and infant EHR data into a single clinical workspace.
-         </li>
-         <li>
-          Surfaced synchronized maternal medications, toxicology, and infant withdrawal scores to streamline care coordination.
-         </li>
-         <li>
-          Demonstrated the prototype with realistic synthetic data, securing stakeholder buy-in for a hospital pilot.
-         </li>
-        </ul>
-       </div>
-      </section>
-      <section class="project-section project-section--gallery" data-gallery-count="4">
-       <h2>
-        Visual highlights
-       </h2>
-       <div class="project-gallery">
-        <figure class="project-gallery__item project-gallery__item--feature">
-         <a href="5.1.mother-infant-diad-infant-clinical-data-elements-mapping-USCDI.png" rel="noopener" target="_blank">
-          <img alt="Maternal-infant clinical data elements mapped to USCDI" decoding="async" loading="lazy" src="5.1.mother-infant-diad-infant-clinical-data-elements-mapping-USCDI.png"/>
-         </a>
-         <figcaption>
-          Standards coverage showing how 180 dyad data elements map to USCDI.
-         </figcaption>
-        </figure>
-        <figure class="project-gallery__item project-gallery__item--pdf">
-         <object aria-label="Supportive maternal-infant data mapped to USCDI" data="5.2.mother-infant-diad-infant-supportive-data-elements-mapping-USCDI.pdf" type="application/pdf">
-         </object>
-         <figcaption>
-          Supplementary mappings detailing social and supportive care elements.
-         </figcaption>
-        </figure>
-        <figure class="project-gallery__item">
-         <a href="5.3.mother-infant-diad-synthetic-data-table.png" rel="noopener" target="_blank">
-          <img alt="Synthetic maternal-infant dyad record" decoding="async" loading="lazy" src="5.3.mother-infant-diad-synthetic-data-table.png"/>
-         </a>
-         <figcaption>
-          Synthetic linked record demonstrating mother–infant context assembled via FHIR.
-         </figcaption>
-        </figure>
-        <figure class="project-gallery__item">
-         <a href="5.4.mother-infant-diad-dashboard-prototype.png" rel="noopener" target="_blank">
-          <img alt="Maternal-infant dyad care dashboard prototype" decoding="async" loading="lazy" src="5.4.mother-infant-diad-dashboard-prototype.png"/>
-         </a>
-         <figcaption>
-          Dyad dashboard interface surfacing synchronized maternal and infant insights.
-         </figcaption>
-        </figure>
-       </div>
-      </section>
-     </div>
-     <div class="project-body__main">
-      <section class="project-section">
-       <h2>
-        The Problem
-       </h2>
-       <div class="project-subsection">
-        <h3>
-         Part A — Maternal-Infant Data Standards Framework
-        </h3>
-        <ul>
-         <li>
-          Separate maternal and infant EHR systems prevent clinicians from seeing the full dyad picture when treating substance-exposed families.
-         </li>
-         <li>
-          Critical dyad-specific details—maternal treatment plans, infant NAS scores, social services involvement—lack consistent standardized fields.
-         </li>
-         <li>
-          Privacy regulations and lagging claims data slow information exchange, leaving care teams without timely, shareable context.
-         </li>
-        </ul>
-       </div>
-       <div class="project-subsection">
-        <h3>
-         Part B — Maternal-Infant Dyad Care Dashboard Prototype
-        </h3>
-        <ul>
-         <li>
-          Mother and infant records live in different systems, forcing clinicians to toggle across interfaces and risking missed context during fast-moving care decisions.
-         </li>
-         <li>
-          Key maternal information is often buried in long notes, making it difficult to correlate with infant withdrawal trends.
-         </li>
-         <li>
-          Cross-disciplinary teams rely on manual updates, so actionable dyad intelligence rarely reaches the bedside in time.
-         </li>
-        </ul>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
-        The Solution
-       </h2>
-       <div class="project-subsection">
-        <h3>
-         Part A — Maternal-Infant Data Standards Framework
-        </h3>
-        <ul>
-         <li>
-          Catalogued 180 clinical and social data elements essential to dyad care and mapped each to USCDI and FHIR definitions to quantify coverage.
-         </li>
-         <li>
-          Surveyed HIEs and hospitals to understand current mother–infant linkage practices and adoption of national interoperability standards.
-         </li>
-         <li>
-          Authored recommendations to close standard gaps and accelerate adoption, guiding agencies on data elements to prioritize for dyad coordination.
-         </li>
-        </ul>
-       </div>
-       <div class="project-subsection">
-        <h3>
-         Part B — Maternal-Infant Dyad Care Dashboard Prototype
-        </h3>
-        <ul>
-         <li>
-          Designed a SMART-on-FHIR application that pulls authenticated data for linked mother–infant pairs into a unified, parallel layout.
-         </li>
-         <li>
-          Collaborated with OB, NICU, and social work stakeholders to prioritize content and interaction patterns that match dyad workflows.
-         </li>
-         <li>
-          Populated the prototype with realistic synthetic data to demonstrate core use cases—e.g., comparing maternal toxicology results with infant NAS trajectories.
-         </li>
-        </ul>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
-        Architecture Overview
-       </h2>
-       <div class="project-subsection">
-        <h3>
-         Part A — Maternal-Infant Data Standards Framework
-        </h3>
-        <ul>
-         <li>
-          Combined manual expert review with Python-assisted lookups to align each dyad element to standard vocabularies without missing edge cases.
-         </li>
-         <li>
-          Designed and analyzed a structured HIE survey, blending quantitative aggregations with qualitative insights on linkage maturity.
-         </li>
-         <li>
-          Visualized coverage and gaps through Sankey charts and coverage dashboards to clearly communicate where standards succeed.
-         </li>
-         <li>
-          Validated mappings with neonatologists, addiction specialists, and informaticians to ensure semantic accuracy before publication.
-         </li>
-         <li>
-          Documented integration pathways so future tools can rely on the mapped standards, laying the groundwork for operational dashboards.
-         </li>
-        </ul>
-       </div>
-       <div class="project-subsection">
-        <h3>
-         Part B — Maternal-Infant Dyad Care Dashboard Prototype
-        </h3>
-        <ul>
-         <li>
-          Iterated low- to high-fidelity designs in Balsamiq and Figma, grounding interface choices in clinician journey mapping.
-         </li>
-         <li>
-          Implemented the front end with HTML, CSS, and JavaScript, leveraging SMART-on-FHIR libraries for secure EHR integration.
-         </li>
-         <li>
-          Queried FHIR resources—medications, labs, vitals—for both mother and infant, using shared identifiers to pair records in real time.
-         </li>
-         <li>
-          Generated synthetic dyad datasets with GPT-4 and custom scripts to test the interface under realistic clinical scenarios.
-         </li>
-         <li>
-          Ran usability walkthroughs with clinicians, adjusting layout and highlighting logic based on observation and feedback.
-         </li>
-        </ul>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
-        Results and Impacts
-       </h2>
-       <div class="project-subsection">
-        <h3>
-         Part A — Maternal-Infant Data Standards Framework
-        </h3>
-        <ul>
-         <li>
-          Proved that a majority of dyad data needs are already covered by national standards, reducing perceived technical barriers for health systems.
-         </li>
-         <li>
-          Published findings in JAMIA, giving implementers a vetted reference for configuring systems that track maternal-infant outcomes.
-         </li>
-         <li>
-          Informed ONC equity guidance and an HHS “Dyad Data Tracker” initiative that uses the mapped elements to monitor outcomes.
-         </li>
-        </ul>
-       </div>
-       <div class="project-subsection">
-        <h3>
-         Part B — Maternal-Infant Dyad Care Dashboard Prototype
-        </h3>
-        <ul>
-         <li>
-          Clinicians immediately saw the benefit of seeing maternal context alongside infant NAS scores, validating the design direction.
-         </li>
-         <li>
-          Stakeholders across HHS and hospital leadership endorsed advancing to a pilot, citing the prototype as proof of feasibility.
-         </li>
-         <li>
-          Featured in national interoperability briefings and health IT press as an exemplar of standards-powered, equity-focused design.
-         </li>
-        </ul>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
-        Skills and Tools Used
-       </h2>
-       <div class="project-subsection">
-        <h3>
-         Part A — Maternal-Infant Data Standards Framework
-        </h3>
-        <div class="project-table-wrapper">
-         <table class="project-table">
-          <tr>
-           <th>
-            Skill/Tool Category
-           </th>
-           <th>
-            Application in Part A
-           </th>
-          </tr>
-          <tr>
-           <td>
-            Healthcare Data Standards
-           </td>
-           <td>
-            Deep expertise in USCDI v4 and FHIR R4; mapped custom dyad requirements to standard fields to ensure semantic alignment.
-           </td>
-          </tr>
-          <tr>
-           <td>
-            Data Mapping &amp; Scripting
-           </td>
-           <td>
-            Combined spreadsheets with Python automation to catalog 180 elements and track coverage versus gaps.
-           </td>
-          </tr>
-          <tr>
-           <td>
-            Survey Design &amp; Analysis
-           </td>
-           <td>
-            Crafted targeted HIE surveys and analyzed responses to understand real-world linkage capabilities.
-           </td>
-          </tr>
-          <tr>
-           <td>
-            Stakeholder Collaboration
-           </td>
-           <td>
-            Coordinated with ONC, HHS, and clinical partners, translating technical findings into actionable policy guidance.
-           </td>
-          </tr>
-          <tr>
-           <td>
-            Data Visualization
-           </td>
-           <td>
-            Built Sankey diagrams and coverage dashboards to communicate mapping outcomes to decision-makers.
-           </td>
-          </tr>
-          <tr>
-           <td>
-            Domain &amp; Regulatory Knowledge
-           </td>
-           <td>
-            Navigated NAS scoring, maternal OUD care, HIPAA, and 42 CFR Part 2 to ensure recommendations fit real-world constraints.
-           </td>
-          </tr>
-         </table>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Maternal-Infant Health Integration &amp; Dyad Dashboard</title>
+    <link href="../assets/css/al-folio.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+  </head>
+  <body class="page">
+    <div class="page__inner">
+      <header class="project-hero">
+        <div class="wrapper project-hero__inner">
+          <a class="back-link" href="../index.html"> ← Back to portfolio </a>
+          <h1 class="project-hero__title">
+            Maternal-Infant Health Integration &amp; Dyad Dashboard
+          </h1>
+          <p class="project-hero__subtitle">
+            Mapped national standards for substance-exposed mother–infant care
+            and prototyped an interoperable dyad dashboard to operationalize
+            them at the point of care.
+          </p>
+          <div class="project-hero__meta">
+            <p>
+              <strong> Role: </strong>
+              Principal Data Scientist &amp; Product Lead
+            </p>
+            <p>
+              <strong> Focus: </strong>
+              Interoperability · Clinical UX · Standards Engineering ·
+              Generative Prototyping
+            </p>
+            <p>
+              <strong> Outcome: </strong>
+              Published a maternal-infant data standards framework in JAMIA
+              (2025) and developed a dyad dashboard prototype
+              endorsed for hospital pilot by HHS stakeholders.<a
+                class="paper-link"
+                href="https://academic.oup.com/jamia/article-abstract/32/3/417/7941938?redirectedFrom=fulltext"
+                rel="noopener"
+                target="_blank"
+                >Paper</a
+          </div>
         </div>
-       </div>
-       <div class="project-subsection">
-        <h3>
-         Part B — Maternal-Infant Dyad Care Dashboard Prototype
-        </h3>
-        <div class="project-table-wrapper">
-         <table class="project-table">
-          <tr>
-           <th>
-            Skill/Tool Category
-           </th>
-           <th>
-            Application in Part B
-           </th>
-          </tr>
-          <tr>
-           <td>
-            UI/UX Design
-           </td>
-           <td>
-            Led user-centered design with wireframes and high-fidelity prototypes tailored to dual-patient views.
-           </td>
-          </tr>
-          <tr>
-           <td>
-            Web Development
-           </td>
-           <td>
-            Built the SMART-on-FHIR front end with HTML, CSS, and JavaScript for secure deployment inside the EHR.
-           </td>
-          </tr>
-          <tr>
-           <td>
-            FHIR API Integration
-           </td>
-           <td>
-            Queried medications, labs, vitals, and notes for linked patients using OAuth2-authenticated FHIR calls.
-           </td>
-          </tr>
-          <tr>
-           <td>
-            Synthetic Data Generation
-           </td>
-           <td>
-            Created realistic dyad datasets with GPT-4 and custom scripts to test workflows without exposing PHI.
-           </td>
-          </tr>
-          <tr>
-           <td>
-            Usability Testing
-           </td>
-           <td>
-            Conducted iterative clinician walkthroughs, capturing insights that shaped layout and alert logic.
-           </td>
-          </tr>
-          <tr>
-           <td>
-            Product &amp; Project Leadership
-           </td>
-           <td>
-            Orchestrated multi-phase development, aligning designers, engineers, and clinical advisors under agile cadences.
-           </td>
-          </tr>
-         </table>
+      </header>
+      <main class="wrapper project-body">
+        <div class="project-body__grid">
+          <div class="project-body__sidebar">
+            <section class="project-section project-section--at-a-glance">
+              <h2>Part A — Maternal-Infant Data Standards Framework</h2>
+              <div class="project-subsection">
+                <h3>At a Glance</h3>
+                <ul>
+                  <li>
+                    Mapped 180 critical data elements for substance-exposed
+                    mother–infant dyads to national health data standards,
+                    exposing interoperability gaps.
+                  </li>
+                  <li>
+                    Demonstrated that over 91% of required dyad data can already
+                    flow through USCDI v4 and FHIR R4, enabling near-term
+                    implementation.
+                  </li>
+                  <li>
+                    Published the framework in JAMIA (2025), influencing federal
+                    interoperability guidance for maternal-infant care.
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section
+              class="project-section project-section--gallery"
+              data-gallery-count="2"
+            >
+              <h2>Part A Visual Highlights</h2>
+              <div class="project-gallery">
+                <figure
+                  class="project-gallery__item project-gallery__item--feature"
+                >
+                  <a
+                    href="5.1.mother-infant-diad-infant-clinical-data-elements-mapping-USCDI.png"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <img
+                      alt="Maternal-infant clinical data elements mapped to USCDI"
+                      decoding="async"
+                      loading="lazy"
+                      src="5.1.mother-infant-diad-infant-clinical-data-elements-mapping-USCDI.png"
+                    />
+                  </a>
+                  <figcaption>
+                    Standards coverage showing how 180 dyad data elements map to
+                    USCDI.
+                  </figcaption>
+                </figure>
+                <figure
+                  class="project-gallery__item project-gallery__item--pdf"
+                >
+                  <object
+                    aria-label="Supportive maternal-infant data mapped to USCDI"
+                    data="5.2.mother-infant-diad-infant-supportive-data-elements-mapping-USCDI.pdf"
+                    type="application/pdf"
+                  ></object>
+                  <figcaption>
+                    Supplementary mappings detailing social and supportive care
+                    elements.
+                  </figcaption>
+                </figure>
+              </div>
+            </section>
+            <section class="project-section project-section--at-a-glance">
+              <h2>Part B — Maternal-Infant Dyad Care Dashboard Prototype</h2>
+              <div class="project-subsection">
+                <h3>At a Glance</h3>
+                <ul>
+                  <li>
+                    Built a SMART-on-FHIR dashboard that unifies mother and
+                    infant EHR data into a single clinical workspace.
+                  </li>
+                  <li>
+                    Surfaced synchronized maternal medications, toxicology, and
+                    infant withdrawal scores to streamline care coordination.
+                  </li>
+                  <li>
+                    Demonstrated the prototype with realistic synthetic data,
+                    securing stakeholder buy-in for a hospital pilot.
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section
+              class="project-section project-section--gallery"
+              data-gallery-count="2"
+            >
+              <h2>Part B Visual Highlights</h2>
+              <div class="project-gallery">
+                <figure class="project-gallery__item">
+                  <a
+                    href="5.3.mother-infant-diad-synthetic-data-table.png"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <img
+                      alt="Synthetic maternal-infant dyad record"
+                      decoding="async"
+                      loading="lazy"
+                      src="5.3.mother-infant-diad-synthetic-data-table.png"
+                    />
+                  </a>
+                  <figcaption>
+                    Synthetic linked record demonstrating mother–infant context
+                    assembled via FHIR.
+                  </figcaption>
+                </figure>
+                <figure class="project-gallery__item">
+                  <a
+                    href="5.4.mother-infant-diad-dashboard-prototype.png"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <img
+                      alt="Maternal-infant dyad care dashboard prototype"
+                      decoding="async"
+                      loading="lazy"
+                      src="5.4.mother-infant-diad-dashboard-prototype.png"
+                    />
+                  </a>
+                  <figcaption>
+                    Dyad dashboard interface surfacing synchronized maternal and
+                    infant insights.
+                  </figcaption>
+                </figure>
+              </div>
+            </section>
+          </div>
+          <div class="project-body__main">
+            <section class="project-section project-section--subproject">
+              <h2>Part A — Maternal-Infant Data Standards Framework</h2>
+              <div class="project-subsection">
+                <h3>The Problem</h3>
+                <ul>
+                  <li>
+                    Separate maternal and infant EHR systems prevent clinicians
+                    from seeing the full dyad picture when treating
+                    substance-exposed families.
+                  </li>
+                  <li>
+                    Critical dyad-specific details—maternal treatment plans,
+                    infant NAS scores, social services involvement—lack
+                    consistent standardized fields.
+                  </li>
+                  <li>
+                    Privacy regulations and lagging claims data slow information
+                    exchange, leaving care teams without timely, shareable
+                    context.
+                  </li>
+                </ul>
+              </div>
+              <div class="project-subsection">
+                <h3>The Solution</h3>
+                <ul>
+                  <li>
+                    Catalogued 180 clinical and social data elements essential
+                    to dyad care and mapped each to USCDI and FHIR definitions
+                    to quantify coverage.
+                  </li>
+                  <li>
+                    Surveyed HIEs and hospitals to understand current
+                    mother–infant linkage practices and adoption of national
+                    interoperability standards.
+                  </li>
+                  <li>
+                    Authored recommendations to close standard gaps and
+                    accelerate adoption, guiding agencies on data elements to
+                    prioritize for dyad coordination.
+                  </li>
+                </ul>
+              </div>
+              <div class="project-subsection">
+                <h3>Architecture Overview</h3>
+                <ul>
+                  <li>
+                    Combined manual expert review with Python-assisted lookups
+                    to align each dyad element to standard vocabularies without
+                    missing edge cases.
+                  </li>
+                  <li>
+                    Designed and analyzed a structured HIE survey, blending
+                    quantitative aggregations with qualitative insights on
+                    linkage maturity.
+                  </li>
+                  <li>
+                    Visualized coverage and gaps through Sankey charts and
+                    coverage dashboards to clearly communicate where standards
+                    succeed.
+                  </li>
+                  <li>
+                    Validated mappings with neonatologists, addiction
+                    specialists, and informaticians to ensure semantic accuracy
+                    before publication.
+                  </li>
+                  <li>
+                    Documented integration pathways so future tools can rely on
+                    the mapped standards, laying the groundwork for operational
+                    dashboards.
+                  </li>
+                </ul>
+              </div>
+              <div class="project-subsection">
+                <h3>Results and Impacts</h3>
+                <ul>
+                  <li>
+                    Proved that a majority of dyad data needs are already
+                    covered by national standards, reducing perceived technical
+                    barriers for health systems.
+                  </li>
+                  <li>
+                    Published findings in JAMIA, giving implementers a vetted
+                    reference for configuring systems that track maternal-infant
+                    outcomes.
+                  </li>
+                  <li>
+                    Informed ONC equity guidance and an HHS “Dyad Data Tracker”
+                    initiative that uses the mapped elements to monitor
+                    outcomes.
+                  </li>
+                </ul>
+              </div>
+              <div class="project-subsection">
+                <h3>Skills and Tools Used</h3>
+                <div class="project-table-wrapper">
+                  <table class="project-table">
+                    <tr>
+                      <th>Skill/Tool Category</th>
+                      <th>Application in Part A</th>
+                    </tr>
+                    <tr>
+                      <td>Healthcare Data Standards</td>
+                      <td>
+                        Deep expertise in USCDI v4 and FHIR R4; mapped custom
+                        dyad requirements to standard fields to ensure semantic
+                        alignment.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Data Mapping &amp; Scripting</td>
+                      <td>
+                        Combined spreadsheets with Python automation to catalog
+                        180 elements and track coverage versus gaps.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Survey Design &amp; Analysis</td>
+                      <td>
+                        Crafted targeted HIE surveys and analyzed responses to
+                        understand real-world linkage capabilities.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Stakeholder Collaboration</td>
+                      <td>
+                        Coordinated with ONC, HHS, and clinical partners,
+                        translating technical findings into actionable policy
+                        guidance.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Data Visualization</td>
+                      <td>
+                        Built Sankey diagrams and coverage dashboards to
+                        communicate mapping outcomes to decision-makers.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Domain &amp; Regulatory Knowledge</td>
+                      <td>
+                        Navigated NAS scoring, maternal OUD care, HIPAA, and 42
+                        CFR Part 2 to ensure recommendations fit real-world
+                        constraints.
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="project-subsection">
+                <h3>Cross-Project Capabilities</h3>
+                <ul>
+                  <li>
+                    Demonstrated standards-first solution design, a practice
+                    applied across subsequent interoperability and surveillance
+                    projects.
+                  </li>
+                  <li>
+                    Bridged policy and engineering, ensuring technical solutions
+                    align with national health IT initiatives.
+                  </li>
+                  <li>
+                    Modeled a rigorous discovery approach that informs later ML
+                    deployments, from ICU analytics to equity dashboards.
+                  </li>
+                </ul>
+              </div>
+              <div class="project-subsection">
+                <h3>Published Papers/Tools</h3>
+                <ul>
+                  <li>
+                    Journal of the American Medical Informatics Association
+                    (2025): detailed mapping of dyad data elements to
+                    USCDI/FHIR.<a
+                      class="paper-link"
+                      href="https://academic.oup.com/jamia/article-abstract/32/3/417/7941938?redirectedFrom=fulltext"
+                      rel="noopener"
+                      target="_blank"
+                      >Paper</a
+                    >
+                  </li>
+                  <li>
+                    Public supplementary spreadsheet cataloging all 180 elements
+                    and their standard codes for implementers.
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section class="project-section project-section--subproject">
+              <h2>Part B — Maternal-Infant Dyad Care Dashboard Prototype</h2>
+              <div class="project-subsection">
+                <h3>The Problem</h3>
+                <ul>
+                  <li>
+                    Mother and infant records live in different systems, forcing
+                    clinicians to toggle across interfaces and risking missed
+                    context during fast-moving care decisions.
+                  </li>
+                  <li>
+                    Key maternal information is often buried in long notes,
+                    making it difficult to correlate with infant withdrawal
+                    trends.
+                  </li>
+                  <li>
+                    Cross-disciplinary teams rely on manual updates, so
+                    actionable dyad intelligence rarely reaches the bedside in
+                    time.
+                  </li>
+                </ul>
+              </div>
+              <div class="project-subsection">
+                <h3>The Solution</h3>
+                <ul>
+                  <li>
+                    Designed a SMART-on-FHIR application that pulls
+                    authenticated data for linked mother–infant pairs into a
+                    unified, parallel layout.
+                  </li>
+                  <li>
+                    Collaborated with OB, NICU, and social work stakeholders to
+                    prioritize content and interaction patterns that match dyad
+                    workflows.
+                  </li>
+                  <li>
+                    Populated the prototype with realistic synthetic data to
+                    demonstrate core use cases—e.g., comparing maternal
+                    toxicology results with infant NAS trajectories.
+                  </li>
+                </ul>
+              </div>
+              <div class="project-subsection">
+                <h3>Architecture Overview</h3>
+                <ul>
+                  <li>
+                    Iterated low- to high-fidelity designs in Balsamiq and
+                    Figma, grounding interface choices in clinician journey
+                    mapping.
+                  </li>
+                  <li>
+                    Implemented the front end with HTML, CSS, and JavaScript.
+                  </li>
+                  <li>
+                    Queried FHIR resources—medications, labs, vitals—for both
+                    mother and infant, using shared identifiers to pair records
+                    in real time.
+                  </li>
+                  <li>
+                    Generated synthetic dyad datasets with GPT-4 and custom
+                    scripts to test the interface under realistic clinical
+                    scenarios.
+                  </li>
+                  <li>
+                    Ran usability walkthroughs with clinicians, adjusting layout
+                    and highlighting logic based on observation and feedback.
+                  </li>
+                </ul>
+              </div>
+              <div class="project-subsection">
+                <h3>Results and Impacts</h3>
+                <ul>
+                  <li>
+                    Clinicians immediately saw the benefit of seeing maternal
+                    context alongside infant NAS scores, validating the design
+                    direction.
+                  </li>
+                  <li>
+                    Stakeholders across HHS and hospital leadership endorsed
+                    advancing to a pilot, citing the prototype as proof of
+                    feasibility.
+                  </li>
+                </ul>
+              </div>
+              <div class="project-subsection">
+                <h3>Skills and Tools Used</h3>
+                <div class="project-table-wrapper">
+                  <table class="project-table">
+                    <tr>
+                      <th>Skill/Tool Category</th>
+                      <th>Application in Part B</th>
+                    </tr>
+                    <tr>
+                      <td>UI/UX Design</td>
+                      <td>
+                        Led user-centered design with wireframes and
+                        high-fidelity prototypes tailored to dual-patient views.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Web Development</td>
+                      <td>
+                        Built the SMART-on-FHIR front end with HTML, CSS, and
+                        JavaScript for secure deployment inside the EHR.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>FHIR API Integration</td>
+                      <td>
+                        Queried medications, labs, vitals, and notes for linked
+                        patients using OAuth2-authenticated FHIR calls.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Synthetic Data Generation</td>
+                      <td>
+                        Created realistic dyad datasets with GPT-4 and custom
+                        scripts to test workflows without exposing PHI.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Usability Testing</td>
+                      <td>
+                        Conducted iterative clinician walkthroughs, capturing
+                        insights that shaped layout and alert logic.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Product &amp; Project Leadership</td>
+                      <td>
+                        Orchestrated multi-phase development, aligning
+                        designers, engineers, and clinical advisors under agile
+                        cadences.
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="project-subsection">
+                <h3>Cross-Project Capabilities</h3>
+                <ul>
+                  <li>
+                    Reinforced ability to synthesize disparate data streams into
+                    unified experiences, echoed in biosurveillance and ICU
+                    projects.
+                  </li>
+                  <li>
+                    Showcased the fusion of AI outputs with clinician-friendly
+                    UX, a throughline for bedside decision-support work.
+                  </li>
+                  <li>
+                    Highlighted cross-disciplinary leadership, guiding teams
+                    from concept through demonstrable prototypes.
+                  </li>
+                </ul>
+              </div>
+              <div class="project-subsection">
+                <h3>Published Papers/Tools</h3>
+                <ul>
+                  <li>
+                    Internal report and demo video distributed to HHS opioid
+                    policy leaders outlining architecture and usability
+                    findings.
+                  </li>
+                  <li>
+                    Planned AMIA/HIMSS submissions describing the
+                    standards-driven design approach and early clinician
+                    feedback.
+                  </li>
+                  <li>
+                    Open-source prototype code (with synthetic FHIR data)
+                    released to encourage adoption and iteration by other health
+                    systems.
+                  </li>
+                  <li>
+                    Featured in national health IT briefings and newsletters as
+                    a forward-looking example of dyad-centered care.
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
         </div>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
-        Cross-Project Capabilities
-       </h2>
-       <div class="project-subsection">
-        <h3>
-         Part A — Maternal-Infant Data Standards Framework
-        </h3>
-        <ul>
-         <li>
-          Demonstrated standards-first solution design, a practice applied across subsequent interoperability and surveillance projects.
-         </li>
-         <li>
-          Bridged policy and engineering, ensuring technical solutions align with national health IT initiatives.
-         </li>
-         <li>
-          Modeled a rigorous discovery approach that informs later ML deployments, from ICU analytics to equity dashboards.
-         </li>
-        </ul>
-       </div>
-       <div class="project-subsection">
-        <h3>
-         Part B — Maternal-Infant Dyad Care Dashboard Prototype
-        </h3>
-        <ul>
-         <li>
-          Reinforced ability to synthesize disparate data streams into unified experiences, echoed in biosurveillance and ICU projects.
-         </li>
-         <li>
-          Showcased the fusion of AI outputs with clinician-friendly UX, a throughline for bedside decision-support work.
-         </li>
-         <li>
-          Highlighted cross-disciplinary leadership, guiding teams from concept through demonstrable prototypes.
-         </li>
-        </ul>
-       </div>
-      </section>
-      <section class="project-section">
-       <h2>
-        Published Papers/Tools
-       </h2>
-       <div class="project-subsection">
-        <h3>
-         Part A — Maternal-Infant Data Standards Framework
-        </h3>
-        <ul>
-         <li>
-          Journal of the American Medical Informatics Association (2025): detailed mapping of dyad data elements to USCDI/FHIR.
-         </li>
-         <li>
-          Public supplementary spreadsheet cataloging all 180 elements and their standard codes for implementers.
-         </li>
-         <li>
-          Presented findings to ONC interoperability working groups and AMIA 2025, seeding adoption discussions nationwide.
-         </li>
-        </ul>
-       </div>
-       <div class="project-subsection">
-        <h3>
-         Part B — Maternal-Infant Dyad Care Dashboard Prototype
-        </h3>
-        <ul>
-         <li>
-          Internal report and demo video distributed to HHS opioid policy leaders outlining architecture and usability findings.
-         </li>
-         <li>
-          Planned AMIA/HIMSS submissions describing the standards-driven design approach and early clinician feedback.
-         </li>
-         <li>
-          Open-source prototype code (with synthetic FHIR data) released to encourage adoption and iteration by other health systems.
-         </li>
-         <li>
-          Featured in national health IT briefings and newsletters as a forward-looking example of dyad-centered care.
-         </li>
-        </ul>
-       </div>
-      </section>
-     </div>
+      </main>
+      <footer class="wrapper project-footer">
+        <a class="btn btn--ghost" href="../index.html"> Back to portfolio </a>
+      </footer>
     </div>
-   </main>
-   <footer class="wrapper project-footer">
-    <a class="btn btn--ghost" href="../index.html">
-     Back to portfolio
-    </a>
-   </footer>
-  </div>
- </body>
+  </body>
 </html>
