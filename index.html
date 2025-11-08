@@ -2062,6 +2062,7 @@
         </p>
       </footer>
     </div>
+    <script src="assets/js/theme-toggle.js"></script>
     <script>
       (function () {
         const yearEl = document.getElementById("year");
@@ -2278,12 +2279,15 @@
         focusTags.forEach((tag) => {
           tag.setAttribute("role", "button");
           tag.setAttribute("tabindex", "0");
-          tag.addEventListener("click", () =>
-            applyFocusFilter(tag.textContent.trim())
-          );
+          tag.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            applyFocusFilter(tag.textContent.trim());
+          });
           tag.addEventListener("keydown", (event) => {
             if (event.key === "Enter" || event.key === " ") {
               event.preventDefault();
+              event.stopPropagation();
               applyFocusFilter(tag.textContent.trim());
             }
           });
