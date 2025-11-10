@@ -58,14 +58,14 @@
         <nav aria-label="Project sections" class="project-nav">
           <div class="project-nav__inner">
             <a
-              aria-label="Featured"
+              aria-label="Search"
               class="project-nav__link"
-              data-label="Featured"
-              href="#featured-projects"
-              title="Featured"
+              data-label="Search"
+              href="#project-search"
+              title="Search"
             >
-              <span aria-hidden="true" class="project-nav__icon">⭐</span>
-              <span class="project-nav__label">Featured</span>
+              <span aria-hidden="true" class="project-nav__icon">🔍</span>
+              <span class="project-nav__label">Search</span>
             </a>
             <a
               aria-label="MissionAI"
@@ -2664,11 +2664,17 @@
         );
 
         const readBadgeText = (badge) => {
-          const labelEl = badge.querySelector(".project-card__badge-label");
-          if (labelEl && labelEl.textContent) {
-            return labelEl.textContent.trim();
+          if (badge.dataset.filterValue) {
+            return badge.dataset.filterValue.trim();
           }
-          return badge.textContent.trim();
+          const labelEl = badge.querySelector(".project-card__badge-label");
+          const textContent = labelEl && labelEl.textContent
+            ? labelEl.textContent.trim()
+            : badge.textContent.trim();
+          if (badge.classList.contains("project-card__badge--media")) {
+            return "Media";
+          }
+          return textContent;
         };
 
         projectBadges.forEach((badge) => {
