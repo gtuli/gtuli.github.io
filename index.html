@@ -68,54 +68,54 @@
               <span class="project-nav__label">Featured</span>
             </a>
             <a
-              aria-label="Mission Ops"
+              aria-label="MissionAI"
               class="project-nav__link"
-              data-label="Mission Ops"
+              data-label="MissionAI"
               href="#mission-analytics"
-              title="Mission Ops"
+              title="MissionAI"
             >
               <span aria-hidden="true" class="project-nav__icon">🛰️</span>
-              <span class="project-nav__label">Mission Ops</span>
+              <span class="project-nav__label">MissionAI</span>
             </a>
             <a
-              aria-label="Clinical AI"
+              aria-label="ClinicalAI"
               class="project-nav__link"
-              data-label="Clinical AI"
+              data-label="ClinicalAI"
               href="#clinical-ai"
-              title="Clinical AI"
+              title="ClinicalAI"
             >
               <span aria-hidden="true" class="project-nav__icon">🩺</span>
-              <span class="project-nav__label">Clinical AI</span>
+              <span class="project-nav__label">ClinicalAI</span>
             </a>
             <a
-              aria-label="Equity"
+              aria-label="PopInsights"
               class="project-nav__link"
-              data-label="Equity"
+              data-label="PopInsights"
               href="#health-equity"
-              title="Equity"
+              title="PopInsights"
             >
               <span aria-hidden="true" class="project-nav__icon">⚖️</span>
-              <span class="project-nav__label">Equity</span>
+              <span class="project-nav__label">PopInsights</span>
             </a>
             <a
-              aria-label="Bio Readiness"
+              aria-label="EpiIntel"
               class="project-nav__link"
-              data-label="Bio Readiness"
+              data-label="EpiIntel"
               href="#biosurveillance"
-              title="Bio Readiness"
+              title="EpiIntel"
             >
               <span aria-hidden="true" class="project-nav__icon">🦠</span>
-              <span class="project-nav__label">Bio Readiness</span>
+              <span class="project-nav__label">EpiIntel</span>
             </a>
             <a
-              aria-label="Networks"
+              aria-label="NetDynamics"
               class="project-nav__link"
-              data-label="Networks"
+              data-label="NetDynamics"
               href="#network-contagion"
-              title="Networks"
+              title="NetDynamics"
             >
               <span aria-hidden="true" class="project-nav__icon">🕸️</span>
-              <span class="project-nav__label">Networks</span>
+              <span class="project-nav__label">NetDynamics</span>
             </a>
             <a
               aria-label="Google Scholar"
@@ -2629,7 +2629,7 @@
           suggestionsEl.hidden = false;
         };
 
-        const applyFocusFilter = (value) => {
+        const applyFilterValue = (value) => {
           if (!searchInput) {
             return;
           }
@@ -2648,13 +2648,48 @@
           tag.addEventListener("click", (event) => {
             event.preventDefault();
             event.stopPropagation();
-            applyFocusFilter(tag.textContent.trim());
+            applyFilterValue(tag.textContent.trim());
           });
           tag.addEventListener("keydown", (event) => {
             if (event.key === "Enter" || event.key === " ") {
               event.preventDefault();
               event.stopPropagation();
-              applyFocusFilter(tag.textContent.trim());
+              applyFilterValue(tag.textContent.trim());
+            }
+          });
+        });
+
+        const projectBadges = Array.from(
+          document.querySelectorAll(".project-card__badge")
+        );
+
+        const readBadgeText = (badge) => {
+          const labelEl = badge.querySelector(".project-card__badge-label");
+          if (labelEl && labelEl.textContent) {
+            return labelEl.textContent.trim();
+          }
+          return badge.textContent.trim();
+        };
+
+        projectBadges.forEach((badge) => {
+          badge.setAttribute("role", "button");
+          badge.setAttribute("tabindex", "0");
+          badge.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            const value = readBadgeText(badge);
+            if (value) {
+              applyFilterValue(value);
+            }
+          });
+          badge.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              event.stopPropagation();
+              const value = readBadgeText(badge);
+              if (value) {
+                applyFilterValue(value);
+              }
             }
           });
         });
