@@ -1,246 +1,343 @@
 <!DOCTYPE html>
 
 <html class="theme-light" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>
-   Gun Violence Surveillance Platform
-  </title>
-<link href="../assets/css/al-folio.css" rel="stylesheet"/>
-<link href="../assets/css/custom.css" rel="stylesheet"/>
-</head>
-<body class="page">
-<div class="page__inner">
-<header class="project-site-header">
-<div class="wrapper project-site-header__inner"><a class="project-site-header__brand" href="../index.html">Gaurav Tuli · PhD Project Portfolio</a></div>
-</header>
-<header class="project-hero">
-<div class="wrapper project-hero__inner">
-<a class="back-link" href="../index.html">
-      ← Back to portfolio
-     </a>
-<h1 class="project-hero__title">
-      Gun Violence Surveillance Platform
-     </h1>
-<div class="project-hero__badges">
-<span aria-label="Product" class="project-card__badge project-card__badge--product"><span class="project-card__badge-label">Product</span></span>
-<span aria-label="Policy" class="project-card__badge project-card__badge--policy"><span class="project-card__badge-label">Policy</span></span>
-<span aria-label="Media 3X" class="project-card__badge project-card__badge--media"><span class="project-card__badge-label">Media 3X</span></span>
-</div>
-<p class="project-hero__subtitle">
-      Built a real-time platform aggregating Twitter, news, and search data to map gun violence incidents across the United States.
-     </p>
-<div class="project-hero__meta">
-<p>
-<strong>
-        Role:
-       </strong>
-       Co-Prinicipal Investigator &amp; ML Systems Architect
-      </p>
-<p>
-<strong>
-        Focus:
-       </strong>
-       Social Data Integration, ML Classification, Civic Tech, Visual Analytics
-      </p>
-<p>
-        <strong>
-         Outcome:
-        </strong>
-        Well recieved public-facing interactive platform <em>gunviolencemap.org</em> that was featured in The Guardian and at SXSW for its novel approach to real-time gun violence awareness.
-       </p>
-</div>
-</div>
-</header>
-<main class="wrapper project-body">
-<div class="project-body__grid"><div class="project-body__sidebar"><section class="project-section project-section--at-a-glance">
-<h2>
-        At a Glance
-       </h2>
-<ul>
-<li>
-         Built a real-time platform aggregating Twitter, news, and search data to map gun violence incidents across the United States.
-        </li>
-<li>
-         Provided up-to-the-minute, state-by-state data on shootings to inform the public and support evidence-based policymaking.
-        </li>
-<li>
-         Innovatively used digital “exhaust” (social media and web data) to fill gaps in official gun violence reporting and awareness.
-        </li>
-</ul>
-</section><section class="project-section project-section--gallery" data-gallery-count="2">
-<h2>
-        Visual highlights
-       </h2>
-<div class="project-gallery"><figure class="project-gallery__item project-gallery__item--feature"><a href="15.1.gunviolence-map-dashboard-views.png" rel="noopener" target="_blank">
-<img alt="Gun violence map dashboard views" decoding="async" loading="lazy" src="15.1.gunviolence-map-dashboard-views.png"/>
-</a><figcaption>Gun violence map dashboard views</figcaption></figure>
-<figure class="project-gallery__item">
-<a href="15.2.gunviolence-map-visual-analytics.png" rel="noopener" target="_blank">
-<img alt="Gun violence visual analytics dashboard" decoding="async" loading="lazy" src="15.2.gunviolence-map-visual-analytics.png"/>
-</a>
-<figcaption>
-          Topic and sentiment analytics powering public storytelling.
-         </figcaption>
-</figure>
-</div>
-</section></div><div class="project-body__main"><section class="project-section">
-<h2>
-        The Problem
-       </h2>
-<ul>
-<li>
-         Official gun violence data was delayed and fragmented, hindering timely awareness of ongoing incidents.
-        </li>
-<li>
-         The public lacked an accessible, up-to-date source for localized gun violence information and trends.
-        </li>
-<li>
-         Policymakers had insufficient interim data between official reports to gauge the effects of policy changes on gun violence.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        The Solution
-       </h2>
-<ul>
-<li>
-         Developed an interactive web dashboard that combines multi-source data (social media posts, news reports, and Google search trends) on gun incidents in near real time.
-        </li>
-<li>
-         Implemented machine learning to categorize gun-related tweets (e.g., distinguishing incident reports vs. discussions) and to classify news articles by type of incident.
-        </li>
-<li>
-         Geocoded all data to the state level and integrated official metrics (e.g., gun death rates, background check stats) to provide contextual insights alongside the live incident feeds.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Architecture Overview
-       </h2>
-<ul>
-<li>
-         Multi-Source Ingestion: Pipelines continuously pulled data from Twitter (streaming API for gun-related keywords), Google News feeds (for relevant articles), and Google Trends (for spikes in gun-related searches).
-        </li>
-<li>
-         ML Classification Pipeline: Automated tagging of content – grouping tweets into four topical categories (e.g., incident, policy, opinion, other) and news articles into seven categories of incidents – for structured analysis.
-        </li>
-<li>
-         Human-in-the-Loop Curation: A small analyst team reviewed the machine outputs to verify classifications, remove duplicate reports, and annotate developing stories, ensuring data quality and reliability.
-        </li>
-<li>
-         Geolocation Engine: Each tweet and news item was mapped to a U.S. state (using text location cues and a geocoding API) so that the dashboard could display state-by-state incident summaries.
-        </li>
-<li>
-         Dashboard Front-End: A public-facing map and timeline interface updated live, showing each state’s recent incidents, trends over time, and comparisons to official statistics, all in one place.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Results and Impacts
-       </h2>
-<ul>
-<li>
-         Tracked ~540,000 gun-related tweets and ~1,600 news articles per month during 2015–2016, demonstrating the system’s ability to handle high-volume, real-time data.
-        </li>
-<li>
-         Deployed the public site Gunviolencemap.org, giving citizens and officials a live, interactive view of gun violence trends by state (a first-of-its-kind public tool).
-        </li>
-<li>
-         Project garnered national attention: it was presented at SXSW 2016 and featured by media outlets (e.g., Wired, KQED) for its novel approach, thereby raising awareness and informing public debate on gun violence.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Skills and Tools Used
-       </h2>
-<div class="project-table-wrapper">
-<table class="project-table">
-<tr>
-<th>
-           Data Sources
-          </th>
-<th>
-           Twitter API, Google News RSS feeds, Google Trends data
-          </th>
-</tr>
-<tr>
-<td>
-           ML &amp; NLP
-          </td>
-<td>
-           Text classification models for tweets and news content
-          </td>
-</tr>
-<tr>
-<td>
-           Geospatial Tech
-          </td>
-<td>
-           Google Maps API for geocoding and state-level mapping
-          </td>
-</tr>
-<tr>
-<td>
-           Web Development
-          </td>
-<td>
-           Interactive dashboard (HTML/JavaScript) for real-time visualization
-          </td>
-</tr>
-<tr>
-<td>
-           Hybrid Curation
-          </td>
-<td>
-           Combined automated classifiers with human review for accuracy
-          </td>
-</tr>
-</table>
-</div>
-</section><section class="project-section">
-<h2>
-        Cross-Project Capabilities
-       </h2>
-<ul>
-<li>
-         Real-Time Social Data Mining: Techniques for live social data tracking developed here were later applied to health domains (digital disease surveillance).
-        </li>
-<li>
-         Reusable Pipelines: The Twitter ingestion and classification pipeline was repurposed in other projects (e.g., patient experience sentiment analysis in healthcare).
-        </li>
-<li>
-         Integrated Data Dashboards: Experience merging diverse data streams (social media, open data, official stats) into unified platforms is leveraged in projects requiring multi-source analytics.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Published Papers/Tools
-       </h2>
-<ul>
-<li>
-        Live Platform: Gunviolencemap.org launched as a public interactive tool (featured by news outlets), providing an ongoing resource for stakeholders and the community.<a class="paper-link" href="https://www.theguardian.com/technology/2016/mar/14/digital-exhaust-social-media-data-gun-violence-predictions" rel="noopener" target="_blank">The Guardian </a><a class="paper-link" href="https://www.kqed.org/futureofyou/149462/why-so-little-research-on-gun-deaths-exists-and-what-big-data-intends-to-do-about-it" rel="noopener" target="_blank"> KQED </a>
-
-        </li>
-<li>
-         Public Outreach: Invited talk at SXSW Interactive 2016, “Using Social Media to Predict Gun Violence,” which disseminated the project’s approach to a broad audience.<a class="paper-link" href="https://www.youtube.com/watch?v=dORcp5QgweY" rel="noopener" target="_blank">SXSW Talk </a>
-        </li>
-        
-
-</ul>
-</section></div></div>
-</main>
-<footer class="wrapper project-footer">
-<a class="btn btn--ghost" href="../index.html">
-     Back to portfolio
-    </a>
-</footer>
-<footer class="project-site-footer">
-<div class="wrapper project-site-footer__inner"><p class="project-site-footer__text">Gaurav Tuli · PhD Project Portfolio · Built on al-folio</p></div>
-</footer>
-</div>
-<script src="../assets/js/theme-toggle.js"></script>
-
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Gun Violence Surveillance Platform</title>
+    <link href="../assets/css/al-folio.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+  </head>
+  <body class="page">
+    <div class="page__inner">
+      <header class="project-site-header">
+        <div class="wrapper project-site-header__inner">
+          <a class="project-site-header__brand" href="../index.html"
+            >Gaurav Tuli · PhD Project Portfolio</a
+          >
+        </div>
+      </header>
+      <header class="project-hero">
+        <div class="wrapper project-hero__inner">
+          <a class="back-link" href="../index.html"> ← Back to portfolio </a>
+          <h1 class="project-hero__title">
+            Gun Violence Surveillance Platform
+          </h1>
+          <div class="project-hero__badges">
+            <span
+              aria-label="Product"
+              class="project-card__badge project-card__badge--product"
+              ><span class="project-card__badge-label">Product</span></span
+            >
+            <span
+              aria-label="Policy"
+              class="project-card__badge project-card__badge--policy"
+              ><span class="project-card__badge-label">Policy</span></span
+            >
+            <span
+              aria-label="Media 6X"
+              class="project-card__badge project-card__badge--media"
+              ><span class="project-card__badge-label">Media 3X</span></span
+            >
+          </div>
+          <p class="project-hero__subtitle">
+            Built a real-time platform aggregating Twitter, news, and search
+            data to map gun violence incidents across the United States.
+          </p>
+          <div class="project-hero__meta">
+            <p>
+              <strong> Role: </strong>
+              Co-Prinicipal Investigator &amp; ML Systems Architect
+            </p>
+            <p>
+              <strong> Focus: </strong>
+              Social Data Integration, ML Classification, Civic Tech, Visual
+              Analytics
+            </p>
+            <p>
+              <strong> Outcome: </strong>
+              Well recieved public-facing interactive platform
+              <em><strong>gunviolencemap.org</strong></em> that was featured in
+              The Guardian and at SXSW for its novel approach to real-time gun
+              violence awareness.<a
+                class="paper-link"
+                href="https://web.archive.org/web/20180810005428/https://gunviolencemap.org"
+                rel="noopener"
+                target="_blank"
+                >Archived website</a
+              >
+            </p>
+          </div>
+        </div>
+      </header>
+      <main class="wrapper project-body">
+        <div class="project-body__grid">
+          <div class="project-body__sidebar">
+            <section class="project-section project-section--at-a-glance">
+              <h2>At a Glance</h2>
+              <ul>
+                <li>
+                  Built a real-time platform aggregating Twitter, news, and
+                  search data to map gun violence incidents across the United
+                  States.
+                </li>
+                <li>
+                  Provided up-to-the-minute, state-by-state data on shootings to
+                  inform the public and support evidence-based policymaking.
+                </li>
+                <li>
+                  Innovatively used digital “exhaust” (social media and web
+                  data) to fill gaps in official gun violence reporting and
+                  awareness.
+                </li>
+              </ul>
+            </section>
+            <section
+              class="project-section project-section--gallery"
+              data-gallery-count="2"
+            >
+              <h2>Visual highlights</h2>
+              <div class="project-gallery">
+                <figure
+                  class="project-gallery__item project-gallery__item--feature"
+                >
+                  <a
+                    href="15.1.gunviolence-map-dashboard-views.png"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <img
+                      alt="Gun violence map dashboard views"
+                      decoding="async"
+                      loading="lazy"
+                      src="15.1.gunviolence-map-dashboard-views.png"
+                    />
+                  </a>
+                  <figcaption>Gun violence map dashboard views</figcaption>
+                </figure>
+                <figure class="project-gallery__item">
+                  <a
+                    href="15.2.gunviolence-map-visual-analytics.png"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <img
+                      alt="Gun violence visual analytics dashboard"
+                      decoding="async"
+                      loading="lazy"
+                      src="15.2.gunviolence-map-visual-analytics.png"
+                    />
+                  </a>
+                  <figcaption>
+                    Topic and sentiment analytics powering public storytelling.
+                  </figcaption>
+                </figure>
+              </div>
+            </section>
+          </div>
+          <div class="project-body__main">
+            <section class="project-section">
+              <h2>The Problem</h2>
+              <ul>
+                <li>
+                  Official gun violence data was delayed and fragmented,
+                  hindering timely awareness of ongoing incidents.
+                </li>
+                <li>
+                  The public lacked an accessible, up-to-date source for
+                  localized gun violence information and trends.
+                </li>
+                <li>
+                  Policymakers had insufficient interim data between official
+                  reports to gauge the effects of policy changes on gun
+                  violence.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>The Solution</h2>
+              <ul>
+                <li>
+                  Developed an interactive web dashboard that combines
+                  multi-source data (social media posts, news reports, and
+                  Google search trends) on gun incidents in near real time.
+                </li>
+                <li>
+                  Implemented machine learning to categorize gun-related tweets
+                  (e.g., distinguishing incident reports vs. discussions) and to
+                  classify news articles by type of incident.
+                </li>
+                <li>
+                  Geocoded all data to the state level and integrated official
+                  metrics (e.g., gun death rates, background check stats) to
+                  provide contextual insights alongside the live incident feeds.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Architecture Overview</h2>
+              <ul>
+                <li>
+                  Multi-Source Ingestion: Pipelines continuously pulled data
+                  from Twitter (streaming API for gun-related keywords), Google
+                  News feeds (for relevant articles), and Google Trends (for
+                  spikes in gun-related searches).
+                </li>
+                <li>
+                  ML Classification Pipeline: Automated tagging of content –
+                  grouping tweets into four topical categories (e.g., incident,
+                  policy, opinion, other) and news articles into seven
+                  categories of incidents – for structured analysis.
+                </li>
+                <li>
+                  Human-in-the-Loop Curation: A small analyst team reviewed the
+                  machine outputs to verify classifications, remove duplicate
+                  reports, and annotate developing stories, ensuring data
+                  quality and reliability.
+                </li>
+                <li>
+                  Geolocation Engine: Each tweet and news item was mapped to a
+                  U.S. state (using text location cues and a geocoding API) so
+                  that the dashboard could display state-by-state incident
+                  summaries.
+                </li>
+                <li>
+                  Dashboard Front-End: A public-facing map and timeline
+                  interface updated live, showing each state’s recent incidents,
+                  trends over time, and comparisons to official statistics, all
+                  in one place.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Results and Impacts</h2>
+              <ul>
+                <li>
+                  Tracked ~540,000 gun-related tweets and ~1,600 news articles
+                  per month during 2015–2016, demonstrating the system’s ability
+                  to handle high-volume, real-time data.
+                </li>
+                <li>
+                  Deployed the public site Gunviolencemap.org, giving citizens
+                  and officials a live, interactive view of gun violence trends
+                  by state (a first-of-its-kind public tool).
+                </li>
+                <li>
+                  Project garnered national attention: it was presented at SXSW
+                  2016 and featured by media outlets (e.g., Wired, KQED) for its
+                  novel approach, thereby raising awareness and informing public
+                  debate on gun violence.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Skills and Tools Used</h2>
+              <div class="project-table-wrapper">
+                <table class="project-table">
+                  <tr>
+                    <th>Data Sources</th>
+                    <th>
+                      Twitter API, Google News RSS feeds, Google Trends data
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>ML &amp; NLP</td>
+                    <td>
+                      Text classification models for tweets and news content
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Geospatial Tech</td>
+                    <td>
+                      Google Maps API for geocoding and state-level mapping
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Web Development</td>
+                    <td>
+                      Interactive dashboard (HTML/JavaScript) for real-time
+                      visualization
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Hybrid Curation</td>
+                    <td>
+                      Combined automated classifiers with human review for
+                      accuracy
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+            <section class="project-section">
+              <h2>Cross-Project Capabilities</h2>
+              <ul>
+                <li>
+                  Real-Time Social Data Mining: Techniques for live social data
+                  tracking developed here were later applied to health domains
+                  (digital disease surveillance).
+                </li>
+                <li>
+                  Reusable Pipelines: The Twitter ingestion and classification
+                  pipeline was repurposed in other projects (e.g., patient
+                  experience sentiment analysis in healthcare).
+                </li>
+                <li>
+                  Integrated Data Dashboards: Experience merging diverse data
+                  streams (social media, open data, official stats) into unified
+                  platforms is leveraged in projects requiring multi-source
+                  analytics.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Published Papers/Tools</h2>
+              <ul>
+                <li>
+                  Live Platform: Gunviolencemap.org launched as a public
+                  interactive tool (featured by news outlets), providing an
+                  ongoing resource for stakeholders and the community.<a
+                    class="paper-link"
+                    href="https://www.theguardian.com/technology/2016/mar/14/digital-exhaust-social-media-data-gun-violence-predictions"
+                    rel="noopener"
+                    target="_blank"
+                    >The Guardian </a
+                  ><a
+                    class="paper-link"
+                    href="https://www.kqed.org/futureofyou/149462/why-so-little-research-on-gun-deaths-exists-and-what-big-data-intends-to-do-about-it"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    KQED
+                  </a>
+                </li>
+                <li>
+                  Public Outreach: Invited talk at SXSW Interactive 2016, “Using
+                  Social Media to Predict Gun Violence,” which disseminated the
+                  project’s approach to a broad audience.<a
+                    class="paper-link"
+                    href="https://www.youtube.com/watch?v=dORcp5QgweY"
+                    rel="noopener"
+                    target="_blank"
+                    >SXSW Talk
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </main>
+      <footer class="wrapper project-footer">
+        <a class="btn btn--ghost" href="../index.html"> Back to portfolio </a>
+      </footer>
+      <footer class="project-site-footer">
+        <div class="wrapper project-site-footer__inner">
+          <p class="project-site-footer__text">
+            Gaurav Tuli · PhD Project Portfolio · Built on al-folio
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script src="../assets/js/theme-toggle.js"></script>
+  </body>
 </html>

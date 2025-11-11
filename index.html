@@ -577,7 +577,7 @@
                       >
                       <span
                         class="project-card__badge project-card__badge--media"
-                        aria-label="Media 3X"
+                        aria-label="Media 6X"
                         ><span class="project-card__badge-label"
                           >Media 3X</span
                         ></span
@@ -1054,10 +1054,10 @@
                         ></span
                       >
                       <span
+                        aria-label="Prototype"
                         class="project-card__badge project-card__badge--product-prototype"
-                        aria-label="Product Prototype"
                         ><span class="project-card__badge-label"
-                          >Product Prototype</span
+                          >Prototype</span
                         ></span
                       >
                     </div>
@@ -1439,6 +1439,13 @@
                         aria-label="Product"
                         ><span class="project-card__badge-label"
                           >Product</span
+                        ></span
+                      >
+                      <span
+                        aria-label="Media"
+                        class="project-card__badge project-card__badge--media"
+                        ><span class="project-card__badge-label"
+                          >Media 2X</span
                         ></span
                       >
                     </div>
@@ -2106,7 +2113,7 @@
                   </figure>
                   <div class="project-card__content">
                     <h3 class="project-card__title">
-                      Social Contagion — Structured Resistance Model
+                      Smoking Contagion — Structured Resistance Model
                     </h3>
                     <p class="project-card__description">
                       Introduced a multi-stage contagion model for smoking that
@@ -2668,9 +2675,10 @@
             return badge.dataset.filterValue.trim();
           }
           const labelEl = badge.querySelector(".project-card__badge-label");
-          const textContent = labelEl && labelEl.textContent
-            ? labelEl.textContent.trim()
-            : badge.textContent.trim();
+          const textContent =
+            labelEl && labelEl.textContent
+              ? labelEl.textContent.trim()
+              : badge.textContent.trim();
           if (badge.classList.contains("project-card__badge--media")) {
             return "Media";
           }
