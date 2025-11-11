@@ -1,252 +1,320 @@
 <!DOCTYPE html>
 
 <html class="theme-light" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>
-   Patient Experience — US Longitudinal Study
-  </title>
-<link href="../assets/css/al-folio.css" rel="stylesheet"/>
-<link href="../assets/css/custom.css" rel="stylesheet"/>
-</head>
-<body class="page">
-<div class="page__inner">
-<header class="project-site-header">
-<div class="wrapper project-site-header__inner"><a class="project-site-header__brand" href="../index.html">Gaurav Tuli · PhD Project Portfolio</a></div>
-</header>
-<header class="project-hero">
-<div class="wrapper project-hero__inner">
-<a class="back-link" href="../index.html">
-      ← Back to portfolio
-     </a>
-<h1 class="project-hero__title">
-      Patient Experience — US Longitudinal Study
-     </h1>
-<div class="project-hero__badges">
-<span aria-label="Publication" class="project-card__badge project-card__badge--publication"><span class="project-card__badge-label">Publication</span></span>
-<span aria-label="Policy" class="project-card__badge project-card__badge--policy"><span class="project-card__badge-label">Policy</span></span>
-<span aria-label="Media" class="project-card__badge project-card__badge--media"><span class="project-card__badge-label">Media</span></span>
-</div>
-<p class="project-hero__subtitle">
-      Collected and analyzed 2.76 million patient experience tweets (2013–2017) from across the US.
-     </p>
-<div class="project-hero__meta">
-<p>
-<strong>
-        Role:
-       </strong>
-       Principal Data Scientist &amp; Co-first Author
-      </p>
-<p>
-<strong>
-        Focus:
-       </strong>
-       ML Classification, Social Media Analytics, Longitudinal Study, Health Equity, Visual Analytics
-      </p>
-</div>
-</div>
-</header>
-<main class="wrapper project-body">
-<div class="project-body__grid"><div class="project-body__sidebar"><section class="project-section project-section--at-a-glance">
-<h2>
-        At a Glance
-       </h2>
-<ul>
-<li>
-         Collected and analyzed 2.76 million patient experience tweets (2013–2017) from across the US.
-        </li>
-<li>
-         Found that patient sentiment became less negative nationwide over time, with distinct urban-rural and daily patterns.
-        </li>
-<li>
-         Demonstrated that Twitter can serve as a real-time, large-scale barometer of patient healthcare experiences.
-        </li>
-</ul>
-</section><section class="project-section project-section--gallery" data-gallery-count="3">
-<h2>
-        Visual highlights
-       </h2>
-<div class="project-gallery"><figure class="project-gallery__item project-gallery__item--feature"><a href="19.1.patient-experience-across-US-states-four-year-logitudinal-study.png" rel="noopener" target="_blank">
-<img alt="Longitudinal patient experience trends across US states" decoding="async" loading="lazy" src="19.1.patient-experience-across-US-states-four-year-logitudinal-study.png"/>
-</a><figcaption>Longitudinal patient experience trends across US states</figcaption></figure>
-<figure class="project-gallery__item project-gallery__item--pdf">
-<object aria-label="Detailed patient experience longitudinal report" data="19.1.patient-experience-across-US-states-four-year-logitudinal-study.pdf" type="application/pdf">
-</object>
-<figcaption>
-          Full longitudinal report accessible within partner portals.
-         </figcaption>
-</figure>
-<figure class="project-gallery__item">
-<a href="19.2.patient-experience-on-twitter-vs-census-all-states.png" rel="noopener" target="_blank">
-<img alt="Patient experience sentiment versus census demographics" decoding="async" loading="lazy" src="19.2.patient-experience-on-twitter-vs-census-all-states.png"/>
-</a>
-<figcaption>
-          Comparison of Twitter sentiment and demographic baselines by state.
-         </figcaption>
-</figure>
-</div>
-</section></div><div class="project-body__main"><section class="project-section">
-<h2>
-        The Problem
-       </h2>
-<ul>
-<li>
-         Existing surveys are infrequent, biased, and lack real-time nationwide patient feedback.
-        </li>
-<li>
-         Healthcare providers needed timely insights into patient satisfaction and concerns.
-        </li>
-<li>
-         Without alternate data, shifts in patient sentiment could remain undetected by stakeholders.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        The Solution
-       </h2>
-<ul>
-<li>
-         Collected 27.3 million tweets (2013–2017) via Twitter’s API using patient experience keywords.
-        </li>
-<li>
-         Built an automated pipeline with a tweet classifier, geolocation engine, and sentiment analyzer.
-        </li>
-<li>
-         Filtered 2.76 million relevant patient-experience tweets and geolocated ~32% to US states.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Architecture Overview
-       </h2>
-<ul>
-<li>
-         Used continuous tweet ingestion with keyword filters (excluding URLs for relevance).
-        </li>
-<li>
-         Classified tweets with an SVM-based model to identify patient experience content.
-        </li>
-<li>
-         Geolocated tweets to states using profile text and Google Maps API.
-        </li>
-<li>
-         Performed sentiment analysis (positive/neutral/negative) on each relevant tweet.
-        </li>
-<li>
-         Aggregated data into a dashboard for temporal and geographic visualization.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Results and Impacts
-       </h2>
-<ul>
-<li>
-         Nationwide, ~36% of patient-experience tweets were negative, ~28% positive (2013–2017).
-        </li>
-<li>
-         Observed that overall sentiment became less negative over four years; night-time tweets were more negative than daytime.
-        </li>
-<li>
-         Found urban-area tweets showed more extreme sentiment (higher negativity) than rural tweets.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Skills and Tools Used
-       </h2>
-<div class="project-table-wrapper">
-<table class="project-table">
-<tr>
-<th>
-           Technique/Skill
-          </th>
-<th>
-           Tools/Implementation
-          </th>
-</tr>
-<tr>
-<td>
-           Big data processing
-          </td>
-<td>
-           Twitter GNIP API (27 million tweets)
-          </td>
-</tr>
-<tr>
-<td>
-           Natural language processing
-          </td>
-<td>
-           NLTK/SVM for tweet classification, sentiment analysis
-          </td>
-</tr>
-<tr>
-<td>
-           Crowdsourced annotation
-          </td>
-<td>
-           Amazon Mechanical Turk labeling
-          </td>
-</tr>
-<tr>
-<td>
-           Geospatial analysis
-          </td>
-<td>
-           Google Maps API for state-level mapping
-          </td>
-</tr>
-<tr>
-<td>
-           Statistical analysis
-          </td>
-<td>
-           Regression, significance testing on trends
-          </td>
-</tr>
-</table>
-</div>
-</section><section class="project-section">
-<h2>
-        Cross-Project Capabilities
-       </h2>
-<ul>
-<li>
-         Twitter data pipeline and sentiment methods were reused in subsequent patient experience projects.
-        </li>
-<li>
-         Crowdsourced ML labeling approach (MTurk) was also used in the Gun Violence curation project.
-        </li>
-<li>
-         Geolocation and mapping techniques paralleled those in the Gun Violence platform.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Published Papers/Tools
-       </h2>
-<ul>
-<li>
-         “Using Twitter to Examine Web-Based Patient Experience Sentiments in the United States: Longitudinal Study” (J. Med. Internet Res. 2018). <a class="paper-link" href="https://scholar.google.com/scholar?q=Using+Twitter+to+Examine+Web-Based+Patient+Experience+Sentiments" rel="noopener" target="_blank">Paper</a>
-        </li>
-<li>
-         Code suite for tweet classification, geolocation, and sentiment analysis (developed for this study).
-        </li>
-</ul>
-</section></div></div>
-</main>
-<footer class="wrapper project-footer">
-<a class="btn btn--ghost" href="../index.html">
-     Back to portfolio
-    </a>
-</footer>
-<footer class="project-site-footer">
-<div class="wrapper project-site-footer__inner"><p class="project-site-footer__text">Gaurav Tuli · PhD Project Portfolio · Built on al-folio</p></div>
-</footer>
-</div>
-<script src="../assets/js/theme-toggle.js"></script>
-
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Patient Experience — US Longitudinal Study</title>
+    <link href="../assets/css/al-folio.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+  </head>
+  <body class="page">
+    <div class="page__inner">
+      <header class="project-site-header">
+        <div class="wrapper project-site-header__inner">
+          <a class="project-site-header__brand" href="../index.html"
+            >Gaurav Tuli · PhD Project Portfolio</a
+          >
+        </div>
+      </header>
+      <header class="project-hero">
+        <div class="wrapper project-hero__inner">
+          <a class="back-link" href="../index.html"> ← Back to portfolio </a>
+          <h1 class="project-hero__title">
+            Patient Experience — US Longitudinal Study
+          </h1>
+          <div class="project-hero__badges">
+            <span
+              aria-label="Publication"
+              class="project-card__badge project-card__badge--publication"
+              ><span class="project-card__badge-label">Publication</span></span
+            >
+            <span
+              aria-label="Policy"
+              class="project-card__badge project-card__badge--policy"
+              ><span class="project-card__badge-label">Policy</span></span
+            >
+            <span
+              aria-label="Media"
+              class="project-card__badge project-card__badge--media"
+              ><span class="project-card__badge-label">Media</span></span
+            >
+          </div>
+          <p class="project-hero__subtitle">
+            Collected and analyzed 2.76 million patient experience tweets
+            (2013–2017) from across the US.
+          </p>
+          <div class="project-hero__meta">
+            <p>
+              <strong> Role: </strong>
+              Principal Data Scientist &amp; Co-first Author
+            </p>
+            <p>
+              <strong> Focus: </strong>
+              ML Classification, Social Media Analytics, Longitudinal Study,
+              Health Equity, Visual Analytics
+            </p>
+            <p>
+              <strong> Outcome: </strong>
+              Published in the Journal of Medical Internet Research; study
+              findings informed Robert Wood Johnson Foundation’s new
+              patient-experience policy initiatives.<a
+                class="paper-link"
+                href="https://www.jmir.org/2018/10/e10043/"
+                rel="noopener"
+                target="_blank"
+              >
+                Paper</a
+              >
+            </p>
+          </div>
+        </div>
+      </header>
+      <main class="wrapper project-body">
+        <div class="project-body__grid">
+          <div class="project-body__sidebar">
+            <section class="project-section project-section--at-a-glance">
+              <h2>At a Glance</h2>
+              <ul>
+                <li>
+                  Collected and analyzed 2.76 million patient experience tweets
+                  (2013–2017) from across the US.
+                </li>
+                <li>
+                  Found that patient sentiment became less negative nationwide
+                  over time, with distinct urban-rural and daily patterns.
+                </li>
+                <li>
+                  Demonstrated that Twitter can serve as a real-time,
+                  large-scale barometer of patient healthcare experiences.
+                </li>
+              </ul>
+            </section>
+            <section
+              class="project-section project-section--gallery"
+              data-gallery-count="3"
+            >
+              <h2>Visual highlights</h2>
+              <div class="project-gallery">
+                <figure
+                  class="project-gallery__item project-gallery__item--feature"
+                >
+                  <a
+                    href="19.1.patient-experience-across-US-states-four-year-logitudinal-study.png"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <img
+                      alt="Longitudinal patient experience trends across US states"
+                      decoding="async"
+                      loading="lazy"
+                      src="19.1.patient-experience-across-US-states-four-year-logitudinal-study.png"
+                    />
+                  </a>
+                  <figcaption>
+                    Longitudinal patient experience trends across US states
+                  </figcaption>
+                </figure>
+                <figure class="project-gallery__item">
+                  <a
+                    href="19.3.patient-experience-tweet-sentiment-by-region-over-time.png"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <img
+                      alt="Patient experience tweet sentiment by region over time"
+                      decoding="async"
+                      loading="lazy"
+                      src="19.3.patient-experience-tweet-sentiment-by-region-over-time.png"
+                    />
+                  </a>
+                  <figcaption>
+                    Patient experience tweet sentiment by region over time.
+                  </figcaption>
+                </figure>
+                <figure class="project-gallery__item">
+                  <a
+                    href="19.2.patient-experience-on-twitter-vs-census-all-states.png"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <img
+                      alt="Patient experience sentiment versus census demographics"
+                      decoding="async"
+                      loading="lazy"
+                      src="19.2.patient-experience-on-twitter-vs-census-all-states.png"
+                    />
+                  </a>
+                  <figcaption>
+                    Comparison of Twitter sentiment and demographic baselines by
+                    state.
+                  </figcaption>
+                </figure>
+              </div>
+            </section>
+          </div>
+          <div class="project-body__main">
+            <section class="project-section">
+              <h2>The Problem</h2>
+              <ul>
+                <li>
+                  Existing surveys are infrequent, biased, and lack real-time
+                  nationwide patient feedback.
+                </li>
+                <li>
+                  Healthcare providers needed timely insights into patient
+                  satisfaction and concerns.
+                </li>
+                <li>
+                  Without alternate data, shifts in patient sentiment could
+                  remain undetected by stakeholders.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>The Solution</h2>
+              <ul>
+                <li>
+                  Collected 27.3 million tweets (2013–2017) via Twitter’s API
+                  using patient experience keywords.
+                </li>
+                <li>
+                  Built an automated pipeline with a tweet classifier,
+                  geolocation engine, and sentiment analyzer.
+                </li>
+                <li>
+                  Filtered 2.76 million relevant patient-experience tweets and
+                  geolocated ~32% to US states.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Architecture Overview</h2>
+              <ul>
+                <li>
+                  Used continuous tweet ingestion with keyword filters
+                  (excluding URLs for relevance).
+                </li>
+                <li>
+                  Classified tweets with an SVM-based model to identify patient
+                  experience content.
+                </li>
+                <li>
+                  Geolocated tweets to states using profile text and Google Maps
+                  API.
+                </li>
+                <li>
+                  Performed sentiment analysis (positive/neutral/negative) on
+                  each relevant tweet.
+                </li>
+                <li>
+                  Aggregated data into a dashboard for temporal and geographic
+                  visualization.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Results and Impacts</h2>
+              <ul>
+                <li>
+                  Nationwide, ~36% of patient-experience tweets were negative,
+                  ~28% positive (2013–2017).
+                </li>
+                <li>
+                  Observed that overall sentiment became less negative over four
+                  years; night-time tweets were more negative than daytime.
+                </li>
+                <li>
+                  Found urban-area tweets showed more extreme sentiment (higher
+                  negativity) than rural tweets.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Skills and Tools Used</h2>
+              <div class="project-table-wrapper">
+                <table class="project-table">
+                  <tr>
+                    <th>Technique/Skill</th>
+                    <th>Tools/Implementation</th>
+                  </tr>
+                  <tr>
+                    <td>Big data processing</td>
+                    <td>Twitter GNIP API (27 million tweets)</td>
+                  </tr>
+                  <tr>
+                    <td>Natural language processing</td>
+                    <td>
+                      NLTK/SVM for tweet classification, sentiment analysis
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Crowdsourced annotation</td>
+                    <td>Amazon Mechanical Turk labeling</td>
+                  </tr>
+                  <tr>
+                    <td>Geospatial analysis</td>
+                    <td>Google Maps API for state-level mapping</td>
+                  </tr>
+                  <tr>
+                    <td>Statistical analysis</td>
+                    <td>Regression, significance testing on trends</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+            <section class="project-section">
+              <h2>Cross-Project Capabilities</h2>
+              <ul>
+                <li>
+                  Twitter data pipeline and sentiment methods were reused in
+                  subsequent patient experience projects.
+                </li>
+                <li>
+                  Crowdsourced ML labeling approach (MTurk) was also used in the
+                  Gun Violence curation project.
+                </li>
+                <li>
+                  Geolocation and mapping techniques paralleled those in the Gun
+                  Violence platform.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Published Papers/Tools</h2>
+              <ul>
+                <li>
+                  “Using Twitter to Examine Web-Based Patient Experience
+                  Sentiments in the United States: Longitudinal Study” (J. Med.
+                  Internet Res. 2018).
+                  <a
+                    class="paper-link"
+                    href="https://www.jmir.org/2018/10/e10043/"
+                    rel="noopener"
+                    target="_blank"
+                    >Paper</a
+                  >
+                </li>
+                <li>
+                  Code suite for tweet classification, geolocation, and
+                  sentiment analysis (developed for this study).
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </main>
+      <footer class="wrapper project-footer">
+        <a class="btn btn--ghost" href="../index.html"> Back to portfolio </a>
+      </footer>
+      <footer class="project-site-footer">
+        <div class="wrapper project-site-footer__inner">
+          <p class="project-site-footer__text">
+            Gaurav Tuli · PhD Project Portfolio · Built on al-folio
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script src="../assets/js/theme-toggle.js"></script>
+  </body>
 </html>
