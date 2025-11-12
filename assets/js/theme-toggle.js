@@ -84,7 +84,7 @@
     }
     hasStoredPreference = false;
     if (prefersDarkQuery && typeof prefersDarkQuery.matches === "boolean") {
-      return prefersDarkQuery.matches ? "theme-dark" : "theme-light";
+    return prefersDarkQuery.matches ? "theme-dark" : "theme-light";
     }
     return "theme-light";
   };

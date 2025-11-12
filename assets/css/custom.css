@@ -963,6 +963,7 @@ html.theme-dark .project-hero__title {
   justify-content: center;
   align-items: center;
   overflow-x: auto;
+  overflow-y: hidden;
   scrollbar-width: none;
 }
 
@@ -1087,8 +1088,11 @@ html.theme-dark .project-hero__title {
   .project-nav__inner {
     flex-direction: row;
     gap: 0.35rem;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
   }
 
   .project-nav__link {

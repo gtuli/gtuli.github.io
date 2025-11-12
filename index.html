@@ -2452,6 +2452,54 @@
         const groups = Array.from(
           document.querySelectorAll("[data-project-group]")
         );
+        const groupOrderTokens = {
+          ma: { groupId: "mission-analytics", navLabel: "MissionAI" },
+          ca: { groupId: "clinical-ai", navLabel: "ClinicalAI" },
+          pi: { groupId: "equity-population", navLabel: "PopInsights" },
+          ei: { groupId: "biosurveillance", navLabel: "EpiIntel" },
+          nd: { groupId: "network-contagion", navLabel: "NetDynamics" },
+        };
+        const queryParams = new URLSearchParams(window.location.search);
+        const groupToken = (queryParams.get("pg") || "")
+          .trim()
+          .toLowerCase();
+        const tokenConfig = groupOrderTokens[groupToken];
+        if (tokenConfig) {
+          const groupsContainer = document.querySelector(".project-groups");
+          const targetGroup = groups.find(
+            (group) => group.dataset.projectGroup === tokenConfig.groupId
+          );
+          if (
+            groupsContainer &&
+            targetGroup &&
+            groupsContainer.firstElementChild !== targetGroup
+          ) {
+            groupsContainer.insertBefore(
+              targetGroup,
+              groupsContainer.firstElementChild
+            );
+          }
+
+          const navContainer = document.querySelector(".project-nav__inner");
+          if (navContainer) {
+            const targetNavLink = Array.from(
+              navContainer.querySelectorAll(".project-nav__link")
+            ).find((link) => link.dataset.label === tokenConfig.navLabel);
+            if (targetNavLink) {
+              const searchNavLink = navContainer.querySelector(
+                '.project-nav__link[data-label="Search"]'
+              );
+              if (searchNavLink) {
+                searchNavLink.insertAdjacentElement(
+                  "afterend",
+                  targetNavLink
+                );
+              } else {
+                navContainer.insertBefore(targetNavLink, navContainer.firstChild);
+              }
+            }
+          }
+        }
         const emptyState = document.querySelector("[data-search-empty]");
         const cardIndex = new Map();
         const suggestionSet = new Set();
