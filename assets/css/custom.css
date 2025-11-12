@@ -1150,15 +1150,64 @@ html.theme-dark .project-hero__title {
   gap: 0.875rem;
 }
 
+.project-group__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
 .project-group__title {
   font-size: clamp(1.6rem, 3vw, 1.9rem);
-  margin-bottom: 0.4rem;
+  margin: 0;
+}
+
+.project-group__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.15rem 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  border-radius: 0.6rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.project-group__toggle:hover,
+.project-group__toggle:focus-visible {
+  background-color: rgba(37, 99, 235, 0.1);
+  color: #0f172a;
+  outline: none;
+}
+
+.project-group__toggle:focus-visible {
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.35);
+}
+
+.project-group__title-text {
+  flex: 1 1 auto;
+  text-align: left;
+}
+
+.project-group__icon {
+  flex: 0 0 auto;
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
 }
 
 .project-group__description {
-  margin-top: 0;
-  margin-bottom: 0.55rem;
+  margin: 0;
+  margin-bottom: 0.6rem;
   color: rgba(15, 23, 42, 0.88);
+}
+
+.project-group--collapsed [data-project-grid] {
+  display: none;
 }
 
 .section-intro,
@@ -1274,6 +1323,16 @@ html.theme-dark .project-group__title {
 html.theme-dark .section-intro,
 html.theme-dark .project-group__description {
   color: rgba(248, 250, 252, 0.88);
+}
+
+html.theme-dark .project-group__toggle:hover,
+html.theme-dark .project-group__toggle:focus-visible {
+  background-color: rgba(59, 130, 246, 0.18);
+  color: #f8fafc;
+}
+
+html.theme-dark .project-group__toggle:focus-visible {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.45);
 }
 
 html.theme-dark .section-subtitle {
