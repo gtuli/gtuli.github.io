@@ -850,28 +850,27 @@ html.theme-dark .project-hero__title {
 }
 
 .project-card__focus-table {
-  display: grid;
-  grid-template-columns: minmax(4.5rem, 5.5rem) 1fr;
-  gap: 0.5rem;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
 .project-card__focus-heading {
   color: #0f172a;
-  text-align: center;
+  text-align: left;
 }
 
 .project-card__focus-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 0.35rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.3rem;
 }
 
 .project-card__focus-tag {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.2rem 0.55rem;
+  padding: 0.18rem 0.5rem;
   border-radius: 999px;
   background: rgba(37, 99, 235, 0.12);
   color: #1e3a8a;
@@ -1336,7 +1335,8 @@ html.theme-dark .hero__subtitle {
 }
 
 html.theme-dark .section-title,
-html.theme-dark .project-group__title {
+html.theme-dark .project-group__title,
+html.theme-dark .project-group__title-text {
   color: #f8fafc;
 }
 
