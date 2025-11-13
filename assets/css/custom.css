@@ -811,7 +811,7 @@ html.theme-dark .project-hero__title {
   gap: 0.6rem;
 }
 
-.project-card__meta li {
+.project-card__meta-item {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -819,13 +819,17 @@ html.theme-dark .project-hero__title {
   flex-wrap: nowrap;
 }
 
-.project-card__meta-label {
+.project-card__meta-label,
+.project-card__focus-heading {
   font-size: 0.75rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #0f172a;
   font-weight: 600;
   white-space: nowrap;
+}
+
+.project-card__meta-label {
+  color: #0f172a;
 }
 
 .project-card__meta-label::after {
@@ -840,17 +844,33 @@ html.theme-dark .project-hero__title {
   min-width: 0;
 }
 
-.project-card__focus-tags {
-  display: inline-flex;
-  align-items: center;
-  flex: 1 1 220px;
-  flex-wrap: wrap;
+
+.project-card__meta-item--focus {
+  display: block;
+}
+
+.project-card__focus-table {
+  display: grid;
+  grid-template-columns: minmax(4.5rem, 5.5rem) 1fr;
+  gap: 0.5rem;
+  align-items: start;
+}
+
+.project-card__focus-heading {
+  color: #0f172a;
+  text-align: center;
+}
+
+.project-card__focus-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: 0.35rem;
 }
 
 .project-card__focus-tag {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding: 0.2rem 0.55rem;
   border-radius: 999px;
   background: rgba(37, 99, 235, 0.12);
@@ -1325,6 +1345,10 @@ html.theme-dark .project-group__description {
   color: rgba(248, 250, 252, 0.88);
 }
 
+html.theme-dark .project-group__toggle {
+  color: #f8fafc;
+}
+
 html.theme-dark .project-group__toggle:hover,
 html.theme-dark .project-group__toggle:focus-visible {
   background-color: rgba(59, 130, 246, 0.18);
@@ -1392,6 +1416,10 @@ html.theme-dark .project-card__meta-label {
 
 html.theme-dark .project-card__meta-value {
   color: #f8fafc;
+}
+
+html.theme-dark .project-card__focus-heading {
+  color: rgba(203, 213, 225, 0.9);
 }
 
 html.theme-dark .project-card__focus-tag {
