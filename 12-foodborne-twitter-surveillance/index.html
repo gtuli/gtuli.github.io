@@ -1,228 +1,335 @@
 <!DOCTYPE html>
 
 <html class="theme-light" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>
-   Foodborne Illness — Twitter Surveillance
-  </title>
-<link href="../assets/css/al-folio.css" rel="stylesheet"/>
-<link href="../assets/css/custom.css" rel="stylesheet"/>
-</head>
-<body class="page">
-<div class="page__inner">
-<header class="project-site-header">
-<div class="wrapper project-site-header__inner"><a class="project-site-header__brand" href="../index.html">Gaurav Tuli · PhD Project Portfolio</a></div>
-</header>
-<header class="project-hero">
-<div class="wrapper project-hero__inner">
-<a class="back-link" href="../index.html">
-      ← Back to portfolio
-     </a>
-<h1 class="project-hero__title">
-      Foodborne Illness — Twitter Surveillance
-     </h1>
-<div class="project-hero__badges">
-<span aria-label="Publications" class="project-card__badge project-card__badge--publication"><span class="project-card__badge-label">Publications</span></span>
-<span aria-label="Product" class="project-card__badge project-card__badge--product"><span class="project-card__badge-label">Product</span></span>
-<span aria-label="Media 4X" class="project-card__badge project-card__badge--media"><span class="project-card__badge-label">Media 4X</span></span>
-</div>
-<p class="project-hero__subtitle">
-      Built a Twitter-driven monitoring dashboard to catch local food poisoning outbreaks in real time.
-     </p>
-<div class="project-hero__meta">
-<p>
-<strong>
-        Role:
-       </strong>
-       Public Health Data Scientist &amp; ML Engineer
-      </p>
-<p>
-<strong>
-        Focus:
-       </strong>
-       Civic Tech · Data Visualization · ML Classification · Public Health Intervention · Public-Private Collaboration · Rapid Response Workflows · Social Media Analytics · Streaming Pipeline
-      </p>
-<p>
-        <strong>
-         Outcome:
-        </strong>
-        Deployed in 18+ city and state health departments, tripling citizen-reported food poisoning cases and speeding outbreak response times. Multiple peer-reviewed publications document the system's impact.
-       </p>
-</div>
-</div>
-</header>
-<main class="wrapper project-body">
-<div class="project-body__grid"><div class="project-body__sidebar"><section class="project-section project-section--at-a-glance">
-<h2>
-        At a Glance
-       </h2>
-<ul>
-<li>
-         Built a Twitter-driven monitoring dashboard to catch local food poisoning outbreaks in real time.
-        </li>
-<li>
-         Tripled the number of citizen-reported food poisoning cases by engaging ill individuals on social media.
-        </li>
-<li>
-         Enabled faster restaurant inspections by flagging outbreaks from tweets, significantly improving public health response time.
-        </li>
-</ul>
-</section><section class="project-section project-section--gallery" data-gallery-count="2">
-<h2>
-        Visual highlights
-       </h2>
-<div class="project-gallery"><figure class="project-gallery__item project-gallery__item--feature"><a href="12.1.foodborne-illness-tweet-detailed.png" rel="noopener" target="_blank">
-<img alt="Tweet flagged by the HealthMap foodborne dashboard" decoding="async" loading="lazy" src="12.1.foodborne-illness-tweet-detailed.png"/>
-</a><figcaption>Tweet flagged by the HealthMap foodborne dashboard</figcaption></figure>
-<figure class="project-gallery__item">
-<a href="12.2.foodborne-illness-surveillance-using-twitter.png" rel="noopener" target="_blank">
-<img alt="Foodborne illness surveillance dashboard" decoding="async" loading="lazy" src="12.2.foodborne-illness-surveillance-using-twitter.png"/>
-</a>
-<figcaption>
-          Dashboard view guiding inspectors to likely outbreak clusters.
-         </figcaption>
-</figure>
-</div>
-</section></div><div class="project-body__main"><section class="project-section">
-<h2>
-        The Problem
-       </h2>
-<ul>
-<li>
-         Vast underreporting: Only ~3% of food poisoning cases are ever reported to health departments, leaving most outbreaks undetected.
-        </li>
-<li>
-         Health agencies rely on consumer complaints, but very few people formally report their foodborne illness to authorities.
-        </li>
-<li>
-         Untapped signals: Many individuals share food poisoning stories on platforms like Twitter instead of official channels, meaning critical clues were being missed.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        The Solution
-       </h2>
-<ul>
-<li>
-         Developed an automated system to continuously scan Twitter for posts indicating possible food poisoning (using keywords and ML filters).
-        </li>
-<li>
-         Engaged directly with users who tweeted about getting sick (e.g., via prompts or replies), encouraging them to submit official illness reports to their local health department.
-        </li>
-<li>
-         Integrated tweet-based alerts into health department workflows by providing a dashboard that mapped suspected cases and facilitated targeted restaurant inspections.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Architecture Overview
-       </h2>
-<ul>
-<li>
-         Twitter Data Pipeline: Set up continuous ingestion of tweets mentioning food poisoning symptoms or related keywords, filtered by location.
-        </li>
-<li>
-         NLP Classification: Employed text processing and machine-learning classifiers to distinguish likely foodborne illness reports from unrelated chatter.
-        </li>
-<li>
-         User Engagement Module: Automated response system that contacts authors of flagged tweets with guidance on how to report their illness to authorities.
-        </li>
-<li>
-         Health Dept Dashboard: A web dashboard for officials that displays a map of tweet-indicated incidents, links to each case’s details, and tracks which have been escalated to inspections.
-        </li>
-<li>
-         Multi-City Template: Designed the system to be easily deployable to different city or state health departments with minimal customization.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Results and Impacts
-       </h2>
-<ul>
-<li>
-         Deployed across 18 public health agencies (U.S. and U.K.), tripling the volume of citizen-reported food poisoning cases compared to prior reporting rates.
-        </li>
-<li>
-         Cut detection and response time by ~60%, enabling inspectors to identify and address outbreak clusters much faster than traditional complaint-driven methods.
-        </li>
-<li>
-         Achieved high precision in identifying true cases: the tweet classification and geolocation approach proved ~91% accurate in pinpointing verifiable foodborne illness incidents in the relevant jurisdiction.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Skills and Tools Used
-       </h2>
-<div class="project-table-wrapper">
-<table class="project-table"><tr><th>Technique/Skill</th><th>Tools/Implementation</th></tr>
-<tr><td>Social Media Mining</td><td>Twitter API integration for real-time data streaming</td></tr>
-<tr>
-<td>
-           NLP Classification
-          </td>
-<td>
-           Machine-learning models to flag food-poisoning-related tweets
-          </td>
-</tr>
-<tr>
-<td>
-           Geospatial Analysis
-          </td>
-<td>
-           Geocoding tweet locations to map incidents to jurisdictions
-          </td>
-</tr>
-<tr>
-<td>
-           Web Dashboard
-          </td>
-<td>
-           Interactive visualization for health officials (maps, alerts, case management)
-          </td>
-</tr>
-</table>
-</div>
-</section><section class="project-section">
-<h2>
-        Cross-Project Capabilities
-       </h2>
-<ul>
-<li>
-         Digital Epidemiology: Pioneered using social media posts as disease surveillance signals, a method extended in later health monitoring projects.
-        </li>
-<li>
-         Public Engagement: Techniques to prompt and capture user reports via digital platforms were reused in other participatory data projects (surveys, forums).
-        </li>
-<li>
-         Real-Time Pipeline: Expertise in building live data pipelines and anomaly detection translated to subsequent projects in both health and security domains.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Published Papers/Tools
-       </h2>
-<ul>
-<li>
-         Research Outputs: Three peer-reviewed publications (2018–2020) documenting the methods and impact of Twitter-based foodborne illness surveillance.<a class="paper-link" href="https://journals.lww.com/jphmp/fulltext/2017/11000/Using_Twitter_to_Identify_and_Respond_to_Food.6.aspx" rel="noopener" target="_blank">Paper</a><a class="paper-link" href="https://ojphi.jmir.org/2016/1/e61776/PDF" rel="noopener" target="_blank">Demo Paper</a><a class="paper-link" href="https://www.ijidonline.com/article/S1201-9712%2816%2931395-9/pdf" rel="noopener" target="_blank">Abstract</a>
-        </li>
-<li>
-         Operational Tool: The Twitter surveillance dashboard was implemented by multiple city and state health departments, becoming a standard tool for live food safety monitoring.
-        </li>
-</ul>
-</section></div></div>
-</main>
-<footer class="wrapper project-footer">
-<a class="btn btn--ghost" href="../index.html">
-     Back to portfolio
-    </a>
-</footer>
-<footer class="project-site-footer">
-<div class="wrapper project-site-footer__inner"><p class="project-site-footer__text">Gaurav Tuli · PhD Project Portfolio · Built on al-folio</p></div>
-</footer>
-</div>
-<script src="../assets/js/theme-toggle.js"></script>
-
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Foodborne Illness — Twitter Surveillance</title>
+    <link href="../assets/css/al-folio.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+  </head>
+  <body class="page">
+    <div class="page__inner">
+      <header class="project-site-header">
+        <div class="wrapper project-site-header__inner">
+          <a class="project-site-header__brand" href="../index.html"
+            >Gaurav Tuli · PhD Project Portfolio</a
+          >
+        </div>
+      </header>
+      <header class="project-hero">
+        <div class="wrapper project-hero__inner">
+          <a class="back-link" href="../index.html"> ← Back to portfolio </a>
+          <h1 class="project-hero__title">
+            Foodborne Illness — Twitter Surveillance
+          </h1>
+          <div class="project-hero__badges">
+            <span
+              aria-label="Publications"
+              class="project-card__badge project-card__badge--publication"
+              ><span class="project-card__badge-label">Publications</span></span
+            >
+            <span
+              aria-label="Product"
+              class="project-card__badge project-card__badge--product"
+              ><span class="project-card__badge-label">Product</span></span
+            >
+            <span
+              aria-label="Media 4X"
+              class="project-card__badge project-card__badge--media"
+              ><span class="project-card__badge-label">Media 4X</span></span
+            >
+          </div>
+          <p class="project-hero__subtitle">
+            Built a Twitter-driven monitoring dashboard to catch local food
+            poisoning outbreaks in real time.
+          </p>
+          <div class="project-hero__meta">
+            <p>
+              <strong> Role: </strong>
+              Public Health Data Scientist, ML Engineer &amp; Full Stack
+              Developer
+            </p>
+            <p>
+              <strong> Focus: </strong>
+              Civic Tech · Data Visualization · ML Classification · Public
+              Health Intervention · Public-Private Collaboration · Rapid
+              Response Workflows · Social Media Analytics · Streaming Pipeline
+            </p>
+            <p>
+              <strong> Outcome: </strong>
+              Deployed in 18+ city and state health departments, tripling
+              citizen-reported food poisoning cases and speeding outbreak
+              response times. Multiple peer-reviewed publications document the
+              system's impact.
+            </p>
+          </div>
+        </div>
+      </header>
+      <main class="wrapper project-body">
+        <div class="project-body__grid">
+          <div class="project-body__sidebar">
+            <section class="project-section project-section--at-a-glance">
+              <h2>At a Glance</h2>
+              <ul>
+                <li>
+                  Built a Twitter-driven monitoring dashboard to catch local
+                  food poisoning outbreaks in real time.
+                </li>
+                <li>
+                  Tripled the number of citizen-reported food poisoning cases by
+                  engaging ill individuals on social media.
+                </li>
+                <li>
+                  Enabled faster restaurant inspections by flagging outbreaks
+                  from tweets, significantly improving public health response
+                  time.
+                </li>
+              </ul>
+            </section>
+            <section
+              class="project-section project-section--gallery"
+              data-gallery-count="2"
+            >
+              <h2>Visual highlights</h2>
+              <div class="project-gallery">
+                <figure
+                  class="project-gallery__item project-gallery__item--feature"
+                >
+                  <a
+                    href="12.1.foodborne-illness-tweet-detailed.png"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <img
+                      alt="Tweet flagged by the HealthMap foodborne dashboard"
+                      decoding="async"
+                      loading="lazy"
+                      src="12.1.foodborne-illness-tweet-detailed.png"
+                    />
+                  </a>
+                  <figcaption>
+                    Tweet flagged by the HealthMap foodborne dashboard
+                  </figcaption>
+                </figure>
+                <figure class="project-gallery__item">
+                  <a
+                    href="12.2.foodborne-illness-surveillance-using-twitter.png"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <img
+                      alt="Foodborne illness surveillance dashboard"
+                      decoding="async"
+                      loading="lazy"
+                      src="12.2.foodborne-illness-surveillance-using-twitter.png"
+                    />
+                  </a>
+                  <figcaption>
+                    Dashboard view guiding inspectors to likely outbreak
+                    clusters.
+                  </figcaption>
+                </figure>
+              </div>
+            </section>
+          </div>
+          <div class="project-body__main">
+            <section class="project-section">
+              <h2>The Problem</h2>
+              <ul>
+                <li>
+                  Vast underreporting: Only ~3% of food poisoning cases are ever
+                  reported to health departments, leaving most outbreaks
+                  undetected.
+                </li>
+                <li>
+                  Health agencies rely on consumer complaints, but very few
+                  people formally report their foodborne illness to authorities.
+                </li>
+                <li>
+                  Untapped signals: Many individuals share food poisoning
+                  stories on platforms like Twitter instead of official
+                  channels, meaning critical clues were being missed.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>The Solution</h2>
+              <ul>
+                <li>
+                  Developed an automated system to continuously scan Twitter for
+                  posts indicating possible food poisoning (using keywords and
+                  ML filters).
+                </li>
+                <li>
+                  Engaged directly with users who tweeted about getting sick
+                  (e.g., via prompts or replies), encouraging them to submit
+                  official illness reports to their local health department.
+                </li>
+                <li>
+                  Integrated tweet-based alerts into health department workflows
+                  by providing a dashboard that mapped suspected cases and
+                  facilitated targeted restaurant inspections.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Architecture Overview</h2>
+              <ul>
+                <li>
+                  Twitter Data Pipeline: Set up continuous ingestion of tweets
+                  mentioning food poisoning symptoms or related keywords,
+                  filtered by location.
+                </li>
+                <li>
+                  NLP Classification: Employed text processing and
+                  machine-learning classifiers to distinguish likely foodborne
+                  illness reports from unrelated chatter.
+                </li>
+                <li>
+                  User Engagement Module: Automated response system that
+                  contacts authors of flagged tweets with guidance on how to
+                  report their illness to authorities.
+                </li>
+                <li>
+                  Health Dept Dashboard: A web dashboard for officials that
+                  displays a map of tweet-indicated incidents, links to each
+                  case’s details, and tracks which have been escalated to
+                  inspections.
+                </li>
+                <li>
+                  Multi-City Template: Designed the system to be easily
+                  deployable to different city or state health departments with
+                  minimal customization.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Results and Impacts</h2>
+              <ul>
+                <li>
+                  Deployed across 18 public health agencies (U.S. and U.K.),
+                  tripling the volume of citizen-reported food poisoning cases
+                  compared to prior reporting rates.
+                </li>
+                <li>
+                  Cut detection and response time by ~60%, enabling inspectors
+                  to identify and address outbreak clusters much faster than
+                  traditional complaint-driven methods.
+                </li>
+                <li>
+                  Achieved high precision in identifying true cases: the tweet
+                  classification and geolocation approach proved ~91% accurate
+                  in pinpointing verifiable foodborne illness incidents in the
+                  relevant jurisdiction.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Skills and Tools Used</h2>
+              <div class="project-table-wrapper">
+                <table class="project-table">
+                  <tr>
+                    <th>Technique/Skill</th>
+                    <th>Tools/Implementation</th>
+                  </tr>
+                  <tr>
+                    <td>Social Media Mining</td>
+                    <td>
+                      Twitter API integration for real-time data streaming
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>NLP Classification</td>
+                    <td>
+                      Machine-learning models to flag food-poisoning-related
+                      tweets
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Geospatial Analysis</td>
+                    <td>
+                      Geocoding tweet locations to map incidents to
+                      jurisdictions
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Web Dashboard</td>
+                    <td>
+                      Interactive visualization for health officials (maps,
+                      alerts, case management)
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+            <section class="project-section">
+              <h2>Cross-Project Capabilities</h2>
+              <ul>
+                <li>
+                  Digital Epidemiology: Pioneered using social media posts as
+                  disease surveillance signals, a method extended in later
+                  health monitoring projects.
+                </li>
+                <li>
+                  Public Engagement: Techniques to prompt and capture user
+                  reports via digital platforms were reused in other
+                  participatory data projects (surveys, forums).
+                </li>
+                <li>
+                  Real-Time Pipeline: Expertise in building live data pipelines
+                  and anomaly detection translated to subsequent projects in
+                  both health and security domains.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Published Papers/Tools</h2>
+              <ul>
+                <li>
+                  Research Outputs: Three peer-reviewed publications (2018–2020)
+                  documenting the methods and impact of Twitter-based foodborne
+                  illness surveillance.<a
+                    class="paper-link"
+                    href="https://journals.lww.com/jphmp/fulltext/2017/11000/Using_Twitter_to_Identify_and_Respond_to_Food.6.aspx"
+                    rel="noopener"
+                    target="_blank"
+                    >Paper</a
+                  ><a
+                    class="paper-link"
+                    href="https://ojphi.jmir.org/2016/1/e61776/PDF"
+                    rel="noopener"
+                    target="_blank"
+                    >Demo Paper</a
+                  ><a
+                    class="paper-link"
+                    href="https://www.ijidonline.com/article/S1201-9712%2816%2931395-9/pdf"
+                    rel="noopener"
+                    target="_blank"
+                    >Abstract</a
+                  >
+                </li>
+                <li>
+                  Operational Tool: The Twitter surveillance dashboard was
+                  implemented by multiple city and state health departments,
+                  becoming a standard tool for live food safety monitoring.
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </main>
+      <footer class="wrapper project-footer">
+        <a class="btn btn--ghost" href="../index.html"> Back to portfolio </a>
+      </footer>
+      <footer class="project-site-footer">
+        <div class="wrapper project-site-footer__inner">
+          <p class="project-site-footer__text">
+            Gaurav Tuli · PhD Project Portfolio · Built on al-folio
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script src="../assets/js/theme-toggle.js"></script>
+  </body>
 </html>

@@ -1,241 +1,302 @@
 <!DOCTYPE html>
 
 <html class="theme-light" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>
-   Edge-Block Contagion Control</title>
-<link href="../assets/css/al-folio.css" rel="stylesheet"/>
-<link href="../assets/css/custom.css" rel="stylesheet"/>
-</head>
-<body class="page">
-<div class="page__inner">
-<header class="project-site-header">
-<div class="wrapper project-site-header__inner"><a class="project-site-header__brand" href="../index.html">Gaurav Tuli · PhD Project Portfolio</a></div>
-</header>
-<header class="project-hero">
-<div class="wrapper project-hero__inner">
-<a class="back-link" href="../index.html">
-      ← Back to portfolio
-     </a>
-<h1 class="project-hero__title">
-      Edge-Block Contagion Control
-     </h1>
-<div class="project-hero__badges">
-<span aria-label="Publication" class="project-card__badge project-card__badge--publication"><span class="project-card__badge-label">Publication</span></span>
-</div>
-<p class="project-hero__subtitle">
-      Studied how to stop contagion spread by cutting network links (edges).
-     </p>
-<div class="project-hero__meta">
-<p>
-<strong>
-        Role:
-       </strong>
-       Lead Modeling and Simulations Engineer
-      </p>
-<p>
-<strong>
-        Focus:
-       </strong>
-       Algorithm Design · Contagion Blocking · Modeling &amp; Simulations · Network Control · Public Health Intervention
-      </p>
-</div>
-</div>
-</header>
-<main class="wrapper project-body">
-<div class="project-body__grid"><div class="project-body__sidebar"><section class="project-section project-section--at-a-glance">
-<h2>
-        At a Glance
-       </h2>
-<ul>
-<li>
-         Studied how to stop contagion spread by cutting network links (edges).
-        </li>
-<li>
-         Proved key edge-removal problems are NP-hard and developed a novel edge-removal heuristic.
-        </li>
-<li>
-         Showed the heuristic significantly improves containment of both simple and complex contagions.
-        </li>
-</ul>
-</section><section class="project-section project-section--gallery" data-gallery-count="2">
-<h2>
-        Visual highlights
-       </h2>
-<div class="project-gallery"><figure class="project-gallery__item project-gallery__item--feature"><a href="25.1.an-efficient-algorithm-for-edge-removal-based-social-contagion-blocking.png" rel="noopener" target="_blank">
-<img alt="Edge removal algorithm performance comparison" decoding="async" loading="lazy" src="25.1.an-efficient-algorithm-for-edge-removal-based-social-contagion-blocking.png"/>
-</a><figcaption>Edge removal algorithm performance comparison</figcaption></figure>
-<figure class="project-gallery__item">
-<a href="25.2.our-approach-for-blocking-social-contagion-vs-pervious-studies.png" rel="noopener" target="_blank">
-<img alt="Edge blocking approach versus prior studies" decoding="async" loading="lazy" src="25.2.our-approach-for-blocking-social-contagion-vs-pervious-studies.png"/>
-</a>
-<figcaption>
-          Comparison chart illustrating gains over prior edge-blocking methods.
-         </figcaption>
-</figure>
-</div>
-</section></div><div class="project-body__main"><section class="project-section">
-<h2>
-        The Problem
-       </h2>
-<ul>
-<li>
-         Selecting an optimal set of edges to delete for maximum containment is NP-hard.
-        </li>
-<li>
-         For complex contagions (requiring multiple exposures), edge removal has no constant-factor approximation.
-        </li>
-<li>
-         Prior research mostly focused on node removal or ignored outbreak-specific contagion dynamics.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        The Solution
-       </h2>
-<ul>
-<li>
-         Formulated edge removal as optimization problems under various constraints (budgets, targeted closures).
-        </li>
-<li>
-         Proved new hardness results for complex contagions and identified special tractable cases.
-        </li>
-<li>
-         Developed an “edge-covering” heuristic to select edges to cut in weighted and unweighted networks.
-        </li>
-<li>
-         Simulated contagion spread on large real networks to compare the heuristic against existing methods.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Architecture Overview
-       </h2>
-<ul>
-<li>
-         Combined graph-theoretic edge cover and cut models with contagion dynamics (independent cascade and threshold models).
-        </li>
-<li>
-         Analyzed computational complexity of edge removal versus node removal strategies.
-        </li>
-<li>
-         Used a simulation framework on real networks (e.g., contact and social graphs) to test interventions.
-        </li>
-<li>
-         Heuristic algorithm considered edge weights, directions, and outbreak source information to prioritize cuts.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Results and Impacts
-       </h2>
-<ul>
-<li>
-         The edge-removal heuristic outperformed prior strategies, blocking more contagion spread in 12 test scenarios.
-        </li>
-<li>
-         Confirmed that while optimal solutions are intractable, a scalable heuristic achieves strong containment.
-        </li>
-<li>
-         Compared node vs. edge removal: cutting specific links often contained outbreaks more cost-effectively.
-        </li>
-<li>
-         Methods informed follow-up research and have been applied to other network intervention scenarios.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Skills and Tools Used
-       </h2>
-<div class="project-table-wrapper">
-<table class="project-table"><tr><th>Technique/Skill</th><th>Tools/Implementation</th></tr>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Edge-Block Contagion Control</title>
+    <link href="../assets/css/al-folio.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+  </head>
+  <body class="page">
+    <div class="page__inner">
+      <header class="project-site-header">
+        <div class="wrapper project-site-header__inner">
+          <a class="project-site-header__brand" href="../index.html"
+            >Gaurav Tuli · PhD Project Portfolio</a
+          >
+        </div>
+      </header>
+      <header class="project-hero">
+        <div class="wrapper project-hero__inner">
+          <a class="back-link" href="../index.html"> ← Back to portfolio </a>
+          <h1 class="project-hero__title">Edge-Block Contagion Control</h1>
+          <div class="project-hero__badges">
+            <span
+              aria-label="Publication"
+              class="project-card__badge project-card__badge--publication"
+              ><span class="project-card__badge-label">Publication</span></span
+            >
+            <span
+              aria-label="Policy"
+              class="project-card__badge project-card__badge--policy"
+              ><span class="project-card__badge-label">Policy</span></span
+            >
+          </div>
+          <p class="project-hero__subtitle">
+            Studied how to stop contagion spread by cutting network links
+            (edges).
+          </p>
+          <div class="project-hero__meta">
+            <p>
+              <strong> Role: </strong>
+              Lead Modeling and Simulations Engineer
+            </p>
+            <p>
+              <strong> Focus: </strong>
+              Algorithm Design · Contagion Blocking · Modeling &amp; Simulations
+              · Network Control · Public Health Intervention
+            </p>
+            <p>
+              <strong> Outcome: </strong>
+              Published in IEEE ICDM, presenting novel edge-removal algorithms
+              that significantly improve contagion containment over prior
+              methods.
+              <a
+                class="paper-link"
+                href="https://ieeexplore.ieee.org/abstract/document/6729524"
+                rel="noopener"
+                target="_blank"
+                >Paper</a
+              >
+            </p>
+          </div>
+        </div>
+      </header>
+      <main class="wrapper project-body">
+        <div class="project-body__grid">
+          <div class="project-body__sidebar">
+            <section class="project-section project-section--at-a-glance">
+              <h2>At a Glance</h2>
+              <ul>
+                <li>
+                  Studied how to stop contagion spread by cutting network links
+                  (edges).
+                </li>
+                <li>
+                  Proved key edge-removal problems are NP-hard and developed a
+                  novel edge-removal heuristic.
+                </li>
+                <li>
+                  Showed the heuristic significantly improves containment of
+                  both simple and complex contagions.
+                </li>
+              </ul>
+            </section>
+            <section
+              class="project-section project-section--gallery"
+              data-gallery-count="2"
+            >
+              <h2>Visual highlights</h2>
+              <div class="project-gallery">
+                <figure
+                  class="project-gallery__item project-gallery__item--feature"
+                >
+                  <a
+                    href="25.1.an-efficient-algorithm-for-edge-removal-based-social-contagion-blocking.png"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <img
+                      alt="Edge removal algorithm performance comparison"
+                      decoding="async"
+                      loading="lazy"
+                      src="25.1.an-efficient-algorithm-for-edge-removal-based-social-contagion-blocking.png"
+                    />
+                  </a>
+                  <figcaption>
+                    Edge removal algorithm performance comparison
+                  </figcaption>
+                </figure>
+                <figure class="project-gallery__item">
+                  <a
+                    href="25.2.our-approach-for-blocking-social-contagion-vs-pervious-studies.png"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <img
+                      alt="Edge blocking approach versus prior studies"
+                      decoding="async"
+                      loading="lazy"
+                      src="25.2.our-approach-for-blocking-social-contagion-vs-pervious-studies.png"
+                    />
+                  </a>
+                  <figcaption>
+                    Comparison chart illustrating gains over prior edge-blocking
+                    methods.
+                  </figcaption>
+                </figure>
+              </div>
+            </section>
+          </div>
+          <div class="project-body__main">
+            <section class="project-section">
+              <h2>The Problem</h2>
+              <ul>
+                <li>
+                  Selecting an optimal set of edges to delete for maximum
+                  containment is NP-hard.
+                </li>
+                <li>
+                  For complex contagions (requiring multiple exposures), edge
+                  removal has no constant-factor approximation.
+                </li>
+                <li>
+                  Prior research mostly focused on node removal or ignored
+                  outbreak-specific contagion dynamics.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>The Solution</h2>
+              <ul>
+                <li>
+                  Formulated edge removal as optimization problems under various
+                  constraints (budgets, targeted closures).
+                </li>
+                <li>
+                  Proved new hardness results for complex contagions and
+                  identified special tractable cases.
+                </li>
+                <li>
+                  Developed an “edge-covering” heuristic to select edges to cut
+                  in weighted and unweighted networks.
+                </li>
+                <li>
+                  Simulated contagion spread on large real networks to compare
+                  the heuristic against existing methods.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Architecture Overview</h2>
+              <ul>
+                <li>
+                  Combined graph-theoretic edge cover and cut models with
+                  contagion dynamics (independent cascade and threshold models).
+                </li>
+                <li>
+                  Analyzed computational complexity of edge removal versus node
+                  removal strategies.
+                </li>
+                <li>
+                  Used a simulation framework on real networks (e.g., contact
+                  and social graphs) to test interventions.
+                </li>
+                <li>
+                  Heuristic algorithm considered edge weights, directions, and
+                  outbreak source information to prioritize cuts.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Results and Impacts</h2>
+              <ul>
+                <li>
+                  The edge-removal heuristic outperformed prior strategies,
+                  blocking more contagion spread in 12 test scenarios.
+                </li>
+                <li>
+                  Confirmed that while optimal solutions are intractable, a
+                  scalable heuristic achieves strong containment.
+                </li>
+                <li>
+                  Compared node vs. edge removal: cutting specific links often
+                  contained outbreaks more cost-effectively.
+                </li>
+                <li>
+                  Methods informed follow-up research and have been applied to
+                  other network intervention scenarios.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Skills and Tools Used</h2>
+              <div class="project-table-wrapper">
+                <table class="project-table">
+                  <tr>
+                    <th>Technique/Skill</th>
+                    <th>Tools/Implementation</th>
+                  </tr>
 
-<tr>
-<td>
-           Graph algorithms and theory
-          </td>
-<td>
-           NP-completeness proofs, approximation limits
-          </td>
-</tr>
-<tr>
-<td>
-           Heuristic design
-          </td>
-<td>
-           Edge-blocking algorithm (implementation)
-          </td>
-</tr>
-<tr>
-<td>
-           Network simulation
-          </td>
-<td>
-           Contagion diffusion on large graphs
-          </td>
-</tr>
-<tr>
-<td>
-           Data analysis
-          </td>
-<td>
-           Comparative evaluation on real networks
-          </td>
-</tr>
-<tr>
-<td>
-           Interdisciplinary approach
-          </td>
-<td>
-           Algorithms + epidemiology for interventions
-          </td>
-</tr>
-</table>
-</div>
-</section><section class="project-section">
-<h2>
-        Cross-Project Capabilities
-       </h2>
-<ul>
-<li>
-         Edge-cutting techniques integrate with community-based blocking by isolating cross-community links.
-        </li>
-<li>
-         Developed general methods handling both simple and complex contagions for a versatile intervention toolkit.
-        </li>
-<li>
-         Established large-scale simulation and evaluation practices used across other contagion projects.
-        </li>
-</ul>
-</section><section class="project-section">
-<h2>
-        Published Papers/Tools
-       </h2>
-<ul>
-<li>
-         Blocking Simple and Complex Contagion by Edge Removal – IEEE ICDM 2013. <a class="paper-link" href="https://scholar.google.com/scholar?q=Blocking+Simple+and+Complex+Contagion+by+Edge+Removal" rel="noopener" target="_blank">Paper</a>
-        </li>
-<li>
-         Released an edge-blocking heuristic code, validated on real social networks (e.g., Montgomery County network).
-        </li>
-<li>
-         Findings cited in later network science research and integrated into contagion simulation platforms.
-        </li>
-</ul>
-</section></div></div>
-</main>
-<footer class="wrapper project-footer">
-<a class="btn btn--ghost" href="../index.html">
-     Back to portfolio
-    </a>
-</footer>
-<footer class="project-site-footer">
-<div class="wrapper project-site-footer__inner"><p class="project-site-footer__text">Gaurav Tuli · PhD Project Portfolio · Built on al-folio</p></div>
-</footer>
-</div>
-<script src="../assets/js/theme-toggle.js"></script>
-
-</body>
+                  <tr>
+                    <td>Graph algorithms and theory</td>
+                    <td>NP-completeness proofs, approximation limits</td>
+                  </tr>
+                  <tr>
+                    <td>Heuristic design</td>
+                    <td>Edge-blocking algorithm (implementation)</td>
+                  </tr>
+                  <tr>
+                    <td>Network simulation</td>
+                    <td>Contagion diffusion on large graphs</td>
+                  </tr>
+                  <tr>
+                    <td>Data analysis</td>
+                    <td>Comparative evaluation on real networks</td>
+                  </tr>
+                  <tr>
+                    <td>Interdisciplinary approach</td>
+                    <td>Algorithms + epidemiology for interventions</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+            <section class="project-section">
+              <h2>Cross-Project Capabilities</h2>
+              <ul>
+                <li>
+                  Edge-cutting techniques integrate with community-based
+                  blocking by isolating cross-community links.
+                </li>
+                <li>
+                  Developed general methods handling both simple and complex
+                  contagions for a versatile intervention toolkit.
+                </li>
+                <li>
+                  Established large-scale simulation and evaluation practices
+                  used across other contagion projects.
+                </li>
+              </ul>
+            </section>
+            <section class="project-section">
+              <h2>Published Papers/Tools</h2>
+              <ul>
+                <li>
+                  Blocking Simple and Complex Contagion by Edge Removal – IEEE
+                  ICDM 2013.
+                  <a
+                    class="paper-link"
+                    href="https://ieeexplore.ieee.org/abstract/document/6729524"
+                    rel="noopener"
+                    target="_blank"
+                    >Paper</a
+                  >
+                </li>
+                <li>
+                  Released an edge-blocking heuristic code, validated on real
+                  social networks (e.g., Montgomery County network).
+                </li>
+                <li>
+                  Findings cited in later network science research and
+                  integrated into contagion simulation platforms.
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </main>
+      <footer class="wrapper project-footer">
+        <a class="btn btn--ghost" href="../index.html"> Back to portfolio </a>
+      </footer>
+      <footer class="project-site-footer">
+        <div class="wrapper project-site-footer__inner">
+          <p class="project-site-footer__text">
+            Gaurav Tuli · PhD Project Portfolio · Built on al-folio
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script src="../assets/js/theme-toggle.js"></script>
+  </body>
 </html>
