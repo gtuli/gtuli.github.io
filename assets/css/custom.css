@@ -853,17 +853,20 @@ html.theme-dark .project-hero__title {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  align-items: center;
 }
 
 .project-card__focus-heading {
   color: #0f172a;
-  text-align: left;
+  text-align: center;
+  width: 100%;
 }
 
 .project-card__focus-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem 0.3rem;
+  justify-content: center;
 }
 
 .project-card__focus-tag {
